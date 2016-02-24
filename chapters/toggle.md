@@ -1,0 +1,28 @@
+很少用Java作为技术栈的我，很少有Java的笔记，记录一下这个简单的feature toggle。
+
+##Spring PropertyPlaceHolder
+
+在[Stackflow](http://stackoverflow.com/questions/21725709/property-place-holder-bean-in-application-context-xml-spring) 上有一个关于这个问题的回答。
+
+1.使用bean创建一个properties。(mvc-config.xml)
+
+    <util:properties id="myProps" location="WEB-INF/config/prop.properties"/>
+
+2.注入值
+
+    @Value("#{myProps['message']}")
+
+这样就可以在``root context``和``mvc context``下工作
+
+3.在jsp中使用
+
+    <spring:eval expression="@myProps.message" var="messageToggle"/>
+
+    <c:if test="${messageToggle eq true}">
+        message
+    </c:if>
+
+4.在测试中使用
+
+    messageToggles = ResourceBundle.getBundle("myProps");
+
