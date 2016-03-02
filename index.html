@@ -2221,8 +2221,41 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>先说说介格——从价格上来说，静态博客是最便宜的，可以使用AWS S3或者国内的云存储等等。从费用上来说，一个月只需要几块钱，并且快速稳定，可以接受大量的流量访问。而动态博客就贵了很多倍——我们需要一直开着这个服务器，并且如果用户的数量比较大，我们就需要考虑使用缓存。用户数量再增加，我们就需要更多地服务器了。而对于半动态的静态博客来说，需要有一个Hook检测文章的修改，这样的Hook可以是一个客户端。当修改发生的时候，运行服务器，随后生成静态网页。最后，这个网页接部署到静态服务器上。</p>
 <p>从操作难度上来说，动态博客是最简单的，静态博客紧随其后，半动态的静态博客是最难的。</p>
 <p>整的性价比考虑如下：</p>
-<pre><code>   |动态博客  | 静态博客 | 半动态的静态博客</code></pre>
-<p>—— |——–|———|——- 价格 | 几十到几百元 | 几元 | 依赖于更新频率 几元~几十元 难度 | 容易 | 稍有难度 | 难度稍大 运维 | 不容易 |容易 | 容易 数据存储 | 数据库 | 无 | 基于git的数据库</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">动态博客</th>
+<th style="text-align: left;">静态博客</th>
+<th style="text-align: left;">半动态的静态博客</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">价格</td>
+<td style="text-align: left;">几十到几百元</td>
+<td style="text-align: left;">几元</td>
+<td style="text-align: left;">依赖于更新频率 几元~几十元</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">难度</td>
+<td style="text-align: left;">容易</td>
+<td style="text-align: left;">稍有难度</td>
+<td style="text-align: left;">难度稍大</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">运维</td>
+<td style="text-align: left;">不容易</td>
+<td style="text-align: left;">容易</td>
+<td style="text-align: left;">容易</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">数据存储</td>
+<td style="text-align: left;">数据库</td>
+<td style="text-align: left;">无</td>
+<td style="text-align: left;">基于git的数据库</td>
+</tr>
+</tbody>
+</table>
 <p>现在，我们已经达到了一定的共识。现在，我们已经有了几个方案可以提用户选择。而这时，我们并不了解进一下的需求，只能等下面的结果。</p>
 <p>客户需要可以看到文章的修改变化，这时就去除了静态博客。现在还有第1和第3种方案可以选，考虑到第3种方案实现难度比较大，不易短期内实现。并且第3种方案可以依赖于第1种方案，就采取了动态博客的方案。</p>
 <p>但是，问题实现上才刚刚开始。</p>
