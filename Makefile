@@ -1,7 +1,7 @@
 include_dir=build
 source=chapters/*.md
 title='Growth'
-filename='ebook'
+filename='growth'
 
 
 all: html epub rtf pdf mobi
