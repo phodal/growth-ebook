@@ -142,7 +142,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#测试驱动开发">测试驱动开发</a><ul>
 <li><a href="#思考">思考</a></li>
 </ul></li>
-<li><a href="#selenium">Selenium</a></li>
+<li><a href="#selenium与自动化测试">Selenium与自动化测试</a></li>
 <li><a href="#可读的代码">可读的代码</a></li>
 <li><a href="#代码重构">代码重构</a></li>
 <li><a href="#intellij-idea重构">Intellij Idea重构</a><ul>
@@ -1342,9 +1342,9 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <p>通常在我的理解下，TDD是可有可无的。既然我知道了我要实现的大部分功能，而且我也知道如何实现。与此同时，对Code Smell也保持着警惕、要保证功能被测试覆盖。那么，总的来说TDD带来的价值并不大。</p>
 <p>然而，在当前这种情况下，我知道我想要的功能，但是我并不理解其深层次的功能。我需要花费大量的时候来理解，它为什么是这样的，需要先有一些脚本来知道它是怎么工作的。TDD变显得很有价值，换句话来说，在现有的情况下，TDD对于我们不了解的一些事情，可以驱动出更多的开发。毕竟在我们完成测试脚本之后，我们也会发现这些测试脚本成为了代码的一部分。</p>
 <p>在这种理想的情况下，我们为什么不TDD呢?</p>
-<h2 id="selenium">Selenium</h2>
+<h2 id="selenium与自动化测试">Selenium与自动化测试</h2>
 <blockquote>
-<p>Selenium也是一个用于Web应用程序测试的工具。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样。支持的浏览器包括IE(7、8、9)、Mozilla Firefox、Mozilla Suite等。这个工具的主要功能包括：测试与浏览器的兼容性——测试你的应用程序看是否能够很好得工作在不同浏览器和操作系统之上。测试系统功能——创建衰退测试检验软件功能和用户需求。支持自动录制动作和自动生成 .Net、Java、Perl等不同语言的测试脚本。Selenium 是ThoughtWorks专门为Web应用程序编写的一个验收测试工具。</p>
+<p>Selenium也是一个用于Web应用程序测试的工具。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样。支持的浏览器包括IE(7、8、9)、Mozilla Firefox、Mozilla Suite等。这个工具的主要功能包括：测试与浏览器的兼容性——测试你的应用程序看是否能够很好得工作在不同浏览器和操作系统之上。测试系统功能——创建衰退测试检验软件功能和用户需求。支持自动录制动作和自动生成.Net、Java、Perl等不同语言的测试脚本。</p>
 </blockquote>
 <h2 id="可读的代码">可读的代码</h2>
 <p>过去，我有过在不同的场合吐槽别人的代码写得烂。而我写的仅仅是比别人好一点而已——而不是好很多。</p>
@@ -2224,6 +2224,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <table>
 <thead>
 <tr class="header">
+<th style="text-align: left;">x</th>
 <th style="text-align: left;">动态博客</th>
 <th style="text-align: left;">静态博客</th>
 <th style="text-align: left;">半动态的静态博客</th>
@@ -2260,6 +2261,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>客户需要可以看到文章的修改变化，这时就去除了静态博客。现在还有第1和第3种方案可以选，考虑到第3种方案实现难度比较大，不易短期内实现。并且第3种方案可以依赖于第1种方案，就采取了动态博客的方案。</p>
 <p>但是，问题实现上才刚刚开始。</p>
 <p><strong>我们使用怎样的技术？</strong></p>
-<p>作为一个团队，我们需要优先考虑这个问题。使用怎样的技术解决方案？</p>
+<p>作为一个团队，我们需要优先考虑这个问题。使用怎样的技术解决方案？而这是一个更复杂的问题，这取决于我们团队的技术组成，以及未来的团队组成。</p>
+<p>如果在现有的系统中，我们使用的是Java语言。并不意味着，每个人都喜欢使用Java语言。因为随着团队的变动，做这个技术决定的那些人有可能已经不在这个团队里。并且即使那些人还在，也不意味着我们喜欢在未来使用这个语言。当时的技术决策都是在当时的环境下产生的，在现在看来很扯的技术决策，有可能在当时是最好的技术决策。</p>
 </body>
 </html>
