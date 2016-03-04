@@ -116,8 +116,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#数据库">数据库</a></li>
 </ul></li>
 <li><a href="#如何选择前端框架">如何选择前端框架</a></li>
-<li><a href="#ajax">Ajax</a><ul>
-<li><a href="#ajax-1">Ajax</a></li>
+<li><a href="#ajaxjson与restful">Ajax、JSON与RESTful</a><ul>
+<li><a href="#ajax">Ajax</a></li>
 <li><a href="#json">JSON</a></li>
 </ul></li>
 <li><a href="#mvvm">MVVM</a></li>
@@ -133,11 +133,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#编程只是在码字">编程只是在码字</a></li>
 </ul></li>
 <li><a href="#kick-off">Kick Off</a></li>
-<li><a href="#tasking">Tasking</a></li>
+<li><a href="#tasking">Tasking</a><ul>
+<li><a href="#如何tasking一本书">如何Tasking一本书</a></li>
+</ul></li>
 <li><a href="#如何编写测试">如何编写测试</a></li>
 <li><a href="#测试金字塔">测试金字塔</a></li>
 <li><a href="#mock与stub">Mock与Stub</a><ul>
-<li><a href="#stub与mock理解">stub与mock理解</a></li>
+<li><a href="#stub">Stub</a></li>
+<li><a href="#mock">Mock</a></li>
 </ul></li>
 <li><a href="#测试驱动开发">测试驱动开发</a><ul>
 <li><a href="#思考">思考</a></li>
@@ -1182,8 +1185,8 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>React似乎很受市场欢迎，各种各样的新知识。但是它的发展远不如我的预期的好，理想的情况下应该类似于Ionic可以直接在Web和手机应用上。</p>
 <p>Vue.js轻量级的框架。</p>
 <p>jQuery还是一个不错的选择，不仅仅对于学习来说，而且对于工作来说也是如此。如果你们不是新起一个项目或者重构旧的项目，那么必然你是没有多少机会去超越DOM。而如果这时候尝试去这样做会付出一定的代价，如我在前端演进史所说的那样——晚点做出选择，可能会好一点。因为谁说jQuery不会去解放DOM，React带来的一些新的思想可能就比不上它的缺点。除此，jQuery耕织几年的生态系统也是不可忽略。</p>
-<h2 id="ajax">Ajax</h2>
-<h3 id="ajax-1">Ajax</h3>
+<h2 id="ajaxjson与restful">Ajax、JSON与RESTful</h2>
+<h3 id="ajax">Ajax</h3>
 <p>AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。</p>
 <p>AJAX = 异步 JavaScript和XML（标准通用标记语言的子集）。</p>
 <p>AJAX 是一种用于创建快速动态网页的技术。</p>
@@ -1260,12 +1263,16 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <p>写字便是如此，给我们同样的纸和笔(ps:减少无关因素)，不同的人写出来的字的差距很大，写得好的相比于写得不好的 ，只是因为练习得更多。而编程难道不也是如此么，最后写代码这件事就和写字一样简单了。</p>
 <p>刚开始写字的时候，我们需要去了解一个字的笔划顺序、字体结构，而这些因素相当于语法及其结构。熟悉了之后，写代码也和写字一样是简简单单的事。</p>
 <h3 id="学习编程只是在学造句">学习编程只是在学造句</h3>
-<pre><code>?多么无聊的一个标题</code></pre>
+<blockquote>
+<p>?多么无聊的一个标题</p>
+</blockquote>
 <p><code>计算机语言同人类语言一样</code>，有时候我们也许会感慨一些计算机语言是多么地背离我们的世界，但是他们才是真正的计算机语言。</p>
 <p>计算机语言是模仿人类的语言，从 if 到其他，而这些计算机语言又比人类语言简单。故而一开始学习语言的时候我们只是在学习造句，用一句话来概括一句代码的意思，或者可以称之为函数、方法(method)。</p>
 <p>于是我们开始组词造句，以便最后能拼凑出一整篇文章。</p>
 <h3 id="编程是在写作">编程是在写作</h3>
-<pre><code>?编程是在写作，这是一个怎样的玩笑?这是在讽刺那些写不好代码，又写不好文章的么</code></pre>
+<blockquote>
+<p>?编程是在写作，这是一个怎样的玩笑?这是在讽刺那些写不好代码，又写不好文章的么</p>
+</blockquote>
 <p>代码如诗，又或者代码如散文。总的来说，这是相对于英语而言，对于中文而言可不是如此。<strong>如果用一种所谓的中文语言写出来的代码，不能像中文诗一样，那么它就算不上是一种真正的中文语言。</strong></p>
 <p>那些所谓的写作逻辑对编程的影响</p>
 <ul>
@@ -1284,23 +1291,27 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <p>写作的过程真的就是一次探索之旅，而且它会贯穿人的一生。</p>
 </blockquote>
 <h3 id="编程只是在码字">编程只是在码字</h3>
-<pre><code>编程只是在码字，难道不是么？</code></pre>
 <blockquote>
-<p>真正的想法都在脑子里，而不在纸上，或者IDE里。</p>
+<p>编程只是在码字，难道不是么？</p>
 </blockquote>
+<p>真正的想法都在脑子里，而不在纸上，或者IDE里。</p>
 <h2 id="kick-off">Kick Off</h2>
 <blockquote>
 <p>Kick Off也就是项目启动会议。当我们有项目启动的时候，把涉及的相关人员都聚集起来，然后召开一个启动的会议。</p>
 </blockquote>
 <p>对应于任务，则是任务的启动，开发人员和业务人员一起讨论问题。</p>
 <h2 id="tasking">Tasking</h2>
-<p>初到TW时，Pair时候总会有人教我如何开始编码，这应该也是一项基础的能力。结合日常，重新演绎一下这个过程：</p>
+<p>初到ThoughtWorks时，Pair时候总会有人教我如何开始编码，这应该也是一项基础的能力。结合日常，重新演绎一下这个过程：</p>
 <ul>
 <li>有一个可衡量、可实现、过程可测的目标</li>
 <li>Tasking (即对要实现的目标过程进行分解)</li>
 <li>一步步实现 (如TDD)</li>
 <li>实现目标</li>
 </ul>
+<p>现在让我们以这本书的写作过程为例，来看看这个过程是怎么发生的。</p>
+<h3 id="如何tasking一本书">如何Tasking一本书</h3>
+<h4 id="章节规则">章节规则</h4>
+<h4 id="tasking文章">Tasking文章</h4>
 <h2 id="如何编写测试">如何编写测试</h2>
 <p>写测试相比于写代码来说算是一种简单的事。多数时候，我们并不需要考虑复杂的逻辑。我们只需要按照我们的代码逻辑，对代码的行为进行覆盖。</p>
 <p>这时，我们需要学会更好地去测试代码——测试金字塔。</p>
@@ -1310,6 +1321,7 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <img src="chapters/images/test-pyramid.png" alt="测试金字塔" /><figcaption>测试金字塔</figcaption>
 </figure>
 <h2 id="mock与stub">Mock与Stub</h2>
+<p>当我们遇到一些很难测试的方法、行为的时候，我们就一些特别的方式来帮助我们测试。Mock和Stub就是常见的两种方式：</p>
 <p><strong>Stub</strong></p>
 <ul>
 <li>Stub是一种状态确认</li>
@@ -1320,16 +1332,22 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <li>Mock是一种行为确认</li>
 <li>Mock模拟行为</li>
 </ul>
-<p><strong>stub vs mock</strong></p>
-<ul>
-<li>Stub从某种程度上来说，会返回我们一个特定的结果，用代码替换来方法。</li>
-<li>Mock确保这个方法被调用。</li>
-</ul>
-<h3 id="stub与mock理解">stub与mock理解</h3>
-<p>stub从字面意义上来说是存根，存根可以理解为我们保留了一些预留的结果。这个时候我们相当于构建了这样一个特殊的测试场景，用于替换诸如网络或者IO口调度等高度不可预期的测试。如当我们需要去验证某个api被调用并返回了一个结果，举例在最小物联网系统设计中返回的json，我们可以在本地构建一个</p>
+<p>简单的来说：Stub从某种程度上来说，会返回我们一个特定的结果，用代码替换来方法；而Mock只是确保这个方法被调用。</p>
+<h3 id="stub">Stub</h3>
+<p>Stub从字面意义上来说是存根，存根可以理解为我们保留了一些预留的结果。这个时候我们相当于构建了这样一个特殊的测试场景，用于替换诸如网络或者IO口调度等高度不可预期的测试。如当我们需要去验证某个api被调用并返回了一个结果，举例在最小物联网系统设计中返回的json，我们可以在本地构建一个</p>
 <pre><code>[{&quot;id&quot;:1,&quot;temperature&quot;:14,&quot;sensors1&quot;:15,&quot;sensors2&quot;:12,&quot;led1&quot;:1}]</code></pre>
 <p>的结果来当我们预期的数据，也就是所谓的存根。那么我们所要做的也就是解析json，并返回预期的结果。当我们依赖于网络时，此时测试容易出现问题。</p>
-<p>mock从字面意义上来说是模仿，也就是说我们要在本地构造一个模仿的环境，而我们只需要验证我们的方法被调用了。</p>
+<h3 id="mock">Mock</h3>
+<p>Mock从字面意义上来说是模仿，也就是说我们要在本地构造一个模仿的环境，而我们只需要验证我们的方法被调用了。</p>
+<pre><code>var Foo = function(){};
+Foo.prototype.callMe = function() {};
+var foo = mock( Foo );
+ 
+foo.callMe();
+ 
+expect( foo.callMe ).toHaveBeenCalled();</code></pre>
+<h4 id="mock-server">Mock Server</h4>
+<p>Mock是一大类的方法，其中还有一个</p>
 <h2 id="测试驱动开发">测试驱动开发</h2>
 <p>测试驱动开发是一个很“古老”的程序开发方法，然而由于国内的开发流程的问题——即开发人员负责功能的测试，导致这么好的一项技术没有在国内推广。</p>
 <p>测试驱动开发的主要过程是:</p>
