@@ -1,4 +1,4 @@
-Growth——距今为止最好的Web开发电子书
+Growth——最好的Web学习电子书
 ===
 
 > 这个项目是开源Web学习应用[Growth](https://github.com/phodal/growth)的电子书高级版。
