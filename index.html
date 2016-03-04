@@ -215,9 +215,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#重构-3">重构</a></li>
 <li><a href="#模式与演进">模式与演进</a></li>
 </ul></li>
-<li><a href="#架构模式">架构模式</a></li>
+<li><a href="#架构模式">架构模式</a><ul>
+<li><a href="#预设计式架构">预设计式架构</a></li>
+<li><a href="#演进式架构">演进式架构</a></li>
+</ul></li>
 <li><a href="#每个人都是架构师如何设计一个博客系统">每个人都是架构师——如何设计一个博客系统</a><ul>
 <li><a href="#如何构建一个博客系统">如何构建一个博客系统</a></li>
+<li><a href="#相关阅读资料">相关阅读资料</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2120,8 +2124,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>用新的语言、框架代替旧的框架(如Scala,Node.js,React)</li>
 </ul>
 <h1 id="回顾与新架构">回顾与新架构</h1>
-<p>架构设计看上去是一个很复杂的话题，然而他是属于设计的一部分。</p>
-<p>如果你懂得什么是美、什么是丑，那么我想你也是懂得设计的。</p>
+<p>在我开始接触架构设计的时候，我对于这个知识点觉得很奇怪。因为架构设计看上去是一个很复杂的话题，然而他是属于设计的一部分。如果你懂得什么是美、什么是丑，那么我想你也是懂得设计的。而设计是一件很有意思的事——刚开始写字时，我们被要求去临摹别人的字体。</p>
 <h2 id="自省">自省</h2>
 <p>总结在某种意义上相当于自己对自己的反馈：</p>
 <figure>
@@ -2207,6 +2210,22 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <blockquote>
 <p>模式就是最好的架构。</p>
 </blockquote>
+<h4 id="架构的产生">架构的产生</h4>
+<p>在我开始接触架构设计的时候，我买了几本书然后我就开始学习了。我发现在这些书中都出现了一些相似的东西，如基本的分层设计、Pipe and Filters模式、MVC模式。然后，我开始意料到这些模式本身就是最好的架构。</p>
+<p>MVC模式本身也是接于分层而设计的，如下图是Spring MVC的请求处理过程：</p>
+<figure>
+<img src="chapters/chapter8/spring-mvc.png" alt="Spring MVC" /><figcaption>Spring MVC</figcaption>
+</figure>
+<p>而这个框架只是框架本身的架构，这一类也是我们预先设计好的框架。</p>
+<p>在框架之上，我们会有自己本身的业务所带来的模式。如下图是我的网上搜罗到的一个简单的发送邮件的架构：</p>
+<figure>
+<img src="chapters/chapter8/basic-paf.png" alt="发送邮件中的Pipe and Filters模式" /><figcaption>发送邮件中的Pipe and Filters模式</figcaption>
+</figure>
+<p>这样的模式则是由业务发展的过程中演进出来的。</p>
+<h3 id="预设计式架构">预设计式架构</h3>
+<p>在我们日常使用的框架多数是预先设计的构架，因为这个架构本身的目标是明确的。</p>
+<h3 id="演进式架构">演进式架构</h3>
+<p>演进式架构则是我们日常工作的业务代码库演进出来的。由于业务本身在不断发展，我们不断地演进系统的架构。</p>
 <h2 id="每个人都是架构师如何设计一个博客系统">每个人都是架构师——如何设计一个博客系统</h2>
 <p>每一个程序员都是架构师。平时在我们工作的时候，架构师这个Title都被那些非常有经历的开发人员占据着。然而，如果你喜欢刷刷Github，喜欢做一些有意思的东西，那么你也将是一个架构师。</p>
 <h3 id="如何构建一个博客系统">如何构建一个博客系统</h3>
@@ -2294,5 +2313,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>。。。</li>
 </ol>
 <p>相信看完之前的章节，你也有了一定的经验了，你也可以成为一个架构师了。</p>
+<h3 id="相关阅读资料">相关阅读资料</h3>
+<p>-《程序员必读之软件架构》</p>
 </body>
 </html>
