@@ -1,9 +1,9 @@
-Growth电子书版
+Growth——距今为止最好的Web开发电子书
 ===
 
-> 这个项目是开源Web学习应用[Growth](https://github.com/phodal/growth)的电子书版本。
+> 这个项目是开源Web学习应用[Growth](https://github.com/phodal/growth)的电子书高级版。
 
-这是继之前的《[教你设计物联网系统](https://github.com/phodal/designiot)》与《[GitHub 漫游指南](https://github.com/phodal/github-roam)》后的电子书，也是还在编写的《[RePractise](https://github.com/phodal/repractise)》的前传。 Growth是面向初中级Web开发者，而Repractise将面向中高级Web开发者。
+(PS: 这是继之前的《[教你设计物联网系统](https://github.com/phodal/designiot)》与《[GitHub 漫游指南](https://github.com/phodal/github-roam)》后的电子书，也是还在编写的《[RePractise](https://github.com/phodal/repractise)》的前传。 Growth是面向初中级Web开发者，而Repractise将面向中高级Web开发者。)
 
 本书是依据Web软件开发的迭代过程而编写的，主要内容如下:  
 
@@ -16,7 +16,7 @@ Growth电子书版
  - 遗留系统
  - 回顾与新架构
 
-其中一些内容来自于博客，一些内容还在编写中，欢迎提交指导意见。
+其中部分内容来自于日常博客的整理，一些内容还在编写中，欢迎提交指导意见。
 
 应用下载
 ---
