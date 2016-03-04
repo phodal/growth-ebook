@@ -39,7 +39,7 @@ alert('hello,world');
 
 同时需要注意的一点是，在每个大的项目开始之前我们应该去找寻好开发环境。搭建环境是一件非常重要的事，它决定了你能不能更好地工作。毕竟环境是生产率的一部分。高效的程序员和低效程序员间的十倍差距，至少有三倍是因为环境差异。
 
-Windows还是Unix? WebStorm还是Sublime?
+系统选择：Windows还是Unix? WebStorm还是Sublime?
 ---
 
 一个好的工具确实有助于编程，但是他只会给我们带来的是帮助，最后的代码风格，我们写出来的代码还是和我们的水平保持着一致的。什么是好的工具，这个说法就有很多了，但是有时候我们往往沉迷于事物的表面，有些时候Vim会比Visual Studio强大，当你只需要修改的是一个配置文件的时候，简单且足够快捷，在我们还未用VS打开的时候，我们已经用Vim做完这个活了。
@@ -90,6 +90,24 @@ Linux下面的命令有一大堆，只是我们常用的只有一小部分。如
 
 等
 
+###包管理
+
+在操作系统中安装软件，最方便的东西莫过于包管理了。引自OpenSUSE官网的说明及图片:
+
+![包管理](chapters/chapter1/pm.png)
+
+Linux 发行版无非就是一堆软件包 (package) 形式的应用程序加上整体地管理这些应用程序的工具。通常这些 Linux 发行版，包括 openSUSE，都是由成千上万不同的软件包构成的。
+
+ - 软件包: 软件包不止是一个文件，内含构成软件的所有文件，包括程序本身、共享库、开发包以及使用说明等。
+
+ - 元数据 (metadata) 包含于软件包之中，包含软件正常运行所需要的一些信息。软件包安装之后，其元数据就存储于本地的软件包数据库之中，以用于软件包检索。
+
+ - 依赖关系 (dependencies) 是软件包管理的一个重要方面。实际上每个软件包都会涉及到其他的软件包，软件包里程序的运行需要有一个可执行的环境（要求有其他的程序、库等），软件包依赖关系正是用来描述这种关系的。
+
+
+
+环境搭建
+---
 
 ###搭建OSX开发环境
 
@@ -129,11 +147,17 @@ Linux下面的命令有一大堆，只是我们常用的只有一小部分。如
 
 **Launchy** 
 
-> Launchy 是一款免费开源的协助您摒弃Windows “运行”的Dock 式替代工具，既方便又实用，自带多款皮肤，作为美化工具也未尝不可。
+> Launchy 是一款免费开源的协助您摒弃Windows “运行”的Dock式替代工具，既方便又实用，自带多款皮肤，作为美化工具也未尝不可。
 
 **PowerShell**
 
 > Launchy 是一款免费开源的协助您摒弃Windows “运行”的Dock 式替代工具，既方便又实用，自带多款皮肤，作为美化工具也未尝不可。
+
+###搭建GNU/Linux开发环境
+
+**Oh My Zsh**
+   
+> Oh My Zsh 同时提供一套插件和工具，可以简化命令行操作。
 
 如何学好一门语言
 ---
@@ -275,6 +299,8 @@ Spring只是一个RESTful服务，我们还需要一些问题，比如DOM的渲�
 Web编程基础
 ---
 
+###从浏览器到服务器
+
 如果你的操作系统带有cURL[^cURL]这个软件(在GNU/Linux、Mac OS都自带这个工具，Windows用户可以从[http://curl.haxx.se/download.html](http://curl.haxx.se/download.html)下载到)，那么我们可以直接用下面的命令来看这看这个过程[^HTTP2cURL](-v 参数可以显示一次http通信的整个过程)：
 
 ```
@@ -319,6 +345,12 @@ curl -v https://www.phodal.com
 以“\*”开始的前8行是一些连接相关的信息，称为**响应首部**。我们向域名 [https://www.phodal.com/](https://www.phodal.com/)发出了请求，接着DNS服务器告诉了我们网站服务器的IP，即54.69.23.11。出于安全考虑，在这里我们的示例，我们是以HTTPS协议为例，所以在这里连接的端口是443。因为使用的是HTTPS协议，所以在这里会试图去获取服务器证书，接着获取到了域名相关的证书信息。
 
 随后以“>”开始的内容，便是向Web服务器发送请求。Host即是我们要访问的主机的域名，GET / 则代表着我们要访问的是根目录，如果我们要访问 [https://www.phodal.com/about/](https://www.phodal.com/about/)页面在这里，便是GET资源文件/about。紧随其后的是HTTP的版本号（HTTP/1.1）。User-Agent通过指向的是使用者行为的软件，通常会加上硬件平台、系统软件、应用软件和用户个人偏好等等的一些信息。Accept则指的是告知服务器发送何种媒体类型。
+
+###从HTML到页面显示
+
+![Render HTML](chapters/chapter1/render-html.jpg)
+
+
 
 或许你觉得CSS一点儿也不重要，而事实上，如果说HTML是建筑的框架，CSS就是房子的装修。那么Javascript呢，我听到的最有趣的说法是小三——还是先让我们回到代码上来吧。
 
@@ -1435,7 +1467,7 @@ Vue.js轻量级的框架。
 
 jQuery还是一个不错的选择，不仅仅对于学习来说，而且对于工作来说也是如此。如果你们不是新起一个项目或者重构旧的项目，那么必然你是没有多少机会去超越DOM。而如果这时候尝试去这样做会付出一定的代价，如我在前端演进史所说的那样——晚点做出选择，可能会好一点。因为谁说jQuery不会去解放DOM，React带来的一些新的思想可能就比不上它的缺点。除此，jQuery耕织几年的生态系统也是不可忽略。
 
-Ajax、JSON与RESTful
+RESTful、JSON与Ajax
 ---
 
 ###Ajax
@@ -2752,22 +2784,24 @@ Retro四个维度:
 
 所以在一开始的时候，我们就有了下面的代码：
 
-	if (rating) {
-      $scope.showSkillMap = true;
-      skillFlareChild[skill.text] = [rating];
+```javascript
+if (rating) {
+    $scope.showSkillMap = true;
+    skillFlareChild[skill.text] = [rating];
 
-      $scope.ratings = $scope.ratings + rating;
-      if (rating >= 0) {
-        $scope.learnedSkills.push({
-          skill: skill.text,
-          rating: rating
-        });
-      }
-      
-      if ($scope.ratings > 250) {
-        $scope.isInfinite = true;
-      }
+    $scope.ratings = $scope.ratings + rating;
+    if (rating >= 0) {
+      $scope.learnedSkills.push({
+        skill: skill.text,
+        rating: rating
+      });
     }
+    
+    if ($scope.ratings > 250) {
+      $scope.isInfinite = true;
+    }
+  }
+```
 
 代码在不经意间充斥着各种Code Smell:
 
@@ -2783,18 +2817,22 @@ Retro四个维度:
 
 测试是系统不至于腐烂的一个后勤保障，除此我们还需要保持对于Code Smell的嗅觉。如上代码：
 
-      if ($scope.ratings > 250) {
-        $scope.isInfinite = true;
-      }
+```javascript
+if ($scope.ratings > 250) {
+  $scope.isInfinite = true;
+}
+```
 
 上面代码中的“250”指的到底是？这样的数字怎么能保证别人一看代码就知道250到底是什么？
 
 如下的代码就好一些：
 
-	  var MAX_SKILL_POINTS = 250;
-	  if ($scope.ratings > MAX_SKILL_POINTS) {
-	    $scope.isInfinite = true;
-	  }
+```javascript
+var MAX_SKILL_POINTS = 250;
+if ($scope.ratings > MAX_SKILL_POINTS) {
+  $scope.isInfinite = true;
+}
+```
 
 而在最开始的时候我们想不到这样的结果。最初我们的第一直觉都是一样的，然而只要我们保持着对Code Smell的警惕，情况就会发生更多的变化。
 
@@ -2835,11 +2873,16 @@ MVC模式本身也是接于分层而设计的，如下图是Spring MVC的请求�
 
 ###预设计式架构
 
-在我们日常使用的框架多数是预先设计的构架，因为这个架构本身的目标是明确的。
+在我们日常使用的框架多数是预先设计的构架，因为这个架构本身的目标是明确的。系统会围绕一定的架构去构建，并且在这个过程中架构会帮助我们更好地理解系统。如下图所示的是Emacs的架构：
+
+![Emcas架构](chapters/chapter8/emacs-architecture.png)
+
+它采用的是交互式应用程序员应用广泛的模型-视图-控制器模式。
 
 ###演进式架构
 
 演进式架构则是我们日常工作的业务代码库演进出来的。由于业务本身在不断发展，我们不断地演进系统的架构。
+
 
 每个人都是架构师——如何设计一个博客系统
 ---
