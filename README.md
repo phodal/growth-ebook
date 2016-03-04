@@ -1,4 +1,4 @@
-Growth——最好的Web学习电子书
+Growth——Be Awesome Developer
 ===
 
 > 这个项目是开源Web学习应用[Growth](https://github.com/phodal/growth)的电子书高级版。
