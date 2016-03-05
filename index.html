@@ -107,7 +107,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li><a href="#前端与后台">前端与后台</a><ul>
-<li><a href="#从浏览器到服务器-1">从浏览器到服务器</a></li>
 <li><a href="#如何选择一门好的后台语言">如何选择一门好的后台语言</a><ul>
 <li><a href="#javascript-1">JavaScript</a></li>
 <li><a href="#python">Python</a></li>
@@ -118,8 +117,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#后台即服务">后台即服务</a></li>
 <li><a href="#数据持久化">数据持久化</a><ul>
 <li><a href="#数据库">数据库</a></li>
+<li><a href="#搜索引擎">搜索引擎</a></li>
 </ul></li>
-<li><a href="#如何选择前端框架">如何选择前端框架</a></li>
+<li><a href="#如何选择前端框架">如何选择前端框架</a><ul>
+<li><a href="#angular">Angular</a></li>
+<li><a href="#react">React</a></li>
+<li><a href="#vue">Vue</a></li>
+<li><a href="#jquery">jQuery</a></li>
+</ul></li>
 <li><a href="#restfuljson与ajax">RESTful、JSON与Ajax</a><ul>
 <li><a href="#ajax">Ajax</a></li>
 <li><a href="#json">JSON</a></li>
@@ -127,7 +132,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#mvvm">MVVM</a></li>
 </ul></li>
 <li><a href="#编码">编码</a><ul>
-<li><a href="#构建系统">构建系统</a></li>
+<li><a href="#一个web应用的构建过程">一个Web应用的构建过程</a><ul>
+<li><a href="#构建工具">构建工具</a></li>
+<li><a href="#构建过程">构建过程</a></li>
+</ul></li>
 <li><a href="#git与版本管理">Git与版本管理</a><ul>
 <li><a href="#git初入">Git初入</a></li>
 </ul></li>
@@ -140,8 +148,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#tasking">Tasking</a><ul>
 <li><a href="#如何tasking一本书">如何Tasking一本书</a></li>
 </ul></li>
-<li><a href="#如何编写测试">如何编写测试</a></li>
+<li><a href="#如何编写测试">如何编写测试</a><ul>
 <li><a href="#测试金字塔">测试金字塔</a></li>
+</ul></li>
 <li><a href="#mock与stub">Mock与Stub</a><ul>
 <li><a href="#stub">Stub</a></li>
 <li><a href="#mock">Mock</a></li>
@@ -150,7 +159,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#思考">思考</a></li>
 </ul></li>
 <li><a href="#selenium与自动化测试">Selenium与自动化测试</a></li>
-<li><a href="#可读的代码">可读的代码</a></li>
+<li><a href="#可读的代码">可读的代码</a><ul>
+<li><a href="#命名">命名</a></li>
+<li><a href="#函数长度">函数长度</a></li>
+<li><a href="#函数嵌套">函数嵌套</a></li>
+<li><a href="#重复代码">重复代码</a></li>
+<li><a href="#测试用例">测试用例</a></li>
+</ul></li>
 <li><a href="#代码重构">代码重构</a></li>
 <li><a href="#intellij-idea重构">Intellij Idea重构</a><ul>
 <li><a href="#重构之提炼函数">重构之提炼函数</a></li>
@@ -175,6 +190,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#应用层缓存">应用层缓存</a></li>
 <li><a href="#前端缓存">前端缓存</a></li>
 <li><a href="#客户端缓存">客户端缓存</a></li>
+<li><a href="#html5-离线缓存">HTML5 离线缓存</a></li>
 </ul></li>
 <li><a href="#可配置">可配置</a></li>
 <li><a href="#toggle">Toggle</a><ul>
@@ -205,21 +221,45 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#认知设计">认知设计</a></li>
 </ul></li>
 <li><a href="#持续交付">持续交付</a><ul>
-<li><a href="#持续集成">持续集成</a></li>
+<li><a href="#持续集成">持续集成</a><ul>
+<li><a href="#瀑布流式开发">瀑布流式开发</a></li>
+<li><a href="#小步前进">小步前进</a></li>
+</ul></li>
 <li><a href="#自动化构建">自动化构建</a></li>
-<li><a href="#持续交付-1">持续交付</a></li>
+<li><a href="#持续交付-1">持续交付</a><ul>
+<li><a href="#自动化">自动化</a></li>
+<li><a href="#devops">DevOps</a></li>
+<li><a href="#云基础">云基础</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#遗留系统">遗留系统</a><ul>
-<li><a href="#遗留代码">遗留代码</a></li>
-<li><a href="#如何修改代码">如何修改代码</a></li>
-<li><a href="#网站重构">网站重构</a></li>
+<li><a href="#遗留代码">遗留代码</a><ul>
+<li><a href="#什么是遗留代码">什么是遗留代码</a></li>
+<li><a href="#遗留代码的问题">遗留代码的问题</a></li>
+</ul></li>
+<li><a href="#如何修改代码">如何修改代码</a><ul>
+<li><a href="#测试">测试</a></li>
+<li><a href="#重构-3">重构</a></li>
+<li><a href="#修改测试">修改测试</a></li>
+<li><a href="#重构-4">重构</a></li>
+</ul></li>
+<li><a href="#网站重构">网站重构</a><ul>
+<li><a href="#速度优化">速度优化</a></li>
+<li><a href="#功能加强">功能加强</a></li>
+<li><a href="#模块重构">模块重构</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#回顾与新架构">回顾与新架构</a><ul>
 <li><a href="#自省">自省</a></li>
-<li><a href="#retro">Retro</a></li>
+<li><a href="#retro">Retro</a><ul>
+<li><a href="#well">Well</a></li>
+<li><a href="#less-well">Less Well</a></li>
+<li><a href="#suggestion">Suggestion</a></li>
+<li><a href="#action">Action</a></li>
+</ul></li>
 <li><a href="#浮现式设计">浮现式设计</a><ul>
 <li><a href="#意图导向">意图导向</a></li>
-<li><a href="#重构-3">重构</a></li>
+<li><a href="#重构-5">重构</a></li>
 <li><a href="#模式与演进">模式与演进</a></li>
 </ul></li>
 <li><a href="#架构模式">架构模式</a><ul>
@@ -466,6 +506,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>以“*”开始的前8行是一些连接相关的信息，称为<strong>响应首部</strong>。我们向域名 <a href="https://www.phodal.com/" class="uri">https://www.phodal.com/</a>发出了请求，接着DNS服务器告诉了我们网站服务器的IP，即54.69.23.11。出于安全考虑，在这里我们的示例，我们是以HTTPS协议为例，所以在这里连接的端口是443。因为使用的是HTTPS协议，所以在这里会试图去获取服务器证书，接着获取到了域名相关的证书信息。</p>
 <p>随后以“&gt;”开始的内容，便是向Web服务器发送请求。Host即是我们要访问的主机的域名，GET / 则代表着我们要访问的是根目录，如果我们要访问 <a href="https://www.phodal.com/about/" class="uri">https://www.phodal.com/about/</a>页面在这里，便是GET资源文件/about。紧随其后的是HTTP的版本号（HTTP/1.1）。User-Agent通过指向的是使用者行为的软件，通常会加上硬件平台、系统软件、应用软件和用户个人偏好等等的一些信息。Accept则指的是告知服务器发送何种媒体类型。</p>
 <h3 id="从html到页面显示">从HTML到页面显示</h3>
+<p>HTML的渲染过程</p>
 <figure>
 <img src="chapters/chapter1/render-html.jpg" alt="Render HTML" /><figcaption>Render HTML</figcaption>
 </figure>
@@ -1038,41 +1079,6 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>你引入了Backbone、Angluar，你的架构变成了MVP、MVVM。尽管发生了一些架构上的变化，但是项目的开发并没有因此而发生变化。这其中涉及到了一些职责的问题，如果某一个层级中有太多的职责，那么它是不是加重了一些人的负担？</p>
 <p>后台在过去的岁月里起着很重要的作用，当然在未来也是。</p>
 <p>就最几年的解耦趋势来看，它在变得更小，变成一系列的服务。并向前台提供很多RESTful API，看上去有点像提供一些辅助性的工作。</p>
-<h2 id="从浏览器到服务器-1">从浏览器到服务器</h2>
-<p>如果你的操作系统带有cURL[^cURL]这个软件(在GNU/Linux、Mac OS都自带这个工具，Windows用户可以从<a href="http://curl.haxx.se/download.html" class="uri">http://curl.haxx.se/download.html</a>下载到)，那么我们可以直接用下面的命令来看这看这个过程[^HTTP2cURL](-v 参数可以显示一次http通信的整个过程)：</p>
-<pre><code>curl -v https://www.phodal.com</code></pre>
-<p>我们就会看到下面的响应过程:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">*</span> Rebuilt URL to: https://www.phodal.com/
-<span class="kw">*</span>   Trying 54.69.23.11...
-<span class="kw">*</span> Connected to www.phodal.com (54.69.23.11) <span class="kw">port</span> 443 (#0)
-<span class="kw">*</span> TLS 1.2 connection using TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
-<span class="kw">*</span> Server certificate: www.phodal.com
-<span class="kw">*</span> Server certificate: COMODO RSA Domain Validation Secure Server CA
-<span class="kw">*</span> Server certificate: COMODO RSA Certification Authority
-<span class="kw">*</span> Server certificate: AddTrust External CA Root
-<span class="kw">&gt;</span> <span class="kw">GET</span> / HTTP/1.1
-<span class="kw">&gt;</span> <span class="kw">Host</span>: www.phodal.com
-<span class="kw">&gt;</span> <span class="kw">User-Agent</span>: curl/7.43.0
-<span class="kw">&gt;</span> <span class="kw">Accept</span>: */*
-<span class="kw">&gt;</span>
-<span class="kw">&lt;</span> <span class="kw">HTTP/1.1</span> 403 Forbidden
-<span class="kw">&lt;</span> <span class="kw">Server</span>: phodal/0.19.4
-<span class="kw">&lt;</span> <span class="kw">Date</span>: Tue, 13 Oct 2015 05:32:13 GMT
-<span class="kw">&lt;</span> <span class="kw">Content-Type</span>: text/html<span class="kw">;</span> <span class="ot">charset=</span>utf-8
-<span class="kw">&lt;</span> <span class="kw">Content-Length</span>: 170
-<span class="kw">&lt;</span> <span class="kw">Connection</span>: keep-alive
-<span class="kw">&lt;</span>
-<span class="kw">&lt;html&gt;</span>
-<span class="kw">&lt;head&gt;&lt;</span>title<span class="kw">&gt;</span>403 Forbidden<span class="kw">&lt;</span>/title<span class="kw">&gt;&lt;</span>/head<span class="kw">&gt;</span>
-<span class="kw">&lt;body</span> bgcolor=<span class="st">&quot;white&quot;</span><span class="kw">&gt;</span>
-<span class="kw">&lt;center&gt;&lt;</span>h<span class="kw">1&gt;</span>403 Forbidden<span class="kw">&lt;</span>/h<span class="kw">1&gt;&lt;</span>/center<span class="kw">&gt;</span>
-<span class="kw">&lt;hr&gt;&lt;</span>center<span class="kw">&gt;</span>phodal/0.19.<span class="kw">4&lt;</span>/center<span class="kw">&gt;</span>
-<span class="kw">&lt;</span>/<span class="kw">body&gt;</span>
-<span class="kw">&lt;</span>/<span class="kw">html&gt;</span>
-<span class="kw">*</span> Connection <span class="co">#0 to host www.phodal.com left intact</span></code></pre></div>
-<p>我们尝试用cURL去访问我的网站，会根据访问的域名找出其IP，通常这个映射关系是来源于ISP缓存DNS（英语：Domain Name System）服务器[^DNSServer]。</p>
-<p>以“*”开始的前8行是一些连接相关的信息，称为<strong>响应首部</strong>。我们向域名 <a href="https://www.phodal.com/" class="uri">https://www.phodal.com/</a>发出了请求，接着DNS服务器告诉了我们网站服务器的IP，即54.69.23.11。出于安全考虑，在这里我们的示例，我们是以HTTPS协议为例，所以在这里连接的端口是443。因为使用的是HTTPS协议，所以在这里会试图去获取服务器证书，接着获取到了域名相关的证书信息。</p>
-<p>随后以“&gt;”开始的内容，便是向Web服务器发送请求。Host即是我们要访问的主机的域名，GET / 则代表着我们要访问的是根目录，如果我们要访问 <a href="https://www.phodal.com/about/" class="uri">https://www.phodal.com/about/</a>页面在这里，便是GET资源文件/about。紧随其后的是HTTP的版本号（HTTP/1.1）。User-Agent通过指向的是使用者行为的软件，通常会加上硬件平台、系统软件、应用软件和用户个人偏好等等的一些信息。Accept则指的是告知服务器发送何种媒体类型。</p>
 <h2 id="如何选择一门好的后台语言">如何选择一门好的后台语言</h2>
 <p>如何选择一门好的后台语言似乎是大家都很感兴趣的问题？大概只是因为他们想要在一开始的时候去学一门很实用的语言——至少会经常用到，而不是学好就被遗弃了。或者它不会因为一门新的语言的出现而消亡。</p>
 <h3 id="javascript-1">JavaScript</h3>
@@ -1205,11 +1211,16 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
   <span class="op">}</span>)<span class="op">;</span>
 <span class="op">}</span>)<span class="op">;</span></code></pre></div>
 <p>像如MongoDB这类的数据库，也是存在数据模型，但说的却是嵌入子文档。在业务量大的情况下，数据库在考验公司的技术能力，想想便觉得Amazon RDS挺好的。</p>
+<h3 id="搜索引擎">搜索引擎</h3>
 <h2 id="如何选择前端框架">如何选择前端框架</h2>
 <p>选择前端框架似乎是一件很难的事，然而这件事情并不是看上去那么难。只是有时候你只想追随潮流，或者有一些些偏见。</p>
+<h3 id="angular">Angular</h3>
 <p>Angular.js对于后端人员写前端代码来说，是一个非常不错的选择。它也用于在本应用中写APP，只是不知道它的2.0大坑让多少人没了兴趣。</p>
+<h3 id="react">React</h3>
 <p>React似乎很受市场欢迎，各种各样的新知识。但是它的发展远不如我的预期的好，理想的情况下应该类似于Ionic可以直接在Web和手机应用上。</p>
+<h3 id="vue">Vue</h3>
 <p>Vue.js轻量级的框架。</p>
+<h3 id="jquery">jQuery</h3>
 <p>jQuery还是一个不错的选择，不仅仅对于学习来说，而且对于工作来说也是如此。如果你们不是新起一个项目或者重构旧的项目，那么必然你是没有多少机会去超越DOM。而如果这时候尝试去这样做会付出一定的代价，如我在前端演进史所说的那样——晚点做出选择，可能会好一点。因为谁说jQuery不会去解放DOM，React带来的一些新的思想可能就比不上它的缺点。除此，jQuery耕织几年的生态系统也是不可忽略。</p>
 <h2 id="restfuljson与ajax">RESTful、JSON与Ajax</h2>
 <h3 id="ajax">Ajax</h3>
@@ -1235,13 +1246,28 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <li>快捷键！快捷键！快捷键！</li>
 <li>使用可以帮助你快速工作的工具——如启动器。</li>
 </ol>
-<h2 id="构建系统">构建系统</h2>
+<h2 id="一个web应用的构建过程">一个Web应用的构建过程</h2>
 <blockquote>
 <p>构建系统(build system)是用来从源代码生成用户可以使用的目标的自动化工具。目标可以包括库、可执行文件、或者生成的脚本等等。</p>
 </blockquote>
-<p>常用的构建系统包括GNU Make、GNU autotools、CMake、Apache Ant（主要用于JAVA）。此外，所有的集成开发环境（IDE）比如Qt Creator、Microsoft Visual Studio和Eclipse都对他们支持的语言添加了自己的构建系统配置工具。通常IDE中的构建系统只是基于控制台的构建系统（比如Autotool和CMake）的前端。</p>
+<h3 id="构建工具">构建工具</h3>
+<p>常用的构建工具包括GNU Make、GNU autotools、CMake、Apache Ant（主要用于JAVA）。此外，所有的集成开发环境（IDE）比如Qt Creator、Microsoft Visual Studio和Eclipse都对他们支持的语言添加了自己的构建系统配置工具。通常IDE中的构建系统只是基于控制台的构建系统（比如Autotool和CMake）的前端。</p>
 <p>对比于Web应用开发来说，构建系统应该还包括应用打包(如Java中的Jar包，或者用于部署的RPM包、源代码分析、测试覆盖率分析等等。</p>
+<h3 id="构建过程">构建过程</h3>
+<p>在这里，我们要使用到的一个工具是Grunt，当然对于Gulp也是类似的。</p>
+<blockquote>
 <p>Grunt是基于Node.js的项目构建工具。它可以自动运行你所设定的任务。Grunt拥有数量庞大的插件，几乎任何你所要做的事情都可以用Grunt实现。</p>
+</blockquote>
+<h4 id="语法检测">语法检测</h4>
+<p>JSHint，JSLint</p>
+<h4 id="自动化测试">自动化测试</h4>
+<p>Mocha</p>
+<h4 id="打包">打包</h4>
+<p>Webpack</p>
+<h4 id="上传">上传</h4>
+<p>AWS S3</p>
+<h4 id="发布">发布</h4>
+<p>RPM</p>
 <h2 id="git与版本管理">Git与版本管理</h2>
 <p>从一般开发者的角度来看，git有以下功能：</p>
 <ol type="1">
@@ -1341,7 +1367,7 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <h2 id="如何编写测试">如何编写测试</h2>
 <p>写测试相比于写代码来说算是一种简单的事。多数时候，我们并不需要考虑复杂的逻辑。我们只需要按照我们的代码逻辑，对代码的行为进行覆盖。</p>
 <p>这时，我们需要学会更好地去测试代码——测试金字塔。</p>
-<h2 id="测试金字塔">测试金字塔</h2>
+<h3 id="测试金字塔">测试金字塔</h3>
 <p>测试金字塔是由Mike Cohn提出的，如下图所示：</p>
 <figure>
 <img src="chapters/images/test-pyramid.png" alt="测试金字塔" /><figcaption>测试金字塔</figcaption>
@@ -1408,6 +1434,11 @@ expect( foo.callMe ).toHaveBeenCalled();</code></pre>
 <li>然后，你要去测试它。这样你就知道需要什么，实际上要做到这些也不是一些难事。</li>
 </ul>
 <p>只是首先，我们要知道我们要自己需要这些。</p>
+<h3 id="命名">命名</h3>
+<h3 id="函数长度">函数长度</h3>
+<h3 id="函数嵌套">函数嵌套</h3>
+<h3 id="重复代码">重复代码</h3>
+<h3 id="测试用例">测试用例</h3>
 <h2 id="代码重构">代码重构</h2>
 <p>什么是重构?</p>
 <blockquote>
@@ -1684,6 +1715,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>我们这里说的前端缓存可以理解为一般使用的cdn技术，利用squid等做前端缓冲技术，主要还是针对静态文件类型，比如图片，css,js,html等静态文件。</p>
 <h3 id="客户端缓存">客户端缓存</h3>
 <p>浏览器端的缓存，可以让用户请求一次之后，下一次不在从服务器端请求数据，直接从本地缓存读取，可以减轻服务器负担也可以加快用户的访问速度。</p>
+<h3 id="html5-离线缓存">HTML5 离线缓存</h3>
 <h2 id="可配置">可配置</h2>
 <p>让我们写的Web应用可配置是一项很有挑战性，也很实用的技能。</p>
 <p>当我们上线了我们的新功能的时候，这时候如果有个Bug，那么我们是下线么？要知道这个版本里面包含了很多的bug修复。如果在这个设计这个新功能的时候，我们有一个可配置和Toogle，那么我们就不需要下线了。只需要切的这个toggle，就可以解决问题了。</p>
@@ -2105,6 +2137,8 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </blockquote>
 <h2 id="持续集成">持续集成</h2>
 <p>更关注代码质量。持续集成是为了确保随着需求变化而变化的代码，在实现功能的同时，质量不受影响。因此，在每一次构建后会运行单元测试，保证代码级的质量。单元测试会针对每一个特定的输入去判断和观察输出的结果，而单元测试的粒度则用来平衡持续集成的质量和速度。</p>
+<h3 id="瀑布流式开发">瀑布流式开发</h3>
+<h3 id="小步前进">小步前进</h3>
 <h2 id="自动化构建">自动化构建</h2>
 <p>自动化构建是一个很大、很广的领域，并且涉及到相当多的知识面。</p>
 <p>几十年前，Unix世界就已经有了Make，而Java世界有Ant，Maven，现在则有Grunt和Gulp。</p>
@@ -2115,6 +2149,9 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>云基础设施</li>
 <li>以软件为中心的哲学</li>
 </ol>
+<h3 id="自动化">自动化</h3>
+<h3 id="devops">DevOps</h3>
+<h3 id="云基础">云基础</h3>
 <h1 id="遗留系统">遗留系统</h1>
 <p>尽管维基百科上对遗留系统的定义是:</p>
 <blockquote>
@@ -2123,7 +2160,9 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>但是实际上，当你看到某个网站宣称用新的框架来替换旧的框架的时候，你应该知晓他们原有的系统是遗留系统。人们已经不想在上面工作了，很多代码也不知道是干什么的，也没有人想去深究——毕竟不是自己的代码。判断是否是遗留代码的条件很简单，维护成本是否比开发成本高很多。</p>
 <h2 id="遗留代码">遗留代码</h2>
 <p>我们生活息息相关的很多软件里满是错误、脆弱，并且难以扩展，这就是我们说的“遗留代码”。</p>
+<h3 id="什么是遗留代码">什么是遗留代码</h3>
 <p>什么是遗留代码？没有自动化测试的代码就是遗留代码，不管它是十年前写的，还是昨天写的。</p>
+<h3 id="遗留代码的问题">遗留代码的问题</h3>
 <h2 id="如何修改代码">如何修改代码</h2>
 <blockquote>
 <p>即使是最训练有素的开发团队，也不能保证始终编写出清晰高效的代码。</p>
@@ -2138,19 +2177,15 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </ol>
 <p>在有测试的情况下重构现有的代码才是安全的。而这些测试用例也是功能的体现，功能首先要得到保证了，然后才能保证一切都可以正常。</p>
 <p>。。。</p>
+<h3 id="测试">测试</h3>
+<h3 id="重构-3">重构</h3>
+<h3 id="修改测试">修改测试</h3>
+<h3 id="重构-4">重构</h3>
 <h2 id="网站重构">网站重构</h2>
 <blockquote>
 <p>应包含结构、行为、表现三层次的分离以及优化，行内分工优化，以及以技术与数据、人文为主导的交互优化等。</p>
 </blockquote>
-<p>深层次的网站重构应该考虑的方面</p>
-<ul>
-<li>减少代码间的耦合</li>
-<li>让代码保持弹性</li>
-<li>严格按规范编写代码</li>
-<li>设计可扩展的API</li>
-<li>代替旧有的框架、语言</li>
-<li>增强用户体验</li>
-</ul>
+<h3 id="速度优化">速度优化</h3>
 <p>通常来说对于速度的优化也包含在重构中</p>
 <ul>
 <li>压缩JS、CSS、image等前端资源(通常是由服务器来解决)</li>
@@ -2159,6 +2194,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>对于JS DOM的优化</li>
 <li>HTTP服务器的文件缓存</li>
 </ul>
+<h3 id="功能加强">功能加强</h3>
 <p>可以应用的的方面</p>
 <ul>
 <li>解耦复杂的模块 -&gt; 微服务</li>
@@ -2166,6 +2202,16 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>针对于内容创建或预留API</li>
 <li>需要添加新的API</li>
 <li>用新的语言、框架代替旧的框架(如Scala,Node.js,React)</li>
+</ul>
+<h3 id="模块重构">模块重构</h3>
+<p>深层次的网站重构应该考虑的方面</p>
+<ul>
+<li>减少代码间的耦合</li>
+<li>让代码保持弹性</li>
+<li>严格按规范编写代码</li>
+<li>设计可扩展的API</li>
+<li>代替旧有的框架、语言</li>
+<li>增强用户体验</li>
 </ul>
 <h1 id="回顾与新架构">回顾与新架构</h1>
 <p>在我开始接触架构设计的时候，我对于这个知识点觉得很奇怪。因为架构设计看上去是一个很复杂的话题，然而他是属于设计的一部分。如果你懂得什么是美、什么是丑，那么我想你也是懂得设计的。而设计是一件很有意思的事——刚开始写字时，我们被要求去临摹别人的字体。</p>
@@ -2194,6 +2240,10 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <figure>
 <img src="chapters/images//happy-retro.jpg" alt="Retro" /><figcaption>Retro</figcaption>
 </figure>
+<h3 id="well">Well</h3>
+<h3 id="less-well">Less Well</h3>
+<h3 id="suggestion">Suggestion</h3>
+<h3 id="action">Action</h3>
 <h2 id="浮现式设计">浮现式设计</h2>
 <p>设计模式不是一开始就有的，好的软件也不是一开始就设计成现在这样的，好的设计亦是如此。</p>
 <p>导致我们重构现有系统的原因有很多，但是多数是因为原来的代码变得越来越不可读，并且重构的风险太大了。在实现业务逻辑的时候，我们快速地用代码实现，没有测试，没有好的设计。</p>
@@ -2227,7 +2277,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>超长的类</li>
 <li>等等</li>
 </ol>
-<h3 id="重构-3">重构</h3>
+<h3 id="重构-5">重构</h3>
 <p>还好我们在一开始的时候写了一些测试，这让我们可以有足够的可能性来重构代码，而使得其不至于变成遗留代码。而这也是我们推崇的一些基本实践：</p>
 <blockquote>
 <p>红 -&gt; 绿 -&gt; 重构</p>

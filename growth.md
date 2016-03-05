@@ -348,6 +348,8 @@ curl -v https://www.phodal.com
 
 ###从HTML到页面显示
 
+HTML的渲染过程
+
 ![Render HTML](chapters/chapter1/render-html.jpg)
 
 
@@ -1241,54 +1243,6 @@ para.style.color="blue";
 
 就最几年的解耦趋势来看，它在变得更小，变成一系列的服务。并向前台提供很多RESTful API，看上去有点像提供一些辅助性的工作。
 
-从浏览器到服务器
----
-
-如果你的操作系统带有cURL[^cURL]这个软件(在GNU/Linux、Mac OS都自带这个工具，Windows用户可以从[http://curl.haxx.se/download.html](http://curl.haxx.se/download.html)下载到)，那么我们可以直接用下面的命令来看这看这个过程[^HTTP2cURL](-v 参数可以显示一次http通信的整个过程)：
-
-```
-curl -v https://www.phodal.com
-```
-
-我们就会看到下面的响应过程:
-
-```bash
-* Rebuilt URL to: https://www.phodal.com/
-*   Trying 54.69.23.11...
-* Connected to www.phodal.com (54.69.23.11) port 443 (#0)
-* TLS 1.2 connection using TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
-* Server certificate: www.phodal.com
-* Server certificate: COMODO RSA Domain Validation Secure Server CA
-* Server certificate: COMODO RSA Certification Authority
-* Server certificate: AddTrust External CA Root
-> GET / HTTP/1.1
-> Host: www.phodal.com
-> User-Agent: curl/7.43.0
-> Accept: */*
->
-< HTTP/1.1 403 Forbidden
-< Server: phodal/0.19.4
-< Date: Tue, 13 Oct 2015 05:32:13 GMT
-< Content-Type: text/html; charset=utf-8
-< Content-Length: 170
-< Connection: keep-alive
-<
-<html>
-<head><title>403 Forbidden</title></head>
-<body bgcolor="white">
-<center><h1>403 Forbidden</h1></center>
-<hr><center>phodal/0.19.4</center>
-</body>
-</html>
-* Connection #0 to host www.phodal.com left intact
-```
-
-我们尝试用cURL去访问我的网站，会根据访问的域名找出其IP，通常这个映射关系是来源于ISP缓存DNS（英语：Domain Name System）服务器[^DNSServer]。
-
-以“\*”开始的前8行是一些连接相关的信息，称为**响应首部**。我们向域名 [https://www.phodal.com/](https://www.phodal.com/)发出了请求，接着DNS服务器告诉了我们网站服务器的IP，即54.69.23.11。出于安全考虑，在这里我们的示例，我们是以HTTPS协议为例，所以在这里连接的端口是443。因为使用的是HTTPS协议，所以在这里会试图去获取服务器证书，接着获取到了域名相关的证书信息。
-
-随后以“>”开始的内容，便是向Web服务器发送请求。Host即是我们要访问的主机的域名，GET / 则代表着我们要访问的是根目录，如果我们要访问 [https://www.phodal.com/about/](https://www.phodal.com/about/)页面在这里，便是GET资源文件/about。紧随其后的是HTTP的版本号（HTTP/1.1）。User-Agent通过指向的是使用者行为的软件，通常会加上硬件平台、系统软件、应用软件和用户个人偏好等等的一些信息。Accept则指的是告知服务器发送何种媒体类型。
-
 如何选择一门好的后台语言
 ---
 
@@ -1454,16 +1408,27 @@ User.sync({force: true}).then(function () {
 
 像如MongoDB这类的数据库，也是存在数据模型，但说的却是嵌入子文档。在业务量大的情况下，数据库在考验公司的技术能力，想想便觉得Amazon RDS挺好的。
 
+###搜索引擎
+
+
 如何选择前端框架
 ---
 
 选择前端框架似乎是一件很难的事，然而这件事情并不是看上去那么难。只是有时候你只想追随潮流，或者有一些些偏见。
 
+###Angular
+
 Angular.js对于后端人员写前端代码来说，是一个非常不错的选择。它也用于在本应用中写APP，只是不知道它的2.0大坑让多少人没了兴趣。
+
+###React
 
 React似乎很受市场欢迎，各种各样的新知识。但是它的发展远不如我的预期的好，理想的情况下应该类似于Ionic可以直接在Web和手机应用上。
 
+###Vue
+
 Vue.js轻量级的框架。
+
+###jQuery
 
 jQuery还是一个不错的选择，不仅仅对于学习来说，而且对于工作来说也是如此。如果你们不是新起一个项目或者重构旧的项目，那么必然你是没有多少机会去超越DOM。而如果这时候尝试去这样做会付出一定的代价，如我在前端演进史所说的那样——晚点做出选择，可能会好一点。因为谁说jQuery不会去解放DOM，React带来的一些新的思想可能就比不上它的缺点。除此，jQuery耕织几年的生态系统也是不可忽略。
 
@@ -1510,18 +1475,42 @@ MVVM 在使用当中，通常还会利用双向绑定技术，使得 Model 变�
 2. 快捷键！快捷键！快捷键！
 3. 使用可以帮助你快速工作的工具——如启动器。
 
-构建系统
+一个Web应用的构建过程
 ---
 
 > 构建系统(build system)是用来从源代码生成用户可以使用的目标的自动化工具。目标可以包括库、可执行文件、或者生成的脚本等等。
 
-常用的构建系统包括GNU Make、GNU autotools、CMake、Apache Ant（主要用于JAVA）。此外，所有的集成开发环境（IDE）比如Qt Creator、Microsoft Visual Studio和Eclipse都对他们支持的语言添加了自己的构建系统配置工具。通常IDE中的构建系统只是基于控制台的构建系统（比如Autotool和CMake）的前端。
+###构建工具
+
+常用的构建工具包括GNU Make、GNU autotools、CMake、Apache Ant（主要用于JAVA）。此外，所有的集成开发环境（IDE）比如Qt Creator、Microsoft Visual Studio和Eclipse都对他们支持的语言添加了自己的构建系统配置工具。通常IDE中的构建系统只是基于控制台的构建系统（比如Autotool和CMake）的前端。
 
 对比于Web应用开发来说，构建系统应该还包括应用打包(如Java中的Jar包，或者用于部署的RPM包、源代码分析、测试覆盖率分析等等。
- 
 
-Grunt是基于Node.js的项目构建工具。它可以自动运行你所设定的任务。Grunt拥有数量庞大的插件，几乎任何你所要做的事情都可以用Grunt实现。
+###构建过程
 
+在这里，我们要使用到的一个工具是Grunt，当然对于Gulp也是类似的。
+
+> Grunt是基于Node.js的项目构建工具。它可以自动运行你所设定的任务。Grunt拥有数量庞大的插件，几乎任何你所要做的事情都可以用Grunt实现。
+
+####语法检测
+
+JSHint，JSLint
+
+####自动化测试
+
+Mocha
+
+####打包
+
+Webpack
+
+####上传
+
+AWS S3
+
+####发布
+
+RPM
 
 Git与版本管理
 ---
@@ -1675,7 +1664,7 @@ Tasking
 
 这时，我们需要学会更好地去测试代码——测试金字塔。
 
-##测试金字塔
+###测试金字塔
 
 测试金字塔是由Mike Cohn提出的，如下图所示：
 
@@ -1772,6 +1761,17 @@ Selenium与自动化测试
  - 然后，你要去测试它。这样你就知道需要什么，实际上要做到这些也不是一些难事。
 
 只是首先，我们要知道我们要自己需要这些。
+
+###命名
+
+###函数长度
+
+###函数嵌套
+
+###重复代码
+
+###测试用例
+
 
 代码重构
 ---
@@ -2181,6 +2181,8 @@ Web缓存是显著提高web站点的性能最有效的方法之一。主要有:
 
 浏览器端的缓存，可以让用户请求一次之后，下一次不在从服务器端请求数据，直接从本地缓存读取，可以减轻服务器负担也可以加快用户的访问速度。
 
+###HTML5 离线缓存
+
 
 可配置
 ---
@@ -2309,11 +2311,6 @@ github.com / referral | 281
 等等等。
 
 除此，我们可以分析用户的行为，如他们访问的主要网站、URL等等。
-
-
-
-
-
 
 
 SEO
@@ -2650,12 +2647,19 @@ UX入门
 
 更关注代码质量。持续集成是为了确保随着需求变化而变化的代码，在实现功能的同时，质量不受影响。因此，在每一次构建后会运行单元测试，保证代码级的质量。单元测试会针对每一个特定的输入去判断和观察输出的结果，而单元测试的粒度则用来平衡持续集成的质量和速度。
 
+###瀑布流式开发
+
+###小步前进
+
+
 自动化构建
 ---
 
 自动化构建是一个很大、很广的领域，并且涉及到相当多的知识面。
 
 几十年前，Unix世界就已经有了Make，而Java世界有Ant，Maven，现在则有Grunt和Gulp。
+
+
 
 持续交付
 ---
@@ -2664,6 +2668,12 @@ UX入门
 2. DevOps
 3. 云基础设施
 4. 以软件为中心的哲学
+
+###自动化
+
+###DevOps
+
+###云基础
 
 遗留系统
 ===
@@ -2680,7 +2690,11 @@ UX入门
 
 我们生活息息相关的很多软件里满是错误、脆弱，并且难以扩展，这就是我们说的“遗留代码”。
 
+###什么是遗留代码
+
 什么是遗留代码？没有自动化测试的代码就是遗留代码，不管它是十年前写的，还是昨天写的。
+
+###遗留代码的问题
 
 如何修改代码
 ---
@@ -2700,19 +2714,20 @@ So，如何开始修改代码？
 
 。。。
 
+###测试
+
+###重构
+
+###修改测试
+
+###重构
+
 网站重构
 ----
 
 > 应包含结构、行为、表现三层次的分离以及优化，行内分工优化，以及以技术与数据、人文为主导的交互优化等。
 
-深层次的网站重构应该考虑的方面
-
- - 减少代码间的耦合
- - 让代码保持弹性
- - 严格按规范编写代码
- - 设计可扩展的API
- - 代替旧有的框架、语言
- - 增强用户体验
+###速度优化
 
 通常来说对于速度的优化也包含在重构中
 
@@ -2722,6 +2737,8 @@ So，如何开始修改代码？
  - 对于JS DOM的优化
  - HTTP服务器的文件缓存
 
+###功能加强
+
 可以应用的的方面
  
  - 解耦复杂的模块 -> 微服务
@@ -2729,6 +2746,17 @@ So，如何开始修改代码？
  - 针对于内容创建或预留API
  - 需要添加新的API
  - 用新的语言、框架代替旧的框架(如Scala,Node.js,React)
+
+###模块重构
+
+深层次的网站重构应该考虑的方面
+
+ - 减少代码间的耦合
+ - 让代码保持弹性
+ - 严格按规范编写代码
+ - 设计可扩展的API
+ - 代替旧有的框架、语言
+ - 增强用户体验
 
 回顾与新架构
 ===
@@ -2764,6 +2792,15 @@ Retro四个维度:
 该模式的特点是会让我们更多的关注less well，关注我们做的不好的那些。
 
 ![Retro](chapters/images//happy-retro.jpg)
+
+###Well
+
+###Less Well
+
+###Suggestion
+
+###Action
+
 
 浮现式设计
 ---
