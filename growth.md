@@ -1803,7 +1803,7 @@ Windows/Linux: ``Ctrl``+``Alt``+``M``
 
 鼠标: Refactor | Extract | Method
 
-####重构之前
+**重构之前**
 
 以重构一书代码为例，重构之前的代码
 
@@ -1823,7 +1823,7 @@ public class extract {
 }
 ```
 
-####重构
+**重构**
 
 选中
 
@@ -1842,7 +1842,7 @@ System.out.println("amount" + amount);
 
 那么重构就完成了。
 
-####重构之后
+**重构之后**
 
 IDE就可以将方法提出来
 
@@ -1865,7 +1865,7 @@ public class extract {
 }
 ```
 
-####重构
+**重构**
 
 还有一种就以Intellij IDEA的示例为例，这像是在说其的智能。
 
@@ -1923,7 +1923,7 @@ Windows/Linux: ``Ctrl``+``Alt``+``M``
 
 鼠标: Refactor | Inline
 
-####重构之前
+**重构之前**
 
 ```java
 public class extract {
@@ -1948,7 +1948,7 @@ public class extract {
 
 再轻轻地回车，Refactor就这么结束了。。
 
-####Intellij Idea 内联临时变量
+**Intellij Idea 内联临时变量**
 
 以书中的代码为例
 
@@ -1983,7 +1983,7 @@ Windows/Linux:  木有
 
 鼠标: **Refactor** | ``Replace Temp with Query``
 
-####重构之前
+**重构之前**
 
 过多的临时变量会让我们写出更长的函数，函数不应该太多，以便使功能单一。这也是重构的另外的目的所在，只有函数专注于其功能，才会更容易读懂。
 
@@ -2004,7 +2004,7 @@ public class replaceTemp {
 }
 ```
 
-####重构
+**重构**
 
 选中``basePrice``很愉快地拿鼠标点上面的重构
 

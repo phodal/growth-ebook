@@ -232,16 +232,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#云基础">云基础</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#遗留系统">遗留系统</a><ul>
+<li><a href="#遗留系统与修改代码">遗留系统与修改代码</a><ul>
 <li><a href="#遗留代码">遗留代码</a><ul>
 <li><a href="#什么是遗留代码">什么是遗留代码</a></li>
 <li><a href="#遗留代码的问题">遗留代码的问题</a></li>
 </ul></li>
 <li><a href="#如何修改代码">如何修改代码</a><ul>
 <li><a href="#测试">测试</a></li>
-<li><a href="#重构-3">重构</a></li>
+<li><a href="#重构">重构</a></li>
 <li><a href="#修改测试">修改测试</a></li>
-<li><a href="#重构-4">重构</a></li>
+<li><a href="#重构-1">重构</a></li>
 </ul></li>
 <li><a href="#网站重构">网站重构</a><ul>
 <li><a href="#速度优化">速度优化</a></li>
@@ -259,7 +259,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="#浮现式设计">浮现式设计</a><ul>
 <li><a href="#意图导向">意图导向</a></li>
-<li><a href="#重构-5">重构</a></li>
+<li><a href="#重构-2">重构</a></li>
 <li><a href="#模式与演进">模式与演进</a></li>
 </ul></li>
 <li><a href="#架构模式">架构模式</a><ul>
@@ -1246,6 +1246,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <li>快捷键！快捷键！快捷键！</li>
 <li>使用可以帮助你快速工作的工具——如启动器。</li>
 </ol>
+<p>不过不得不提到的一点是：你需要去考虑这个需求是不是一个坑的问题。如果这是个一个坑，那么你应该尽早的去反馈这个问题。沟通越早，成本越低。</p>
 <h2 id="一个web应用的构建过程">一个Web应用的构建过程</h2>
 <blockquote>
 <p>构建系统(build system)是用来从源代码生成用户可以使用的目标的自动化工具。目标可以包括库、可执行文件、或者生成的脚本等等。</p>
@@ -1455,7 +1456,7 @@ expect( foo.callMe ).toHaveBeenCalled();</code></pre>
 <p>Mac: <code>alt</code>+<code>command</code>+<code>M</code></p>
 <p>Windows/Linux: <code>Ctrl</code>+<code>Alt</code>+<code>M</code></p>
 <p>鼠标: Refactor | Extract | Method</p>
-<h4 id="重构之前">重构之前</h4>
+<p><strong>重构之前</strong></p>
 <p>以重构一书代码为例，重构之前的代码</p>
 <div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> extract {
     <span class="kw">private</span> String _name;
@@ -1470,7 +1471,7 @@ expect( foo.callMe ).toHaveBeenCalled();</code></pre>
     <span class="kw">private</span> <span class="dt">void</span> <span class="fu">printBanner</span>() {
     }
 }</code></pre></div>
-<h4 id="重构">重构</h4>
+<p><strong>重构</strong></p>
 <p>选中</p>
 <div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java">System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;name:&quot;</span> + _name);
 System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;amount&quot;</span> + amount);</code></pre></div>
@@ -1481,7 +1482,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>输入</p>
 <pre><code> printDetails</code></pre>
 <p>那么重构就完成了。</p>
-<h4 id="重构之后">重构之后</h4>
+<p><strong>重构之后</strong></p>
 <p>IDE就可以将方法提出来</p>
 <div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> extract {
     <span class="kw">private</span> String _name;
@@ -1499,7 +1500,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
     <span class="kw">private</span> <span class="dt">void</span> <span class="fu">printBanner</span>() {
     }
 }</code></pre></div>
-<h4 id="重构-1">重构</h4>
+<p><strong>重构</strong></p>
 <p>还有一种就以Intellij IDEA的示例为例，这像是在说其的智能。</p>
 <div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> extract {
     <span class="kw">public</span> <span class="dt">void</span> <span class="fu">method</span>() {
@@ -1535,7 +1536,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>Mac: <code>alt</code>+<code>command</code>+<code>M</code></p>
 <p>Windows/Linux: <code>Ctrl</code>+<code>Alt</code>+<code>M</code></p>
 <p>鼠标: Refactor | Inline</p>
-<h4 id="重构之前-1">重构之前</h4>
+<p><strong>重构之前</strong></p>
 <div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> extract {
 
     <span class="kw">public</span> <span class="dt">void</span> <span class="fu">method</span>() {
@@ -1555,7 +1556,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <img src="chapters/images/inline.jpg" alt="Inline Method" /><figcaption>Inline Method</figcaption>
 </figure>
 <p>再轻轻地回车，Refactor就这么结束了。。</p>
-<h4 id="intellij-idea-内联临时变量">Intellij Idea 内联临时变量</h4>
+<p><strong>Intellij Idea 内联临时变量</strong></p>
 <p>以书中的代码为例</p>
 <div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="dt">double</span> basePrice = anOrder.<span class="fu">basePrice</span>();
 <span class="kw">return</span> (basePrice &gt; <span class="dv">1000</span>);</code></pre></div>
@@ -1571,7 +1572,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>Windows/Linux: 木有</p>
 <p>或者: <code>Shift</code>+<code>alt</code>+<code>command</code>+<code>T</code> 再选择 <code>Replace Temp with Query</code></p>
 <p>鼠标: <strong>Refactor</strong> | <code>Replace Temp with Query</code></p>
-<h4 id="重构之前-2">重构之前</h4>
+<p><strong>重构之前</strong></p>
 <p>过多的临时变量会让我们写出更长的函数，函数不应该太多，以便使功能单一。这也是重构的另外的目的所在，只有函数专注于其功能，才会更容易读懂。</p>
 <p>以书中的代码为例</p>
 <div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">import java.lang.System;</span>
@@ -1586,7 +1587,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
         }
     }
 }</code></pre></div>
-<h4 id="重构-2">重构</h4>
+<p><strong>重构</strong></p>
 <p>选中<code>basePrice</code>很愉快地拿鼠标点上面的重构</p>
 <figure>
 <img src="chapters/images/replace.jpg" alt="Replace Temp With Query" /><figcaption>Replace Temp With Query</figcaption>
@@ -2152,12 +2153,22 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="自动化">自动化</h3>
 <h3 id="devops">DevOps</h3>
 <h3 id="云基础">云基础</h3>
-<h1 id="遗留系统">遗留系统</h1>
+<h1 id="遗留系统与修改代码">遗留系统与修改代码</h1>
 <p>尽管维基百科上对遗留系统的定义是:</p>
 <blockquote>
 <p>一种旧的方法、旧的技术、旧的计算机系统或应用程序。</p>
 </blockquote>
 <p>但是实际上，当你看到某个网站宣称用新的框架来替换旧的框架的时候，你应该知晓他们原有的系统是遗留系统。人们已经不想在上面工作了，很多代码也不知道是干什么的，也没有人想去深究——毕竟不是自己的代码。判断是否是遗留代码的条件很简单，维护成本是否比开发成本高很多。</p>
+<p>在维护这一类系统的过程中，我们可能会遇到一些原因来修改代码。如《修改代码的艺术》的一书中所说，修改软件有四大原因：</p>
+<ul>
+<li>增加特性</li>
+<li>修复Bug</li>
+<li>改善设计</li>
+<li>优化</li>
+</ul>
+<p>当我们修改代码之后，我们将继续引进新的Bug。</p>
+<p>参考阅读</p>
+<p>-《修改代码的艺术》</p>
 <h2 id="遗留代码">遗留代码</h2>
 <p>我们生活息息相关的很多软件里满是错误、脆弱，并且难以扩展，这就是我们说的“遗留代码”。</p>
 <h3 id="什么是遗留代码">什么是遗留代码</h3>
@@ -2178,9 +2189,9 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>在有测试的情况下重构现有的代码才是安全的。而这些测试用例也是功能的体现，功能首先要得到保证了，然后才能保证一切都可以正常。</p>
 <p>。。。</p>
 <h3 id="测试">测试</h3>
-<h3 id="重构-3">重构</h3>
+<h3 id="重构">重构</h3>
 <h3 id="修改测试">修改测试</h3>
-<h3 id="重构-4">重构</h3>
+<h3 id="重构-1">重构</h3>
 <h2 id="网站重构">网站重构</h2>
 <blockquote>
 <p>应包含结构、行为、表现三层次的分离以及优化，行内分工优化，以及以技术与数据、人文为主导的交互优化等。</p>
@@ -2277,7 +2288,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>超长的类</li>
 <li>等等</li>
 </ol>
-<h3 id="重构-5">重构</h3>
+<h3 id="重构-2">重构</h3>
 <p>还好我们在一开始的时候写了一些测试，这让我们可以有足够的可能性来重构代码，而使得其不至于变成遗留代码。而这也是我们推崇的一些基本实践：</p>
 <blockquote>
 <p>红 -&gt; 绿 -&gt; 重构</p>
