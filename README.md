@@ -1,4 +1,4 @@
-Growth——带你成为全栈工程师
+Growth——全栈工程师
 ===
 
 > 这个项目是开源Web学习应用[Growth](https://github.com/phodal/growth)的电子书高级版。
