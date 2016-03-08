@@ -3,6 +3,10 @@ Growth: 深入浅出全栈工程师
 
 > 这个项目是开源Web学习应用[Growth](https://github.com/phodal/growth)的电子书版。
 
+在线查看：[http://growth.phodal.com/](http://growth.phodal.com/)
+
+PDF | Mobi | Epub 版本：稍等!
+
 (PS: 这是继之前的《[教你设计物联网系统](https://github.com/phodal/designiot)》与《[GitHub 漫游指南](https://github.com/phodal/github-roam)》后的电子书，也是还在编写的《[RePractise](https://github.com/phodal/repractise)》的前传。 Growth是面向初中级Web开发者，而Repractise将面向中高级Web开发者。)
 
 本书是依据Web软件开发的迭代过程而编写的，主要内容如下:  
@@ -17,6 +21,8 @@ Growth: 深入浅出全栈工程师
  - 回顾与新架构
 
 其中部分内容来自于日常博客的整理，一些内容还在编写中，欢迎提交指导意见。
+
+反馈及意见请填写到：[https://jinshuju.net/f/ycfpdv](https://jinshuju.net/f/ycfpdv)
 
 应用下载
 ---
