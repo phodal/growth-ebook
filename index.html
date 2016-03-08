@@ -71,7 +71,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#webstorm还是sublime">WebStorm还是Sublime?</a></li>
 <li><a href="#语言也是一种工具">语言也是一种工具</a></li>
 </ul></li>
-<li><a href="#通用工具">通用工具</a><ul>
+<li><a href="#效率与工具">效率与工具</a><ul>
+<li><a href="#论快捷键">论快捷键</a></li>
 <li><a href="#快速启动软件">快速启动软件</a></li>
 <li><a href="#ide">IDE</a></li>
 <li><a href="#终端或命令提示符">终端或命令提示符</a></li>
@@ -338,12 +339,32 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>以前，习惯用Wordpress来写博客，因为可以有移动客户端，使用电脑时就不喜欢打开浏览器去写。</p>
 <p>等等</p>
 <p>等</p>
-<h2 id="通用工具">通用工具</h2>
+<h2 id="效率与工具">效率与工具</h2>
+<h3 id="论快捷键">论快捷键</h3>
 <p>由于我们可能使用不同的操作系统来完成不同的工具。下面就先说说一些通用的、不限操作的工具：</p>
 <h3 id="快速启动软件">快速启动软件</h3>
+<p>在我还不和道有这样的工具的时候，我都是把图标放在下面的任务栏里：</p>
+<figure>
+<img src="chapters/chapter1/windows-launch.png" alt="Windows任务栏" /><figcaption>Windows任务栏</figcaption>
+</figure>
+<p>直到有一天，我知道有这样的工具。这里不得不提到一本书《卓有成效的程序员》，在书中提到了很多提高效率的工具。使用快捷键是其中的一个，而还有一个是使用快速启动软件。于是，我在Windows上使用了Launcy:</p>
+<figure>
+<img src="chapters/chapter1/launchy.png" alt="Launchy" /><figcaption>Launchy</figcaption>
+</figure>
+<p>通过这个软件，我们可以在电脑上通过输入软件名，然后运行相关的软件。</p>
 <h3 id="ide">IDE</h3>
+<p>尽管在上一篇中，我们说过IDE和编辑器没有什么好争论的。但是如果是从头开始搭建环境的话，IDE是最好的——编辑器还需要安装相应的插件。所以，这也就是为什么面试的时候会用编辑器的原因。</p>
+<p>IDE的全称是集成开发环境，顾名思义即它集成了你需要用到的一些工具。而如果是编辑器的话，你需要自己去找寻合适的工具来做这件事。不过，这也意味着使用编辑器会有更多的自由度。如果你没有足够的时间去打造自己的开发环境就使用IDE吧。</p>
+<p>一般来说，他们都应该有下面的一些要素：</p>
+<p><strong>快捷键</strong></p>
+<p><strong>Code HighLight</strong></p>
+<p><strong>Auto Complete</strong></p>
+<p><strong>Syntax Check</strong></p>
 <h3 id="终端或命令提示符">终端或命令提示符</h3>
 <p>在开始写代码的时候，使用GUI可能是难以戒掉的一个习惯。但是当你习惯了使用终端之后，或者说使用终端的工具，你会发现这是另外一片天空。对于GUI应用上同样的菜单来说，在终端上也会有同样的工具——只是你觉得记住更多的命令。而且不同的工具对于同一实现可能会不同的规范，而GUI应用则会有一致的风格。不过，总的来说使用终端是一个很有益的习惯——从速度、便捷性。忘了提到一点，当你使用Linux服务器的时候，你不得不使用终端。</p>
+<figure>
+<img src="chapters/chapter1/linux-server-console.jpg" alt="Linux终端截图" /><figcaption>Linux终端截图</figcaption>
+</figure>
 <h3 id="包管理">包管理</h3>
 <p>虽然包管理不仅仅存在于操作系统中，还存在着语言的包管理工具。在操作系统中安装软件，最方便的东西莫过于包管理了。引自OpenSUSE官网的说明及图片:</p>
 <figure>
@@ -554,8 +575,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>我们尝试用cURL去访问我的网站，会根据访问的域名找出其IP，通常这个映射关系是来源于ISP缓存DNS（英语：Domain Name System）服务器[^DNSServer]。</p>
 <p>以“*”开始的前8行是一些连接相关的信息，称为<strong>响应首部</strong>。我们向域名 <a href="https://www.phodal.com/" class="uri">https://www.phodal.com/</a>发出了请求，接着DNS服务器告诉了我们网站服务器的IP，即54.69.23.11。出于安全考虑，在这里我们的示例，我们是以HTTPS协议为例，所以在这里连接的端口是443。因为使用的是HTTPS协议，所以在这里会试图去获取服务器证书，接着获取到了域名相关的证书信息。</p>
 <p>随后以“&gt;”开始的内容，便是向Web服务器发送请求。Host即是我们要访问的主机的域名，GET / 则代表着我们要访问的是根目录，如果我们要访问 <a href="https://www.phodal.com/about/" class="uri">https://www.phodal.com/about/</a>页面在这里，便是GET资源文件/about。紧随其后的是HTTP的版本号（HTTP/1.1）。User-Agent通过指向的是使用者行为的软件，通常会加上硬件平台、系统软件、应用软件和用户个人偏好等等的一些信息。Accept则指的是告知服务器发送何种媒体类型。</p>
+<h4 id="http协议">HTTP协议</h4>
+<p>说到这里，我们不得不说说HTTP协议——超文本传输协议。它也是一个基于文本的传输协议，这就是为什么你在上面看到的都是文本的传输过程。</p>
 <h3 id="从html到页面显示">从HTML到页面显示</h3>
-<p>HTML的渲染过程</p>
+<p>而浏览器接收到文本的时候，就要开始着手将HTML变成屏幕。下图是Chrome渲染页面的一个时间线：</p>
+<figure>
+<img src="chapters/chapter1/chrome-timeline.jpg" alt="Chrome渲染的Timeline" /><figcaption>Chrome渲染的Timeline</figcaption>
+</figure>
+<p>这个渲染过程如下图所示：</p>
 <figure>
 <img src="chapters/chapter1/render-html.jpg" alt="Render HTML" /><figcaption>Render HTML</figcaption>
 </figure>
