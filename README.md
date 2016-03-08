@@ -5,7 +5,7 @@ Growth: 深入浅出全栈工程师
 
 在线查看：[http://growth.phodal.com/](http://growth.phodal.com/)
 
-PDF | Mobi | Epub 版本：稍等!
+Epub 版本：[下载](https://github.com/phodal/growth-ebook/raw/gh-pages/growth.epub)
 
 (PS: 这是继之前的《[教你设计物联网系统](https://github.com/phodal/designiot)》与《[GitHub 漫游指南](https://github.com/phodal/github-roam)》后的电子书。)
 
