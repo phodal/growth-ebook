@@ -71,10 +71,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#webstorm还是sublime">WebStorm还是Sublime?</a></li>
 <li><a href="#语言也是一种工具">语言也是一种工具</a></li>
 </ul></li>
-<li><a href="#效率与工具">效率与工具</a><ul>
-<li><a href="#论快捷键">论快捷键</a></li>
+<li><a href="#提高效率的工具">提高效率的工具</a><ul>
 <li><a href="#快速启动软件">快速启动软件</a></li>
-<li><a href="#开发软件">开发软件</a></li>
+<li><a href="#ide">IDE</a></li>
+<li><a href="#debug工具">DEBUG工具</a></li>
 <li><a href="#终端或命令提示符">终端或命令提示符</a></li>
 <li><a href="#包管理">包管理</a></li>
 </ul></li>
@@ -339,8 +339,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>以前，习惯用Wordpress来写博客，因为可以有移动客户端，使用电脑时就不喜欢打开浏览器去写。</p>
 <p>等等</p>
 <p>等</p>
-<h2 id="效率与工具">效率与工具</h2>
-<h3 id="论快捷键">论快捷键</h3>
+<h2 id="提高效率的工具">提高效率的工具</h2>
+<p>在提交效率的N种方法里：有一个很重要的方法是使用快捷键。熟练掌握快捷键可以让我们随着自己的感觉编写程序——有时候如果我们手感不好，是不是就说明今天不适合写代码！笑~~</p>
 <p>由于我们可能使用不同的操作系统来完成不同的工具。下面就先说说一些通用的、不限操作的工具：</p>
 <h3 id="快速启动软件">快速启动软件</h3>
 <p>在我还不和道有这样的工具的时候，我都是把图标放在下面的任务栏里：</p>
@@ -352,7 +352,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <img src="chapters/chapter1/launchy.png" alt="Launchy" /><figcaption>Launchy</figcaption>
 </figure>
 <p>通过这个软件，我们可以在电脑上通过输入软件名，然后运行相关的软件。我们不再需要点击某个菜单，再从菜单里选中某个软件打开。</p>
-<h3 id="开发软件">开发软件</h3>
+<h3 id="ide">IDE</h3>
 <p>尽管在上一篇中，我们说过IDE和编辑器没有什么好争论的。但是如果是从头开始搭建环境的话，IDE是最好的——编辑器还需要安装相应的插件。所以，这也就是为什么面试的时候会用编辑器的原因。</p>
 <p>IDE的全称是集成开发环境，顾名思义即它集成了你需要用到的一些工具。而如果是编辑器的话，你需要自己去找寻合适的工具来做这件事。不过，这也意味着使用编辑器会有更多的自由度。如果你没有足够的时间去打造自己的开发环境就使用IDE吧。</p>
 <p>一般来说，他们都应该有下面的一些要素：</p>
@@ -364,6 +364,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 <p>而如果是编辑器的话，就需要自己去找寻这些相应的插件。</p>
 <p>IDE一般是针对特定语言才产生的，并且优化更好。而，编辑器则需要自己去搭配。这也意味着如果你需要在多个语言上工作时，并且喜欢折腾，你可以考虑使用编辑器。</p>
+<h3 id="debug工具">DEBUG工具</h3>
+<p>不得不提及的是在有些IDE自带了Debug工具，这点可能使得使用IDE更有优势。在简单的项目是，我们可能不需要这样的Debug工具。因为我们对我们的代码库比较熟悉，一个简单的问题一眼就知道是哪里的问题。而对于那些复杂的项目来说，可能就没有那么简单了。特别是当你来到一个新的大中型项目，一个简单的逻辑在实现上可能要经过一系列的函数才能处理完。</p>
+<p>这时候我们就需要Debug工具——对于前端开发来说，我们可能使用Chrome的Dev Tools。但是对于后端来说，我们就需要使用别的工具。如下图所示的是Intellij Idea的Debug界面：</p>
+<figure>
+<img src="chapters/chapter1/idea-debug.png" alt="Intellij Idea Debug" /><figcaption>Intellij Idea Debug</figcaption>
+</figure>
+<p>在Debug的过程中，我们可以根据代码的执行流程一步步向下执行。这也意味着，当出现Bug的时候我们可以更容易找到Bug。这就是为什么他叫Debug工具的原因了。</p>
 <h3 id="终端或命令提示符">终端或命令提示符</h3>
 <p>在开始写代码的时候，使用GUI可能是难以戒掉的一个习惯。但是当你习惯了使用终端之后，或者说使用终端的工具，你会发现这是另外一片天空。对于GUI应用上同样的菜单来说，在终端上也会有同样的工具——只是你觉得记住更多的命令。而且不同的工具对于同一实现可能会不同的规范，而GUI应用则会有一致的风格。不过，总的来说使用终端是一个很有益的习惯——从速度、便捷性。忘了提到一点，当你使用Linux服务器的时候，你不得不使用终端。</p>
 <figure>
@@ -387,6 +394,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 <p>我们经常会使用各式各样的包管理工具，来加速我们地日常使用。而不是Google某个软件，然后下载，接着安装。</p>
 <h2 id="环境搭建">环境搭建</h2>
+<p>由于我近期工具在Mac OS X上，所以先以Mac OS X为例。</p>
 <h3 id="搭建osx开发环境">搭建OSX开发环境</h3>
 <p><strong>Homebrew</strong></p>
 <blockquote>
@@ -421,6 +429,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <blockquote>
 <p>MacDown 是 Markdown 编辑器。</p>
 </blockquote>
+<p><strong>CheatSheet</strong></p>
+<blockquote>
+<p>CheatSheet 能够显示当前程序的快捷键列表，默认的快捷键是长按⌘。</p>
+</blockquote>
+<p><strong>SourceTree</strong></p>
+<blockquote>
+<p>SourceTree 是 Atlassian 公司出品的一款优秀的 Git 图形化客户端。</p>
+</blockquote>
+<p><strong>Alfred</strong></p>
+<blockquote>
+<p>Mac 用户不用鼠标键盘的必备神器，配合大量 Workflows，习惯之后可以大大减少操作时间。</p>
+</blockquote>
+<p>上手简单，调教成本在后期自定义 Workflows，不过有大量雷锋使用者提供的现成扩展，访问这里挑选喜欢的，并可以极其简单地根据自己的需要修改。</p>
 <p><strong>Vimium</strong></p>
 <blockquote>
 <p>Vimium 是一个 Google Chrome 扩展，让你可以纯键盘操作 Chrome。</p>
@@ -428,6 +449,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>相关参考：</p>
 <ul>
 <li><a href="https://gist.github.com/erikreagan/3259442">Mac web developer apps</a></li>
+<li><a href="https://github.com/macdao/ocds-guide-to-setting-up-mac">强迫症的 Mac 设置指南</a></li>
 </ul>
 <h3 id="搭建windows开发环境">搭建Windows开发环境</h3>
 <p><strong>Chocolatey</strong></p>
