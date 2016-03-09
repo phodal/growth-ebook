@@ -152,7 +152,7 @@ IDE一般是针对特定语言才产生的，并且优化更好。而，编辑�
 
 使用终端的优点在于我们可以摆脱鼠标的操作——这可以让我们更容易集中精力于完成任务。而这也是两种不同的选择，便捷还是更快。虽是如此，但是这也意味着学习Linux会越来戴上轻松。
 
-![Linux与Windows的学习曲线](chapters/chapter1/linux-server-console.jpg)
+![Linux与Windows的学习曲线](chapters/chapter1/linux-learn-line.png)
 
 虽然这是以Linux和Windows作了两个不同的对比，但是两个系统在终端工具上的差距是很大的。Linux自身的哲学鼓励使用命令行来完成任务，这也意味着在Linux上会有更多的工具可以在命令行下使用。虽然Windows上也可以——如使用CygWin来完成，但是这看上去并不是那么让人满意！
 
@@ -413,7 +413,7 @@ Web编程基础
 
 ###从浏览器到服务器
 
-如果你的操作系统带有cURL[^cURL]这个软件(在GNU/Linux、Mac OS都自带这个工具，Windows用户可以从[http://curl.haxx.se/download.html](http://curl.haxx.se/download.html)下载到)，那么我们可以直接用下面的命令来看这看这个过程[^HTTP2cURL](-v 参数可以显示一次http通信的整个过程)：
+如果你的操作系统带有cURL这个软件(在GNU/Linux、Mac OS都自带这个工具，Windows用户可以从[http://curl.haxx.se/download.html](http://curl.haxx.se/download.html)下载到)，那么我们可以直接用下面的命令来看这看这个过程(-v 参数可以显示一次http通信的整个过程)：
 
 ```
 curl -v https://www.phodal.com
@@ -458,6 +458,14 @@ curl -v https://www.phodal.com
 
 随后以“>”开始的内容，便是向Web服务器发送请求。Host即是我们要访问的主机的域名，GET / 则代表着我们要访问的是根目录，如果我们要访问 [https://www.phodal.com/about/](https://www.phodal.com/about/)页面在这里，便是GET资源文件/about。紧随其后的是HTTP的版本号（HTTP/1.1）。User-Agent通过指向的是使用者行为的软件，通常会加上硬件平台、系统软件、应用软件和用户个人偏好等等的一些信息。Accept则指的是告知服务器发送何种媒体类型。
 
+这个过程，大致如下图所示：
+
+![DNS到服务器的过程](chapters/chapter1/server-dns-forward.jpg)
+
+在图中，我们会发现解析DNS的时候，我们需要先本地DNS服务器查询。如果没有的话，再向根域名服务器查询——这个域名由哪个服务器来解析。直至最后拿到真正的服务器IP才能获取页面。
+
+当我们拿到相应的HTML、JS、CSS后，我们就开始渲染这个页面了。
+
 ####HTTP协议
 
 说到这里，我们不得不说说HTTP协议——超文本传输协议。它也是一个基于文本的传输协议，这就是为什么你在上面看到的都是文本的传输过程。
@@ -468,9 +476,24 @@ curl -v https://www.phodal.com
 
 ![Chrome渲染的Timeline](chapters/chapter1/chrome-timeline.jpg)
 
-这个渲染过程如下图所示：
+及其整个渲染过程如下图所示：
 
-![Render HTML](chapters/chapter1/render-html.jpg)
+![Render HTML](chapters/chapter1/render-html.png)
+
+（PS: 需要注意的是这里用的是WebKit内核的渲染过程，即Chrome和Safari等浏览器所使用的内核。）
+
+从上面的两图可以看出来第一步都Parser HTML，而Paser HTML实质上就是将其将解析为DOM Tree。与此同时，CSS解析器会解析CSS会产生CSS规则树。
+
+随后会根据生成的DOM树和CSS规则树来构建Render Tree，接着生成Render Tree的布局，最后就是绘制出Render Tree。
+
+
+详细的内容还得参见相关的书籍~~。
+
+相关内容：
+
+ - 《[How browsers work](http://taligarsiel.com/Projects/howbrowserswork1.htm)》
+
+
 
 
 
