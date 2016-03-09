@@ -271,6 +271,8 @@ Zsh 是一款功能强大终端（shell）软件，既可以作为一个交互�
 
 > ReText是一个使用 Markdown 语法和 reStructuredText (reST) 结构的文本编辑器，编辑的内容支持导出到 PDF、ODT 和 HTML 以及纯文本，支持即时预览、网页生成以及 HTML 语法高亮、全屏模式，可导出文件到 Google Docs 等。
 
+环境搭建完毕！现在，就让我们来看看如何学好一门语言！
+
 如何学好一门语言
 ---
 
