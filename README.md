@@ -3,11 +3,7 @@ Growth: 深入浅出全栈工程师
 
 > 《[RePractise](https://github.com/phodal/repractise)》前传，兼开源Web学习应用[Growth](https://github.com/phodal/growth)的电子书版。
 
-在线查看：[http://growth.phodal.com/](http://growth.phodal.com/)
-
-Epub 版本：[下载](https://github.com/phodal/growth-ebook/raw/gh-pages/growth.epub)
-
-(PS: 这是继之前的《[教你设计物联网系统](https://github.com/phodal/designiot)》与《[GitHub 漫游指南](https://github.com/phodal/github-roam)》后的电子书。)
+在线查看：[http://growth.phodal.com/](http://growth.phodal.com/)，Epub版本：[下载](https://github.com/phodal/growth-ebook/raw/gh-pages/growth.epub)
 
 本书是依据Web软件开发的迭代过程而编写的，主要内容如下:  
 
@@ -20,7 +16,7 @@ Epub 版本：[下载](https://github.com/phodal/growth-ebook/raw/gh-pages/growt
  - 遗留系统
  - 回顾与新架构
 
-其中部分内容来自于日常博客的整理，一些内容还在编写中，欢迎提交指导意见。
+这是继之前的《[教你设计物联网系统](https://github.com/phodal/designiot)》与《[GitHub 漫游指南](https://github.com/phodal/github-roam)》后的电子书。其中部分内容来自于日常博客的整理，一些内容还在编写中，欢迎提交指导意见。
 
 反馈及意见请填写到：[https://jinshuju.net/f/ycfpdv](https://jinshuju.net/f/ycfpdv)
 
