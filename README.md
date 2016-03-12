@@ -20,6 +20,12 @@ Growth: 深入浅出全栈工程师
 
 反馈及意见请填写到：[https://jinshuju.net/f/ycfpdv](https://jinshuju.net/f/ycfpdv)
 
+
+关注我的微信公众号，搜索Phodal:
+
+![QRCode](https://raw.githubusercontent.com/phodal/growth/master/www/img/wechat.jpg)
+
+
 应用下载
 ---
 
@@ -29,10 +35,6 @@ Growth: 深入浅出全栈工程师
 
 Donate
 ---
-
-没钱捧个人场(关注我的微信公众号):
-
-![QRCode](https://raw.githubusercontent.com/phodal/growth/master/www/img/wechat.jpg)
 
 有钱捧个钱场:
 
