@@ -240,7 +240,7 @@ Zsh 是一款功能强大终端（shell）软件，既可以作为一个交互�
 
 **Chocolatey**
 
-> Chocolatey是一个软件包管理工具，类似于Uutu下面的at-get,不过是运行在Widow环境下面。
+> Chocolatey是一个软件包管理工具，类似于Ubuntu下面的apt-get,不过是运行在Window环境下面。
 
 **Launchy** 
 
@@ -1510,6 +1510,14 @@ Domain（业务）是一个相当复杂的层级，这里是业务的核心。�
 
 业务是善变的，昨天我们可能还在和对手竞争谁先推出新功能，但是今天可能已经合并了。我们很难预见业务变化，但是我们应该能预见Controller是不容易变化的。在一些设计里面，这种模式就是Command模式。
 
+###Model
+
+###View
+
+###Controller
+
+
+
 后台即服务
 ---
 
@@ -1520,6 +1528,11 @@ Domain（业务）是一个相当复杂的层级，这里是业务的核心。�
 在一些更特殊的例子里，即有网页版和移动应用端，他们也开始使用同一个API。前端作为一个单页面的应用，或者有后台渲染的应用。其架构如下图所示：
 
 ![Backend As A Service](chapters/images/baas-diagram.png)
+
+###业务逻辑
+
+
+
 
 数据持久化
 ---
@@ -1536,6 +1549,8 @@ Domain（业务）是一个相当复杂的层级，这里是业务的核心。�
 4. LocalStorage。LocalStorage算是另外一种方式的CRUD。
 
 说了这么多都是废话，他们都是可以用类CRUD的方式操作。
+
+###文件存储
 
 ###数据库
 
@@ -1652,17 +1667,90 @@ MVVM 在使用当中，通常还会利用双向绑定技术，使得 Model 变�
 
 在这里，我们要使用到的一个工具是Grunt，当然对于Gulp也是类似的。
 
-> Grunt是基于Node.js的项目构建工具。它可以自动运行你所设定的任务。Grunt拥有数量庞大的插件，几乎任何你所要做的事情都可以用Grunt实现。
+> Gulp.js 是一个自动化构建工具，开发者可以使用它在项目开发过程中自动执行常见任务。Gulp.js 是基于 Node.js 构建的，利用 Node.js 流的威力，你可以快速构建项目并减少频繁的 IO 操作。Gulp.js 源文件和你用来定义任务的 Gulp 文件都是通过 JavaScript（或者 CoffeeScript ）源码来实现的。
+
+####入门指南
+
+1. 全局安装 gulp：
+
+```bash
+$ npm install --global gulp
+```
+
+2. 作为项目的开发依赖（devDependencies）安装：
+
+```bash
+$ npm install --save-dev gulp
+```
+
+3. 在项目根目录下创建一个名为 gulpfile.js 的文件：
+
+```javascript
+var gulp = require('gulp');
+
+gulp.task('default', function() {
+  // 将你的默认的任务代码放在这
+});
+```
+
+4. 运行 gulp：
+
+```bash
+$ gulp
+```
+
+默认的名为 default 的任务（task）将会被运行，在这里，这个任务并未做任何事情。
 
 ####代码质量检测工具
 
 当C还是一门新型的编程语言时，还存在一些未被原始编译器捕获的常见错误，所以程序员们开发了一个被称作lint的配套项目用来扫描源文件，查找问题。
 
-JSHint，JSLint
+对应于不同的语言都会有不同的lint工具，在JavaScript中就有JSLint。JavaScript是一门年轻、语法灵活多变且对格式要求相对松散的语言，因此这样的工具对于这门语言来说比较重要。
 
-####自动化测试
+2011年，一个叫Anton Kovalyov的前端程序员借助开源社区的力量弄出来了JSHint，其思想基本上和JSLint是一致的，但是其有一下几项优势： 
 
-Mocha
+ - 可配置规则，每个团队可以自己定义自己想要的代码规范。
+ - 对社区非常友好，社区支持度高。
+ - 可定制的结果报表。
+
+**安装及使用**
+
+```bash
+npm install jshint gulp-jshint --save-dev
+```
+
+示例代码:
+
+```javascript
+var jshint = require('gulp-jshint');
+var gulp   = require('gulp');
+ 
+gulp.task('lint', function() {
+  return gulp.src('./lib/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('YOUR_REPORTER_HERE'));
+});
+```
+
+####自动化测试工具
+
+一般来说，自动测试应该从两部分考虑：
+
+ - 单元测试
+ - 功能测试
+
+Mocha是一个可以运行在Node.js和浏览器环境里的测试框架，
+
+```
+var gulp = require('gulp');
+var mocha = require('gulp-mocha');
+ 
+gulp.task('default', function () {
+	return gulp.src('test.js', {read: false})
+		// gulp-mocha needs filepaths so you can't have any plugins before it 
+		.pipe(mocha({reporter: 'nyan'}));
+});
+```
 
 ####打包
 
@@ -1929,7 +2017,7 @@ Mock是一大类的方法，其中还有一个
 
 在这种理想的情况下，我们为什么不TDD呢?
 
-Selenium与自动化测试
+Selenium与功能测试的自动化
 ---
 
 > Selenium也是一个用于Web应用程序测试的工具。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样。支持的浏览器包括IE(7、8、9)、Mozilla Firefox、Mozilla Suite等。这个工具的主要功能包括：测试与浏览器的兼容性——测试你的应用程序看是否能够很好得工作在不同浏览器和操作系统之上。测试系统功能——创建衰退测试检验软件功能和用户需求。支持自动录制动作和自动生成.Net、Java、Perl等不同语言的测试脚本。
@@ -1951,7 +2039,11 @@ Selenium与自动化测试
 
 只是首先，我们要知道我们要自己需要这些。
 
+首先要说的就是程序员认为最难的一个话题了——命名。
+
 ###命名
+
+
 
 ###函数长度
 
@@ -2289,11 +2381,12 @@ public class replaceTemp {
 
 > 容器一般位于应用服务器之内，由应用服务器负责加载和维护。一个容器只能存在于一个应用服务器之内，一个应用服务器可以建立和维护多个容器。
 
+###Web容器
 
+Tomcat 服务器是一个免费的开放源代码的Web 应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP 程序的首选。对于一个初学者来说，可以这样认为，当在一台机器上配置好Apache 服务器，可利用它响应HTML（标准通用标记语言下的一个应用）页面的访问请求。实际上Tomcat 部分是Apache 服务器的扩展，但它是独立运行的，所以当你运行tomcat 时，它实际上作为一个与Apache 独立的进程单独运行的。
 
 ###应用容器
 
-Tomcat 服务器是一个免费的开放源代码的Web 应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP 程序的首选。对于一个初学者来说，可以这样认为，当在一台机器上配置好Apache 服务器，可利用它响应HTML（标准通用标记语言下的一个应用）页面的访问请求。实际上Tomcat 部分是Apache 服务器的扩展，但它是独立运行的，所以当你运行tomcat 时，它实际上作为一个与Apache 独立的进程单独运行的。
 
 Docker
 ---
@@ -2303,10 +2396,16 @@ Docker
 LNMP架构
 ---
 
-Linux + Nginx + MySQL + PHP
+> LNMP是一个基于CentOS/Debian编写的Nginx、PHP、MySQL、phpMyAdmin、eAccelerator一键安装包。可以在VPS、独立主机上轻松的安装LNMP生产环境。
 
-HTTP服务器
----
+###操作系统
+
+Linux是一种自由和开放源码的类UNIX操作系统内核。目前存在着许多不同的Linux发行版，可安装在各种各样的电脑硬件设备，从手机、平板电脑、路由器和影音游戏控制台，到桌上型电脑，大型电脑和超级电脑。 Linux是一个领先的操作系统内核，世界上运算最快的10台超级电脑运行的都是基于Linux内核的操作系统。
+
+Linux操作系统也是自由软件和开放源代码发展中最著名的例子。只要遵循GNU通用公共许可证,任何人和机构都可以自由地使用Linux的所有底层源代码，也可以自由地修改和再发布。严格来讲，Linux这个词本身只表示Linux内核，但在实际上人们已经习惯了用Linux来形容整个基于Linux内核，并且使用GNU 工程各种工具和数据库的操作系统（也被称为GNU/ Linux）。通常情况下，Linux被打包成供桌上型电脑和服务器使用的Linux发行版本。一些流行的主流Linux发行版本，包括Debian（及其衍生版本Ubuntu），Fedora和openSUSE等。 Linux得名于电脑业余爱好者Linus Torvalds。
+
+
+###HTTP服务器
 
 >  Web服务器一般指网站服务器，是指驻留于因特网上某种类型计算机的程序，可以向浏览器等Web客户端提供文档，也可以放置网站文件，让全世界浏览；可以放置数据文件，让全世界下载。
 
@@ -2323,6 +2422,10 @@ Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（I
 ###IIS
 
 Internet Information Services（IIS，互联网信息服务），是由微软公司提供的基于运行Microsoft Windows的互联网基本服务。最初是Windows NT版本的可选包，随后内置在Windows 2000、Windows XP Professional和Windows Server 2003一起发行，但在Windows XP Home版本上并没有IIS。
+
+###Web应用语言
+
+###数据持久化
 
 代理
 ---
@@ -2836,10 +2939,15 @@ UX入门
 
 更关注代码质量。持续集成是为了确保随着需求变化而变化的代码，在实现功能的同时，质量不受影响。因此，在每一次构建后会运行单元测试，保证代码级的质量。单元测试会针对每一个特定的输入去判断和观察输出的结果，而单元测试的粒度则用来平衡持续集成的质量和速度。
 
+###前提条件
+
 ###瀑布流式开发
 
 ###小步前进
 
+参考目录：
+
+ -《持续交付：发布可靠软件的系统方法》
 
 自动化构建
 ---

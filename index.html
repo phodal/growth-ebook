@@ -120,9 +120,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#php">PHP</a></li>
 <li><a href="#其他-1">其他</a></li>
 </ul></li>
-<li><a href="#mvc">MVC</a></li>
-<li><a href="#后台即服务">后台即服务</a></li>
+<li><a href="#mvc">MVC</a><ul>
+<li><a href="#model">Model</a></li>
+<li><a href="#view">View</a></li>
+<li><a href="#controller">Controller</a></li>
+</ul></li>
+<li><a href="#后台即服务">后台即服务</a><ul>
+<li><a href="#业务逻辑">业务逻辑</a></li>
+</ul></li>
 <li><a href="#数据持久化">数据持久化</a><ul>
+<li><a href="#文件存储">文件存储</a></li>
 <li><a href="#数据库">数据库</a></li>
 <li><a href="#搜索引擎">搜索引擎</a></li>
 </ul></li>
@@ -169,7 +176,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#功能实现">功能实现</a></li>
 <li><a href="#重构代码">重构代码</a></li>
 </ul></li>
-<li><a href="#selenium与自动化测试">Selenium与自动化测试</a></li>
+<li><a href="#selenium与功能测试的自动化">Selenium与功能测试的自动化</a></li>
 <li><a href="#可读的代码">可读的代码</a><ul>
 <li><a href="#命名">命名</a></li>
 <li><a href="#函数长度">函数长度</a></li>
@@ -186,14 +193,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="#上线">上线</a><ul>
 <li><a href="#容器">容器</a><ul>
+<li><a href="#web容器">Web容器</a></li>
 <li><a href="#应用容器">应用容器</a></li>
 </ul></li>
 <li><a href="#docker">Docker</a></li>
-<li><a href="#lnmp架构">LNMP架构</a></li>
-<li><a href="#http服务器">HTTP服务器</a><ul>
+<li><a href="#lnmp架构">LNMP架构</a><ul>
+<li><a href="#操作系统">操作系统</a></li>
+<li><a href="#http服务器">HTTP服务器</a></li>
 <li><a href="#apache">Apache</a></li>
 <li><a href="#nginx">Nginx</a></li>
 <li><a href="#iis">IIS</a></li>
+<li><a href="#web应用语言">Web应用语言</a></li>
+<li><a href="#数据持久化-1">数据持久化</a></li>
 </ul></li>
 <li><a href="#代理">代理</a></li>
 <li><a href="#web缓存">Web缓存</a><ul>
@@ -233,6 +244,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="#持续交付">持续交付</a><ul>
 <li><a href="#持续集成">持续集成</a><ul>
+<li><a href="#前提条件">前提条件</a></li>
 <li><a href="#瀑布流式开发">瀑布流式开发</a></li>
 <li><a href="#小步前进">小步前进</a></li>
 </ul></li>
@@ -455,7 +467,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h3 id="搭建windows开发环境">搭建Windows开发环境</h3>
 <p><strong>Chocolatey</strong></p>
 <blockquote>
-<p>Chocolatey是一个软件包管理工具，类似于Uutu下面的at-get,不过是运行在Widow环境下面。</p>
+<p>Chocolatey是一个软件包管理工具，类似于Ubuntu下面的apt-get,不过是运行在Window环境下面。</p>
 </blockquote>
 <p><strong>Launchy</strong></p>
 <blockquote>
@@ -1303,6 +1315,9 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <li>处理Session和Cookies</li>
 </ol>
 <p>业务是善变的，昨天我们可能还在和对手竞争谁先推出新功能，但是今天可能已经合并了。我们很难预见业务变化，但是我们应该能预见Controller是不容易变化的。在一些设计里面，这种模式就是Command模式。</p>
+<h3 id="model">Model</h3>
+<h3 id="view">View</h3>
+<h3 id="controller">Controller</h3>
 <h2 id="后台即服务">后台即服务</h2>
 <blockquote>
 <p>BaaS（Backend as a Service）是一种新型的云服务，旨在为移动和Web应用提供后端云服务，包括云端数据/文件存储、账户管理、消息推送、社交媒体整合等。</p>
@@ -1312,6 +1327,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <figure>
 <img src="chapters/images/baas-diagram.png" alt="Backend As A Service" /><figcaption>Backend As A Service</figcaption>
 </figure>
+<h3 id="业务逻辑">业务逻辑</h3>
 <h2 id="数据持久化">数据持久化</h2>
 <p>信息源于数据，我们在网站上看到的内容都应该是属于信息的范畴。这些信息是应用从数据库中根据业务需求查找、过滤出来的数据。</p>
 <p>数据通常以文件的形式存储，毕竟文件是存储信息的基本单位。只是由于业务本身对于Create、Update、Query、Index等有不同的组合需求就引发了不同的数据存储软件。</p>
@@ -1323,6 +1339,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <li>LocalStorage。LocalStorage算是另外一种方式的CRUD。</li>
 </ol>
 <p>说了这么多都是废话，他们都是可以用类CRUD的方式操作。</p>
+<h3 id="文件存储">文件存储</h3>
 <h3 id="数据库">数据库</h3>
 <p>数据库里存储着大量的数据，在我们对系统建模的时候，也在决定系统的基础模型。</p>
 <p>在传统SQL数据库中，我们可能会依赖于ORM，也可能会自己写SQL。在那之间，我们需要先定义Model，如下是Node.js的ORM框架Sequelize的一个示例：</p>
@@ -1392,13 +1409,65 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <h3 id="构建过程">构建过程</h3>
 <p>在这里，我们要使用到的一个工具是Grunt，当然对于Gulp也是类似的。</p>
 <blockquote>
-<p>Grunt是基于Node.js的项目构建工具。它可以自动运行你所设定的任务。Grunt拥有数量庞大的插件，几乎任何你所要做的事情都可以用Grunt实现。</p>
+<p>Gulp.js 是一个自动化构建工具，开发者可以使用它在项目开发过程中自动执行常见任务。Gulp.js 是基于 Node.js 构建的，利用 Node.js 流的威力，你可以快速构建项目并减少频繁的 IO 操作。Gulp.js 源文件和你用来定义任务的 Gulp 文件都是通过 JavaScript（或者 CoffeeScript ）源码来实现的。</p>
 </blockquote>
+<h4 id="入门指南">入门指南</h4>
+<ol type="1">
+<li>全局安装 gulp：</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">npm</span> install --global gulp</code></pre></div>
+<ol start="2" type="1">
+<li>作为项目的开发依赖（devDependencies）安装：</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">npm</span> install --save-dev gulp</code></pre></div>
+<ol start="3" type="1">
+<li>在项目根目录下创建一个名为 gulpfile.js 的文件：</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> gulp <span class="op">=</span> <span class="at">require</span>(<span class="st">&#39;gulp&#39;</span>)<span class="op">;</span>
+
+<span class="va">gulp</span>.<span class="at">task</span>(<span class="st">&#39;default&#39;</span><span class="op">,</span> <span class="kw">function</span>() <span class="op">{</span>
+  <span class="co">// 将你的默认的任务代码放在这</span>
+<span class="op">}</span>)<span class="op">;</span></code></pre></div>
+<ol start="4" type="1">
+<li>运行 gulp：</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">gulp</span></code></pre></div>
+<p>默认的名为 default 的任务（task）将会被运行，在这里，这个任务并未做任何事情。</p>
 <h4 id="代码质量检测工具">代码质量检测工具</h4>
 <p>当C还是一门新型的编程语言时，还存在一些未被原始编译器捕获的常见错误，所以程序员们开发了一个被称作lint的配套项目用来扫描源文件，查找问题。</p>
-<p>JSHint，JSLint</p>
-<h4 id="自动化测试">自动化测试</h4>
-<p>Mocha</p>
+<p>对应于不同的语言都会有不同的lint工具，在JavaScript中就有JSLint。JavaScript是一门年轻、语法灵活多变且对格式要求相对松散的语言，因此这样的工具对于这门语言来说比较重要。</p>
+<p>2011年，一个叫Anton Kovalyov的前端程序员借助开源社区的力量弄出来了JSHint，其思想基本上和JSLint是一致的，但是其有一下几项优势：</p>
+<ul>
+<li>可配置规则，每个团队可以自己定义自己想要的代码规范。</li>
+<li>对社区非常友好，社区支持度高。</li>
+<li>可定制的结果报表。</li>
+</ul>
+<p><strong>安装及使用</strong></p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">npm</span> install jshint gulp-jshint --save-dev</code></pre></div>
+<p>示例代码:</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> jshint <span class="op">=</span> <span class="at">require</span>(<span class="st">&#39;gulp-jshint&#39;</span>)<span class="op">;</span>
+<span class="kw">var</span> gulp   <span class="op">=</span> <span class="at">require</span>(<span class="st">&#39;gulp&#39;</span>)<span class="op">;</span>
+ 
+<span class="va">gulp</span>.<span class="at">task</span>(<span class="st">&#39;lint&#39;</span><span class="op">,</span> <span class="kw">function</span>() <span class="op">{</span>
+  <span class="cf">return</span> <span class="va">gulp</span>.<span class="at">src</span>(<span class="st">&#39;./lib/*.js&#39;</span>)
+    .<span class="at">pipe</span>(<span class="at">jshint</span>())
+    .<span class="at">pipe</span>(<span class="va">jshint</span>.<span class="at">reporter</span>(<span class="st">&#39;YOUR_REPORTER_HERE&#39;</span>))<span class="op">;</span>
+<span class="op">}</span>)<span class="op">;</span></code></pre></div>
+<h4 id="自动化测试工具">自动化测试工具</h4>
+<p>一般来说，自动测试应该从两部分考虑：</p>
+<ul>
+<li>单元测试</li>
+<li>功能测试</li>
+</ul>
+<p>Mocha是一个可以运行在Node.js和浏览器环境里的测试框架，</p>
+<pre><code>var gulp = require(&#39;gulp&#39;);
+var mocha = require(&#39;gulp-mocha&#39;);
+ 
+gulp.task(&#39;default&#39;, function () {
+    return gulp.src(&#39;test.js&#39;, {read: false})
+        // gulp-mocha needs filepaths so you can&#39;t have any plugins before it 
+        .pipe(mocha({reporter: &#39;nyan&#39;}));
+});</code></pre>
 <h4 id="打包">打包</h4>
 <p>Webpack</p>
 <h4 id="上传">上传</h4>
@@ -1576,7 +1645,7 @@ expect( foo.callMe ).toHaveBeenCalled();</code></pre>
 <p>通常在我的理解下，TDD是可有可无的。既然我知道了我要实现的大部分功能，而且我也知道如何实现。与此同时，对Code Smell也保持着警惕、要保证功能被测试覆盖。那么，总的来说TDD带来的价值并不大。</p>
 <p>然而，在当前这种情况下，我知道我想要的功能，但是我并不理解其深层次的功能。我需要花费大量的时候来理解，它为什么是这样的，需要先有一些脚本来知道它是怎么工作的。TDD变显得很有价值，换句话来说，在现有的情况下，TDD对于我们不了解的一些事情，可以驱动出更多的开发。毕竟在我们完成测试脚本之后，我们也会发现这些测试脚本成为了代码的一部分。</p>
 <p>在这种理想的情况下，我们为什么不TDD呢?</p>
-<h2 id="selenium与自动化测试">Selenium与自动化测试</h2>
+<h2 id="selenium与功能测试的自动化">Selenium与功能测试的自动化</h2>
 <blockquote>
 <p>Selenium也是一个用于Web应用程序测试的工具。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样。支持的浏览器包括IE(7、8、9)、Mozilla Firefox、Mozilla Suite等。这个工具的主要功能包括：测试与浏览器的兼容性——测试你的应用程序看是否能够很好得工作在不同浏览器和操作系统之上。测试系统功能——创建衰退测试检验软件功能和用户需求。支持自动录制动作和自动生成.Net、Java、Perl等不同语言的测试脚本。</p>
 </blockquote>
@@ -1592,6 +1661,7 @@ expect( foo.callMe ).toHaveBeenCalled();</code></pre>
 <li>然后，你要去测试它。这样你就知道需要什么，实际上要做到这些也不是一些难事。</li>
 </ul>
 <p>只是首先，我们要知道我们要自己需要这些。</p>
+<p>首先要说的就是程序员认为最难的一个话题了——命名。</p>
 <h3 id="命名">命名</h3>
 <h3 id="函数长度">函数长度</h3>
 <h3 id="函数嵌套">函数嵌套</h3>
@@ -1818,15 +1888,21 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <blockquote>
 <p>容器一般位于应用服务器之内，由应用服务器负责加载和维护。一个容器只能存在于一个应用服务器之内，一个应用服务器可以建立和维护多个容器。</p>
 </blockquote>
-<h3 id="应用容器">应用容器</h3>
+<h3 id="web容器">Web容器</h3>
 <p>Tomcat 服务器是一个免费的开放源代码的Web 应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP 程序的首选。对于一个初学者来说，可以这样认为，当在一台机器上配置好Apache 服务器，可利用它响应HTML（标准通用标记语言下的一个应用）页面的访问请求。实际上Tomcat 部分是Apache 服务器的扩展，但它是独立运行的，所以当你运行tomcat 时，它实际上作为一个与Apache 独立的进程单独运行的。</p>
+<h3 id="应用容器">应用容器</h3>
 <h2 id="docker">Docker</h2>
 <blockquote>
 <p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）。几乎没有性能开销,可以很容易地在机器和数据中心中运行。最重要的是,他们不依赖于任何语言、框架包括系统。</p>
 </blockquote>
 <h2 id="lnmp架构">LNMP架构</h2>
-<p>Linux + Nginx + MySQL + PHP</p>
-<h2 id="http服务器">HTTP服务器</h2>
+<blockquote>
+<p>LNMP是一个基于CentOS/Debian编写的Nginx、PHP、MySQL、phpMyAdmin、eAccelerator一键安装包。可以在VPS、独立主机上轻松的安装LNMP生产环境。</p>
+</blockquote>
+<h3 id="操作系统">操作系统</h3>
+<p>Linux是一种自由和开放源码的类UNIX操作系统内核。目前存在着许多不同的Linux发行版，可安装在各种各样的电脑硬件设备，从手机、平板电脑、路由器和影音游戏控制台，到桌上型电脑，大型电脑和超级电脑。 Linux是一个领先的操作系统内核，世界上运算最快的10台超级电脑运行的都是基于Linux内核的操作系统。</p>
+<p>Linux操作系统也是自由软件和开放源代码发展中最著名的例子。只要遵循GNU通用公共许可证,任何人和机构都可以自由地使用Linux的所有底层源代码，也可以自由地修改和再发布。严格来讲，Linux这个词本身只表示Linux内核，但在实际上人们已经习惯了用Linux来形容整个基于Linux内核，并且使用GNU 工程各种工具和数据库的操作系统（也被称为GNU/ Linux）。通常情况下，Linux被打包成供桌上型电脑和服务器使用的Linux发行版本。一些流行的主流Linux发行版本，包括Debian（及其衍生版本Ubuntu），Fedora和openSUSE等。 Linux得名于电脑业余爱好者Linus Torvalds。</p>
+<h3 id="http服务器">HTTP服务器</h3>
 <blockquote>
 <p>Web服务器一般指网站服务器，是指驻留于因特网上某种类型计算机的程序，可以向浏览器等Web客户端提供文档，也可以放置网站文件，让全世界浏览；可以放置数据文件，让全世界下载。</p>
 </blockquote>
@@ -1837,6 +1913,8 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-like 协议下发行。由俄罗斯的程序设计师Igor Sysoev所开发，供俄国大型的入口网站及搜索引擎Rambler（俄文：Рамблер）使用。其特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、新浪、网易、腾讯等。</p>
 <h3 id="iis">IIS</h3>
 <p>Internet Information Services（IIS，互联网信息服务），是由微软公司提供的基于运行Microsoft Windows的互联网基本服务。最初是Windows NT版本的可选包，随后内置在Windows 2000、Windows XP Professional和Windows Server 2003一起发行，但在Windows XP Home版本上并没有IIS。</p>
+<h3 id="web应用语言">Web应用语言</h3>
+<h3 id="数据持久化-1">数据持久化</h3>
 <h2 id="代理">代理</h2>
 <blockquote>
 <p>代理服务器（Proxy Server）是一种重要的服务器安全功能，它的工作主要在开放系统互联(OSI)模型的会话层，从而起到防火墙的作用。代理服务器大多被用来连接INTERNET（国际互联网）和Local Area Network（局域网）。</p>
@@ -2295,8 +2373,11 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </blockquote>
 <h2 id="持续集成">持续集成</h2>
 <p>更关注代码质量。持续集成是为了确保随着需求变化而变化的代码，在实现功能的同时，质量不受影响。因此，在每一次构建后会运行单元测试，保证代码级的质量。单元测试会针对每一个特定的输入去判断和观察输出的结果，而单元测试的粒度则用来平衡持续集成的质量和速度。</p>
+<h3 id="前提条件">前提条件</h3>
 <h3 id="瀑布流式开发">瀑布流式开发</h3>
 <h3 id="小步前进">小步前进</h3>
+<p>参考目录：</p>
+<p>-《持续交付：发布可靠软件的系统方法》</p>
 <h2 id="自动化构建">自动化构建</h2>
 <p>自动化构建是一个很大、很广的领域，并且涉及到相当多的知识面。</p>
 <p>几十年前，Unix世界就已经有了Make，而Java世界有Ant，Maven，现在则有Grunt和Gulp。</p>
