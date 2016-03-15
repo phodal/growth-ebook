@@ -1447,17 +1447,16 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>这是一个后台语言用的是Java，前台语言用的是JavaScript项目的构建流程。</p>
 <p><strong>Compile</strong>。对于那些不是用浏览器的前端项目来说，如ES6、CoffeeScript，他们还需要将代码编译成浏览器使用的JavaScript版本。对于Java语言来说，他需要一个编译的过程，在这个编译的过程中，会检查一些语法问题。</p>
 <p><strong>Check Style</strong>。通常我们会在我们的项目里定义一些代码规范，如JavaScript中的使用两个空格的缩进，Java的Checkstyle中一个函数不能超过30行的限制。</p>
-<p><strong>单元测试</strong>。</p>
-<p><strong>功能测试</strong>。</p>
-<p><strong>Mock Server</strong>。</p>
-<p><strong>集成测试</strong>。</p>
-<p><strong>打包</strong>。</p>
-<p><strong>上传包</strong>。</p>
-<p><strong>部署</strong>。</p>
+<p><strong>单元测试</strong>。作为测试中最基础也是最快的测试，这个测试将集中于测试单个函数的是不是正确的。</p>
+<p><strong>功能测试</strong>。功能测试的意义在于，保证一个功能依赖的几个函数组合在一起也是可以工作的。</p>
+<p><strong>Mock Server</strong>。当我们的代码依赖于第三方服务的时候，我们就需要一个Mock Server来保证我们的功能代码可以独立地测试。</p>
+<p><strong>集成测试</strong>。这一步将集成前台、后台，并且运行起最后将上线的应用。接着依据于用户所需要的功能来编写相应的测试，来保证一个个的功能是可以工作的。</p>
+<p><strong>打包</strong>。对于部署来说，直接安装一个RPM包，或者DEB包是最方便的事。在这个包里会包含应用程序所需的所有二进制文件、数据和配置文件等等。</p>
+<p><strong>上传包</strong>。在完成打包后，我们就可以上传这个软件包了。</p>
+<p><strong>部署</strong>。最后，我们就可以在我们的线上环境中安装这个软件包。</p>
 <h3 id="一个web应用的构建过程">一个Web应用的构建过程</h3>
-<p>下面就让我们来构建一个简单的Web应用，并看看这个过程是怎样发生的。</p>
+<p>下面就让我们来构建一个简单的Web应用，来实践一下这个过程。在这里，我们要使用到的一个工具是Gulp，当然对于Grunt也是类似的。</p>
 <h4 id="gulp入门指南">Gulp入门指南</h4>
-<p>在这里，我们要使用到的一个工具是Grunt，当然对于Gulp也是类似的。</p>
 <blockquote>
 <p>Gulp.js 是一个自动化构建工具，开发者可以使用它在项目开发过程中自动执行常见任务。Gulp.js 是基于 Node.js 构建的，利用 Node.js 流的威力，你可以快速构建项目并减少频繁的 IO 操作。Gulp.js 源文件和你用来定义任务的 Gulp 文件都是通过 JavaScript（或者 CoffeeScript ）源码来实现的。</p>
 </blockquote>
@@ -1520,19 +1519,17 @@ gulp.task(&#39;default&#39;, function () {
 });</code></pre>
 <h4 id="编译">编译</h4>
 <p>对于静态型语言来说，编译是一个很重要的步骤。不过，对于动态语言来说也存在这样的工具。</p>
-<p><strong>静态语言的编译</strong></p>
 <p><strong>动态语言的编译</strong></p>
 <p>可以说这类型的语言，是以我们常见的JavaScript为代表。</p>
 <ol type="1">
 <li><p>CoffeeScript是一套JavaScript的转译语言，并且它增强了JavaScript的简洁性与可读性。</p></li>
-<li><p>Webpack</p></li>
-<li><p>Babel</p></li>
+<li><p>Webpack是一款模块加载器兼打包工具，它能把各种资源，例如JS（含JSX）、coffee、样式（含less/sass）、图片等都作为模块来使用和处理。</p></li>
+<li><p>Babel是一个转换编译器，它能将ES6转换成可以在浏览器中运行的代码。</p></li>
 </ol>
 <h4 id="打包">打包</h4>
-<h4 id="上传">上传</h4>
-<p>AWS S3</p>
-<h4 id="发布">发布</h4>
-<p>RPM</p>
+<p>RPM Package Manager（原Red Hat Package Manager，现在是一个递归缩写）。</p>
+<h4 id="上传及发布包">上传及发布包</h4>
+<p>上传包之前我们需要创建一个相应的文件服务器，又或者是相应的软件源。并且对于我们的产品环境的服务器来说，我们还需要指定好这个软件源才能安装这个包。</p>
 <h2 id="git与版本管理">Git与版本管理</h2>
 <p>从一般开发者的角度来看，git有以下功能：</p>
 <ol type="1">
