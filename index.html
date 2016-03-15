@@ -150,6 +150,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li><a href="#编码">编码</a><ul>
+<li><a href="#编码过程">编码过程</a></li>
 <li><a href="#一个web应用的构建过程">一个Web应用的构建过程</a><ul>
 <li><a href="#构建工具">构建工具</a></li>
 <li><a href="#构建过程">构建过程</a></li>
@@ -1413,6 +1414,25 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <li>使用可以帮助你快速工作的工具——如启动器。</li>
 </ol>
 <p>不过不得不提到的一点是：你需要去考虑这个需求是不是一个坑的问题。如果这是个一个坑，那么你应该尽早的去反馈这个问题。沟通越早，成本越低。</p>
+<h2 id="编码过程">编码过程</h2>
+<p>整个编程的过程如下图所示：</p>
+<figure>
+<img src="chapters/chapter3/coding.png" alt="编码过程" /><figcaption>编码过程</figcaption>
+</figure>
+<p>步骤如下所示：</p>
+<ol type="1">
+<li>Kick Off。在这个步骤中，我们要详细地了解我们所需要做的东西、我们的验收条件是什么、我们需要做哪些事情。</li>
+<li>Tasking。<strong>简单</strong>的规则一下，我们需要怎么做。一般来说，如果是结对编程的话，还会记录下来。</li>
+<li>最新的代码。对于使用Git来管理项目的团队来说，在一个任务刚开始的时候应该保证本地的代码是最新的。</li>
+<li>Test First。测试优先是一个很不错的实践，可以保证我们写的代码的健壮，并且函数尽可能小，当然也会有测试。</li>
+<li>Code。就是实现功能，一般人都知道。</li>
+<li>重构。在我们实现了上面两步之后，我们还需要重构代码，使我们的代码更容易阅读、更易懂等等。</li>
+<li>提交代码。这里的提交代码只是本地的提交代码，因此都提倡在本地多次提交代码。</li>
+<li>运行测试。当我们完成我们的任务后，我们就可以准备PUSH代码了。在这时，我们需要在本地运行测试——以保证我们不破坏别人的功能。</li>
+<li>PUSH代码。</li>
+<li>等CI测试通过。如果这时候CI是挂的话，那么我们就需要再修CI。这时其他的人就没有理由PUSH代码，如果他们的代码也是有问题的，这只会使情况变得愈加复杂。</li>
+</ol>
+<p>不过，在最开始的时候我们要了解一下如何去搭建一个项目。</p>
 <h2 id="一个web应用的构建过程">一个Web应用的构建过程</h2>
 <blockquote>
 <p>构建系统(build system)是用来从源代码生成用户可以使用的目标的自动化工具。目标可以包括库、可执行文件、或者生成的脚本等等。</p>
@@ -1421,11 +1441,14 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>常用的构建工具包括GNU Make、GNU autotools、CMake、Apache Ant（主要用于JAVA）。此外，所有的集成开发环境（IDE）比如Qt Creator、Microsoft Visual Studio和Eclipse都对他们支持的语言添加了自己的构建系统配置工具。通常IDE中的构建系统只是基于控制台的构建系统（比如Autotool和CMake）的前端。</p>
 <p>对比于Web应用开发来说，构建系统应该还包括应用打包(如Java中的Jar包，或者用于部署的RPM包、源代码分析、测试覆盖率分析等等。</p>
 <h3 id="构建过程">构建过程</h3>
+<figure>
+<img src="chapters/chapter3/build-web-project.png" alt="构建过程" /><figcaption>构建过程</figcaption>
+</figure>
+<h4 id="gulp入门指南">Gulp入门指南</h4>
 <p>在这里，我们要使用到的一个工具是Grunt，当然对于Gulp也是类似的。</p>
 <blockquote>
 <p>Gulp.js 是一个自动化构建工具，开发者可以使用它在项目开发过程中自动执行常见任务。Gulp.js 是基于 Node.js 构建的，利用 Node.js 流的威力，你可以快速构建项目并减少频繁的 IO 操作。Gulp.js 源文件和你用来定义任务的 Gulp 文件都是通过 JavaScript（或者 CoffeeScript ）源码来实现的。</p>
 </blockquote>
-<h4 id="入门指南">入门指南</h4>
 <ol type="1">
 <li>全局安装 gulp：</li>
 </ol>
@@ -1446,7 +1469,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <li>运行 gulp：</li>
 </ol>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">gulp</span></code></pre></div>
-<p>默认的名为 default 的任务（task）将会被运行，在这里，这个任务并未做任何事情。</p>
+<p>默认的名为 default 的任务（task）将会被运行，在这里，这个任务并未做任何事情。接下来，我们就可以打造我们的应用的构建系统了。</p>
 <h4 id="代码质量检测工具">代码质量检测工具</h4>
 <p>当C还是一门新型的编程语言时，还存在一些未被原始编译器捕获的常见错误，所以程序员们开发了一个被称作lint的配套项目用来扫描源文件，查找问题。</p>
 <p>对应于不同的语言都会有不同的lint工具，在JavaScript中就有JSLint。JavaScript是一门年轻、语法灵活多变且对格式要求相对松散的语言，因此这样的工具对于这门语言来说比较重要。</p>
@@ -1456,6 +1479,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <li>对社区非常友好，社区支持度高。</li>
 <li>可定制的结果报表。</li>
 </ul>
+<p>下面就让我们来安装这个软件吧：</p>
 <p><strong>安装及使用</strong></p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">npm</span> install jshint gulp-jshint --save-dev</code></pre></div>
 <p>示例代码:</p>
