@@ -151,9 +151,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="#编码">编码</a><ul>
 <li><a href="#编码过程">编码过程</a></li>
-<li><a href="#一个web应用的构建过程">一个Web应用的构建过程</a><ul>
-<li><a href="#构建工具">构建工具</a></li>
+<li><a href="#web应用的构建系统">Web应用的构建系统</a><ul>
 <li><a href="#构建过程">构建过程</a></li>
+<li><a href="#一个web应用的构建过程">一个Web应用的构建过程</a></li>
 </ul></li>
 <li><a href="#git与版本管理">Git与版本管理</a><ul>
 <li><a href="#git初入">Git初入</a></li>
@@ -1433,17 +1433,29 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <li>等CI测试通过。如果这时候CI是挂的话，那么我们就需要再修CI。这时其他的人就没有理由PUSH代码，如果他们的代码也是有问题的，这只会使情况变得愈加复杂。</li>
 </ol>
 <p>不过，在最开始的时候我们要了解一下如何去搭建一个项目。</p>
-<h2 id="一个web应用的构建过程">一个Web应用的构建过程</h2>
+<h2 id="web应用的构建系统">Web应用的构建系统</h2>
 <blockquote>
 <p>构建系统(build system)是用来从源代码生成用户可以使用的目标的自动化工具。目标可以包括库、可执行文件、或者生成的脚本等等。</p>
 </blockquote>
-<h3 id="构建工具">构建工具</h3>
 <p>常用的构建工具包括GNU Make、GNU autotools、CMake、Apache Ant（主要用于JAVA）。此外，所有的集成开发环境（IDE）比如Qt Creator、Microsoft Visual Studio和Eclipse都对他们支持的语言添加了自己的构建系统配置工具。通常IDE中的构建系统只是基于控制台的构建系统（比如Autotool和CMake）的前端。</p>
 <p>对比于Web应用开发来说，构建系统应该还包括应用打包(如Java中的Jar包，或者用于部署的RPM包、源代码分析、测试覆盖率分析等等。</p>
 <h3 id="构建过程">构建过程</h3>
+<p>在刚创建项目的时候，我们都会有一个完整的构建思路。如下图便是这样的一个例子：</p>
 <figure>
 <img src="chapters/chapter3/build-web-project.png" alt="构建过程" /><figcaption>构建过程</figcaption>
 </figure>
+<p>这是一个后台语言用的是Java，前台语言用的是JavaScript项目的构建流程。</p>
+<p><strong>Compile</strong>。对于那些不是用浏览器的前端项目来说，如ES6、CoffeeScript，他们还需要将代码编译成浏览器使用的JavaScript版本。对于Java语言来说，他需要一个编译的过程，在这个编译的过程中，会检查一些语法问题。</p>
+<p><strong>Check Style</strong>。通常我们会在我们的项目里定义一些代码规范，如JavaScript中的使用两个空格的缩进，Java的Checkstyle中一个函数不能超过30行的限制。</p>
+<p><strong>单元测试</strong>。</p>
+<p><strong>功能测试</strong>。</p>
+<p><strong>Mock Server</strong>。</p>
+<p><strong>集成测试</strong>。</p>
+<p><strong>打包</strong>。</p>
+<p><strong>上传包</strong>。</p>
+<p><strong>部署</strong>。</p>
+<h3 id="一个web应用的构建过程">一个Web应用的构建过程</h3>
+<p>下面就让我们来构建一个简单的Web应用，并看看这个过程是怎样发生的。</p>
 <h4 id="gulp入门指南">Gulp入门指南</h4>
 <p>在这里，我们要使用到的一个工具是Grunt，当然对于Gulp也是类似的。</p>
 <blockquote>
