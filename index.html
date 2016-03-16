@@ -1400,7 +1400,13 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>相对于 MVC 的历史来说，MVVM 是一个相当新的架构，MVVM 最早于 2005 年被微软的 WPF 和 Silverlight 的架构师 John Gossman 提出，并且应用在微软的软件开发中。当时 MVC 已经被提出了 20 多年了，可见两者出现的年代差别有多大。</p>
 <p>MVVM 在使用当中，通常还会利用双向绑定技术，使得 Model 变化时，ViewModel 会自动更新，而 ViewModel 变化时，View 也会自动变化。所以，MVVM 模式有些时候又被称作：model-view-binder 模式。</p>
 <h3 id="mvp">MVP</h3>
+<blockquote>
+<p>MVP 是从经典的模式MVC演变而来，它们的基本思想有相通的地方：Controller/Presenter负责逻辑的处理，Model提供数据，View负责显示。</p>
+</blockquote>
 <h3 id="mvvm-1">MVVM</h3>
+<blockquote>
+<p>MVVM（Model-View-ViewModel）框架的由来便是MVP（Model-View-Presenter）模式与WPF结合的应用方式时发展演变过来的一种新型架构框架。</p>
+</blockquote>
 <h1 id="编码">编码</h1>
 <p>在我们真正开始去写代码之前，我们可能会去考虑一些事情。怎么去规划我们的任务，如果去细分这个任务。</p>
 <ol type="1">
@@ -2043,21 +2049,18 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <pre><code>messageToggles = ResourceBundle.getBundle(&quot;myProps&quot;);</code></pre>
 <h1 id="数据分析">数据分析</h1>
 <p>数据分析是一个很有意思的过程，也是一个非常重要的过程，他们是非常重要的一个循环：</p>
-<blockquote>
 <p>想法 -&gt; 构建 -&gt; 产品 -&gt; 衡量 -&gt; 数据 -&gt; 学习 -&gt; 想法</p>
-</blockquote>
 <p>有时候，对于我们的决定只要有一点点的数据支持就够了。也就是一点点的变化，可能就决定了我们产品的好坏。我们可能会因此而作出一些些改变，这些改变可能会让我们打败巨头。</p>
 <p>这一点和Growth的构建过程也很相像，在最开始的时候我只是想制定一个成长路线。而后，我发现这好像是一个不错的idea，我就开始去构建这个idea。于是它变成了Growth，这时候我需要依靠什么去分析用户喜欢的功能呢？我没有那么多的精力去和那么多的人沟通，也不能去和那么多的人沟通。</p>
 <p>我只能借助Google Analytics来收集用户的数据。从这些数据里去学习一些东西，而这些就会变成一个新的想法。</p>
-<p>不得不补充一点的是，作为一个开发人员，会讨厌这点异想天开。</p>
 <h2 id="google-analytics">Google Analytics</h2>
 <p>Google Analytics是一个非常赞的分析工具，而且它不仅仅可以用于Web应用，也可以用于移动应用。</p>
 <h3 id="受众群体">受众群体</h3>
-<p>如下图是Growth应用，最近两星期的数据结果：</p>
+<p>如下图是Growth应用最近两星期的数据：</p>
 <figure>
 <img src="chapters/images/ga/growth-ga.png" alt="Growth GA" /><figcaption>Growth GA</figcaption>
 </figure>
-<p>此图为Google Analytics中的“受众群体”的概览，在这个视图中：</p>
+<p>这是Google Analytics中的“受众群体”的概览，在这个视图中：</p>
 <ol type="1">
 <li>折线图就是每天的用户数。</li>
 <li>下面会有用户数、会话、屏幕浏览量等等的一些信息。</li>
