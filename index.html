@@ -94,20 +94,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="#html">HTML</a><ul>
 <li><a href="#html的helloworld">HTML的hello,world</a></li>
-<li><a href="#想用中文">想用中文？</a></li>
+<li><a href="#中文">中文？</a></li>
 <li><a href="#其他html标记">其他html标记</a></li>
 <li><a href="#小结-1">小结</a></li>
 </ul></li>
 <li><a href="#css">CSS</a><ul>
-<li><a href="#关于css">关于CSS</a></li>
-<li><a href="#代码结构">代码结构</a></li>
+<li><a href="#简介">简介</a></li>
 <li><a href="#样式与目标">样式与目标</a></li>
 <li><a href="#选择器">选择器</a></li>
 <li><a href="#更有趣的css">更有趣的CSS</a></li>
 </ul></li>
 <li><a href="#javascript">JavaScript</a><ul>
-<li><a href="#javascript的helloworld">Javascript的Hello,world</a></li>
-<li><a href="#更javascriptful">更JavaScriptful</a></li>
+<li><a href="#helloworld">hello,world</a></li>
+<li><a href="#javascriptful">JavaScriptFul</a></li>
 <li><a href="#面向对象">面向对象</a></li>
 <li><a href="#其他">其他</a></li>
 </ul></li>
@@ -691,7 +690,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><p>我们所使用的汉语是人类用智慧创造的，我们所正在学的这门语言同样也是人类创造的。</p></li>
 <li><p>我们在自己的语言里遵循着<strong>桌子是桌子，凳子是凳子</strong>的原则，很少有人会问为什么。</p></li>
 </ol>
-<h3 id="想用中文">想用中文？</h3>
+<h3 id="中文">中文？</h3>
 <p>所以我们也可以把计算机语言与现实世界里用于交流沟通的语言划上一个等号。而我们所要学习的语言，并不是我们最熟悉的汉语语言，所以我们便觉得这些很复杂，但是如果我们试着用汉语替换掉上面的代码的话</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="er">&lt;</span>语言&gt;
     <span class="er">&lt;</span>头&gt;<span class="er">&lt;</span>结束头&gt;
@@ -792,12 +791,12 @@ hello,world
 <figure>
 <img src="chapters/images/redfonts.png" alt="Red Fonts" /><figcaption>Red Fonts</figcaption>
 </figure>
-<h3 id="关于css">关于CSS</h3>
+<h3 id="简介">简介</h3>
 <p>这不是一篇专业讲述CSS的书籍，所以我不会去说CSS是怎么来的，有些东西我们既然可以很容易从其他地方知道，也就不需要花太多时间去重复。诸如重构等这些的目的之一也在于去除重复的代码，不过有些重复是不可少的，也是有必要的，而通常这些东西可能是由其他地方复制过来的。</p>
 <p>到目前为止我们没有依赖于任何特殊的硬件或者是软件，对于我们来说我们最基本的需求就是一台电脑，或者可以是你的平板电脑，当然也可以是你的智能手机，因为他们都有个浏览器，而这些都是能用的，对于我们的CSS来说也不会有例外的。</p>
 <p>CSS(Cascading Style Sheets)，到今天我也没有记得他的全称，CSS还有一个中文名字是层叠式样式表，事实上翻译成什么可能并不是我们关心的内容，我们需要关心的是他能做些什么。作为三剑客之一，它的主要目的在于可以让我们方便灵活地去控制Web页面的外观表现。我们可以用它做出像淘宝一样复杂的界面，也可以像我们的书本一样简单，不过如果要和我们书本一样简单的话，可能不需要用到CSS。HTML一开始就是依照报纸的格式而设计的，我们还可以继续用上面说到的编辑器，又或者是其他的。如果你喜欢DreamWeaver那也不错，不过一开始使用IDE可无助于我们写出良好的代码。</p>
 <p>忘说了，CSS也是有版本的，和windows，Linux内核等等一样，但是更新可能没有那么频繁，HTML也是有版本的，JS也是有版本的，复杂的东西不是当前考虑的内容。</p>
-<h3 id="代码结构">代码结构</h3>
+<h4 id="代码结构">代码结构</h4>
 <p>对于我们的上面的Red示例来说，如果没有一个好的结构，那么以后可能就是这样子。</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
 <span class="kw">&lt;html&gt;</span>
@@ -903,7 +902,9 @@ hello,world
     <span class="kw">padding-left:</span> <span class="dt">20px</span><span class="kw">;</span>
 <span class="kw">}</span></code></pre></div>
 <p>我们的目标就是</p>
-<pre><code>如果没有一个好的结构</code></pre>
+<blockquote>
+<p>如果没有一个好的结构</p>
+</blockquote>
 <p>所以样式和目标在这里牵手了，问题是他们是如何在一起的呢？下面就是CSS与HTML沟通的重点所在了:</p>
 <h3 id="选择器">选择器</h3>
 <p>我们用到的选择器叫做类选择器，也就是class，或者说应该称之为class选择器更合适。与类选择器最常一起出现的是ID选择器，不过这个适用于比较高级的场合，诸如用JS控制DOM的时候就需要用到ID选择器。而基本的选择器就是如下面的例子:</p>
@@ -969,7 +970,7 @@ div#content p {
 <p>或许我们写的代码都是那么的简单，从HTML到Javascript，还有现在的CSS，只是总有一些核心的东西，而不是去考虑那些基础语法，基础的东西我们可以在实践的过程中一一发现。但是我们可能发现不了，或者在平时的使用中考虑不到一些有趣的用法或者说特殊的用法，这时候可以通过观察一些精致设计的代码中学习到。复杂的东西可以变得很简单，简单的东西也可以变得很复杂。</p>
 <h2 id="javascript">JavaScript</h2>
 <p>Javascript现在已经无处不在了，也许你正打开的某个网站，他便可能是node.js+json+javascript+mustache.js完成的，虽然你还没理解上面那些是什么，也正是因为你不理解才需要去学习更多的东西。但是你只要知道Javascript已经无处不在了，它可能就在你手机上的某个app里，就在你浏览的网页里，就运行在你IDE中的某个进程里。</p>
-<h3 id="javascript的helloworld">Javascript的Hello,world</h3>
+<h3 id="helloworld">hello,world</h3>
 <p>这里我们还需要有一个helloworld.html，Javascript是专为网页交互而设计的脚本语言，所以我们一点点来开始这部分的旅途，先写一个符合标准的helloworld.html</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
 <span class="kw">&lt;html&gt;</span>
@@ -1010,7 +1011,7 @@ div#content p {
         <span class="op">&lt;</span><span class="ss">/noscript&gt;</span>
 <span class="ss">    &lt;/body</span><span class="op">&gt;</span>
 <span class="op">&lt;</span><span class="ss">/html&gt;</span></code></pre></div>
-<h3 id="更javascriptful">更JavaScriptful</h3>
+<h3 id="javascriptful">JavaScriptFul</h3>
 <p>我们需要让我们的代码看上去更像是js，同时是以js结尾。就像C语言的源码是以C结尾的，我们也同样需要让我们的代码看上去更正式一点。于是我们需要在helloworld.html的同一文件夹下创建一个app.js文件，在里面写着</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="va">document</span>.<span class="at">write</span>(<span class="st">&#39;hello,world&#39;</span>)<span class="op">;</span></code></pre></div>
 <p>同时我们的helloworld.html还需要告诉我们的浏览器js代码在哪里</p>
