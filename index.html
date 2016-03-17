@@ -111,6 +111,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#其他">其他</a></li>
 </ul></li>
 </ul></li>
+<li><a href="#基础实战篇">基础实战篇</a></li>
 <li><a href="#前端与后台">前端与后台</a><ul>
 <li><a href="#如何选择一门好的后台语言">如何选择一门好的后台语言</a><ul>
 <li><a href="#javascript-1">JavaScript</a></li>
@@ -124,8 +125,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#view">View</a></li>
 <li><a href="#controller">Controller</a></li>
 </ul></li>
-<li><a href="#后台即服务演进史">后台即服务演进史</a><ul>
+<li><a href="#后台即服务">后台即服务</a><ul>
 <li><a href="#api演进史">API演进史</a></li>
+<li><a href="#后台即服务-1">后台即服务</a></li>
 </ul></li>
 <li><a href="#数据持久化">数据持久化</a><ul>
 <li><a href="#文件存储">文件存储</a></li>
@@ -1227,6 +1229,8 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <li>我们可以用Javascript修改页面的属性，虽然只是简单的示例。</li>
 <li>我们还可以去解决实际的编程问题。</li>
 </ul>
+<h1 id="基础实战篇">基础实战篇</h1>
+<p>Welcome Django。。</p>
 <h1 id="前端与后台">前端与后台</h1>
 <p>维基百科是这样说的：前端Front-end和后端back-end是描述进程开始和结束的通用词汇。前端作用于采集输入信息，后端进行处理。计算机程序的界面样式，视觉呈现属于前端。</p>
 <p>这种说法给人一种很模糊的感觉，但是他说得又很对，它负责视觉展示。在MVC结构或者MVP中，负责视觉显示的部分只有View层，而今天大多数所谓的View层已经超越了View层。前端是一个很神奇的概念，但是而今的前端已经发生了很大的变化。</p>
@@ -1335,7 +1339,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>ORM(Object Relational Mapping)，即对象关系映射，主要是将数据库中的关系数据映射称为程序中的对象。</p>
 <h3 id="view">View</h3>
 <h3 id="controller">Controller</h3>
-<h2 id="后台即服务演进史">后台即服务演进史</h2>
+<h2 id="后台即服务">后台即服务</h2>
 <blockquote>
 <p>BaaS（Backend as a Service）是一种新型的云服务，旨在为移动和Web应用提供后端云服务，包括云端数据/文件存储、账户管理、消息推送、社交媒体整合等。</p>
 </blockquote>
@@ -1366,10 +1370,12 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 </figure>
 <p>随后——也就是今天，各种新的解决方案出现了，如React、混合应用、原生+Web的混合式应用、他们的目的就是解决上述的问题。不过，这些解决方案只是为了解决在前端中可能出现的问题，详细的内容可以见《前端演进史》。</p>
 <p>而人们也借此机会在统一后台——因为我们可以借助于混合应用或混合式应用（即原生+内嵌WebView，可以同时解决性能和跨平台问题）统一移动端，借助于响应式设计的理念可以统一桌面、平板和手机端。</p>
-<p>因此，我们需要的就只是这样的一个API：</p>
+<p>因此，我们需要的就只是这样的一个API：</p>
 <figure>
 <img src="chapters/chapter2/one-api.png" alt="One API" /><figcaption>One API</figcaption>
 </figure>
+<h3 id="后台即服务-1">后台即服务</h3>
+<p>现在，让我们来看看一个采用后台即服务的网站架构会是怎样的？</p>
 <h2 id="数据持久化">数据持久化</h2>
 <p>信息源于数据，我们在网站上看到的内容都应该是属于信息的范畴。这些信息是应用从数据库中根据业务需求查找、过滤出来的数据。</p>
 <p>数据通常以文件的形式存储，毕竟文件是存储信息的基本单位。只是由于业务本身对于Create、Update、Query、Index等有不同的组合需求就引发了不同的数据存储软件。</p>
@@ -1382,13 +1388,14 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 </ol>
 <p>说了这么多都是废话，他们都是可以用类CRUD的方式操作。</p>
 <h3 id="文件存储">文件存储</h3>
+<p>通常来说，以这种方式存储最常见的方式是log(日志)，如Nginx的access.log。像这样的文件就需要一些专业的软件，如GoAccess、又或者是Hadoop、Spark来做对应的事。</p>
 <p>在数据库出现之前，人们都是使用文件来存储数据的。数据以文件为单位存储在硬盘上，并且这些文件不容易一起管理、修改等等。如下图所示的是我早期存储文件的一种方式：</p>
 <pre><code>├── 3.12
 │   ├── cover.png
 │   └── favicon.ico
 └── 3.13
     └── template.tex</code></pre>
-<p>每天我们都会修改、查看大量的不同类型的文件。而由于工作繁忙，我们可能没有办法一一地去分类这些文件。有时选择的便是，优先先按日期把文件一划分，接着再在随后的日子里归档。</p>
+<p>每天我们都会修改、查看大量的不同类型的文件。而由于工作繁忙，我们可能没有办法一一地去分类这些文件。有时选择的便是，优先先按日期把文件一划分，接着再在随后的日子里归档。而这种存储方式大量的依赖于人来索引的工作，在很多时候往往显得不是很靠谱。并且当我们将数据存储进去后，往往很难进行修改。</p>
 <h3 id="数据库">数据库</h3>
 <p>数据库里存储着大量的数据，在我们对系统建模的时候，也在决定系统的基础模型。</p>
 <p>在传统SQL数据库中，我们可能会依赖于ORM，也可能会自己写SQL。在那之间，我们需要先定义Model，如下是Node.js的ORM框架Sequelize的一个示例：</p>
@@ -1413,6 +1420,18 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <span class="op">}</span>)<span class="op">;</span></code></pre></div>
 <p>像如MongoDB这类的数据库，也是存在数据模型，但说的却是嵌入子文档。在业务量大的情况下，数据库在考验公司的技术能力，想想便觉得Amazon RDS挺好的。</p>
 <h3 id="搜索引擎">搜索引擎</h3>
+<p>尽管百科上对于搜索引擎的定义是这样的：</p>
+<blockquote>
+<p>搜索引擎指自动从因特网搜集信息，经过一定整理以后，提供给用户进行查询的系统。</p>
+</blockquote>
+<p>但是这样说往得不是非常准备。因为有相当多的网站采用了搜索引擎作为础的存储服务架构，而且他们并非自动从互联网上搜索信息。搜索引擎应该分成三个部分来组成：</p>
+<ol type="1">
+<li>索引服务</li>
+<li>搜索服务</li>
+<li>索引数据</li>
+</ol>
+<p>索引服务便是用于将数据存储到索引数据中，而搜索服务正是搜索引擎存在的意义。对于查询条件复杂的网站来说，采用搜索引擎就意味着减少了非常多的繁琐数据处理事务。</p>
+<p>在一些架构中，人们用数据库存储数据，并使用工作来将数据注入到搜索引擎中。</p>
 <h2 id="如何选择前端框架">如何选择前端框架</h2>
 <p>选择前端框架似乎是一件很难的事，然而这件事情并不是看上去那么难。只是有时候你只想追随潮流，或者有一些些偏见。</p>
 <h3 id="angular">Angular</h3>
