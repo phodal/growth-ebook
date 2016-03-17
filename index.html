@@ -125,7 +125,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#controller">Controller</a></li>
 </ul></li>
 <li><a href="#后台即服务">后台即服务</a><ul>
-<li><a href="#业务逻辑">业务逻辑</a></li>
+<li><a href="#one-api演进史">One API演进史</a></li>
+<li><a href="#domain">Domain</a></li>
 </ul></li>
 <li><a href="#数据持久化">数据持久化</a><ul>
 <li><a href="#文件存储">文件存储</a></li>
@@ -185,10 +186,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#重复代码">重复代码</a></li>
 <li><a href="#测试用例-1">测试用例</a></li>
 </ul></li>
-<li><a href="#代码重构">代码重构</a></li>
-<li><a href="#intellij-idea重构">Intellij Idea重构</a><ul>
+<li><a href="#代码重构">代码重构</a><ul>
+<li><a href="#重命名">重命名</a></li>
+<li><a href="#提交变量">提交变量</a></li>
 <li><a href="#提炼函数">提炼函数</a></li>
 <li><a href="#内联函数">内联函数</a></li>
+<li><a href="#高级重构">高级重构</a></li>
+</ul></li>
+<li><a href="#intellij-idea重构">Intellij Idea重构</a><ul>
+<li><a href="#提炼函数-1">提炼函数</a></li>
+<li><a href="#内联函数-1">内联函数</a></li>
 <li><a href="#查询取代临时变量">查询取代临时变量</a></li>
 </ul></li>
 </ul></li>
@@ -228,7 +235,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#seo基础知识">SEO基础知识</a></li>
 <li><a href="#内容">内容</a></li>
 </ul></li>
-<li><a href="#hadoop分析数据">Hadoop分析数据</a></li>
+<li><a href="#hadoop分析数据">Hadoop分析数据</a><ul>
+<li><a href="#数据源">数据源</a></li>
+<li><a href="#数据分析-1">数据分析</a></li>
+<li><a href="#学习">学习</a></li>
+</ul></li>
 <li><a href="#ux">UX</a><ul>
 <li><a href="#什么是ux">什么是UX</a></li>
 <li><a href="#ux需要什么">UX需要什么</a></li>
@@ -1334,7 +1345,21 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <figure>
 <img src="chapters/images/baas-diagram.png" alt="Backend As A Service" /><figcaption>Backend As A Service</figcaption>
 </figure>
-<h3 id="业务逻辑">业务逻辑</h3>
+<h3 id="one-api演进史">One API演进史</h3>
+<p>在早期的工作中，我们会发现我们会将大量的业务逻辑放置到View层——如迭代出某个结果。</p>
+<p>而在今天，当我们有大量的逻辑一致时，我们怎么办，重复实现三次？</p>
+<figure>
+<img src="chapters/chapter2/duplicate-business-logic.png" alt="重复逻辑的系统架构" /><figcaption>重复逻辑的系统架构</figcaption>
+</figure>
+<p>而上面系统的产生，主要原因是因为技术本身的演进所造成的，并非是系统在一开始没有考虑到这个问题。</p>
+<figure>
+<img src="chapters/chapter2/api-history.png" alt="API演进史" /><figcaption>API演进史</figcaption>
+</figure>
+<p>又或者是将所有的业务逻辑放置后台？</p>
+<figure>
+<img src="chapters/chapter2/one-api.png" alt="One API" /><figcaption>One API</figcaption>
+</figure>
+<h3 id="domain">Domain</h3>
 <h2 id="数据持久化">数据持久化</h2>
 <p>信息源于数据，我们在网站上看到的内容都应该是属于信息的范畴。这些信息是应用从数据库中根据业务需求查找、过滤出来的数据。</p>
 <p>数据通常以文件的形式存储，毕竟文件是存储信息的基本单位。只是由于业务本身对于Create、Update、Query、Index等有不同的组合需求就引发了不同的数据存储软件。</p>
@@ -1347,6 +1372,13 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 </ol>
 <p>说了这么多都是废话，他们都是可以用类CRUD的方式操作。</p>
 <h3 id="文件存储">文件存储</h3>
+<p>在数据库出现之前，人们都是使用文件来存储数据的。数据以文件为单位存储在硬盘上，并且这些文件不容易一起管理、修改等等。如下图所示的是我早期存储文件的一种方式：</p>
+<pre><code>├── 3.12
+│   ├── cover.png
+│   └── favicon.ico
+└── 3.13
+    └── template.tex</code></pre>
+<p>每天我们都会修改、查看大量的不同类型的文件。而由于工作繁忙，我们可能没有办法一一地去分类这些文件。有时选择的便是，优先先按日期把文件一划分，接着再在随后的日子里归档。</p>
 <h3 id="数据库">数据库</h3>
 <p>数据库里存储着大量的数据，在我们对系统建模的时候，也在决定系统的基础模型。</p>
 <p>在传统SQL数据库中，我们可能会依赖于ORM，也可能会自己写SQL。在那之间，我们需要先定义Model，如下是Node.js的ORM框架Sequelize的一个示例：</p>
@@ -1749,8 +1781,15 @@ expect( foo.callMe ).toHaveBeenCalled();</code></pre>
 <blockquote>
 <p>代码重构（英语：Code refactoring）指对软件代码做任何更动以增加可读性或者简化结构而不影响输出结果。</p>
 </blockquote>
-<h2 id="intellij-idea重构">Intellij Idea重构</h2>
+<p>下面简单地介绍一下，一些可以直接使用IDE就能完成的重构。这种重构可以用在日常的工作中，只需要使用IDE上的快捷键就可以完成了。</p>
+<h3 id="重命名">重命名</h3>
+<h3 id="提交变量">提交变量</h3>
 <h3 id="提炼函数">提炼函数</h3>
+<h3 id="内联函数">内联函数</h3>
+<h3 id="高级重构">高级重构</h3>
+<p>上面介绍的都是一些简单、基础、实用的重构技巧，更多精彩内容还是需要大家去好好掌握的。</p>
+<h2 id="intellij-idea重构">Intellij Idea重构</h2>
+<h3 id="提炼函数-1">提炼函数</h3>
 <p>Intellij IDEA带了一些有意思的快捷键，或者说自己之前不在意这些快捷键的存在。重构作为单独的一个菜单，显然也突显了其功能的重要性，说说<strong>提炼函数</strong>，或者说提出方法。</p>
 <p>快捷键</p>
 <p>Mac: <code>alt</code>+<code>command</code>+<code>M</code></p>
@@ -1830,7 +1869,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 
 }</code></pre></div>
 <p>然而我们就可以很愉快地继续和它玩耍了。当然这其中还会有一些更复杂的情形，当学会了这一个剩下的也不难了。</p>
-<h3 id="内联函数">内联函数</h3>
+<h3 id="内联函数-1">内联函数</h3>
 <p>继续走这重构一书的复习之路，接着便是内联，除了内联变量，当然还有内联函数。</p>
 <p>快捷键</p>
 <p>Mac: <code>alt</code>+<code>command</code>+<code>M</code></p>
@@ -2327,10 +2366,15 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p><strong>参考来源</strong>:</p>
 <p>《SEO艺术》(The Art of SEO)</p>
 <h2 id="hadoop分析数据">Hadoop分析数据</h2>
-<p>Hadoop是一个由Apache基金会所开发的分布式系统基础架构。</p>
-<p>用户可以在不了解分布式底层细节的情况下，开发分布式程序。充分利用集群的威力进行高速运算和存储。</p>
-<p>Hadoop实现了一个分布式文件系统（Hadoop Distributed File System），简称HDFS。HDFS有高容错性的特点，并且设计用来部署在低廉的（low-cost）硬件上；而且它提供高吞吐量（high throughput）来访问应用程序的数据，适合那些有着超大数据集（large data set）的应用程序。HDFS放宽了（relax）POSIX的要求，可以以流的形式访问（streaming access）文件系统中的数据。</p>
+<blockquote>
+<p>Hadoop是一个由Apache基金会所开发的分布式系统基础架构。它可以让用户可以在不了解分布式底层细节的情况下，开发分布式程序。充分利用集群的威力进行高速运算和存储。</p>
+</blockquote>
 <p>Hadoop的框架最核心的设计就是：HDFS和MapReduce。HDFS为海量的数据提供了存储，则MapReduce为海量的数据提供了计算。</p>
+<p>Hadoop实现了一个分布式文件系统（Hadoop Distributed File System），简称HDFS。HDFS有高容错性的特点，并且设计用来部署在低廉的（low-cost）硬件上；而且它提供高吞吐量（high throughput）来访问应用程序的数据，适合那些有着超大数据集（large data set）的应用程序。同时，HDFS放宽了（relax）POSIX的要求，可以以流的形式访问（streaming access）文件系统中的数据。</p>
+<p>MapReduce是Google提出的一个软件架构，用于大规模数据集（大于1TB）的并行运算。概念“Map（映射）”和“Reduce（归纳）”，及他们的主要思想，都是从函数式编程语言借来的，还有从矢量编程语言借来的特性。</p>
+<h3 id="数据源">数据源</h3>
+<h3 id="数据分析-1">数据分析</h3>
+<h3 id="学习">学习</h3>
 <h2 id="ux">UX</h2>
 <p>用户体验设计（英语：User Experience Design），是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。其目的就是保证：</p>
 <ul>

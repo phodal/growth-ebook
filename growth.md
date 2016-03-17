@@ -1539,10 +1539,23 @@ ORM(Object Relational Mapping)，即对象关系映射，主要是将数据库�
 
 ![Backend As A Service](chapters/images/baas-diagram.png)
 
-###业务逻辑
+###One API演进史
 
+在早期的工作中，我们会发现我们会将大量的业务逻辑放置到View层——如迭代出某个结果。
 
+而在今天，当我们有大量的逻辑一致时，我们怎么办，重复实现三次？
 
+![重复逻辑的系统架构](chapters/chapter2/duplicate-business-logic.png)
+
+而上面系统的产生，主要原因是因为技术本身的演进所造成的，并非是系统在一开始没有考虑到这个问题。
+
+![API演进史](chapters/chapter2/api-history.png)
+
+又或者是将所有的业务逻辑放置后台？
+
+![One API](chapters/chapter2/one-api.png)
+
+###Domain
 
 数据持久化
 ---
@@ -1561,6 +1574,18 @@ ORM(Object Relational Mapping)，即对象关系映射，主要是将数据库�
 说了这么多都是废话，他们都是可以用类CRUD的方式操作。
 
 ###文件存储
+
+在数据库出现之前，人们都是使用文件来存储数据的。数据以文件为单位存储在硬盘上，并且这些文件不容易一起管理、修改等等。如下图所示的是我早期存储文件的一种方式：
+
+```
+├── 3.12
+│   ├── cover.png
+│   └── favicon.ico
+└── 3.13
+    └── template.tex
+```    
+
+每天我们都会修改、查看大量的不同类型的文件。而由于工作繁忙，我们可能没有办法一一地去分类这些文件。有时选择的便是，优先先按日期把文件一划分，接着再在随后的日子里归档。
 
 ###数据库
 
@@ -2167,6 +2192,19 @@ Selenium与功能测试的自动化
 
 > 代码重构（英语：Code refactoring）指对软件代码做任何更动以增加可读性或者简化结构而不影响输出结果。 
 
+下面简单地介绍一下，一些可以直接使用IDE就能完成的重构。这种重构可以用在日常的工作中，只需要使用IDE上的快捷键就可以完成了。
+
+###重命名
+
+###提交变量
+
+###提炼函数
+
+###内联函数
+
+###高级重构
+
+上面介绍的都是一些简单、基础、实用的重构技巧，更多精彩内容还是需要大家去好好掌握的。
 
 Intellij Idea重构
 ---
@@ -2891,13 +2929,20 @@ Total links
 Hadoop分析数据
 ---
 
-Hadoop是一个由Apache基金会所开发的分布式系统基础架构。
-
-用户可以在不了解分布式底层细节的情况下，开发分布式程序。充分利用集群的威力进行高速运算和存储。
-
-Hadoop实现了一个分布式文件系统（Hadoop Distributed File System），简称HDFS。HDFS有高容错性的特点，并且设计用来部署在低廉的（low-cost）硬件上；而且它提供高吞吐量（high throughput）来访问应用程序的数据，适合那些有着超大数据集（large data set）的应用程序。HDFS放宽了（relax）POSIX的要求，可以以流的形式访问（streaming access）文件系统中的数据。
+> Hadoop是一个由Apache基金会所开发的分布式系统基础架构。它可以让用户可以在不了解分布式底层细节的情况下，开发分布式程序。充分利用集群的威力进行高速运算和存储。
 
 Hadoop的框架最核心的设计就是：HDFS和MapReduce。HDFS为海量的数据提供了存储，则MapReduce为海量的数据提供了计算。 
+
+Hadoop实现了一个分布式文件系统（Hadoop Distributed File System），简称HDFS。HDFS有高容错性的特点，并且设计用来部署在低廉的（low-cost）硬件上；而且它提供高吞吐量（high throughput）来访问应用程序的数据，适合那些有着超大数据集（large data set）的应用程序。同时，HDFS放宽了（relax）POSIX的要求，可以以流的形式访问（streaming access）文件系统中的数据。
+
+MapReduce是Google提出的一个软件架构，用于大规模数据集（大于1TB）的并行运算。概念“Map（映射）”和“Reduce（归纳）”，及他们的主要思想，都是从函数式编程语言借来的，还有从矢量编程语言借来的特性。
+
+###数据源
+
+###数据分析
+
+###学习
+
 
 UX
 ---
