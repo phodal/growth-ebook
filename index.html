@@ -125,8 +125,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#controller">Controller</a></li>
 </ul></li>
 <li><a href="#后台即服务演进史">后台即服务演进史</a><ul>
-<li><a href="#one-api演进史">One API演进史</a></li>
-<li><a href="#domain">Domain</a></li>
+<li><a href="#api演进史">API演进史</a></li>
 </ul></li>
 <li><a href="#数据持久化">数据持久化</a><ul>
 <li><a href="#文件存储">文件存储</a></li>
@@ -1345,7 +1344,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <figure>
 <img src="chapters/images/baas-diagram.png" alt="Backend As A Service" /><figcaption>Backend As A Service</figcaption>
 </figure>
-<h3 id="one-api演进史">One API演进史</h3>
+<h3 id="api演进史">API演进史</h3>
 <p>在早期的工作中，我们会发现我们会将大量的业务逻辑放置到View层——如迭代出某个结果。</p>
 <p>而在今天，当我们有大量的逻辑一致时，我们怎么办，重复实现三次？</p>
 <p>如下所示是笔者之前重构的系统的一个架构缩略图：</p>
@@ -1361,12 +1360,16 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>第二阶段： 前“智能手机”出现了，人们需要开发移动版本的网站来适用用户的需要。这时由于当时的开发环境，以及技术条件所限，当时的网站只会是桌面模板的简化。这时还没有普及Ajax请求、SPA这些事物。</p>
 <p>第三阶段： 手机应用的制作开始流行起来了。由于需要制作手机应用，人们就需要在网站上创建API。由于当时的业务或者项目需求，这个API是直接耦合在系统中的。</p>
 <p>第四阶段： 由于手机性能的不断提高，并且移动网络速度不断提升，人们便开始在手机上制作单页面应用。</p>
-<p>这时由于需求的不断添加、没有及时更新技术栈、系统耦合严重等等原因，系统的架构便得非常混乱：</p>
-<p>又或者是将所有的业务逻辑放置后台？</p>
+<p>由于他们使用的是相同业务逻辑、代码逻辑相同而<strong>技术栈不同</strong>的代码，当有一个新的需求出现时，他们需要重复多次实现，如下图所示：</p>
+<figure>
+<img src="chapters/chapter2/duplicate-business-logic-with-domain.png" alt="重复业务逻辑的系统架构" /><figcaption>重复业务逻辑的系统架构</figcaption>
+</figure>
+<p>随后——也就是今天，各种新的解决方案出现了，如React、混合应用、原生+Web的混合式应用、他们的目的就是解决上述的问题。不过，这些解决方案只是为了解决在前端中可能出现的问题，详细的内容可以见《前端演进史》。</p>
+<p>而人们也借此机会在统一后台——因为我们可以借助于混合应用或混合式应用（即原生+内嵌WebView，可以同时解决性能和跨平台问题）统一移动端，借助于响应式设计的理念可以统一桌面、平板和手机端。</p>
+<p>人们需要的就只是这样的一个API：</p>
 <figure>
 <img src="chapters/chapter2/one-api.png" alt="One API" /><figcaption>One API</figcaption>
 </figure>
-<h3 id="domain">Domain</h3>
 <h2 id="数据持久化">数据持久化</h2>
 <p>信息源于数据，我们在网站上看到的内容都应该是属于信息的范畴。这些信息是应用从数据库中根据业务需求查找、过滤出来的数据。</p>
 <p>数据通常以文件的形式存储，毕竟文件是存储信息的基本单位。只是由于业务本身对于Create、Update、Query、Index等有不同的组合需求就引发了不同的数据存储软件。</p>
