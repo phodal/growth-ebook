@@ -124,7 +124,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#view">View</a></li>
 <li><a href="#controller">Controller</a></li>
 </ul></li>
-<li><a href="#后台即服务">后台即服务</a><ul>
+<li><a href="#后台即服务演进史">后台即服务演进史</a><ul>
 <li><a href="#one-api演进史">One API演进史</a></li>
 <li><a href="#domain">Domain</a></li>
 </ul></li>
@@ -1258,7 +1258,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>个人感觉Go也不错，虽然没怎么用，但是性能应该是相当可以的。</p>
 <p>Ruby、Scala，对于写代码的人来说，这是非常不错的语言。但是如果是团队合作时，就有待商榷。</p>
 <h2 id="mvc">MVC</h2>
-<p>人们在不断地反思这其中复杂的过程，整理了一些好的架构模式，其中不得不提到的是我司Martin Folwer的《企业应用架构模式》。该书中文译版出版的时候是2004年，那时对于系统的分层是</p>
+<p>人们在不断地反思这其中复杂的过程，整理了一些好的架构模式，其中不得不提到的是我司Martin Fowler的《企业应用架构模式》。该书中文译版出版的时候是2004年，那时对于系统的分层是</p>
 <table>
 <thead>
 <tr class="header">
@@ -1336,7 +1336,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>ORM(Object Relational Mapping)，即对象关系映射，主要是将数据库中的关系数据映射称为程序中的对象。</p>
 <h3 id="view">View</h3>
 <h3 id="controller">Controller</h3>
-<h2 id="后台即服务">后台即服务</h2>
+<h2 id="后台即服务演进史">后台即服务演进史</h2>
 <blockquote>
 <p>BaaS（Backend as a Service）是一种新型的云服务，旨在为移动和Web应用提供后端云服务，包括云端数据/文件存储、账户管理、消息推送、社交媒体整合等。</p>
 </blockquote>
@@ -1348,13 +1348,20 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <h3 id="one-api演进史">One API演进史</h3>
 <p>在早期的工作中，我们会发现我们会将大量的业务逻辑放置到View层——如迭代出某个结果。</p>
 <p>而在今天，当我们有大量的逻辑一致时，我们怎么办，重复实现三次？</p>
+<p>如下所示是笔者之前重构的系统的一个架构缩略图：</p>
 <figure>
 <img src="chapters/chapter2/duplicate-business-logic.png" alt="重复逻辑的系统架构" /><figcaption>重复逻辑的系统架构</figcaption>
 </figure>
-<p>而上面系统的产生，主要原因是因为技术本身的演进所造成的，并非是系统在一开始没有考虑到这个问题。</p>
+<p>上面系统产生的主要原因是：技术本身的演进所造成的，并非是系统在一开始没有考虑到这个问题。</p>
 <figure>
 <img src="chapters/chapter2/api-history.png" alt="API演进史" /><figcaption>API演进史</figcaption>
 </figure>
+<p>从早期到现在的互联网公司都有这样的问题，也会有同样的过程：</p>
+<p>第一阶段： 因为创始人对于某个领域的看好，他们就创建了这样的一个网站。这个时间点，大概可以在2000年左右。</p>
+<p>第二阶段： 前“智能手机”出现了，人们需要开发移动版本的网站来适用用户的需要。这时由于当时的开发环境，以及技术条件所限，当时的网站只会是桌面模板的简化。这时还没有普及Ajax请求、SPA这些事物。</p>
+<p>第三阶段： 手机应用的制作开始流行起来了。由于需要制作手机应用，人们就需要在网站上创建API。由于当时的业务或者项目需求，这个API是直接耦合在系统中的。</p>
+<p>第四阶段： 由于手机性能的不断提高，并且移动网络速度不断提升，人们便开始在手机上制作单页面应用。</p>
+<p>这时由于需求的不断添加、没有及时更新技术栈、系统耦合严重等等原因，系统的架构便得非常混乱：</p>
 <p>又或者是将所有的业务逻辑放置后台？</p>
 <figure>
 <img src="chapters/chapter2/one-api.png" alt="One API" /><figcaption>One API</figcaption>
@@ -1440,7 +1447,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>MVVM（Model-View-ViewModel）框架的由来便是MVP（Model-View-Presenter）模式与WPF结合的应用方式时发展演变过来的一种新型架构框架。</p>
 </blockquote>
 <h1 id="编码">编码</h1>
-<p>在我们真正开始去写代码之前，我们可能会去考虑一些事情。怎么去规划我们的任务，如果去细分这个任务。</p>
+<p>在我们真正开始去写代码之前，我们可能会去考虑一些事情。怎么去规划我们的任务，如何去细分这个任务。</p>
 <ol type="1">
 <li>如果一件事可以自动化，那么就尽量去自动化，毕竟你是一个程序员。</li>
 <li>快捷键！快捷键！快捷键！</li>
@@ -1672,7 +1679,7 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <p>以本文的写作为例，细分上面的过程就是：</p>
 <ol type="1">
 <li>我有了一个中心思想——在某种意义上来说就是标题。</li>
-<li>依据中心思考我将这篇文章分成了四小节。</li>
+<li>依据中心思想我将这篇文章分成了四小节。</li>
 <li>然后我开始写四小节的内容。</li>
 <li>直到完成。</li>
 </ol>
@@ -1850,7 +1857,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
     }
 }</code></pre></div>
 <p>只是这次要选中的只有一行，</p>
-<p>`<code>int three = one + two;</code></p>
+<pre><code>int three = one + two;</code></pre>
 <p>以便于其的智能，它便很愉快地告诉你它又找到了一个重复</p>
 <pre><code> IDE has detected 1 code fragments in this file that can be replaced with a call to extracted method...</code></pre>
 <p>便返回了这样一个结果</p>
@@ -1950,7 +1957,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>而实际上我们也可以</p>
 <ol type="1">
 <li><p>选中</p>
-<p>_quantity * _itemPrice</p></li>
+<pre><code>_quantity * _itemPrice</code></pre></li>
 <li><p>对其进行<code>Extrace Method</code></p></li>
 <li><p>选择<code>basePrice</code>再<code>Inline Method</code></p></li>
 </ol>
@@ -2072,7 +2079,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h2 id="toggle">Toggle</h2>
 <p>很少用Java作为技术栈的我，很少有Java的笔记，记录一下这个简单的feature toggle。</p>
 <h3 id="spring-propertyplaceholder">Spring PropertyPlaceHolder</h3>
-<p>在<a href="http://stackoverflow.com/questions/21725709/property-place-holder-bean-in-application-context-xml-spring">Stackflow</a> 上有一个关于这个问题的回答。</p>
+<p>在<a href="http://stackoverflow.com/questions/21725709/property-place-holder-bean-in-application-context-xml-spring">StackOverflow</a> 上有一个关于这个问题的回答。</p>
 <p>1.使用bean创建一个properties。(mvc-config.xml)</p>
 <pre><code>&lt;util:properties id=&quot;myProps&quot; location=&quot;WEB-INF/config/prop.properties&quot;/&gt;</code></pre>
 <p>2.注入值</p>
