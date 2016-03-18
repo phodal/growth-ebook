@@ -51,8 +51,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </head>
 <body>
 <p>
-<h1>Growth: 深入浅出全栈工程师</h1>
-<p>项目首页: <a href="https://github.com/phodal/github-roam">Growth: 深入浅出全栈工程师</a></p>
+<h1>Growth: 全栈工程师学习手册</h1>
+<p>项目首页: <a href="https://github.com/phodal/github-roam">Growth: 全栈工程师学习手册</a></p>
 <p>By <a href="https://www.phodal.com">Phodal</a>(微博、知乎、GitHub、SegmentFault: @<a href="http://weibo.com/phodal">phodal</a>)
 </p>
 <p>微信公众号</p>
@@ -110,15 +110,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#面向对象">面向对象</a></li>
 <li><a href="#其他">其他</a></li>
 </ul></li>
-</ul></li>
-<li><a href="#基础实战篇">基础实战篇</a><ul>
-<li><a href="#django">Django</a><ul>
-<li><a href="#架构">架构</a></li>
-</ul></li>
-<li><a href="#创建django项目">创建Django项目</a></li>
-<li><a href="#mezzanine">Mezzanine</a></li>
-<li><a href="#博客">博客</a></li>
-<li><a href="#实践">实践</a></li>
 </ul></li>
 <li><a href="#前端与后台">前端与后台</a><ul>
 <li><a href="#如何选择一门好的后台语言">如何选择一门好的后台语言</a><ul>
@@ -290,7 +281,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#模块重构">模块重构</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#回顾与新架构">回顾与新架构</a><ul>
+<li><a href="#回顾与架构设计">回顾与架构设计</a><ul>
 <li><a href="#自省">自省</a></li>
 <li><a href="#retro">Retro</a><ul>
 <li><a href="#well">Well</a></li>
@@ -311,6 +302,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#如何构建一个博客系统">如何构建一个博客系统</a></li>
 <li><a href="#相关阅读资料">相关阅读资料</a></li>
 </ul></li>
+</ul></li>
+<li><a href="#基础实战篇">基础实战篇</a><ul>
+<li><a href="#django">Django</a><ul>
+<li><a href="#架构">架构</a></li>
+</ul></li>
+<li><a href="#创建django项目">创建Django项目</a></li>
+<li><a href="#mezzanine">Mezzanine</a></li>
+<li><a href="#mezzanine项目">Mezzanine项目</a></li>
+<li><a href="#cms与博客">CMS与博客</a></li>
+<li><a href="#实践与目标">实践与目标</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1237,15 +1238,6 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <li>我们可以用Javascript修改页面的属性，虽然只是简单的示例。</li>
 <li>我们还可以去解决实际的编程问题。</li>
 </ul>
-<h1 id="基础实战篇">基础实战篇</h1>
-<p>Welcome Django。。</p>
-<h2 id="django">Django</h2>
-<h3 id="架构">架构</h3>
-<h2 id="创建django项目">创建Django项目</h2>
-<h2 id="mezzanine">Mezzanine</h2>
-<p>我们并不想从头</p>
-<h2 id="博客">博客</h2>
-<h2 id="实践">实践</h2>
 <h1 id="前端与后台">前端与后台</h1>
 <p>维基百科是这样说的：前端Front-end和后端back-end是描述进程开始和结束的通用词汇。前端作用于采集输入信息，后端进行处理。计算机程序的界面样式，视觉呈现属于前端。</p>
 <p>这种说法给人一种很模糊的感觉，但是他说得又很对，它负责视觉展示。在MVC结构或者MVP中，负责视觉显示的部分只有View层，而今天大多数所谓的View层已经超越了View层。前端是一个很神奇的概念，但是而今的前端已经发生了很大的变化。</p>
@@ -1353,7 +1345,47 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>SQL(Structured Query Language，即结构化查询语言)， 语句是数据库的查询语言</p>
 <p>ORM(Object Relational Mapping)，即对象关系映射，主要是将数据库中的关系数据映射称为程序中的对象。</p>
 <h3 id="view">View</h3>
+<p>View层在Web应用中，一般是使用模板引擎装载对应HTML。如下所示的是一段JSP代码：</p>
+<div class="sourceCode"><pre class="sourceCode jsp"><code class="sourceCode jsp">&lt;html&gt;
+&lt;head&gt;&lt;title&gt;First JSP&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;%
+    <span class="dt">double</span> num = Math.random();
+    <span class="kw">if</span> (num &gt; <span class="fl">0.95</span>) {
+  %&gt;
+      &lt;h2&gt;You&#39;ll have a luck day!&lt;/h2&gt;&lt;p&gt;(&lt;%= num %&gt;)&lt;/p&gt;
+  &lt;%
+    } <span class="kw">else</span> {
+  %&gt;
+      &lt;h2&gt;Well, life goes on ... &lt;/h2&gt;&lt;p&gt;(&lt;%= num %&gt;)&lt;/p&gt;
+  &lt;%
+    }
+  %&gt;
+  &lt;a<span class="ot"> href</span>=<span class="dt">&quot;</span>&lt;%= request.getRequestURI() %&gt;<span class="dt">&quot;</span>&gt;&lt;h3&gt;Try Again&lt;/h3&gt;&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<p>上面的JSP代码在经过程序解析、处理后，会变成相对应的HTML。而我们可以发现在这里的View层不仅仅只有模板的作用，我们会发现这里的View层还计划了部分的逻辑。我们可以在后面细细看这些问题，对于前端的View层来说，他可能是这样的：</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;information pure-g&quot;</span><span class="kw">&gt;</span>
+    {{#.}}
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;pure-u-1 &quot;</span><span class="kw">&gt;</span>
+        <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;l-box&quot;</span><span class="kw">&gt;</span>
+            <span class="kw">&lt;h3</span><span class="ot"> class=</span><span class="st">&quot;information-head&quot;</span><span class="kw">&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#/blog/{{slug}}&quot;</span><span class="ot"> alt=</span><span class="st">&quot;{{title}}&quot;</span><span class="kw">&gt;</span>{{title}}<span class="kw">&lt;/a&gt;&lt;/h3&gt;</span>
+            <span class="kw">&lt;p&gt;</span>
+                发布时间:<span class="kw">&lt;span&gt;</span>{{created}}<span class="kw">&lt;/span&gt;</span>
+            <span class="kw">&lt;p&gt;</span>
+                {{{content}}}
+            <span class="kw">&lt;/p&gt;</span>
+
+            <span class="kw">&lt;/p&gt;</span>
+        <span class="kw">&lt;/div&gt;</span>
+    <span class="kw">&lt;/div&gt;</span>
+    {{/.}}
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+<p>在这里的View层只是单纯的一个显示作用，这也是我们推荐的做法。业务逻辑应该尽可能的放置于业务层。</p>
 <h3 id="controller">Controller</h3>
+<blockquote>
+<p>控制器层起到不同层面间的组织作用，用于控制应用程序的流程。</p>
+</blockquote>
 <h2 id="后台即服务">后台即服务</h2>
 <blockquote>
 <p>BaaS（Backend as a Service）是一种新型的云服务，旨在为移动和Web应用提供后端云服务，包括云端数据/文件存储、账户管理、消息推送、社交媒体整合等。</p>
@@ -1450,7 +1482,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <h2 id="如何选择前端框架">如何选择前端框架</h2>
 <p>选择前端框架似乎是一件很难的事，然而这件事情并不是看上去那么难。只是有时候你只想追随潮流，或者有一些些偏见。</p>
 <h3 id="angular">Angular</h3>
-<p>Angular.js对于后端人员写前端代码来说，是一个非常不错的选择。它也用于在本应用中写APP，只是不知道它的2.0大坑让多少人没了兴趣。</p>
+<p>Angular.js对于后端人员写前端代码来说，是一个非常不错的选择。并且类似于Ionic这样的混合框架，也将Ionic带到了移动应用的领域。</p>
 <h3 id="react">React</h3>
 <p>React似乎很受市场欢迎，各种各样的新知识。但是它的发展远不如我的预期的好，理想的情况下应该类似于Ionic可以直接在Web和手机应用上。</p>
 <p>React只是我们在上面章节里说到的View层，而这个View层需要辅以其他框架才能完成更多的工作。</p>
@@ -2620,7 +2652,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>代替旧有的框架、语言</li>
 <li>增强用户体验</li>
 </ul>
-<h1 id="回顾与新架构">回顾与新架构</h1>
+<h1 id="回顾与架构设计">回顾与架构设计</h1>
 <p>在我开始接触架构设计的时候，我对于这个知识点觉得很奇怪。因为架构设计看上去是一个很复杂的话题，然而他是属于设计的一部分。如果你懂得什么是美、什么是丑，那么我想你也是懂得设计的。而设计是一件很有意思的事——刚开始写字时，我们被要求去临摹别人的字体。</p>
 <h2 id="自省">自省</h2>
 <p>总结在某种意义上相当于自己对自己的反馈：</p>
@@ -2820,5 +2852,15 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>相信看完之前的章节，你也有了一定的经验了，你也可以成为一个架构师了。</p>
 <h3 id="相关阅读资料">相关阅读资料</h3>
 <p>-《程序员必读之软件架构》</p>
+<h1 id="基础实战篇">基础实战篇</h1>
+<p>Welcome Django。。</p>
+<h2 id="django">Django</h2>
+<h3 id="架构">架构</h3>
+<h2 id="创建django项目">创建Django项目</h2>
+<h2 id="mezzanine">Mezzanine</h2>
+<p>我们并不想从头</p>
+<h2 id="mezzanine项目">Mezzanine项目</h2>
+<h2 id="cms与博客">CMS与博客</h2>
+<h2 id="实践与目标">实践与目标</h2>
 </body>
 </html>

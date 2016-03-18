@@ -1383,31 +1383,6 @@ para.style.color="blue";
  - 我们还可以去解决实际的编程问题。
  
 
-基础实战篇
-===
-
-Welcome Django。。
-
-Django
----
-
-###架构
-
-创建Django项目
----
-
-Mezzanine
----
-
-我们并不想从头
-
-
-博客
----
-
-实践
----
-
 前端与后台
 ===
 
@@ -1549,7 +1524,55 @@ ORM(Object Relational Mapping)，即对象关系映射，主要是将数据库�
 
 ###View
 
+View层在Web应用中，一般是使用模板引擎装载对应HTML。如下所示的是一段JSP代码：
+
+```jsp
+<html>
+<head><title>First JSP</title></head>
+<body>
+  <%
+    double num = Math.random();
+    if (num > 0.95) {
+  %>
+      <h2>You'll have a luck day!</h2><p>(<%= num %>)</p>
+  <%
+    } else {
+  %>
+      <h2>Well, life goes on ... </h2><p>(<%= num %>)</p>
+  <%
+    }
+  %>
+  <a href="<%= request.getRequestURI() %>"><h3>Try Again</h3></a>
+</body>
+</html>
+```
+
+上面的JSP代码在经过程序解析、处理后，会变成相对应的HTML。而我们可以发现在这里的View层不仅仅只有模板的作用，我们会发现这里的View层还计划了部分的逻辑。我们可以在后面细细看这些问题，对于前端的View层来说，他可能是这样的：
+
+```html
+<div class="information pure-g">
+    {{#.}}
+    <div class="pure-u-1 ">
+        <div class="l-box">
+            <h3 class="information-head"><a href="#/blog/{{slug}}" alt="{{title}}">{{title}}</a></h3>
+            <p>
+                发布时间:<span>{{created}}</span>
+            <p>
+                {{{content}}}
+            </p>
+
+            </p>
+        </div>
+    </div>
+    {{/.}}
+</div>
+```
+
+在这里的View层只是单纯的一个显示作用，这也是我们推荐的做法。业务逻辑应该尽可能的放置于业务层。
+
 ###Controller
+
+> 控制器层起到不同层面间的组织作用，用于控制应用程序的流程。
 
 
 
@@ -1692,7 +1715,7 @@ User.sync({force: true}).then(function () {
 
 ###Angular
 
-Angular.js对于后端人员写前端代码来说，是一个非常不错的选择。它也用于在本应用中写APP，只是不知道它的2.0大坑让多少人没了兴趣。
+Angular.js对于后端人员写前端代码来说，是一个非常不错的选择。并且类似于Ionic这样的混合框架，也将Ionic带到了移动应用的领域。
 
 ###React
 
@@ -3277,7 +3300,7 @@ So，如何开始修改代码？
  - 代替旧有的框架、语言
  - 增强用户体验
 
-回顾与新架构
+回顾与架构设计
 ===
 
 在我开始接触架构设计的时候，我对于这个知识点觉得很奇怪。因为架构设计看上去是一个很复杂的话题，然而他是属于设计的一部分。如果你懂得什么是美、什么是丑，那么我想你也是懂得设计的。而设计是一件很有意思的事——刚开始写字时，我们被要求去临摹别人的字体。
@@ -3522,3 +3545,32 @@ MVC模式本身也是接于分层而设计的，如下图是Spring MVC的请求�
  -《程序员必读之软件架构》
  
 
+
+基础实战篇
+===
+
+Welcome Django。。
+
+Django
+---
+
+###架构
+
+创建Django项目
+---
+
+
+Mezzanine
+---
+
+我们并不想从头
+
+
+Mezzanine项目
+---
+
+CMS与博客
+---
+
+实践与目标
+---
