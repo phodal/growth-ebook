@@ -1388,6 +1388,26 @@ para.style.color="blue";
 
 Welcome Django。。
 
+Django
+---
+
+###架构
+
+创建Django项目
+---
+
+Mezzanine
+---
+
+我们并不想从头
+
+
+博客
+---
+
+实践
+---
+
 前端与后台
 ===
 
