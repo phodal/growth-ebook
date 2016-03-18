@@ -282,7 +282,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li><a href="#回顾与架构设计">回顾与架构设计</a><ul>
-<li><a href="#自省">自省</a></li>
+<li><a href="#自我总结">自我总结</a><ul>
+<li><a href="#为什么你不看不到自己的方向">为什么你不看不到自己的方向？</a></li>
+</ul></li>
 <li><a href="#retro">Retro</a><ul>
 <li><a href="#well">Well</a></li>
 <li><a href="#less-well">Less Well</a></li>
@@ -2163,11 +2165,14 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>4.在测试中使用</p>
 <pre><code>messageToggles = ResourceBundle.getBundle(&quot;myProps&quot;);</code></pre>
 <h1 id="数据分析">数据分析</h1>
-<p>数据分析是一个很有意思的过程，也是一个非常重要的过程，他们是非常重要的一个循环：</p>
-<p>想法 -&gt; 构建 -&gt; 产品 -&gt; 衡量 -&gt; 数据 -&gt; 学习 -&gt; 想法</p>
+<p>数据分析是一个很有意思的过程，也是一个非常重要的过程，他们是非常重要的一个循环[^精益数据分析]：</p>
+<figure>
+<img src="chapters/chapter5/lean-analytics.png" alt="数据分析过程" /><figcaption>数据分析过程</figcaption>
+</figure>
 <p>有时候，对于我们的决定只要有一点点的数据支持就够了。也就是一点点的变化，可能就决定了我们产品的好坏。我们可能会因此而作出一些些改变，这些改变可能会让我们打败巨头。</p>
 <p>这一点和Growth的构建过程也很相像，在最开始的时候我只是想制定一个成长路线。而后，我发现这好像是一个不错的idea，我就开始去构建这个idea。于是它变成了Growth，这时候我需要依靠什么去分析用户喜欢的功能呢？我没有那么多的精力去和那么多的人沟通，也不能去和那么多的人沟通。</p>
 <p>我只能借助Google Analytics来收集用户的数据。从这些数据里去学习一些东西，而这些就会变成一个新的想法。</p>
+<p>[^精益数据分析]：参考来源精益数据分析。</p>
 <h2 id="google-analytics">Google Analytics</h2>
 <p>Google Analytics是一个非常赞的分析工具，而且它不仅仅可以用于Web应用，也可以用于移动应用。</p>
 <h3 id="受众群体">受众群体</h3>
@@ -2664,13 +2669,13 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </ul>
 <h1 id="回顾与架构设计">回顾与架构设计</h1>
 <p>在我开始接触架构设计的时候，我对于这个知识点觉得很奇怪。因为架构设计看上去是一个很复杂的话题，然而他是属于设计的一部分。如果你懂得什么是美、什么是丑，那么我想你也是懂得设计的。而设计是一件很有意思的事——刚开始写字时，我们被要求去临摹别人的字体。</p>
-<h2 id="自省">自省</h2>
+<h2 id="自我总结">自我总结</h2>
 <p>总结在某种意义上相当于自己对自己的反馈：</p>
 <figure>
 <img src="chapters/images/output-input.png" alt="Output is Input" /><figcaption>Output is Input</figcaption>
 </figure>
-<p>当我们向自己输入更多反馈的时候，我们就可以更好地调整我们的方向。</p>
-<p>总结本身属于输出的一部分，而我们也在不断调整我们的输入的时候，我们也在导向更好地输出。</p>
+<p>当我们向自己输入更多反馈的时候，我们就可以更好地调整我们的方向。它属于输出的一部分，而我们也在不断调整我们的输入的时候，我们也在导向更好地输出。</p>
+<h3 id="为什么你不看不到自己的方向">为什么你不看不到自己的方向？</h3>
 <h2 id="retro">Retro</h2>
 <blockquote>
 <p>Retro 的目的是对团队的激励。Retro的模式的特点就是让我们更关注于Less Well。定期，经常，回顾，反思。当我们无法变得更好的时候可以帮助我们反观团队自身，不要变得更差。让破窗效应<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>难以发生。</p>
