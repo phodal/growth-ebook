@@ -66,7 +66,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <nav id="TOC">
 <ul>
 <li><a href="#growth-全栈工程师学习手册">Growth: 全栈工程师学习手册</a><ul>
-<li><a href="#全栈工程师是未来">全栈工程师是未来</a></li>
+<li><a href="#全栈工程师是未来">全栈工程师是未来</a><ul>
+<li><a href="#技术的变革">技术的变革</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#基础知识篇">基础知识篇</a><ul>
 <li><a href="#windows还是unix-webstorm还是sublime">Windows还是Unix? WebStorm还是Sublime?</a><ul>
@@ -322,6 +324,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </nav>
 <h1 id="growth-全栈工程师学习手册">Growth: 全栈工程师学习手册</h1>
 <h2 id="全栈工程师是未来">全栈工程师是未来</h2>
+<p>技术在过去的几十年里进步很快，也将在未来的几十年里发展得更快。今天技术的门槛下降得越来越快，原本需要一个团队做出来的Web应用，现在只需要一两个人就可以了。</p>
+<h3 id="技术的变革">技术的变革</h3>
+<p>二十年前的网站以静态的形式出现，这样的网站并不需要太多的人去维护、管理。接着，人们发明了CGI(通用网关接口，英语：Common Gateway Interface)来实现动态的网站。下图是一个早期网站的架构图：</p>
+<figure>
+<img src="chapters/prelude/cgi-arch.gif" alt="CGI网站架构" /><figcaption>CGI网站架构</figcaption>
+</figure>
+<p>当时这种网站的URL类似于：</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">https</span>://www.phodal.com/cgi-bin/getblog</code></pre></div>
+<p>(PS：这个链接是为了讲解而存在的，并没有真实存在。)</p>
+<p>用户访问上面的网页的时候就会访问，cgi-bin的路径下对应的getblog脚本。你可以用Shell返回这个网页：</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co">#!/bin/sh</span>
+<span class="kw">echo</span> Content-type: text/plain
+<span class="kw">echo</span> hello,world</code></pre></div>
+<p>也可以用Perl来处理:</p>
+<div class="sourceCode"><pre class="sourceCode perl"><code class="sourceCode perl"><span class="kw">#!/usr/local/bin/perl</span>
+<span class="fu">print</span> <span class="kw">&quot;</span><span class="st">Content-type: text/plain</span><span class="kw">&quot;</span>;
+<span class="fu">print</span> <span class="kw">&quot;</span><span class="st">helo,world</span><span class="kw">&quot;</span>;</code></pre></div>
 <h1 id="基础知识篇">基础知识篇</h1>
 <p>在我们第一次开始写程序的时候，都是以Hello World开始的。或者：</p>
 <div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c">printf(<span class="st">&quot;hello,world&quot;</span>);</code></pre></div>
