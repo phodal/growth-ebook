@@ -326,6 +326,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2 id="全栈工程师是未来">全栈工程师是未来</h2>
 <p>技术在过去的几十年里进步很快，也将在未来的几十年里发展得更快。今天技术的门槛下降得越来越快，原本需要一个团队做出来的Web应用，现在只需要一两个人就可以了。</p>
 <h3 id="技术的变革">技术的变革</h3>
+<p>在开始进入主题之前，先我们看看历史的进程。</p>
+<h4 id="早期网站架构">早期网站架构</h4>
 <p>二十年前的网站以静态的形式出现，这样的网站并不需要太多的人去维护、管理。接着，人们发明了CGI(通用网关接口，英语：Common Gateway Interface)来实现动态的网站。下图是一个早期网站的架构图：</p>
 <figure>
 <img src="chapters/prelude/cgi-arch.gif" alt="CGI网站架构" /><figcaption>CGI网站架构</figcaption>
@@ -341,6 +343,40 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div class="sourceCode"><pre class="sourceCode perl"><code class="sourceCode perl"><span class="kw">#!/usr/local/bin/perl</span>
 <span class="fu">print</span> <span class="kw">&quot;</span><span class="st">Content-type: text/plain</span><span class="kw">&quot;</span>;
 <span class="fu">print</span> <span class="kw">&quot;</span><span class="st">helo,world</span><span class="kw">&quot;</span>;</code></pre></div>
+<p>这时的网站大量的依赖于脚本，如果说有明显的架构模式的话，就是上面那张古老的图。人们将HTML、脚本代码、CSS、SQL语句等等的代码都写在脚本文件里。看起来就像这样的：</p>
+<div class="sourceCode"><pre class="sourceCode perl"><code class="sourceCode perl"><span class="kw">#!/usr/bin/perl</span>
+<span class="fu">use</span> DBI;
+
+<span class="co"># connect to MySQL...</span>
+<span class="dt">$driver</span>= <span class="kw">&quot;</span><span class="st">mysql</span><span class="kw">&quot;</span>;
+<span class="dt">$dsn</span> = <span class="kw">&quot;</span><span class="st">DBI:</span><span class="dt">$driver</span><span class="st">:database=sample;host=csmysql.cs.cf.ac.uk</span><span class="kw">&quot;</span>;
+<span class="dt">$dbh</span> = DBI-&gt;<span class="fu">connect</span>(<span class="dt">$dsn</span>, <span class="kw">&quot;</span><span class="st">exampleuser</span><span class="kw">&quot;</span>, <span class="kw">&quot;</span><span class="st">passabc</span><span class="kw">&quot;</span>);
+
+<span class="co"># prepare and execute the SQL statement</span>
+<span class="dt">$sth</span> = <span class="dt">$dbh</span>-&gt;<span class="dt">prepare</span>(<span class="kw">&quot;</span><span class="st">SELECT s.name, o.osname, p.pname</span>
+<span class="st">       FROM systems s, opsystem o, people p</span>
+<span class="st">       WHERE s.oscode=o.oscode and s.ownercode = p.pcode</span><span class="kw">&quot;</span>);
+<span class="dt">$sth</span>-&gt;<span class="dt">execute</span>;
+
+<span class="co"># retrieve the results</span>
+<span class="fu">print</span> <span class="kw">&quot;</span><span class="st">Name</span><span class="ch">\t</span><span class="st">Owner</span><span class="ch">\t</span><span class="st">Operating System</span><span class="ch">\n</span><span class="kw">&quot;</span>;
+<span class="kw">while</span>(  <span class="kw">my</span> <span class="dt">$ref</span> = <span class="dt">$sth</span>-&gt;<span class="dt">fetchrow_hashref</span>() ) {
+    <span class="fu">print</span> <span class="dt">$ref</span>-&gt;{<span class="kw">&#39;</span><span class="st">name</span><span class="kw">&#39;</span>};
+    <span class="fu">print</span> <span class="kw">&quot;</span><span class="ch">\t</span><span class="kw">&quot;</span>;
+    <span class="fu">print</span> <span class="dt">$ref</span>-&gt;{<span class="kw">&#39;</span><span class="st">pname</span><span class="kw">&#39;</span>};
+    <span class="fu">print</span> <span class="kw">&quot;</span><span class="ch">\t</span><span class="kw">&quot;</span>;
+    <span class="fu">print</span> <span class="dt">$ref</span>-&gt;{<span class="kw">&#39;</span><span class="st">osname</span><span class="kw">&#39;</span>};
+    <span class="fu">print</span> <span class="kw">&quot;</span><span class="ch">\n</span><span class="kw">&quot;</span>;
+}
+<span class="fu">exit</span>;</code></pre></div>
+<p>Blabla，各种代码混乱地夹杂在一起。不得不说一句：这样的代码在2012年，我也看了有一些。简单地来说，这个时代的代码结构就是这样的：</p>
+<figure>
+<img src="chapters/prelude/cgi-script.png" alt="CGI脚本文件" /><figcaption>CGI脚本文件</figcaption>
+</figure>
+<p>这简直就是一场恶梦。不过，在今天好似那些PHP新手也是这样写代码的。</p>
+<p>好了，这时候我们就可以讨论讨论MVC模式了。</p>
+<h4 id="mvc模式">MVC模式</h4>
+<p>我有理由相信Martin Fowler的《企业应用架构模式》在当时一定非常受欢迎。</p>
 <h1 id="基础知识篇">基础知识篇</h1>
 <p>在我们第一次开始写程序的时候，都是以Hello World开始的。或者：</p>
 <div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c">printf(<span class="st">&quot;hello,world&quot;</span>);</code></pre></div>
