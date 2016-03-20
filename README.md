@@ -1,13 +1,18 @@
 Growth: 全栈增长工程师指南
 ===
 
+这是一本不止于全栈工程师的学习手册，它也包含了如何成为一个Growth Hacker的知识。
+
 > 《[RePractise](https://github.com/phodal/repractise)》前传，兼开源Web学习应用[Growth](https://github.com/phodal/growth)的电子书版。
 
 在线查看：[http://growth.phodal.com/](http://growth.phodal.com/)，Epub版本：[下载](https://github.com/phodal/growth-ebook/raw/gh-pages/growth.epub)
 
-这是一本不止于全栈工程师的学习手册，它也包含了如何成为一个Growth Hacker的知识。
+有钱捧个钱场:
 
-获取最新动态，请关注我的微信公众号（搜索Phodal）:
+![Alipay](https://raw.githubusercontent.com/phodal/growth/master/docs/alipay.png)![Wechat](https://raw.githubusercontent.com/phodal/growth/master/docs/wechat.png)
+
+
+没钱棒个人场: 关注我的微信公众号（搜索Phodal）.
 
 ![QRCode](https://raw.githubusercontent.com/phodal/growth/master/www/img/wechat.jpg)
 
@@ -200,13 +205,6 @@ Growth: 全栈增长工程师指南
     *   [每个人都是架构师](http://growth.phodal.com/#每个人都是架构师)
         *   [如何构建一个博客系统](http://growth.phodal.com/#如何构建一个博客系统)
         *   [相关阅读资料](http://growth.phodal.com/#相关阅读资料)
-
-Donate
----
-
-有钱捧个钱场:
-
-![Alipay](https://raw.githubusercontent.com/phodal/growth/master/docs/alipay.png)![Wechat](https://raw.githubusercontent.com/phodal/growth/master/docs/wechat.png)
 
 License
 ---
