@@ -15,7 +15,7 @@ html: markdown
 		--include-before-body $(include_dir)/author.html \
 		--include-before-body $(include_dir)/share.html \
 		--include-after-body $(include_dir)/stats.html \
-		--title-prefix "Growth: 全栈工程师学习手册" \
+		--title-prefix "Growth: 全栈增长工程师指南" \
 		--normalize \
 		--smart \
 		--toc

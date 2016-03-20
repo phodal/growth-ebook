@@ -1,4 +1,4 @@
-Growth: 全栈工程师学习手册
+Growth: 全栈增长工程师指南
 ===
 
 > 《[RePractise](https://github.com/phodal/repractise)》前传，兼开源Web学习应用[Growth](https://github.com/phodal/growth)的电子书版。
