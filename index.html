@@ -68,6 +68,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#growth-全栈工程师学习手册">Growth: 全栈工程师学习手册</a><ul>
 <li><a href="#全栈工程师是未来">全栈工程师是未来</a><ul>
 <li><a href="#技术层面">技术层面</a></li>
+<li><a href="#软件开发的核心难题沟通">软件开发的核心难题：沟通</a></li>
 <li><a href="#大公司的专家与小公司的全栈">大公司的专家与小公司的全栈</a></li>
 </ul></li>
 </ul></li>
@@ -359,7 +360,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <img src="chapters/prelude/oneui-serviceful-arch.png" alt="后台服务化与前台一致化架构" /><figcaption>后台服务化与前台一致化架构</figcaption>
 </figure>
 <p>后台在不知不觉中已经被服务化了，即只提供API接口和服务。前端在这时已经尽量地和APP端在结合，使得他们可以保持一致。</p>
-<h3 id="大公司的专家与小公司的全栈">大公司的专家与小公司的全栈</h3>
+<h3 id="软件开发的核心难题沟通">软件开发的核心难题：沟通</h3>
 <p>软件开发在过去的几十年里都是大公司的专利，小公司根本没有足够的能力去做这样的事。</p>
 <figure>
 <img src="chapters/prelude/develop-history.png" alt="开发演进" /><figcaption>开发演进</figcaption>
@@ -370,14 +371,33 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </figure>
 <p>然而这种开发方式很难应对市场的变化——当我们花费了几年的时间开发出了一个软件，而这个软件是几年前人们才需要的。同时，由于软件开发本身的复杂度的限制，复制的系统在后期需要大量的系统集成工作。这样的集成工作可能要花费上大量的时间——几星期、几个月。</p>
 <figure>
-<img src="chapters/prelude/waterfall-process.png" alt="瀑布流的工作模型" /><figcaption>瀑布流的工作模型</figcaption>
+<img src="chapters/prelude/waterfall-process.png" alt="瀑布流的沟通模型" /><figcaption>瀑布流的沟通模型</figcaption>
 </figure>
-<h4 id="沟通问题">沟通问题</h4>
+<p>当人们意识到这个问题的时候，开始改进工作流程。出现了敏捷软件开发，这可以解释为什么产品经理会经常改需求。如果一个功能本身是没必要出现的话，那么为什么要花功夫去开发。但是如果一个功能在设计的初期就没有好好设计，那么改需求也是必然的。</p>
+<p>现有的互联网公司的工作流程和敏捷软件开发在很多部分上是相似的，都有迭代、分析等等的过程：</p>
+<figure>
+<img src="chapters/prelude/scrum.png" alt="敏捷软件开发" /><figcaption>敏捷软件开发</figcaption>
+</figure>
+<p>但是据我的所知：国内的多数互联网公司是不写测试的、没有Code Review等等。当然，这也不是一篇关于如何实践敏捷的文章。敏捷与瀑布式开发在很大的区别就是：沟通问题。传统的软件开发在调研完毕后就是分析、开发等等。而敏捷开发则会强调这个过程中的沟通问题：</p>
+<figure>
+<img src="chapters/prelude/scrum-communication.png" alt="敏捷软件开发" /><figcaption>敏捷软件开发</figcaption>
+</figure>
+<p>在整个过程中都不断地强调沟通问题，然而这时还存在一个问题：组织结构本身的问题。这样的组织结构，如下图所示：</p>
+<figure>
+<img src="chapters/prelude/scrum-issues.png" alt="组织结构" /><figcaption>组织结构</figcaption>
+</figure>
+<p>如果市场部门/产品经理没有与研发团队坐一起来分析问题，那么问题就多了。当一个需求在实现的过程中遇到问题，到底是哪个部门的问题？</p>
+<p>同样的如果我们的研发部门是这样子的结构：</p>
+<figure>
+<img src="chapters/prelude/tech-org.png" alt="研发部门" /><figcaption>研发部门</figcaption>
+</figure>
+<p>那么在研发、上线的过程中仍然会遇到各种的沟通问题。</p>
+<h3 id="大公司的专家与小公司的全栈">大公司的专家与小公司的全栈</h3>
 <p>参考书籍</p>
 <ul>
 <li>《精益企业： 高效能组织如何规模化创新》</li>
 <li>《企业应用架构模式》</li>
-<li>《》</li>
+<li>《敏捷软件开发》</li>
 </ul>
 <h1 id="基础知识篇">基础知识篇</h1>
 <p>在我们第一次开始写程序的时候，都是以Hello World开始的。或者：</p>
