@@ -148,6 +148,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="#前台与后台交互">前台与后台交互</a><ul>
 <li><a href="#ajax">Ajax</a></li>
+<li><a href="#restful-api">RESTful API</a></li>
 <li><a href="#json">JSON</a></li>
 <li><a href="#websocket">WebSocket</a></li>
 </ul></li>
@@ -1368,6 +1369,13 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>你引入了Backbone、Angluar，你的架构变成了MVP、MVVM。尽管发生了一些架构上的变化，但是项目的开发并没有因此而发生变化。这其中涉及到了一些职责的问题，如果某一个层级中有太多的职责，那么它是不是加重了一些人的负担？</p>
 <p>后台在过去的岁月里起着很重要的作用，当然在未来也是。</p>
 <p>就最几年的解耦趋势来看，它在变得更小，变成一系列的服务。并向前台提供很多RESTful API，看上去有点像提供一些辅助性的工作。</p>
+<p>因此在这一章里，我们将讲述详细介绍：</p>
+<ol type="1">
+<li>后台语言与选型</li>
+<li>前端框架与选型</li>
+<li>前端一致化，后台服务化的趋势</li>
+<li>前后端通讯</li>
+</ol>
 <h2 id="如何选择一门好的后台语言">如何选择一门好的后台语言</h2>
 <p>如何选择一门好的后台语言似乎是大家都很感兴趣的问题？大概只是因为他们想要在一开始的时候去学一门很实用的语言——至少会经常用到，而不是学好就被遗弃了。或者它不会因为一门新的语言的出现而消亡。</p>
 <h3 id="javascript-1">JavaScript</h3>
@@ -1646,6 +1654,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <h3 id="ajax">Ajax</h3>
 <p>AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。</p>
 <p>通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。传统的网页（不使用 AJAX）如果需要更新内容，必须重载整个网页页面。</p>
+<h3 id="restful-api">RESTful API</h3>
 <h3 id="json">JSON</h3>
 <p>JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。它基于ECMAScript的一个子集。 JSON采用完全独立于语言的文本格式，但是也使用了类似于C语言家族的习惯（包括C、C++、C#、Java、JavaScript、Perl、Python等）。这些特性使JSON成为理想的数据交换语言。 易于人阅读和编写，同时也易于机器解析和生成(一般用于提升网络传输速率)。</p>
 <h4 id="json-web-tokens">JSON WEB Tokens</h4>
