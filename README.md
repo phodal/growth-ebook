@@ -5,7 +5,14 @@ Growth: 全栈增长工程师指南
 
 > 《[RePractise](https://github.com/phodal/repractise)》前传，兼开源Web学习应用[Growth](https://github.com/phodal/growth)的电子书版。
 
-在线查看：[http://growth.phodal.com/](http://growth.phodal.com/)，Epub版本：[下载](https://github.com/phodal/growth-ebook/raw/gh-pages/growth.epub)
+在线查看：[http://growth.phodal.com/](http://growth.phodal.com/)
+
+**下载**
+
+ - [Epub版：《Growth: 全栈增长工程师指南》](https://github.com/phodal/growth-ebook/releases/download/0.2.5/growth.epub)
+ - [Mobi版：《Growth: 全栈增长工程师指南》](https://github.com/phodal/growth-ebook/releases/download/0.2.5/growth.mobi)
+ - [PDF版：《Growth: 全栈增长工程师指南》](https://github.com/phodal/growth-ebook/releases/download/0.2.5/growth.pdf)
+ - [RTF版：《Growth: 全栈增长工程师指南》](https://github.com/phodal/growth-ebook/releases/download/0.2.5/growth.rtf)
 
 有钱捧个钱场:
 
