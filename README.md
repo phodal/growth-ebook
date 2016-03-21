@@ -1,11 +1,9 @@
 Growth: 全栈增长工程师指南
 ===
 
-这是一本不止于全栈工程师的学习手册，它也包含了如何成为一个Growth Hacker的知识。
+不止于全栈工程师，还有Growth Hacker。
 
-> 《[RePractise](https://github.com/phodal/repractise)》前传，兼开源Web学习应用[Growth](https://github.com/phodal/growth)的电子书版。
-
-在线查看：[http://growth.phodal.com/](http://growth.phodal.com/)
+在线：[http://growth.phodal.com/](http://growth.phodal.com/)
 
 **下载**
 
