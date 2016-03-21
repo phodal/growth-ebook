@@ -186,7 +186,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#功能实现">功能实现</a></li>
 <li><a href="#重构代码">重构代码</a></li>
 </ul></li>
-<li><a href="#selenium与功能测试的自动化">Selenium与功能测试的自动化</a></li>
+<li><a href="#selenium与自动化测试">Selenium与自动化测试</a></li>
 <li><a href="#可读的代码">可读的代码</a><ul>
 <li><a href="#命名">命名</a></li>
 <li><a href="#函数长度">函数长度</a></li>
@@ -216,8 +216,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#lnmp架构">LNMP架构</a><ul>
 <li><a href="#操作系统">操作系统</a></li>
 <li><a href="#http服务器">HTTP服务器</a></li>
-<li><a href="#web应用语言">Web应用语言</a></li>
-<li><a href="#数据持久化-1">数据持久化</a></li>
 </ul></li>
 <li><a href="#代理">代理</a></li>
 <li><a href="#web缓存">Web缓存</a><ul>
@@ -1948,17 +1946,17 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <p>简单的来说：Stub从某种程度上来说，会返回我们一个特定的结果，用代码替换来方法；而Mock只是确保这个方法被调用。</p>
 <h3 id="stub">Stub</h3>
 <p>Stub从字面意义上来说是存根，存根可以理解为我们保留了一些预留的结果。这个时候我们相当于构建了这样一个特殊的测试场景，用于替换诸如网络或者IO口调度等高度不可预期的测试。如当我们需要去验证某个api被调用并返回了一个结果，举例在最小物联网系统设计中返回的json，我们可以在本地构建一个</p>
-<pre><code>[{&quot;id&quot;:1,&quot;temperature&quot;:14,&quot;sensors1&quot;:15,&quot;sensors2&quot;:12,&quot;led1&quot;:1}]</code></pre>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript">[<span class="op">{</span><span class="st">&quot;id&quot;</span><span class="op">:</span><span class="dv">1</span><span class="op">,</span><span class="st">&quot;temperature&quot;</span><span class="op">:</span><span class="dv">14</span><span class="op">,</span><span class="st">&quot;sensors1&quot;</span><span class="op">:</span><span class="dv">15</span><span class="op">,</span><span class="st">&quot;sensors2&quot;</span><span class="op">:</span><span class="dv">12</span><span class="op">,</span><span class="st">&quot;led1&quot;</span><span class="op">:</span><span class="dv">1</span><span class="op">}</span>]</code></pre></div>
 <p>的结果来当我们预期的数据，也就是所谓的存根。那么我们所要做的也就是解析json，并返回预期的结果。当我们依赖于网络时，此时测试容易出现问题。</p>
 <h3 id="mock">Mock</h3>
 <p>Mock从字面意义上来说是模仿，也就是说我们要在本地构造一个模仿的环境，而我们只需要验证我们的方法被调用了。</p>
-<pre><code>var Foo = function(){};
-Foo.prototype.callMe = function() {};
-var foo = mock( Foo );
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> Foo <span class="op">=</span> <span class="kw">function</span>()<span class="op">{};</span>
+<span class="va">Foo</span>.<span class="va">prototype</span>.<span class="at">callMe</span> <span class="op">=</span> <span class="kw">function</span>() <span class="op">{};</span>
+<span class="kw">var</span> foo <span class="op">=</span> <span class="at">mock</span>( Foo )<span class="op">;</span>
  
-foo.callMe();
+<span class="va">foo</span>.<span class="at">callMe</span>()<span class="op">;</span>
  
-expect( foo.callMe ).toHaveBeenCalled();</code></pre>
+<span class="at">expect</span>( <span class="va">foo</span>.<span class="at">callMe</span> ).<span class="at">toHaveBeenCalled</span>()<span class="op">;</span></code></pre></div>
 <h4 id="mock-server">Mock Server</h4>
 <p>Mock是一大类的方法，其中还有一个比较高级的用法是Mock第三方服务。</p>
 <h2 id="测试驱动开发">测试驱动开发</h2>
@@ -1982,7 +1980,7 @@ expect( foo.callMe ).toHaveBeenCalled();</code></pre>
 <p>通常在我的理解下，TDD是可有可无的。既然我知道了我要实现的大部分功能，而且我也知道如何实现。与此同时，对Code Smell也保持着警惕、要保证功能被测试覆盖。那么，总的来说TDD带来的价值并不大。</p>
 <p>然而，在当前这种情况下，我知道我想要的功能，但是我并不理解其深层次的功能。我需要花费大量的时候来理解，它为什么是这样的，需要先有一些脚本来知道它是怎么工作的。TDD变显得很有价值，换句话来说，在现有的情况下，TDD对于我们不了解的一些事情，可以驱动出更多的开发。毕竟在我们完成测试脚本之后，我们也会发现这些测试脚本成为了代码的一部分。</p>
 <p>在这种理想的情况下，我们为什么不TDD呢?</p>
-<h2 id="selenium与功能测试的自动化">Selenium与功能测试的自动化</h2>
+<h2 id="selenium与自动化测试">Selenium与自动化测试</h2>
 <blockquote>
 <p>Selenium也是一个用于Web应用程序测试的工具。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样。支持的浏览器包括IE(7、8、9)、Mozilla Firefox、Mozilla Suite等。这个工具的主要功能包括：测试与浏览器的兼容性——测试你的应用程序看是否能够很好得工作在不同浏览器和操作系统之上。测试系统功能——创建衰退测试检验软件功能和用户需求。支持自动录制动作和自动生成.Net、Java、Perl等不同语言的测试脚本。</p>
 </blockquote>
@@ -2257,8 +2255,6 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-like 协议下发行。由俄罗斯的程序设计师Igor Sysoev所开发，供俄国大型的入口网站及搜索引擎Rambler（俄文：Рамблер）使用。其特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、新浪、网易、腾讯等。</p>
 <h4 id="iis">IIS</h4>
 <p>Internet Information Services（IIS，互联网信息服务），是由微软公司提供的基于运行Microsoft Windows的互联网基本服务。最初是Windows NT版本的可选包，随后内置在Windows 2000、Windows XP Professional和Windows Server 2003一起发行，但在Windows XP Home版本上并没有IIS。</p>
-<h3 id="web应用语言">Web应用语言</h3>
-<h3 id="数据持久化-1">数据持久化</h3>
 <h2 id="代理">代理</h2>
 <blockquote>
 <p>代理服务器（Proxy Server）是一种重要的服务器安全功能，它的工作主要在开放系统互联(OSI)模型的会话层，从而起到防火墙的作用。代理服务器大多被用来连接INTERNET（国际互联网）和Local Area Network（局域网）。</p>
@@ -2306,18 +2302,18 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="spring-propertyplaceholder">Spring PropertyPlaceHolder</h3>
 <p>在<a href="http://stackoverflow.com/questions/21725709/property-place-holder-bean-in-application-context-xml-spring">StackOverflow</a> 上有一个关于这个问题的回答。</p>
 <p>1.使用bean创建一个properties。(mvc-config.xml)</p>
-<pre><code>&lt;util:properties id=&quot;myProps&quot; location=&quot;WEB-INF/config/prop.properties&quot;/&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;util:properties</span><span class="ot"> id=</span><span class="st">&quot;myProps&quot;</span><span class="ot"> location=</span><span class="st">&quot;WEB-INF/config/prop.properties&quot;</span><span class="kw">/&gt;</span></code></pre></div>
 <p>2.注入值</p>
-<pre><code>@Value(&quot;#{myProps[&#39;message&#39;]}&quot;)</code></pre>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="fu">@Value</span>(<span class="st">&quot;#{myProps[&#39;message&#39;]}&quot;</span>)</code></pre></div>
 <p>这样就可以在<code>root context</code>和<code>mvc context</code>下工作</p>
 <p>3.在jsp中使用</p>
-<pre><code>&lt;spring:eval expression=&quot;@myProps.message&quot; var=&quot;messageToggle&quot;/&gt;
+<div class="sourceCode"><pre class="sourceCode jsp"><code class="sourceCode jsp"><span class="kw">&lt;spring:eval</span><span class="ot"> expression</span>=<span class="dt">&quot;@myProps.message&quot;</span><span class="ot"> var</span>=<span class="dt">&quot;messageToggle&quot;</span><span class="kw">/&gt;</span>
 
-&lt;c:if test=&quot;${messageToggle eq true}&quot;&gt;
+<span class="kw">&lt;c:if</span><span class="ot"> test</span>=<span class="dt">&quot;</span>${messageToggle <span class="kw">eq</span> <span class="kw">true</span>}<span class="dt">&quot;</span><span class="kw">&gt;</span>
     message
-&lt;/c:if&gt;</code></pre>
+<span class="kw">&lt;/c:if&gt;</span></code></pre></div>
 <p>4.在测试中使用</p>
-<pre><code>messageToggles = ResourceBundle.getBundle(&quot;myProps&quot;);</code></pre>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java">messageToggles = ResourceBundle.<span class="fu">getBundle</span>(<span class="st">&quot;myProps&quot;</span>);</code></pre></div>
 <h1 id="数据分析">数据分析</h1>
 <p>数据分析是一个很有意思的过程，也是一个非常重要的过程，他们是非常重要的一个循环[^精益数据分析]：</p>
 <figure>
@@ -2628,20 +2624,10 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>保证功能核心同人机界面之间的协调工作，减少BUG。</li>
 </ul>
 <h3 id="ux需要什么">UX需要什么</h3>
-<p>上传一张来自知乎上回答的答案，所需要的东西也差不多是这样子的。</p>
+<p>从下图中我们可以看到一些UX所需要的知识体系：</p>
 <figure>
 <img src="chapters/images/ux/ux_design.jpg" alt="UX" /><figcaption>UX</figcaption>
 </figure>
-<ul>
-<li>Information Architecture</li>
-<li>Architecture</li>
-<li>Industrial Design</li>
-<li>Human Factors</li>
-<li>Sound Design</li>
-<li>Human-Computer Interaction</li>
-<li>Visual Design</li>
-<li>Content(Text,Video,Sound)</li>
-</ul>
 <p>即</p>
 <ul>
 <li>信息构架</li>

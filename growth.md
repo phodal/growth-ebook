@@ -1796,10 +1796,6 @@ View层在Web应用中，一般是使用模板引擎装载对应HTML。如下所
 
 现在，让我们来看看一个采用后台即服务的网站架构会是怎样的？
 
-
-
-
-
 数据持久化
 ---
 
@@ -2182,8 +2178,6 @@ Git与版本控制
 
 > 版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。
 
-
-
 ###Git
 
 从一般开发者的角度来看，git有以下功能：
@@ -2389,15 +2383,17 @@ Mock与Stub
 
 Stub从字面意义上来说是存根，存根可以理解为我们保留了一些预留的结果。这个时候我们相当于构建了这样一个特殊的测试场景，用于替换诸如网络或者IO口调度等高度不可预期的测试。如当我们需要去验证某个api被调用并返回了一个结果，举例在最小物联网系统设计中返回的json，我们可以在本地构建一个
 
-    [{"id":1,"temperature":14,"sensors1":15,"sensors2":12,"led1":1}]
-    
+```javascript
+[{"id":1,"temperature":14,"sensors1":15,"sensors2":12,"led1":1}]
+```
+
 的结果来当我们预期的数据，也就是所谓的存根。那么我们所要做的也就是解析json，并返回预期的结果。当我们依赖于网络时，此时测试容易出现问题。
 
 ###Mock
 
 Mock从字面意义上来说是模仿，也就是说我们要在本地构造一个模仿的环境，而我们只需要验证我们的方法被调用了。
 
-```
+```javascript
 var Foo = function(){};
 Foo.prototype.callMe = function() {};
 var foo = mock( Foo );
@@ -2443,7 +2439,7 @@ Mock是一大类的方法，其中还有一个比较高级的用法是Mock第三
 
 在这种理想的情况下，我们为什么不TDD呢?
 
-Selenium与功能测试的自动化
+Selenium与自动化测试
 ---
 
 > Selenium也是一个用于Web应用程序测试的工具。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样。支持的浏览器包括IE(7、8、9)、Mozilla Firefox、Mozilla Suite等。这个工具的主要功能包括：测试与浏览器的兼容性——测试你的应用程序看是否能够很好得工作在不同浏览器和操作系统之上。测试系统功能——创建衰退测试检验软件功能和用户需求。支持自动录制动作和自动生成.Net、Java、Perl等不同语言的测试脚本。
@@ -2468,8 +2464,6 @@ Selenium与功能测试的自动化
 首先要说的就是程序员认为最难的一个话题了——命名。
 
 ###命名
-
-
 
 ###函数长度
 
@@ -2843,7 +2837,6 @@ Linux是一种自由和开放源码的类UNIX操作系统内核。目前存在�
 
 Linux操作系统也是自由软件和开放源代码发展中最著名的例子。只要遵循GNU通用公共许可证,任何人和机构都可以自由地使用Linux的所有底层源代码，也可以自由地修改和再发布。严格来讲，Linux这个词本身只表示Linux内核，但在实际上人们已经习惯了用Linux来形容整个基于Linux内核，并且使用GNU 工程各种工具和数据库的操作系统（也被称为GNU/ Linux）。通常情况下，Linux被打包成供桌上型电脑和服务器使用的Linux发行版本。一些流行的主流Linux发行版本，包括Debian（及其衍生版本Ubuntu），Fedora和openSUSE等。 Linux得名于电脑业余爱好者Linus Torvalds。
 
-
 ###HTTP服务器
 
 >  Web服务器一般指网站服务器，是指驻留于因特网上某种类型计算机的程序，可以向浏览器等Web客户端提供文档，也可以放置网站文件，让全世界浏览；可以放置数据文件，让全世界下载。
@@ -2861,10 +2854,6 @@ Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（I
 ####IIS
 
 Internet Information Services（IIS，互联网信息服务），是由微软公司提供的基于运行Microsoft Windows的互联网基本服务。最初是Windows NT版本的可选包，随后内置在Windows 2000、Windows XP Professional和Windows Server 2003一起发行，但在Windows XP Home版本上并没有IIS。
-
-###Web应用语言
-
-###数据持久化
 
 代理
 ---
@@ -2937,25 +2926,33 @@ Toggle
 
 1.使用bean创建一个properties。(mvc-config.xml)
 
-    <util:properties id="myProps" location="WEB-INF/config/prop.properties"/>
+```xml
+<util:properties id="myProps" location="WEB-INF/config/prop.properties"/>
+```
 
 2.注入值
 
-    @Value("#{myProps['message']}")
+```java
+@Value("#{myProps['message']}")
+```
 
 这样就可以在``root context``和``mvc context``下工作
 
 3.在jsp中使用
 
-    <spring:eval expression="@myProps.message" var="messageToggle"/>
+```jsp
+<spring:eval expression="@myProps.message" var="messageToggle"/>
 
-    <c:if test="${messageToggle eq true}">
-        message
-    </c:if>
+<c:if test="${messageToggle eq true}">
+    message
+</c:if>
+```
 
 4.在测试中使用
 
-    messageToggles = ResourceBundle.getBundle("myProps");
+```java
+messageToggles = ResourceBundle.getBundle("myProps");
+```
 
 
 数据分析
@@ -2970,7 +2967,6 @@ Toggle
 这一点和Growth的构建过程也很相像，在最开始的时候我只是想制定一个成长路线。而后，我发现这好像是一个不错的idea，我就开始去构建这个idea。于是它变成了Growth，这时候我需要依靠什么去分析用户喜欢的功能呢？我没有那么多的精力去和那么多的人沟通，也不能去和那么多的人沟通。
 
 我只能借助Google Analytics来收集用户的数据。从这些数据里去学习一些东西，而这些就会变成一个新的想法。
-
 
 [^精益数据分析]：参考来源精益数据分析。
 
@@ -3269,18 +3265,9 @@ UX
 
 ###UX需要什么
 
-上传一张来自知乎上回答的答案，所需要的东西也差不多是这样子的。
+从下图中我们可以看到一些UX所需要的知识体系：
 
 ![UX](chapters/images/ux/ux_design.jpg)
-
- - Information Architecture
- - Architecture
- - Industrial Design
- - Human Factors
- - Sound Design
- - Human-Computer Interaction
- - Visual Design
- - Content(Text,Video,Sound)
 
 即
 
