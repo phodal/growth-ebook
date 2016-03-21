@@ -147,16 +147,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#jquery系">jQuery系</a></li>
 </ul></li>
 <li><a href="#前台与后台交互">前台与后台交互</a><ul>
-<li><a href="#ajax">Ajax</a></li>
-<li><a href="#restful-api">RESTful API</a></li>
-<li><a href="#json">JSON</a></li>
-<li><a href="#websocket">WebSocket</a></li>
+<li><a href="#api">API</a></li>
+<li><a href="#数据格式">数据格式</a></li>
+<li><a href="#通讯方式">通讯方式</a></li>
 </ul></li>
 <li><a href="#mvvm">MVVM</a><ul>
 <li><a href="#mvp">MVP</a></li>
 <li><a href="#mvvm-1">MVVM</a></li>
 </ul></li>
-<li><a href="#消息队列">消息队列</a></li>
+<li><a href="#服务间通讯消息队列">服务间通讯：消息队列</a></li>
 </ul></li>
 <li><a href="#编码">编码</a><ul>
 <li><a href="#编码过程">编码过程</a></li>
@@ -1651,17 +1650,23 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>这是前几年（今年2016）的一个技术方向，今天似乎已经不太常见了。</p>
 <h2 id="前台与后台交互">前台与后台交互</h2>
 <p>在我们把后台服务化后，前端跨平台化之前，我们还需要了解前台和后台之间怎么通讯。</p>
-<h3 id="ajax">Ajax</h3>
-<p>AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。</p>
-<p>通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。传统的网页（不使用 AJAX）如果需要更新内容，必须重载整个网页页面。</p>
-<h3 id="restful-api">RESTful API</h3>
-<h3 id="json">JSON</h3>
+<h3 id="api">API</h3>
+<h4 id="restful">RESTful</h4>
+<h3 id="数据格式">数据格式</h3>
+<h4 id="json">JSON</h4>
+<blockquote>
 <p>JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。它基于ECMAScript的一个子集。 JSON采用完全独立于语言的文本格式，但是也使用了类似于C语言家族的习惯（包括C、C++、C#、Java、JavaScript、Perl、Python等）。这些特性使JSON成为理想的数据交换语言。 易于人阅读和编写，同时也易于机器解析和生成(一般用于提升网络传输速率)。</p>
+</blockquote>
 <h4 id="json-web-tokens">JSON WEB Tokens</h4>
 <ul>
 <li>JSON Web Token (JWT) 是一种基于token 的认证方案。</li>
 </ul>
-<h3 id="websocket">WebSocket</h3>
+<h3 id="通讯方式">通讯方式</h3>
+<h4 id="ajax">Ajax</h4>
+<p>AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。</p>
+<p>这个过程可以从最早的的XMLHttpRequest开始说起，它是一个 JavaScript 对象。它最初由微软设计，随后被 Mozilla、Apple和Google采纳。如今，该对象已经被W3C组织标准化。</p>
+<p>通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。传统的网页（不使用 AJAX）如果需要更新内容，必须重载整个网页页面。</p>
+<h4 id="websocket">WebSocket</h4>
 <blockquote>
 <p>WebSocket是HTML5开始提供的一种在单个TCP 连接上进行全双工通讯的协议。</p>
 </blockquote>
@@ -1677,7 +1682,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <blockquote>
 <p>MVVM（Model-View-ViewModel）框架的由来便是MVP（Model-View-Presenter）模式与WPF结合的应用方式时发展演变过来的一种新型架构框架。</p>
 </blockquote>
-<h2 id="消息队列">消息队列</h2>
+<h2 id="服务间通讯消息队列">服务间通讯：消息队列</h2>
 <h1 id="编码">编码</h1>
 <p>在我们真正开始去写代码之前，我们可能会去考虑一些事情。怎么去规划我们的任务，如何去细分这个任务。</p>
 <ol type="1">

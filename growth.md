@@ -1942,24 +1942,33 @@ jQuery还是一个不错的选择，不仅仅对于学习来说，而且对于�
 
 在我们把后台服务化后，前端跨平台化之前，我们还需要了解前台和后台之间怎么通讯。
 
-###Ajax
+###API
 
-AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。
+####RESTful 
 
-通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。传统的网页（不使用 AJAX）如果需要更新内容，必须重载整个网页页面。
+###数据格式
 
-###RESTful API
+####JSON
 
-###JSON
-
-JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。它基于ECMAScript的一个子集。 JSON采用完全独立于语言的文本格式，但是也使用了类似于C语言家族的习惯（包括C、C++、C#、Java、JavaScript、Perl、Python等）。这些特性使JSON成为理想的数据交换语言。 易于人阅读和编写，同时也易于机器解析和生成(一般用于提升网络传输速率)。
+> JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。它基于ECMAScript的一个子集。 JSON采用完全独立于语言的文本格式，但是也使用了类似于C语言家族的习惯（包括C、C++、C#、Java、JavaScript、Perl、Python等）。这些特性使JSON成为理想的数据交换语言。 易于人阅读和编写，同时也易于机器解析和生成(一般用于提升网络传输速率)。
 
 
 ####JSON WEB Tokens
 
 - JSON Web Token (JWT) 是一种基于token 的认证方案。
 
-###WebSocket
+
+###通讯方式
+
+####Ajax
+
+AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。
+
+这个过程可以从最早的的XMLHttpRequest开始说起，它是一个 JavaScript 对象。它最初由微软设计，随后被 Mozilla、Apple和Google采纳。如今，该对象已经被W3C组织标准化。
+
+通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。传统的网页（不使用 AJAX）如果需要更新内容，必须重载整个网页页面。
+
+####WebSocket
 
 > WebSocket是HTML5开始提供的一种在单个TCP 连接上进行全双工通讯的协议。
 
@@ -1982,7 +1991,7 @@ MVVM 在使用当中，通常还会利用双向绑定技术，使得 Model 变�
 
 > MVVM（Model-View-ViewModel）框架的由来便是MVP（Model-View-Presenter）模式与WPF结合的应用方式时发展演变过来的一种新型架构框架。
 
-消息队列
+服务间通讯：消息队列
 ---
 
 
