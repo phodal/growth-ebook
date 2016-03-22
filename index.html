@@ -169,7 +169,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#git">Git</a></li>
 </ul></li>
 <li><a href="#写代码只是在码字">写代码只是在码字</a></li>
-<li><a href="#kick-off">Kick Off</a></li>
 <li><a href="#tasking">Tasking</a><ul>
 <li><a href="#如何tasking一本书">如何Tasking一本书</a></li>
 </ul></li>
@@ -187,7 +186,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#功能实现">功能实现</a></li>
 <li><a href="#重构代码">重构代码</a></li>
 </ul></li>
-<li><a href="#selenium与自动化测试">Selenium与自动化测试</a></li>
+<li><a href="#自动化测试">自动化测试</a><ul>
+<li><a href="#selenium">Selenium</a></li>
+</ul></li>
 <li><a href="#可读的代码">可读的代码</a><ul>
 <li><a href="#命名">命名</a></li>
 <li><a href="#函数长度">函数长度</a></li>
@@ -1861,6 +1862,9 @@ gulp.task(&#39;default&#39;, function () {
 <blockquote>
 <p>版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。</p>
 </blockquote>
+<figure>
+<img src="chapters/chapter3/gitflow.png" alt="基于Git的工作流" /><figcaption>基于Git的工作流</figcaption>
+</figure>
 <h3 id="git">Git</h3>
 <p>从一般开发者的角度来看，git有以下功能：</p>
 <ol type="1">
@@ -1940,11 +1944,6 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <p>编程只是在码字，难道不是么？</p>
 </blockquote>
 <p>真正的想法都在脑子里，而不在纸上，或者IDE里。</p>
-<h2 id="kick-off">Kick Off</h2>
-<blockquote>
-<p>Kick Off也就是项目启动会议。当我们有项目启动的时候，把涉及的相关人员都聚集起来，然后召开一个启动的会议。</p>
-</blockquote>
-<p>对应于任务，则是任务的启动，开发人员和业务人员一起讨论问题。</p>
 <h2 id="tasking">Tasking</h2>
 <p>初到ThoughtWorks时，Pair时候总会有人教我如何开始编码，这应该也是一项基础的能力。结合日常，重新演绎一下这个过程：</p>
 <ol type="1">
@@ -2035,7 +2034,8 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <p>通常在我的理解下，TDD是可有可无的。既然我知道了我要实现的大部分功能，而且我也知道如何实现。与此同时，对Code Smell也保持着警惕、要保证功能被测试覆盖。那么，总的来说TDD带来的价值并不大。</p>
 <p>然而，在当前这种情况下，我知道我想要的功能，但是我并不理解其深层次的功能。我需要花费大量的时候来理解，它为什么是这样的，需要先有一些脚本来知道它是怎么工作的。TDD变显得很有价值，换句话来说，在现有的情况下，TDD对于我们不了解的一些事情，可以驱动出更多的开发。毕竟在我们完成测试脚本之后，我们也会发现这些测试脚本成为了代码的一部分。</p>
 <p>在这种理想的情况下，我们为什么不TDD呢?</p>
-<h2 id="selenium与自动化测试">Selenium与自动化测试</h2>
+<h2 id="自动化测试">自动化测试</h2>
+<h3 id="selenium">Selenium</h3>
 <blockquote>
 <p>Selenium也是一个用于Web应用程序测试的工具。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样。支持的浏览器包括IE(7、8、9)、Mozilla Firefox、Mozilla Suite等。这个工具的主要功能包括：测试与浏览器的兼容性——测试你的应用程序看是否能够很好得工作在不同浏览器和操作系统之上。测试系统功能——创建衰退测试检验软件功能和用户需求。支持自动录制动作和自动生成.Net、Java、Perl等不同语言的测试脚本。</p>
 </blockquote>
