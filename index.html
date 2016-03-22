@@ -135,6 +135,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#model">Model</a></li>
 <li><a href="#view">View</a></li>
 <li><a href="#controller">Controller</a></li>
+<li><a href="#更多-1">更多</a></li>
 </ul></li>
 <li><a href="#后台即服务">后台即服务</a><ul>
 <li><a href="#api演进史">API演进史</a></li>
@@ -156,17 +157,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#json">JSON</a></li>
 <li><a href="#websocket">WebSocket</a></li>
 </ul></li>
-<li><a href="#mvvm">MVVM</a><ul>
-<li><a href="#mvp">MVP</a></li>
-<li><a href="#mvvm-1">MVVM</a></li>
-</ul></li>
-<li><a href="#服务间通讯消息队列">服务间通讯：消息队列</a></li>
 </ul></li>
 <li><a href="#编码">编码</a><ul>
 <li><a href="#编码过程">编码过程</a></li>
 <li><a href="#web应用的构建系统">Web应用的构建系统</a><ul>
-<li><a href="#构建过程">构建过程</a></li>
-<li><a href="#一个web应用的构建过程">一个Web应用的构建过程</a></li>
+<li><a href="#web应用的构建过程">Web应用的构建过程</a></li>
+<li><a href="#web应用的构建实战">Web应用的构建实战</a></li>
 </ul></li>
 <li><a href="#git与版本控制">Git与版本控制</a><ul>
 <li><a href="#版本控制">版本控制</a></li>
@@ -1525,6 +1521,19 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <blockquote>
 <p>控制器层起到不同层面间的组织作用，用于控制应用程序的流程。</p>
 </blockquote>
+<h3 id="更多-1">更多</h3>
+<p>在前后端解耦合的系统中，通常系统的架构模式就变成了MVP，又或者是MVVM。</p>
+<figure>
+<img src="chapters/chapter2/mvc-mvvm-mvp.png" alt="MVC、MVVM、MVP对比" /><figcaption>MVC、MVVM、MVP对比</figcaption>
+</figure>
+<p>三者间很大的不同在于层级间的通讯模型、使用场景。</p>
+<h4 id="mvp">MVP</h4>
+<blockquote>
+<p>MVP 是从经典的模式MVC演变而来，它们的基本思想有相通的地方：Controller/Presenter负责逻辑的处理，Model提供数据，View负责显示。</p>
+</blockquote>
+<h4 id="mvvm">MVVM</h4>
+<p>MVVM是Model-View-ViewModel的简写。相比于MVC悠久的历史来说，MVVM是一个相当新的架构，它最早于2005年被由的WPF和Silverlight 的架构师 John Gossman提出，并且应用在微软的软件开发中。而MVC已经被提出了二十多年了，可见两者出现的年代差别有多大。</p>
+<p>MVVM 在使用当中，通常还会利用双向绑定技术，使得 Model 变化时，ViewModel会自动更新，而ViewModel变化时，View 也会自动变化。所以，MVVM 模式有些时候又被称作：model-view-binder模式。</p>
 <h2 id="后台即服务">后台即服务</h2>
 <blockquote>
 <p>BaaS（Backend as a Service）是一种新型的云服务，旨在为移动和Web应用提供后端云服务，包括云端数据/文件存储、账户管理、消息推送、社交媒体整合等。</p>
@@ -1655,7 +1664,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>jQuery还是一个不错的选择，不仅仅对于学习来说，而且对于工作来说也是如此。如果你们不是新起一个项目或者重构旧的项目，那么必然你是没有多少机会去超越DOM。而如果这时候尝试去这样做会付出一定的代价，如我在前端演进史所说的那样——晚点做出选择，可能会好一点。</p>
 <p>因为谁说jQuery不会去解放DOM，React带来的一些新的思想可能就比不上它的缺点。除此，jQuery耕织几年的生态系统也是不可忽略。</p>
 <h4 id="backbone-zepto-mustache">Backbone + Zepto + Mustache</h4>
-<p>这是前几年（今年2016）的一个技术方向，今天似乎已经不太常见了。</p>
+<p>这是前几年（今年2016）的一个技术方向，今天似乎已经不太常见了。在这种模式下，人们使用Backbone来做一些路由、模型、视图、集合方面的工作，而由jQuery的兼容者Zepto来负责对DOM的处理，而Mustache在这里则充当模板系统的工作。</p>
 <h2 id="前台与后台交互">前台与后台交互</h2>
 <p>在我们把后台服务化后，前端跨平台化之前，我们还需要了解前台和后台之间怎么通讯。从现有的一些技术上来看，Ajax和WebSocket是比较受欢迎的。</p>
 <h3 id="ajax">Ajax</h3>
@@ -1715,19 +1724,6 @@ thePerson <span class="op">=</span> thePeople[<span class="dv">0</span>]<span cl
 <h3 id="websocket">WebSocket</h3>
 <p>在一些网站上为了实现推送技术，都采用了轮询的技术。即在特定的的时间间隔里，由浏览器对服务器发出HTTP请求，然后浏览器便可以从服务器获取最新的技术。由于浏览器需要不断的向服务器发出请求，而HTTP的Header是非常长的，即使是一个很小的数据也会占用大量的带宽和服务器资源。为了解决这个问题，HTML5推出了一种在单个TCP连接上进行全双工通讯的协议WebSocket。</p>
 <p>WebSocket可以让客户端和服务器之间存在持久的连接，而且双方都可以随时开始发送数据。</p>
-<h2 id="mvvm">MVVM</h2>
-<p>MVVM是Model-View-ViewModel的简写。</p>
-<p>相对于 MVC 的历史来说，MVVM 是一个相当新的架构，MVVM 最早于 2005 年被微软的 WPF 和 Silverlight 的架构师 John Gossman 提出，并且应用在微软的软件开发中。当时 MVC 已经被提出了 20 多年了，可见两者出现的年代差别有多大。</p>
-<p>MVVM 在使用当中，通常还会利用双向绑定技术，使得 Model 变化时，ViewModel 会自动更新，而 ViewModel 变化时，View 也会自动变化。所以，MVVM 模式有些时候又被称作：model-view-binder 模式。</p>
-<h3 id="mvp">MVP</h3>
-<blockquote>
-<p>MVP 是从经典的模式MVC演变而来，它们的基本思想有相通的地方：Controller/Presenter负责逻辑的处理，Model提供数据，View负责显示。</p>
-</blockquote>
-<h3 id="mvvm-1">MVVM</h3>
-<blockquote>
-<p>MVVM（Model-View-ViewModel）框架的由来便是MVP（Model-View-Presenter）模式与WPF结合的应用方式时发展演变过来的一种新型架构框架。</p>
-</blockquote>
-<h2 id="服务间通讯消息队列">服务间通讯：消息队列</h2>
 <h1 id="编码">编码</h1>
 <p>在我们真正开始去写代码之前，我们可能会去考虑一些事情。怎么去规划我们的任务，如何去细分这个任务。</p>
 <ol type="1">
@@ -1761,7 +1757,7 @@ thePerson <span class="op">=</span> thePeople[<span class="dv">0</span>]<span cl
 </blockquote>
 <p>常用的构建工具包括GNU Make、GNU autotools、CMake、Apache Ant（主要用于JAVA）。此外，所有的集成开发环境（IDE）比如Qt Creator、Microsoft Visual Studio和Eclipse都对他们支持的语言添加了自己的构建系统配置工具。通常IDE中的构建系统只是基于控制台的构建系统（比如Autotool和CMake）的前端。</p>
 <p>对比于Web应用开发来说，构建系统应该还包括应用打包(如Java中的Jar包，或者用于部署的RPM包、源代码分析、测试覆盖率分析等等。</p>
-<h3 id="构建过程">构建过程</h3>
+<h3 id="web应用的构建过程">Web应用的构建过程</h3>
 <p>在刚创建项目的时候，我们都会有一个完整的构建思路。如下图便是这样的一个例子：</p>
 <figure>
 <img src="chapters/chapter3/build-web-project.png" alt="构建过程" /><figcaption>构建过程</figcaption>
@@ -1776,7 +1772,7 @@ thePerson <span class="op">=</span> thePeople[<span class="dv">0</span>]<span cl
 <p><strong>打包</strong>。对于部署来说，直接安装一个RPM包，或者DEB包是最方便的事。在这个包里会包含应用程序所需的所有二进制文件、数据和配置文件等等。</p>
 <p><strong>上传包</strong>。在完成打包后，我们就可以上传这个软件包了。</p>
 <p><strong>部署</strong>。最后，我们就可以在我们的线上环境中安装这个软件包。</p>
-<h3 id="一个web应用的构建过程">一个Web应用的构建过程</h3>
+<h3 id="web应用的构建实战">Web应用的构建实战</h3>
 <p>下面就让我们来构建一个简单的Web应用，来实践一下这个过程。在这里，我们要使用到的一个工具是Gulp，当然对于Grunt也是类似的。</p>
 <h4 id="gulp入门指南">Gulp入门指南</h4>
 <blockquote>
