@@ -1907,7 +1907,7 @@ User.sync({force: true}).then(function () {
 如何选择前端框架
 ---
 
-选择前端框架似乎是一件很难的事，然而这件事情并不是看上去那么难。只是有时候你只想追随潮流，或者有一些些偏见。
+选择前端框架似乎是一件很难的事，然而这件事情并不是看上去那么难。只是有时候你只想追随潮流，或者因为你在技术选型受到一些影响。但是总的来说，选择一个框架并不是一件很难的事。同时也不是一件非常重要的事，因为框架本身是相通的。如果我们不尽量去解耦系统，那么选择什么框架也都是一样的。
 
 ###Angular
 
@@ -1940,39 +1940,73 @@ jQuery还是一个不错的选择，不仅仅对于学习来说，而且对于�
 前台与后台交互
 ---
 
-在我们把后台服务化后，前端跨平台化之前，我们还需要了解前台和后台之间怎么通讯。
+在我们把后台服务化后，前端跨平台化之前，我们还需要了解前台和后台之间怎么通讯。从现有的一些技术上来看，Ajax和WebSocket是比较受欢迎的。
 
-###API
+###Ajax
 
-####RESTful 
+AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。这个功能在之前的很多年来一直被Web开发者所忽视，直到最近Gmail、Google Suggest和Google Maps的出现，才使人们开始意识到其重要性.
 
-###数据格式
+说起Ajax，我们就需要用JavaScript向服务器发送一个HTTP请求。这个过程要从XMLHttpRequest开始说起，它是一个 JavaScript 对象。它最初由微软设计，随后被 Mozilla、Apple和Google采纳。如今，该对象已经被W3C组织标准化。
 
-####JSON
+通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。传统的网页（不使用 AJAX）如果需要更新内容，必须重载整个网页页面。
+
+###WebSocket
+
+在一些网站上为了实现推送技术，都采用了轮询的技术。即在特定的的时间间隔里，由浏览器对服务器发出HTTP请求，然后浏览器便可以从服务器获取最新的技术。由于浏览器需要不断的向服务器发出请求，而HTTP的Header是非常长的，即使是一个很小的数据也会占用大量的带宽和服务器资源。为了解决这个问题，HTML5推出了一种在单个TCP连接上进行全双工通讯的协议WebSocket。
+
+WebSocket可以让客户端和服务器之间存在持久的连接，而且双方都可以随时开始发送数据。
+
+###JSON
+
+尽管Ajax可以支持使用XML和JSON等格式，但是从近年的趋势来看，XML基本上已经很少看到了。
 
 > JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。它基于ECMAScript的一个子集。 JSON采用完全独立于语言的文本格式，但是也使用了类似于C语言家族的习惯（包括C、C++、C#、Java、JavaScript、Perl、Python等）。这些特性使JSON成为理想的数据交换语言。 易于人阅读和编写，同时也易于机器解析和生成(一般用于提升网络传输速率)。
+
+####XML VS JSON
+
+JSON格式的数据具有以下的一些特点：
+
+ - 容易阅读
+ - 解析速度更快
+ - 占用空间更少
+
+如下所示的是一个简单的对比过程：
+
+```javascript
+myJSON = {"age" : 12, "name" : "Danielle"}
+``` 
+
+如果我们要取出上面数值中的age，那么我们只需要这样做：
+
+```javascript
+anObject = JSON.parse(myJSON);
+anObject.age === 12 // True
+```
+
+同样的，对于XML来说，我们有下面的格式:
+
+```
+<person>
+    <age>12</age>
+    <name>Danielle</name>
+</person>
+```
+
+而如果我们要取出上面数据中的age的值，他将是这样的：
+
+```javascript
+myObject = parseThatXMLPlease();
+thePeople = myObject.getChildren("person");
+thePerson = thePeople[0];
+thePerson.getChildren("age")[0].value() == "12" // True
+```
 
 
 ####JSON WEB Tokens
 
-- JSON Web Token (JWT) 是一种基于token 的认证方案。
+在人们大规模地开始Web应用的时候，我们在授权的时候遇到了一些问题，而这些问题不是Cookie所能解决的。Cookie存在一些明显的问题：不能支持跨域、并且不是无状态的、不能使用CDN、与系统耦合等等。因此人们提出了JWT来解决这个问题，除了解决上面的问题，它还可以提高性能等等。
 
-
-###通讯方式
-
-####Ajax
-
-AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。
-
-这个过程可以从最早的的XMLHttpRequest开始说起，它是一个 JavaScript 对象。它最初由微软设计，随后被 Mozilla、Apple和Google采纳。如今，该对象已经被W3C组织标准化。
-
-通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。传统的网页（不使用 AJAX）如果需要更新内容，必须重载整个网页页面。
-
-####WebSocket
-
-> WebSocket是HTML5开始提供的一种在单个TCP 连接上进行全双工通讯的协议。
-
-
+> JSON Web Token (JWT) 是一种基于token 的认证方案。
 
 MVVM
 ---
