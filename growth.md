@@ -1572,7 +1572,7 @@ para.style.color="blue";
 3. 前端一致化，后台服务化的趋势
 4. 前后端通讯
 
-如何选择一门好的后台语言
+后台语言选择
 ---
 
 如何选择一门好的后台语言似乎是大家都很感兴趣的问题？大概只是因为他们想要在一开始的时候去学一门很实用的语言——至少会经常用到，而不是学好就被遗弃了。或者它不会因为一门新的语言的出现而消亡。
@@ -1904,7 +1904,7 @@ User.sync({force: true}).then(function () {
 1. Index Documents。索引文档部分，将用于存储数据到文件系统中。
 2. Search Index。搜索部分，用于查询相应的数据。
 
-如何选择前端框架
+前端框架选择
 ---
 
 选择前端框架似乎是一件很难的事，然而这件事情并不是看上去那么难。只是有时候你只想追随潮流，或者因为你在技术选型受到一些影响。但是总的来说，选择一个框架并不是一件很难的事。同时也不是一件非常重要的事，因为框架本身是相通的。如果我们不尽量去解耦系统，那么选择什么框架也都是一样的。
@@ -2971,7 +2971,9 @@ Toggle
 
 很少用Java作为技术栈的我，很少有Java的笔记，记录一下这个简单的feature toggle。
 
-###Spring PropertyPlaceHolder
+###PropertyPlaceHolder
+
+Spring PropertyPlaceHolder
 
 在[StackOverflow](http://stackoverflow.com/questions/21725709/property-place-holder-bean-in-application-context-xml-spring) 上有一个关于这个问题的回答。
 
@@ -3020,6 +3022,15 @@ messageToggles = ResourceBundle.getBundle("myProps");
 我只能借助Google Analytics来收集用户的数据。从这些数据里去学习一些东西，而这些就会变成一个新的想法。
 
 [^精益数据分析]：参考来源精益数据分析。
+
+数据分析
+---
+
+###数据分析的过程
+
+![数据分析过程](chapters/chapter5/lean-analytics.png)
+
+
 
 Google Analytics
 ---
@@ -3580,7 +3591,9 @@ So，如何开始修改代码？
 
 当我们向自己输入更多反馈的时候，我们就可以更好地调整我们的方向。它属于输出的一部分，而我们也在不断调整我们的输入的时候，我们也在导向更好地输出。
 
-###为什么你不看不到自己的方向？
+###吾日三省吾身
+
+> 为什么你不看不到自己的方向？
 
 Retro
 ---
