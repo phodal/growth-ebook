@@ -1584,7 +1584,7 @@ para.style.color="blue";
  - Node.js + Javascript 网站前后台
  - Javascript + Tessl 做硬件
 
-So，这是一门很有应用场景的语言。
+So，这是一门很有应用前景的语言。
 
 ###Python
 
