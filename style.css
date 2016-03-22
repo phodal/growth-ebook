@@ -145,6 +145,10 @@ figure img {
     max-width: 100%;
 }
 
+figcaption {
+    text-align: center;
+}
+
 ul li a {
     font-weight: bold;
 }
