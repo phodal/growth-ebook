@@ -3070,7 +3070,7 @@ Google Analytics是一个非常赞的分析工具，而且它不仅仅可以用�
 
 如下图是Growth应用最近两星期的数据：
 
-![Growth GA](chapters/images/ga/growth-ga.png)
+![Growth GA](chapters/chapter5/growth-ga.png)
 
 这是Google Analytics中的“受众群体”的概览，在这个视图中：
 
@@ -3107,7 +3107,7 @@ Opera|34|64.71%
 
 除此，不得不说的一点就是流量获取，如下图所示是我博客的热门渠道：
 
-![Phodal.com Traffic](chapters/images/ga/phodal-traffic.png)
+![Phodal.com Traffic](chapters/chapter5/phodal-traffic.png)
 
 可以直接得到一个不错的结论是我的博客的主要流量来源是搜索引擎，再细细一看数据：
 
@@ -3132,7 +3132,7 @@ github.com / referral | 281
 
 ###移动应用
 
-![Growth应用数据](chapters/images/ga/ga-app.jpg)
+![Growth应用数据](chapters/chapter5/ga-app.jpg)
 
 
 SEO
