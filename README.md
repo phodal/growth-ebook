@@ -5,12 +5,7 @@ Growth: 全栈增长工程师指南
 
 在线：[http://growth.phodal.com/](http://growth.phodal.com/)
 
-**下载**
-
- - [Epub版：《Growth: 全栈增长工程师指南》](https://github.com/phodal/growth-ebook/releases/download/0.2.5/growth.epub)
- - [Mobi版：《Growth: 全栈增长工程师指南》](https://github.com/phodal/growth-ebook/releases/download/0.2.5/growth.mobi)
- - [PDF版：《Growth: 全栈增长工程师指南》](https://github.com/phodal/growth-ebook/releases/download/0.2.5/growth.pdf)
- - [RTF版：《Growth: 全栈增长工程师指南》](https://github.com/phodal/growth-ebook/releases/download/0.2.5/growth.rtf)
+**下载**: [Epub版](https://github.com/phodal/growth-ebook/releases/download/0.2.5/growth.epub)、[Mobi版](https://github.com/phodal/growth-ebook/releases/download/0.2.5/growth.mobi)、[PDF版](https://github.com/phodal/growth-ebook/releases/download/0.2.5/growth.pdf)、[RTF版](https://github.com/phodal/growth-ebook/releases/download/0.2.5/growth.rtf)
 
 有钱捧个钱场:
 
