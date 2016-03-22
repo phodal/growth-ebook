@@ -240,6 +240,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#google-analytics">Google Analytics</a><ul>
 <li><a href="#受众群体">受众群体</a></li>
 <li><a href="#流量获取">流量获取</a></li>
+<li><a href="#移动应用">移动应用</a></li>
 </ul></li>
 <li><a href="#seo">SEO</a><ul>
 <li><a href="#爬虫与索引">爬虫与索引</a></li>
@@ -2523,6 +2524,10 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </ol>
 <p>等等等。</p>
 <p>除此，我们可以分析用户的行为，如他们访问的主要网站、URL等等。</p>
+<h3 id="移动应用">移动应用</h3>
+<figure>
+<img src="chapters/images/ga/ga-app.jpg" alt="Growth应用数据" /><figcaption>Growth应用数据</figcaption>
+</figure>
 <h2 id="seo">SEO</h2>
 <blockquote>
 <p>这是一个老的，有些过时纸，但非常平易近人，甚至在我们中间的非白皮书的读者图标微笑什么每个程序员都应该知道的关于搜索引擎优化和他们绝对概念的解释更详细，我只提一笔带过。</p>
@@ -2571,7 +2576,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>SEO与编程的最大不同之处在于: <strong>编程的核心是技术，SEO的核心是内容</strong>。</p>
 <p>内容才是SEO最重要的组成部分，这也就是腾讯复制不了的东西。</p>
 <h3 id="seo基础知识">SEO基础知识</h3>
-<h4 id="确保网站是可以被索引的">确保网站是可以被索引的</h4>
+<p><strong>确保网站是可以被索引的</strong></p>
 <p>一些常见的页面不能被访问的原因</p>
 <ul>
 <li>隐藏在需要提交的表格中的链接</li>
@@ -2587,7 +2592,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>网站通过WebSocket的方法渲染内容</li>
 <li>使用诸如Mustache之类的JS模板引擎</li>
 </ul>
-<h4 id="什么样的网页可以被索引">什么样的网页可以被索引</h4>
+<p><strong>什么样的网页可以被索引</strong></p>
 <ul>
 <li>确保页面可以在没有JavaScript下能被渲染。对于现在JavaScript语言的使用越来越多的情况下，在使用JS模板引擎的时候也应该注意这样的问题。</li>
 <li>在用户禁用了JavaScript的情况下，保证所有的链接和页面是可以访问的。</li>
@@ -2597,7 +2602,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>确保页面能被索引。有一指向它的URL</li>
 <li>URL应该遵循最佳实践。如blog/how-to-driver有更好的可读性</li>
 </ul>
-<h4 id="在正确的地方使用正确的关键词">在正确的地方使用正确的关键词</h4>
+<p><strong>在正确的地方使用正确的关键词</strong></p>
 <ul>
 <li>把关键词放URL中</li>
 <li>关键词应该是页面的标签</li>
@@ -2663,9 +2668,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <blockquote>
 <p>另外，也许不太明显的方式，建立链接（或者至少流量）是使用社交媒体 - 所以设置你的Facebook ，Twitter和谷歌，每当你有新的链接一定要分享。这些通道也可以作为一个有效的渠道，推动更多的流量到您的网站。</p>
 </blockquote>
-<p>由社交渠道带来的流量在现在已经越来越重要了，对于一些以内容为主导的网站，而且处于发展初期，可以迅速带来流量，可以参考一下这篇文章</p>
-<p><a href="http://www.phodal.com/blog/xunta-analytics-and-website-content/">寻ta分析与网站内容</a></p>
-<p>一些更简单的办法就是交换链接，总之这个话题有些沉重，可能会带来一些负面的影响，如黑帽SEO。。。。</p>
+<p>由社交渠道带来的流量在现在已经越来越重要了，对于一些以内容为主导的网站，而且处于发展初期，可以迅速带来流量。一些更简单的办法就是交换链接，总之这个话题有些沉重，可能会带来一些负面的影响，如黑帽SEO。。。。</p>
 <p><strong>参考来源</strong>:</p>
 <p>《SEO艺术》(The Art of SEO)</p>
 <h2 id="hadoop分析数据">Hadoop分析数据</h2>
@@ -2673,7 +2676,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>Hadoop是一个由Apache基金会所开发的分布式系统基础架构。它可以让用户可以在不了解分布式底层细节的情况下，开发分布式程序。充分利用集群的威力进行高速运算和存储。</p>
 </blockquote>
 <p>Hadoop的框架最核心的设计就是：HDFS和MapReduce。HDFS为海量的数据提供了存储，则MapReduce为海量的数据提供了计算。</p>
-<p>Hadoop实现了一个分布式文件系统（Hadoop Distributed File System），简称HDFS。HDFS有高容错性的特点，并且设计用来部署在低廉的（low-cost）硬件上；而且它提供高吞吐量（high throughput）来访问应用程序的数据，适合那些有着超大数据集（large data set）的应用程序。同时，HDFS放宽了（relax）POSIX的要求，可以以流的形式访问（streaming access）文件系统中的数据。</p>
+<p>HDF是一个分布式文件系统（Hadoop Distributed File System）。它有高容错性的特点，并且设计用来部署在低廉的（low-cost）硬件上；而且它提供高吞吐量（high throughput）来访问应用程序的数据，适合那些有着超大数据集（large data set）的应用程序。同时，HDFS放宽了（relax）POSIX的要求，可以以流的形式访问（streaming access）文件系统中的数据。</p>
 <p>MapReduce是Google提出的一个软件架构，用于大规模数据集（大于1TB）的并行运算。概念“Map（映射）”和“Reduce（归纳）”，及他们的主要思想，都是从函数式编程语言借来的，还有从矢量编程语言借来的特性。</p>
 <h3 id="数据源">数据源</h3>
 <h3 id="数据分析-2">数据分析</h3>
