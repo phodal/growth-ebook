@@ -175,8 +175,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="#如何编写测试">如何编写测试</a><ul>
 <li><a href="#测试金字塔">测试金字塔</a></li>
-<li><a href="#测试用例">测试用例</a></li>
-<li><a href="#测试力度">测试力度</a></li>
 </ul></li>
 <li><a href="#mock与stub">Mock与Stub</a><ul>
 <li><a href="#stub">Stub</a></li>
@@ -195,7 +193,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#函数长度">函数长度</a></li>
 <li><a href="#函数嵌套">函数嵌套</a></li>
 <li><a href="#重复代码">重复代码</a></li>
-<li><a href="#测试用例-1">测试用例</a></li>
+<li><a href="#测试用例">测试用例</a></li>
 </ul></li>
 <li><a href="#代码重构">代码重构</a><ul>
 <li><a href="#重命名">重命名</a></li>
@@ -2000,12 +1998,25 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 </figure>
 <p>从结构上来说，上面的金字塔可以分成三部分：</p>
 <ol type="1">
-<li>单元测试</li>
+<li>单元测试。</li>
 <li>服务测试</li>
 <li>UI测试/功能测试</li>
 </ol>
-<h3 id="测试用例">测试用例</h3>
-<h3 id="测试力度">测试力度</h3>
+<p>如果你不知道上面的三种测试的话，那么我还是简单地但介绍一下。</p>
+<h4 id="单元测试">单元测试</h4>
+<p>单元测试是针对程序模块（软件设计的最小单位）来进行正确性检验的测试工作。它是应用的最小可测试部件。举个例子来说，下面是一个JavaScript的函数，用于判断一个变量是否是一个对象：</p>
+<pre><code>var isObject = function (obj) {
+    var type = typeof obj;
+    return type === &#39;function&#39; || type === &#39;object&#39; &amp;&amp; !!obj;
+};</code></pre>
+<p>这是一个很简单的功能，对应的我们会有一个简单的Jasmine测试来保证这个函数是正常工作的：</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="at">it</span>(<span class="st">&quot;should be a object&quot;</span><span class="op">,</span> <span class="kw">function</span> () <span class="op">{</span>
+    <span class="at">expect</span>(<span class="va">l</span>.<span class="at">isObject</span>([])).<span class="at">toEqual</span>(<span class="kw">true</span>)<span class="op">;</span>
+    <span class="at">expect</span>(<span class="va">l</span>.<span class="at">isObject</span>([<span class="op">{}</span>])).<span class="at">toEqual</span>(<span class="kw">true</span>)<span class="op">;</span>
+<span class="op">}</span>)<span class="op">;</span></code></pre></div>
+<p>虽然这个测试看上去很简单，但是大量的基本的单元测试可以保证我们调用的函数都是可以正常工作的。这也相当于是我们在建设金字塔时用的石块——如果我们的石块都是经常测试的，那么我们就不怕金字塔因为石块的损坏而坍塌。</p>
+<p>当单元测试达到一定的覆盖率，我们的代码就会变得更健壮。因为我们都需要保证我们的代码都是可测的，也意味着我们代码间的耦合度会降低。我们需要去考虑代码的长度，越长的代码在测试的时间会变得越困难。这也就是为什么TDD会促使我们写出短的代码。如果我们的代码都是有测试的，单元测试可以帮助我们在未来重构我们的代码。</p>
+<p>并且在很多没有文档或者文档不完整的开源项目中，了解这个项目某个函数的用法就是查看他的测试用例。这些测试用例<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>可以让我们直观地理解程序程序的API。</p>
 <h2 id="mock与stub">Mock与Stub</h2>
 <p>当我们遇到一些很难测试的方法、行为的时候，我们就一些特别的方式来帮助我们测试。Mock和Stub就是常见的两种方式：</p>
 <p><strong>Stub</strong></p>
@@ -2077,7 +2088,7 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <h3 id="函数长度">函数长度</h3>
 <h3 id="函数嵌套">函数嵌套</h3>
 <h3 id="重复代码">重复代码</h3>
-<h3 id="测试用例-1">测试用例</h3>
+<h3 id="测试用例">测试用例</h3>
 <h2 id="代码重构">代码重构</h2>
 <p>什么是重构?</p>
 <blockquote>
@@ -2905,7 +2916,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </blockquote>
 <h2 id="retro">Retro</h2>
 <blockquote>
-<p>Retro 的目的是对团队的激励。Retro的模式的特点就是让我们更关注于Less Well。定期，经常，回顾，反思。当我们无法变得更好的时候可以帮助我们反观团队自身，不要变得更差。让破窗效应<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>难以发生。</p>
+<p>Retro 的目的是对团队的激励。Retro的模式的特点就是让我们更关注于Less Well。定期，经常，回顾，反思。当我们无法变得更好的时候可以帮助我们反观团队自身，不要变得更差。让破窗效应<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>难以发生。</p>
 </blockquote>
 <p>Retro一般来说，有四个维度:</p>
 <ol type="1">
@@ -3104,7 +3115,8 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>以一幢有少许破窗的建筑为例，如果那些窗不被修理好，可能将会有破坏者破坏更多的窗户。最终他们甚至会闯入建筑内，如果发现无人居住，也许就在那里定居或者纵火。又或想像一条人行道有些许纸屑，如果无人清理，不久后就会有更多垃圾，最终人们会视为理所当然地将垃圾顺手丢弃在地上。因此破窗理论强调着力打击轻微罪行有助减少更严重罪案，应该以零容忍的态度面对罪案。<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p>测试用例（Test Case）是为某个特殊目标而编制的一组测试输入、执行条件以及预期结果，以便测试某个程序路径或核实是否满足某个特定需求。<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>以一幢有少许破窗的建筑为例，如果那些窗不被修理好，可能将会有破坏者破坏更多的窗户。最终他们甚至会闯入建筑内，如果发现无人居住，也许就在那里定居或者纵火。又或想像一条人行道有些许纸屑，如果无人清理，不久后就会有更多垃圾，最终人们会视为理所当然地将垃圾顺手丢弃在地上。因此破窗理论强调着力打击轻微罪行有助减少更严重罪案，应该以零容忍的态度面对罪案。<a href="#fnref2">↩</a></p></li>
 </ol>
 </section>
 </body>
