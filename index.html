@@ -175,6 +175,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="#如何编写测试">如何编写测试</a><ul>
 <li><a href="#测试金字塔">测试金字塔</a></li>
+<li><a href="#测试用例">测试用例</a></li>
 </ul></li>
 <li><a href="#mock与stub">Mock与Stub</a><ul>
 <li><a href="#stub">Stub</a></li>
@@ -193,7 +194,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#函数长度">函数长度</a></li>
 <li><a href="#函数嵌套">函数嵌套</a></li>
 <li><a href="#重复代码">重复代码</a></li>
-<li><a href="#测试用例">测试用例</a></li>
 </ul></li>
 <li><a href="#代码重构">代码重构</a><ul>
 <li><a href="#重命名">重命名</a></li>
@@ -2017,6 +2017,16 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <p>虽然这个测试看上去很简单，但是大量的基本的单元测试可以保证我们调用的函数都是可以正常工作的。这也相当于是我们在建设金字塔时用的石块——如果我们的石块都是经常测试的，那么我们就不怕金字塔因为石块的损坏而坍塌。</p>
 <p>当单元测试达到一定的覆盖率，我们的代码就会变得更健壮。因为我们都需要保证我们的代码都是可测的，也意味着我们代码间的耦合度会降低。我们需要去考虑代码的长度，越长的代码在测试的时间会变得越困难。这也就是为什么TDD会促使我们写出短的代码。如果我们的代码都是有测试的，单元测试可以帮助我们在未来重构我们的代码。</p>
 <p>并且在很多没有文档或者文档不完整的开源项目中，了解这个项目某个函数的用法就是查看他的测试用例。这些测试用例<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>可以让我们直观地理解程序程序的API。</p>
+<h3 id="测试用例">测试用例</h3>
+<ol type="1">
+<li>了解软件的原始需求(测试目的)</li>
+<li>熟悉软件的功能需求(测试点)</li>
+<li>熟悉软件的实现原理(测试点)</li>
+<li>用户场景和网上问题(测试点)</li>
+<li>测试用例的框架</li>
+<li>测试步骤(测试技巧方法)</li>
+<li>测试用例的一些思路</li>
+</ol>
 <h2 id="mock与stub">Mock与Stub</h2>
 <p>当我们遇到一些很难测试的方法、行为的时候，我们就一些特别的方式来帮助我们测试。Mock和Stub就是常见的两种方式：</p>
 <p><strong>Stub</strong></p>
@@ -2088,7 +2098,6 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <h3 id="函数长度">函数长度</h3>
 <h3 id="函数嵌套">函数嵌套</h3>
 <h3 id="重复代码">重复代码</h3>
-<h3 id="测试用例">测试用例</h3>
 <h2 id="代码重构">代码重构</h2>
 <p>什么是重构?</p>
 <blockquote>
