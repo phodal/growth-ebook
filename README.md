@@ -7,7 +7,9 @@ Growth: 全栈增长工程师指南
 
 **下载**: [Epub版](https://github.com/phodal/growth-ebook/releases/download/0.2.5/growth.epub)、[Mobi版](https://github.com/phodal/growth-ebook/releases/download/0.2.5/growth.mobi)、[PDF版](https://github.com/phodal/growth-ebook/releases/download/0.2.5/growth.pdf)、[RTF版](https://github.com/phodal/growth-ebook/releases/download/0.2.5/growth.rtf)
 
-《Growth实战篇Django版》: [Growth In Action Django](https://github.com/phodal/growth-in-action-django)
+**Growth实战篇**
+
+Django版: [Growth In Action Django](https://github.com/phodal/growth-in-action-django)
 
 
 有钱捧个钱场:
