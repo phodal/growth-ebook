@@ -217,10 +217,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="#docker">Docker</a></li>
 <li><a href="#lnmp架构">LNMP架构</a><ul>
-<li><a href="#操作系统">操作系统</a></li>
+<li><a href="#linux">Linux</a></li>
 <li><a href="#http服务器">HTTP服务器</a></li>
 </ul></li>
-<li><a href="#代理">代理</a></li>
+<li><a href="#代理服务器">代理服务器</a></li>
 <li><a href="#web缓存">Web缓存</a><ul>
 <li><a href="#数据库端缓存">数据库端缓存</a></li>
 <li><a href="#应用层缓存">应用层缓存</a></li>
@@ -1852,9 +1852,19 @@ gulp.task(&#39;default&#39;, function () {
 <blockquote>
 <p>版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。</p>
 </blockquote>
+<p>虽然基于Git的工作流可能并不是一个非常好的实践，但是在这里我们以这个工作流做为实践来开展我们的项目。如下图所示是一个基于Git的项目流：</p>
 <figure>
 <img src="chapters/chapter3/gitflow.png" alt="基于Git的工作流" /><figcaption>基于Git的工作流</figcaption>
 </figure>
+<p>我们日常会工作在“develop”分支（那条线）上，通常来说每个迭代我们会发布一个新的版本，而这个新的版本将会直接上线到产品环境。那么上线到产品环境的这个版本就需要打一个版本号——这样不仅可以方便跟踪我们的系统，而且当出错的时候我们也可以直接回滚到上一个版本。如果在上线的时候有些Bug不得不去修复，并且由于上线的新功能很重要，我们就需要一些Hotfix。而从整个过程来看，版本控制起了一个非常大的作用。</p>
+<p>不仅仅如此，版本控制的最大重要是在开发的过程中扮演的角色。通过版本管理系统，我们可以：</p>
+<ol type="1">
+<li>将某个文件回溯到之前的状态。</li>
+<li>将项目回退到过去某个时间点。</li>
+<li>在修改Bug时，可以查看修改历史，查出修改原因</li>
+<li>只要版本控制系统还在，你可以任意修改项目中的文件，并且还可以轻松恢复。</li>
+</ol>
+<p>常用的版本管理系统有Git、SVN，但是从近年来看Git似乎更受市场欢迎。</p>
 <h3 id="git">Git</h3>
 <p>从一般开发者的角度来看，git有以下功能：</p>
 <ol type="1">
@@ -1885,7 +1895,7 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <p>或者只是添加某个文件：</p>
 <pre><code>$ git add -p</code></pre>
 <p>我们可以输入</p>
-<pre><code>$git status</code></pre>
+<pre><code>$ git status</code></pre>
 <p>来看现在的状态，如下图是添加之前的：</p>
 <figure>
 <img src="chapters/images/before-add.png" alt="Before add" /><figcaption>Before add</figcaption>
@@ -1895,6 +1905,12 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <img src="chapters/images/after-add.png" alt="After add" /><figcaption>After add</figcaption>
 </figure>
 <p>可以看到状态的变化是从黄色到绿色，即unstage到add。</p>
+<p>在完成添加之后，我们就可以写入相应的提交信息——如这次修改添加了什么内容 、这次修改修复了什么问题等等。在我们的工作流程里，我们使用Jira这样的工具来管理我们的项目，也会在我们的Commit Message里写上作者的名字，如下：</p>
+<pre><code>$ git commit -m &quot;[GROWTH-001] Phodal: add first commit &amp; example&quot;</code></pre>
+<p>在这里的<code>GROWTH-001</code>就相当于是我们的任务号，Phodal则对应于用户名，后面的提交信息也会写明这个任务是干嘛的。</p>
+<p>由于有测试的存在，在完成提交之后，我们就需要运行相应的测试来保证我们没有破坏原来的功能。因此，我们就可以PUSH我们的代码到服务器端：</p>
+<pre><code>$ git push</code></pre>
+<p>这样其他人就可以看到我们修改的代码。</p>
 <h2 id="tasking">Tasking</h2>
 <p>初到ThoughtWorks时，Pair时候总会有人教我如何开始编码，这应该也是一项基础的能力。结合日常，重新演绎一下这个过程：</p>
 <ol type="1">
@@ -2371,7 +2387,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <blockquote>
 <p>LNMP是一个基于CentOS/Debian编写的Nginx、PHP、MySQL、phpMyAdmin、eAccelerator一键安装包。可以在VPS、独立主机上轻松的安装LNMP生产环境。</p>
 </blockquote>
-<h3 id="操作系统">操作系统</h3>
+<h3 id="linux">Linux</h3>
 <p>Linux是一种自由和开放源码的类UNIX操作系统内核。目前存在着许多不同的Linux发行版，可安装在各种各样的电脑硬件设备，从手机、平板电脑、路由器和影音游戏控制台，到桌上型电脑，大型电脑和超级电脑。 Linux是一个领先的操作系统内核，世界上运算最快的10台超级电脑运行的都是基于Linux内核的操作系统。</p>
 <p>Linux操作系统也是自由软件和开放源代码发展中最著名的例子。只要遵循GNU通用公共许可证,任何人和机构都可以自由地使用Linux的所有底层源代码，也可以自由地修改和再发布。严格来讲，Linux这个词本身只表示Linux内核，但在实际上人们已经习惯了用Linux来形容整个基于Linux内核，并且使用GNU 工程各种工具和数据库的操作系统（也被称为GNU/ Linux）。通常情况下，Linux被打包成供桌上型电脑和服务器使用的Linux发行版本。一些流行的主流Linux发行版本，包括Debian（及其衍生版本Ubuntu），Fedora和openSUSE等。 Linux得名于电脑业余爱好者Linus Torvalds。</p>
 <h3 id="http服务器">HTTP服务器</h3>
@@ -2385,7 +2401,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-like 协议下发行。由俄罗斯的程序设计师Igor Sysoev所开发，供俄国大型的入口网站及搜索引擎Rambler（俄文：Рамблер）使用。其特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、新浪、网易、腾讯等。</p>
 <h4 id="iis">IIS</h4>
 <p>Internet Information Services（IIS，互联网信息服务），是由微软公司提供的基于运行Microsoft Windows的互联网基本服务。最初是Windows NT版本的可选包，随后内置在Windows 2000、Windows XP Professional和Windows Server 2003一起发行，但在Windows XP Home版本上并没有IIS。</p>
-<h2 id="代理">代理</h2>
+<h2 id="代理服务器">代理服务器</h2>
 <blockquote>
 <p>代理服务器（Proxy Server）是一种重要的服务器安全功能，它的工作主要在开放系统互联(OSI)模型的会话层，从而起到防火墙的作用。代理服务器大多被用来连接INTERNET（国际互联网）和Local Area Network（局域网）。</p>
 </blockquote>
