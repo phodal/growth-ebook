@@ -181,7 +181,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#如何编写测试">如何编写测试</a><ul>
 <li><a href="#测试金字塔">测试金字塔</a></li>
 <li><a href="#如何测试">如何测试</a></li>
-<li><a href="#tips">Tips</a></li>
 </ul></li>
 <li><a href="#测试替身">测试替身</a><ul>
 <li><a href="#stub">Stub</a></li>
@@ -2112,20 +2111,26 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <li>访问首页</li>
 <li>验证首页的标题是“Welcome to my blog”</li>
 </ol>
-<p>大部分的测试代码也是以如何的流程来运行着。</p>
-<p><strong>Setup</strong></p>
-<p><strong>Execute</strong></p>
-<p><strong>Verify</strong></p>
-<p><strong>Tear Down</strong></p>
-<h3 id="tips">Tips</h3>
+<p>大部分的测试代码也是以如何的流程来运行着。有一点需要注意的是：一般来说函数名就表示了这个测试所要做测试的事情，如这里就是测试可以访问首页。</p>
+<p>如上所示的测试过程称为“四阶段测试”，即这个过程分为如下的四个阶段：</p>
+<ol type="1">
+<li><strong>Setup</strong>。在这个阶段主要是做一些准备工作，如数据准备和初始化等等，在上面的setup阶段就是用selenium启动了一个Firefox浏览器，然后把窗口最大化了。</li>
+<li><strong>Execute</strong>。在执行阶段就是做好验证结果前的工作，如我们在测试注册的时候，那么这里就是填写数据，并点击提交按钮。在上面的代码里，我们只是打开了首页。</li>
+<li><strong>Verify</strong>。在验证阶段，我们所要做的就是验证返回的结果是否和我们预期的一致。在这里我们还是使用和单元测试一样的assert来做断言，通过判断这个页面的标题是“Welcome to my blog”，来说明我们现在就是在首页里。</li>
+<li><strong>Tear Down</strong>。就是一些收尾工作啦 ，比如关闭浏览器、清除测试数据等等。</li>
+</ol>
+<h4 id="tips">Tips</h4>
 <p>需要注意的几点是：</p>
 <ol type="1">
 <li>从运行测试速度上来看，三种测试的运行速度是呈倒金字塔结构。即，单元测试跑得最快，开发速度也越快。随后是服务测试，最后是UI测试。</li>
 <li>即使现在的UI测试跑得非常快，但是随着时间的推移，UI测试会越来越多。这也意味着测试来跑得越来越久，那么人们就开始不想测试了。在我们之前的项目里，运行完所有的测试大概接近一个小时，我们开始在会议会争论这些测试的必要性，也在想方设法减少这些测试。</li>
 <li>如果一个测试可以在最底层写，那么就不要在他的上一层写了，因为他的运行速度更快。</li>
 </ol>
-<p>参考书籍</p>
-<p>《优质代码——软件测试的原则、实践与模式》</p>
+<p>参考书籍:</p>
+<ul>
+<li>《优质代码——软件测试的原则、实践与模式》</li>
+<li>《Python Web开发： 测试驱动开发方法》</li>
+</ul>
 <h2 id="测试替身">测试替身</h2>
 <p>测试替身（Test Double）是一个非常有意思的概念。</p>
 <blockquote>
