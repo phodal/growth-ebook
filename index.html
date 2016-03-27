@@ -2086,7 +2086,31 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <p>而对于服务这一层级，我们所要测试的就是一个完整的功能。对于以API为主的项目来说，实际上就是在测返回结果是不否是正确的。</p>
 <p>最后UI这一层级，我们所需要测试的就是一个完整的功能。用户操作的时候应该是怎样的，那么我们就应该模仿用户的行为来测试。这是一个完整的业务需求，也可以称之为验证测试。</p>
 <h4 id="测试点">测试点</h4>
-<h4 id="如何测试代码">如何测试代码</h4>
+<h4 id="如何写测试代码">如何写测试代码</h4>
+<p>先让来们来简单地看一下测试用例，然后再让我们看看一般情况下我们是如何写测试代码的。下面的代码是一个用Python写的测试用例：</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">class</span> HomepageTestCase(LiveServerTestCase):
+    <span class="kw">def</span> setUp(<span class="va">self</span>):
+        <span class="va">self</span>.selenium <span class="op">=</span> webdriver.Firefox()
+        <span class="va">self</span>.selenium.maximize_window()
+        <span class="bu">super</span>(HomepageTestCase, <span class="va">self</span>).setUp()
+
+    <span class="kw">def</span> tearDown(<span class="va">self</span>):
+        <span class="va">self</span>.selenium.quit()
+        <span class="bu">super</span>(HomepageTestCase, <span class="va">self</span>).tearDown()
+
+    <span class="kw">def</span> test_can_visit_homepage(<span class="va">self</span>):
+        <span class="va">self</span>.selenium.get(
+            <span class="st">&#39;</span><span class="sc">%s%s</span><span class="st">&#39;</span> <span class="op">%</span> (<span class="va">self</span>.live_server_url,  <span class="st">&quot;/&quot;</span>)
+        )
+
+        <span class="va">self</span>.assertIn(<span class="st">&quot;Welcome to my blog&quot;</span>, <span class="va">self</span>.selenium.title)</code></pre></div>
+<p>在上面的代码里主要有三个方法，setUp()、tearDown()和test_can_visit_homepage()。在这三个方法中起主要作用的是和test_can_visit_homepage()方法。而setUp()和tearDown()是特殊的方法，分别在测试方法开始之前运行和之后运行。同时，在这里我们也用这两个方法来打开和关闭浏览器。</p>
+<p>而在我们的测试方法test_can_visit_homepage()里，主要有两个步骤：</p>
+<ol type="1">
+<li>访问首页</li>
+<li>验证首页的标题是“Welcome to my blog”</li>
+</ol>
+<p>大部分的测试代码也是以如何的流程来运行着。</p>
 <p><strong>Setup</strong></p>
 <p><strong>Execute</strong></p>
 <p><strong>Verify</strong></p>
