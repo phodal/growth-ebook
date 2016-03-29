@@ -320,13 +320,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#预设计式架构">预设计式架构</a></li>
 <li><a href="#演进式架构">演进式架构</a></li>
 </ul></li>
-<li><a href="#架构解耦">架构解耦</a><ul>
-<li><a href="#cqrs">CQRS</a></li>
-<li><a href="#高级cqrs">高级CQRS</a></li>
-</ul></li>
 <li><a href="#每个人都是架构师">每个人都是架构师</a><ul>
 <li><a href="#如何构建一个博客系统">如何构建一个博客系统</a></li>
 <li><a href="#相关阅读资料">相关阅读资料</a></li>
+</ul></li>
+<li><a href="#架构解耦">架构解耦</a><ul>
+<li><a href="#cqrs">CQRS</a></li>
+<li><a href="#高级cqrs">高级CQRS</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -3143,26 +3143,6 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>它采用的是交互式应用程序员应用广泛的模型-视图-控制器模式。</p>
 <h3 id="演进式架构">演进式架构</h3>
 <p>演进式架构则是我们日常工作的业务代码库演进出来的。由于业务本身在不断发展，我们不断地演进系统的架构。</p>
-<h2 id="架构解耦">架构解耦</h2>
-<p>MVC模式的问题</p>
-<figure>
-<img src="chapters/chapter8/cqrs-vs-mvc.jpg" alt="CQRS vs MVC" /><figcaption>CQRS vs MVC</figcaption>
-</figure>
-<h3 id="cqrs">CQRS</h3>
-<blockquote>
-<p>命令和查询责任分离Command Query Responsibility Segregation（CQRS）是一种将系统的读写操作分离为两种独立模型的架构模式。</p>
-</blockquote>
-<h4 id="cqrs-basic">CQRS Basic</h4>
-<figure>
-<img src="chapters/chapter8/cqrs-2.png" alt="CQRS Basic" /><figcaption>CQRS Basic</figcaption>
-</figure>
-<h4 id="cqrs-进阶">CQRS 进阶</h4>
-<figure>
-<img src="chapters/chapter8/cqrs-separate-storage.png" alt="CQRS进阶" /><figcaption>CQRS进阶</figcaption>
-</figure>
-<h3 id="高级cqrs">高级CQRS</h3>
-<h4 id="编辑-发布分离">编辑-发布分离</h4>
-<h4 id="微服务">微服务</h4>
 <h2 id="每个人都是架构师">每个人都是架构师</h2>
 <p>每一个程序员都是架构师。平时在我们工作的时候，架构师这个Title都被那些非常有经历的开发人员占据着。然而，如果你喜欢刷刷Github，喜欢做一些有意思的东西，那么你也将是一个架构师。</p>
 <h3 id="如何构建一个博客系统">如何构建一个博客系统</h3>
@@ -3252,6 +3232,26 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>相信看完之前的章节，你也有了一定的经验了，你也可以成为一个架构师了。</p>
 <h3 id="相关阅读资料">相关阅读资料</h3>
 <p>-《程序员必读之软件架构》</p>
+<h2 id="架构解耦">架构解耦</h2>
+<p>MVC模式的问题</p>
+<figure>
+<img src="chapters/chapter8/cqrs-vs-mvc.jpg" alt="CQRS vs MVC" /><figcaption>CQRS vs MVC</figcaption>
+</figure>
+<h3 id="cqrs">CQRS</h3>
+<blockquote>
+<p>命令和查询责任分离Command Query Responsibility Segregation（CQRS）是一种将系统的读写操作分离为两种独立模型的架构模式。</p>
+</blockquote>
+<h4 id="cqrs-basic">CQRS Basic</h4>
+<figure>
+<img src="chapters/chapter8/cqrs-2.png" alt="CQRS Basic" /><figcaption>CQRS Basic</figcaption>
+</figure>
+<h4 id="cqrs-进阶">CQRS 进阶</h4>
+<figure>
+<img src="chapters/chapter8/cqrs-separate-storage.png" alt="CQRS进阶" /><figcaption>CQRS进阶</figcaption>
+</figure>
+<h3 id="高级cqrs">高级CQRS</h3>
+<h4 id="编辑-发布分离">编辑-发布分离</h4>
+<h4 id="微服务">微服务</h4>
 <section class="footnotes">
 <hr />
 <ol>
