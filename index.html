@@ -325,6 +325,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#相关阅读资料">相关阅读资料</a></li>
 </ul></li>
 <li><a href="#架构解耦">架构解耦</a><ul>
+<li><a href="#mvc-1">MVC</a></li>
 <li><a href="#cqrs">CQRS</a></li>
 <li><a href="#高级cqrs">高级CQRS</a></li>
 </ul></li>
@@ -3233,10 +3234,52 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="相关阅读资料">相关阅读资料</h3>
 <p>-《程序员必读之软件架构》</p>
 <h2 id="架构解耦">架构解耦</h2>
-<p>MVC模式的问题</p>
+<h3 id="mvc-1">MVC</h3>
+<p>在我初识架构是什么的时候，我看到了MVC模式架构。这种模式是基于分层的结构，要理解起逻辑也很简单。这个模式如下图所示：</p>
 <figure>
-<img src="chapters/chapter8/cqrs-vs-mvc.jpg" alt="CQRS vs MVC" /><figcaption>CQRS vs MVC</figcaption>
+<img src="chapters/chapter8/spring-mvc.png" alt="Spring MVC" /><figcaption>Spring MVC</figcaption>
 </figure>
+<p>由我们的Front controller来处理由客户端（浏览器）发过来的请求，实际上这里的Front controller是DispatcherServlet。DispatcherServlet负责将请求派发到特定的handler，接着交由对应的Controller来处理这个请求。依据请求的内容，Controller将创建相应model。随后这个model将传到前端框架中渲染，最后再返回给浏览器。</p>
+<p>但是这样的架构充满了太多的问题，如view与controller的紧密耦合、controller粒度难以把控的问题等等。</p>
+<h4 id="django-mtv">Django MTV</h4>
+<p>我使用Django差不多有四年了，主要是用在我的博客上。与MVC模式一对比，我发现Django在分层上还是很有鲜明特性的：</p>
+<figure>
+<img src="chapters/chapter8/django-mtv.png" alt="django-mtv.png" /><figcaption>django-mtv.png</figcaption>
+</figure>
+<p>在Django中没有Controller的概念，Controller做的事都交由URL Dispatcher，而这是一个高级的URL Dispatcher。它使用正则表达式匹配URL，然后调用合适的Python函数。然后这个函数就交由相应的View层来处理，而这个View层则是处理业务逻辑的地方。处理完后，model将传到Template层来处理。</p>
+<p>对比如下图如示：</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">传统的MVC架构</th>
+<th style="text-align: left;">Django 架构</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Model</td>
+<td style="text-align: left;">Model(Data Access Logic)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">View</td>
+<td style="text-align: left;">Template(Presentation Logic)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">View</td>
+<td style="text-align: left;">View(Business Logic)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Controller</td>
+<td style="text-align: left;">Django itself</td>
+</tr>
+</tbody>
+</table>
+<p>从上面的对比中，我们可以发现Django把View分层了。以Django对于MVC的解释来说，视图用来描述要展现给用户的数据。 而在ROR等其他的MVC框架中，控制器负责决定向用户展现哪些数据，而视图决定如何展现数据。</p>
+<p>联想起我最近在学的Scala中的Play框架，我发现了其中诸多的相似之处：</p>
+<figure>
+<img src="chapters/chapter8/playarchtectureasyncrequest.png" alt="playarchtectureasyncrequest.png" /><figcaption>playarchtectureasyncrequest.png</figcaption>
+</figure>
+<p>虽然在Play中，也有Controller的概念。但是对于URL的处理先交给了Routes来处理，随后再交给Controller中的函数来处理。</p>
 <h3 id="cqrs">CQRS</h3>
 <blockquote>
 <p>命令和查询责任分离Command Query Responsibility Segregation（CQRS）是一种将系统的读写操作分离为两种独立模型的架构模式。</p>
