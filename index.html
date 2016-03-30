@@ -3363,8 +3363,9 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <figure>
 <img src="chapters/chapter8/combinedlist.png" alt="Combined List" /><figcaption>Combined List</figcaption>
 </figure>
-<p>对于复杂的系统来说，这样做确实很不错。但是对于一个简单地系统来说，这样做是不是玩过火了？如果我们要设计一个博客系统的话，那么我们是不是可以考虑将Write/Read分离就可以了？</p>
+<p>我们将我们后台的服务变成微服务的架构，在我们的前台使用Reactive编程，这样我们就可以结合两者的优势，解耦出更好的架构模式。然而，这其中还有一个让人不爽的问题，即数据库。如果我们使用多个数据库，那么维护成本也随着上升。而如果我们可以在后台使用类似于微服务的Django MTV架构，并且它可以支持异步请求的话，并在前台使用Reactive来编程，是不是就会更爽一点？</p>
 <h3 id="cqrs">CQRS</h3>
+<p>对于复杂的系统来说，上面的做法做确实很不错。但是对于一个简单地系统来说，这样做是不是玩过火了？如果我们要设计一个博客系统的话，那么我们是不是可以考虑将Write/Read分离就可以了？</p>
 <blockquote>
 <p>命令和查询责任分离Command Query Responsibility Segregation（CQRS）是一种将系统的读写操作分离为两种独立模型的架构模式。</p>
 </blockquote>
