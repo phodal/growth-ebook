@@ -3943,9 +3943,11 @@ Retro一般来说，有四个维度:
 
 该模式的特点是会让我们更多的关注less well，关注我们做的不好的那些。
 
-![Retro](chapters/images//happy-retro.jpg)
+![Retro](chapters/chapter8/happy-retro.jpg)
 
 ###Well
+
+Well这个维度可以很好地发现团队在这一个迭代的一些让人开心的事。
 
 ###Less Well
 
