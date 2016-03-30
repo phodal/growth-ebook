@@ -142,6 +142,8 @@ pre code {
 }
 
 figure img {
+    display: block;
+    margin: 0 auto;
     max-width: 100%;
 }
 
@@ -166,7 +168,7 @@ ul li ul a {
 
 
 table {
-    margin-bottom: 10px
+    margin: 10px auto;
 }
 
 thead {
