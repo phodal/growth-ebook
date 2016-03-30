@@ -2777,8 +2777,35 @@ if (EchoesWorks.isObject(words)) {
 
 命名是一个特别长的，也是特别忧伤的故事。我想作为一个程序员的你，也相当恐惧这件事。一个好的函数名、变量名应该包含着这个函数的信息，如这个函数是干什么的，或者这个函数是怎么来的，这个变量名存储的是什么。
 
-正因为取名字是一件很重要的事，所以它也是一件很难的事。一个好的函数名、变量名应该能正确地表达出它的涵义。如
+正因为取名字是一件很重要的事，所以它也是一件很难的事。一个好的函数名、变量名应该能正确地表达出它的涵义。如你可以猜到下面的代码中的i是什么意思吗？
 
+```python
+fruits = ['banana', 'apple',  'mango']
+for i in fruits:        # Second Example
+   print 'Current fruit :', i
+```
+
+那如果换成下面的代码会不会更容易阅读呢？
+
+
+```python
+fruits = ['banana', 'apple',  'mango']
+for i in fruits:        # Second Example
+   print 'Current fruit :', i
+```
+
+而命令还存在于对函数的命名上，如我们可能会用getNumber来表示去获取一个数值，但是要知道这样的命名并不是在所有的语言中都可以这样用。如在Java中存在getter和setter这种模式，如下的代码所示：
+
+```
+public String getNumber() {
+  return number;
+}
+public void setNumber(String number) {
+  this.number = number;
+}
+```
+
+如果我们是去取某个东西的数值，那么我们应该使用retrieveNumber这样的更具代表性的名字。
 
 在《编写可读代码的艺术》也提到了这几点：
 
@@ -2791,7 +2818,7 @@ if (EchoesWorks.isObject(words)) {
 
 ###函数长度
 
-###函数嵌套
+对于函数长度的控制是为了有效控制分支深度。如果我们用一个函数来实现一个复杂的功能，那么不仅仅在我们下次阅读的时间会花费大量的时间。
 
 ###重复代码
 

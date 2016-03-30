@@ -193,7 +193,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#可读的代码">可读的代码</a><ul>
 <li><a href="#命名">命名</a></li>
 <li><a href="#函数长度">函数长度</a></li>
-<li><a href="#函数嵌套">函数嵌套</a></li>
 <li><a href="#重复代码">重复代码</a></li>
 </ul></li>
 <li><a href="#代码重构">代码重构</a><ul>
@@ -2236,7 +2235,22 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <p>首先要说的就是程序员认为最难的一个话题了——命名。</p>
 <h3 id="命名">命名</h3>
 <p>命名是一个特别长的，也是特别忧伤的故事。我想作为一个程序员的你，也相当恐惧这件事。一个好的函数名、变量名应该包含着这个函数的信息，如这个函数是干什么的，或者这个函数是怎么来的，这个变量名存储的是什么。</p>
-<p>正因为取名字是一件很重要的事，所以它也是一件很难的事。一个好的函数名、变量名应该能正确地表达出它的涵义。如</p>
+<p>正因为取名字是一件很重要的事，所以它也是一件很难的事。一个好的函数名、变量名应该能正确地表达出它的涵义。如你可以猜到下面的代码中的i是什么意思吗？</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">fruits <span class="op">=</span> [<span class="st">&#39;banana&#39;</span>, <span class="st">&#39;apple&#39;</span>,  <span class="st">&#39;mango&#39;</span>]
+<span class="cf">for</span> i <span class="op">in</span> fruits:        <span class="co"># Second Example</span>
+   <span class="bu">print</span> <span class="st">&#39;Current fruit :&#39;</span>, i</code></pre></div>
+<p>那如果换成下面的代码会不会更容易阅读呢？</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">fruits <span class="op">=</span> [<span class="st">&#39;banana&#39;</span>, <span class="st">&#39;apple&#39;</span>,  <span class="st">&#39;mango&#39;</span>]
+<span class="cf">for</span> i <span class="op">in</span> fruits:        <span class="co"># Second Example</span>
+   <span class="bu">print</span> <span class="st">&#39;Current fruit :&#39;</span>, i</code></pre></div>
+<p>而命令还存在于对函数的命名上，如我们可能会用getNumber来表示去获取一个数值，但是要知道这样的命名并不是在所有的语言中都可以这样用。如在Java中存在getter和setter这种模式，如下的代码所示：</p>
+<pre><code>public String getNumber() {
+  return number;
+}
+public void setNumber(String number) {
+  this.number = number;
+}</code></pre>
+<p>如果我们是去取某个东西的数值，那么我们应该使用retrieveNumber这样的更具代表性的名字。</p>
 <p>在《编写可读代码的艺术》也提到了这几点：</p>
 <ol type="1">
 <li>选择专业的词。最好是可以和业务相关的，它应该极具表现力。</li>
@@ -2247,7 +2261,7 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <li>利用名字的格式来传递含义。</li>
 </ol>
 <h3 id="函数长度">函数长度</h3>
-<h3 id="函数嵌套">函数嵌套</h3>
+<p>对于函数长度的控制是为了有效控制分支深度。如果我们用一个函数来实现一个复杂的功能，那么不仅仅在我们下次阅读的时间会花费大量的时间。</p>
 <h3 id="重复代码">重复代码</h3>
 <h2 id="代码重构">代码重构</h2>
 <p>什么是重构?</p>
