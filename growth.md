@@ -4160,7 +4160,7 @@ MVC模式本身也是接于分层而设计的，如下图是Spring MVC的请求�
 架构解耦
 ---
 
-###MVC
+###MVC与微服务
 
 在我初识架构是什么的时候，我看到了MVC模式架构。这种模式是基于分层的结构，要理解起逻辑也很简单。这个模式如下图所示：
 
@@ -4174,7 +4174,7 @@ MVC模式本身也是接于分层而设计的，如下图是Spring MVC的请求�
 
 我使用Django差不多有四年了，主要是用在我的博客上。与MVC模式一对比，我发现Django在分层上还是很有鲜明特性的：
 
-![django-mtv.png](chapters/chapter8/django-mtv.png)
+![Django MTV架构](chapters/chapter8/django-mtv.png)
 
 在Django中没有Controller的概念，Controller做的事都交由URL Dispatcher，而这是一个高级的URL Dispatcher。它使用正则表达式匹配URL，然后调用合适的Python函数。然后这个函数就交由相应的View层来处理，而这个View层则是处理业务逻辑的地方。处理完后，model将传到Template层来处理。
 
@@ -4191,9 +4191,25 @@ Controller | Django itself
 
 联想起我最近在学的Scala中的Play框架，我发现了其中诸多的相似之处：
 
-![playarchtectureasyncrequest.png](chapters/chapter8/playarchtectureasyncrequest.png)
+![Play框架异步请求](chapters/chapter8/playarchtectureasyncrequest.png)
 
 虽然在Play中，也有Controller的概念。但是对于URL的处理先交给了Routes来处理，随后再交给Controller中的函数来处理。
+
+不过与一般MVC架构的最大不同之处，怕是在于Django的APP架构。Django中有一个名为APP的概念，它是实现某种功能的Web应用程序，。如果我们要设计一个博客系统的话，那么在这个项目中，Blogpost是一个APP、评论是一个APP、用户管理是一个APP等等。每个APP之中，都会有自己的Model、View和Controller。其架构如下图所示：
+
+![Django APP架构](chapters/chapter8/django_app_arch.jpg)
+
+当我们需要创建一个新的功能的时候，我们只需要创建一个新的APP即可——为这个APP配置新的URL、创建新的Model以及新的View。如果功能上没有与原来的代码重复的话，那么这就是一个独立的APP，并且我们可以将这个APP的代码Copy/Paste到一个新的项目中，并且不需要做修改。
+
+与一般的MVC架构相比，我们会发现我们细化了这些业务逻辑原来的三层结构，会随着APP的数量发生变化。如果我们有三个APP的话，那么我们相当于有3*三层，但是他不是等于九层。这样做可以从代码上直接减少逻辑的思考，让我们可以更加集中注意力于业务实现，同时也利于我们后期维护。
+
+####微服务与Reactive
+
+Django从某种意义上有点接近微服务的概念，只是实际上并没有。因为它没有实现Play框架的异步请求机制。抱句话来说，应用很容易就会在调用JDBC、Streaming API、HTTP请求等一系列的请求中发生阻塞。
+
+![分散数据](chapters/chapter8/decentralised-data.png)
+
+虽是如此，后来我意识到了这样的架构并没有在意识有太多的先进之处。而这实际上是一个美好但是不现实的东西，因为我们还是使用同一个数据库。我们还是没有剥离Write/Read，而在我们的理解里，这样的博客系统应该是多读少写的。因此，为什么我们还需要将其做成一个动态的网站呢？
 
 ###CQRS
 
