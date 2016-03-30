@@ -284,14 +284,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#遗留系统与修改代码">遗留系统与修改代码</a><ul>
 <li><a href="#遗留代码">遗留代码</a><ul>
 <li><a href="#什么是遗留代码">什么是遗留代码</a></li>
+<li><a href="#遗留代码的来源">遗留代码的来源</a></li>
 <li><a href="#遗留代码的问题">遗留代码的问题</a></li>
 </ul></li>
-<li><a href="#如何修改代码">如何修改代码</a><ul>
-<li><a href="#测试-1">测试</a></li>
-<li><a href="#重构">重构</a></li>
-<li><a href="#修改测试">修改测试</a></li>
-<li><a href="#再次重构">再次重构</a></li>
-</ul></li>
+<li><a href="#如何修改代码">如何修改代码</a></li>
 <li><a href="#网站重构">网站重构</a><ul>
 <li><a href="#速度优化">速度优化</a></li>
 <li><a href="#功能加强">功能加强</a></li>
@@ -310,7 +306,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="#浮现式设计">浮现式设计</a><ul>
 <li><a href="#意图导向">意图导向</a></li>
-<li><a href="#重构-1">重构</a></li>
+<li><a href="#重构">重构</a></li>
 <li><a href="#模式与演进">模式与演进</a></li>
 </ul></li>
 <li><a href="#架构模式">架构模式</a><ul>
@@ -3039,6 +3035,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>我们生活息息相关的很多软件里满是错误、脆弱，并且难以扩展，这就是我们说的“遗留代码”。</p>
 <h3 id="什么是遗留代码">什么是遗留代码</h3>
 <p>什么是遗留代码？没有自动化测试的代码就是遗留代码，不管它是十年前写的，还是昨天写的。</p>
+<h3 id="遗留代码的来源">遗留代码的来源</h3>
 <h3 id="遗留代码的问题">遗留代码的问题</h3>
 <h2 id="如何修改代码">如何修改代码</h2>
 <blockquote>
@@ -3053,11 +3050,6 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>再次重构</li>
 </ol>
 <p>在有测试的情况下重构现有的代码才是安全的。而这些测试用例也是功能的体现，功能首先要得到保证了，然后才能保证一切都可以正常。</p>
-<p>。。。</p>
-<h3 id="测试-1">测试</h3>
-<h3 id="重构">重构</h3>
-<h3 id="修改测试">修改测试</h3>
-<h3 id="再次重构">再次重构</h3>
 <h2 id="网站重构">网站重构</h2>
 <blockquote>
 <p>网站重构应包含结构、行为、表现三层次的分离以及优化，行内分工优化，以及以技术与数据、人文为主导的交互优化等。</p>
@@ -3164,7 +3156,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>超长的类</li>
 <li>等等</li>
 </ol>
-<h3 id="重构-1">重构</h3>
+<h3 id="重构">重构</h3>
 <p>还好我们在一开始的时候写了一些测试，这让我们可以有足够的可能性来重构代码，而使得其不至于变成遗留代码。而这也是我们推崇的一些基本实践：</p>
 <blockquote>
 <p>红 -&gt; 绿 -&gt; 重构</p>
