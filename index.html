@@ -3370,10 +3370,14 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <blockquote>
 <p>命令和查询责任分离Command Query Responsibility Segregation（CQRS）是一种将系统的读写操作分离为两种独立模型的架构模式。</p>
 </blockquote>
-<h4 id="cqrs-basic">CQRS Basic</h4>
+<p>对于这个架构的深入思考是起源于之前在理解DDD。据说在DDD领域中被广泛使用。理解CQRS可以用分离Model和API集合来处理读取和写入请求开始，即CQS（Command Query Separation，命令查询分离）模式。CQS模式最早由软件大师Bertrand Meyer（Eiffel语言之父，面向对象开-闭原则 OCP 提出者）提出。他认为，对象的行为仅有两种：命令和查询。</p>
+<p>这个类型的架构如下图所示：</p>
 <figure>
-<img src="chapters/chapter8/cqrs-2.png" alt="CQRS Basic" /><figcaption>CQRS Basic</figcaption>
+<img src="chapters/chapter8/cqrs-2.png" alt="CQS Basic" /><figcaption>CQS Basic</figcaption>
 </figure>
+<blockquote>
+<p>除了编写优化的查询类型，它可以让我们轻松换API的一部分读一些缓存机制，甚至移动读取API的请求到另一台服务器。</p>
+</blockquote>
 <h4 id="cqrs-进阶">CQRS 进阶</h4>
 <figure>
 <img src="chapters/chapter8/cqrs-separate-storage.png" alt="CQRS进阶" /><figcaption>CQRS进阶</figcaption>
