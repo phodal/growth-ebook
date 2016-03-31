@@ -4227,6 +4227,8 @@ Django从某种意义上有点接近微服务的概念，只是实际上并没�
 
 > 命令和查询责任分离Command Query Responsibility Segregation（CQRS）是一种将系统的读写操作分离为两种独立模型的架构模式。
 
+####CQS
+
 对于这个架构的深入思考是起源于之前在理解DDD。据说在DDD领域中被广泛使用。理解CQRS可以用分离Model和API集合来处理读取和写入请求开始，即CQS（Command Query Separation，命令查询分离）模式。CQS模式最早由软件大师Bertrand Meyer（Eiffel语言之父，面向对象开-闭原则 OCP 提出者）提出。他认为，对象的行为仅有两种：命令和查询。
 
 这个类型的架构如下图所示：
@@ -4235,20 +4237,41 @@ Django从某种意义上有点接近微服务的概念，只是实际上并没�
 
 > 除了编写优化的查询类型，它可以让我们轻松换API的一部分读一些缓存机制，甚至移动读取API的请求到另一台服务器。
 
+对于读取和写入相差不多的应用来说，这种架构看起来还是不错的。而这种架构还存在一个瓶颈问题，使用同一个RDBMS。对于写入多、读取少的应用来说，这种架构还是存在着不合理性。
+
+为了解决这个问题，人们自然是使用缓存来解决这个问题了。我们在我们的应用服务外有一个HTTP服务器，而在HTTP服务器之外有一个缓存服务器，用于缓存用户常驻的一些资源。如下图所示：
+
+![带缓存的Web架构](chapters/chapter8/cache-website-blog.png)
+
+而实际上这样的服务器可能是多余的——我们为什么不直接生成HTML就好了？
+
+####编辑-发布分离
+
+或许你听过Martin Folwer提出的编辑-发布分享式架构：即文章在编辑时是一个形式，而发表时是另一个形式，比如用markdown编辑，而用html发表。
+
+![编辑-发布分离](chapters/chapter8/edit-pub.jpg)
+
+而最典型的应用就是流行于GitHub的Hexo、Jekyll框架之类的静态网站。如下图所示的是Hexo的工作流：
+
+![Hexo站点工作流](chapters/chapter8/hexo-workflow.png)
+
+我们在本地生成我们的项目，然后可以创建一个新的博客、开始编写内容等等。接着，我们可以在本地运行起这个服务，除了查看博客的内容，还可以修改样式等等。完成上面的工作后，我们就可以生成静态内容，然后部署我们的应用到GitHub Page上。这一切看上去都完美。
+
+####编辑-发布-开发分离
+
+![基于git的编辑-发布分离](chapters/chapter8/travis-edit-publish-code.png)
+
+对于有大量数据的网站怎么办？Scrapy爬虫
+
 ####CQRS 进阶
 
 ![CQRS进阶](chapters/chapter8/cqrs-separate-storage.png)
 
-###编辑-发布分离
-
-Scrapy爬虫
-
 ###高级CQRS
+
+####六边形架构
 
 ####Nginx微服务
 
 ![Nginx解耦微服务](chapters/chapter8/nginx-microservices.png)
 
-####编辑-发布-开发分离
-
-![基于git的编辑-发布分离](chapters/chapter8/travis-edit-publish-code.png)
