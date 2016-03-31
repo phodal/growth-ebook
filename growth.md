@@ -4261,6 +4261,12 @@ Django从某种意义上有点接近微服务的概念，只是实际上并没�
 
 ####编辑-发布-开发分离
 
+因为我们需要交我们的博客转为JSON，而不是一个hexo之类的格式。有了这些JSON文件的存在，我们就可以把Git当成一个NoSQL数据库。
+
+![Git As NoSQL DB](chapters/chapter8/git-internals-commits.png)
+
+其次，这些博客还需要hexo一样生成HTML。
+
 ![基于git的编辑-发布分离](chapters/chapter8/travis-edit-publish-code.png)
 
 对于有大量数据的网站怎么办？Scrapy爬虫
