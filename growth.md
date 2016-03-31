@@ -4255,25 +4255,39 @@ Django从某种意义上有点接近微服务的概念，只是实际上并没�
 
 ![Hexo站点工作流](chapters/chapter8/hexo-workflow.png)
 
-我们在本地生成我们的项目，然后可以创建一个新的博客、开始编写内容等等。接着，我们可以在本地运行起这个服务，除了查看博客的内容，还可以修改样式等等。完成上面的工作后，我们就可以生成静态内容，然后部署我们的应用到GitHub Page上。这一切看上去都完美。
+我们在本地生成我们的项目，然后可以创建一个新的博客、开始编写内容等等。接着，我们可以在本地运行起这个服务，除了查看博客的内容，还可以修改样式等等。完成上面的工作后，我们就可以生成静态内容，然后部署我们的应用到GitHub Page上。这一切看上去都完美，我们有两个不同的数据源——一个是md格式的文本，一个是最后生成的html。它们已经实现了读写/分离：
+
+![CQRS进阶](chapters/chapter8/cqrs-separate-storage.png)
 
 但是作为一个前端开发人员，没有JSON，用不了Ajax请求，我怎么把我的博客做成一个单页面应用？
 
 ####编辑-发布-开发分离
 
-因为我们需要交我们的博客转为JSON，而不是一个hexo之类的格式。有了这些JSON文件的存在，我们就可以把Git当成一个NoSQL数据库。
+因为我们需要交我们的博客转为JSON，而不是一个hexo之类的格式。有了这些JSON文件的存在，我们就可以把Git当成一个NoSQL数据库。同时这些JSON文件也可以直接当成API来
 
 ![Git As NoSQL DB](chapters/chapter8/git-internals-commits.png)
 
 其次，这些博客还需要hexo一样生成HTML。
 
+并且，开发人员在开发的时候不会影响到编辑的使用，于是就有了下面的架构：
+
 ![基于git的编辑-发布分离](chapters/chapter8/travis-edit-publish-code.png)
 
-对于有大量数据的网站怎么办？Scrapy爬虫
+在这其中我们有两种不同的数据形式，即存储着Markdown数据的JSON文件和最后生成的HTML。
 
-####CQRS 进阶
+对博客数量不是很大的网站，或者说一般的网站来说，用上面的技术都不是问题。然而有大量数据的网站怎么办？使用EventBus
 
-![CQRS进阶](chapters/chapter8/cqrs-separate-storage.png)
+![CQRS和EventBus](chapters/chapter8/cqrs-arch.png)
+
+但是如果仅仅只是如何，我们还存在一些问题：
+
+1. 搜索功能
+2. AutoComplete
+
+等等。
+
+你有什么想法呢？
+
 
 ###高级CQRS
 
