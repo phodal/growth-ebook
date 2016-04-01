@@ -316,7 +316,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#架构解耦">架构解耦</a><ul>
 <li><a href="#从mvc与微服务">从MVC与微服务</a></li>
 <li><a href="#cqrs">CQRS</a></li>
-<li><a href="#高级cqrs">高级CQRS</a></li>
+<li><a href="#cqrs结合微服务">CQRS结合微服务</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -3300,6 +3300,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="相关阅读资料">相关阅读资料</h3>
 <p>-《程序员必读之软件架构》</p>
 <h2 id="架构解耦">架构解耦</h2>
+<p>解耦是一件很有意思的过程，它也能反应架构的变迁。</p>
 <h3 id="从mvc与微服务">从MVC与微服务</h3>
 <p>在我初识架构是什么的时候，我看到了MVC模式架构。这种模式是基于分层的结构，要理解起逻辑也很简单。这个模式如下图所示：</p>
 <figure>
@@ -3420,13 +3421,15 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>AutoComplete</li>
 </ol>
 <p>等等。</p>
-<p>你有什么想法呢？</p>
-<h3 id="高级cqrs">高级CQRS</h3>
-<h4 id="六边形架构">六边形架构</h4>
-<h4 id="nginx微服务">Nginx微服务</h4>
+<h3 id="cqrs结合微服务">CQRS结合微服务</h3>
+<p>既然可以有这么多分法，并且我们都已经准备好分他们了。那么分了之后，我们就可以把他们都合到一起了。</p>
+<h4 id="nginx-as-dispatcher">Nginx as Dispatcher</h4>
+<p>最常见的解耦应用的方式中，就有一种是基于Nginx来分发URL请求。在这种情况下，对于API的使用者，或者最终用户来说，他们都是同一个API。只是在后台里，这个API已经是不同的几个API组成，如下图所示：</p>
 <figure>
 <img src="chapters/chapter8/nginx-microservices.png" alt="Nginx解耦微服务" /><figcaption>Nginx解耦微服务</figcaption>
 </figure>
+<p>客户端的请求来到API Gateway，根据不同的请求类型，这些URL被分发到不同的Service，如Review Service、Order Service等等。</p>
+<p>对于我们想要设计的系统来说也是如此，我们可以通过这个API来解耦我们的服务。</p>
 <section class="footnotes">
 <hr />
 <ol>
