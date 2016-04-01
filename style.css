@@ -59,21 +59,22 @@ h1 a {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 28px;
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 24px;
 }
 
 h4 {
-    font-size: 16px;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 h5 {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 h6 {
