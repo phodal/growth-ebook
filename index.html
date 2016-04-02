@@ -3431,6 +3431,9 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>客户端的请求来到API Gateway，根据不同的请求类型，这些URL被分发到不同的Service，如Review Service、Order Service等等。</p>
 <p>对于我们想要设计的系统来说也是如此，我们可以通过这个Dispatcher来解耦我们的服务。</p>
 <h4 id="cqrs结合微服务-1">CQRS结合微服务</h4>
+<p>现在，我们想要的系统的雏形已经出现了。</p>
+<p>从源头上来说，我们把能缓存的内容变成了静态的HTML，通过CDN来分发。并且，我们还可以将把不同的服务独立出来。</p>
+<p>从实现上来说，我们将博客的数据变成了两部分： 一个以Git + JSON格式存在的API，它除了可以用于生成HTML，另外一部分作为API来使用。</p>
 <figure>
 <img src="chapters/chapter8/dispatcher-services.png" alt="CQRS结合微服务" /><figcaption>CQRS结合微服务</figcaption>
 </figure>
