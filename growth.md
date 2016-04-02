@@ -4288,9 +4288,9 @@ Django从某种意义上有点接近微服务的概念，只是实际上并没�
 1. 搜索功能
 2. AutoComplete
 
-等等。
+等等的这些服务是没有用静态API来实现的。
 
-###CQRS结合微服务
+###进阶
 
 既然可以有这么多分法，并且我们都已经准备好分他们了。那么分了之后，我们就可以把他们都合到一起了。
 
@@ -4314,3 +4314,4 @@ Django从某种意义上有点接近微服务的概念，只是实际上并没�
 
 ![CQRS结合微服务](chapters/chapter8/dispatcher-services.png)
 
+最后，我们可以通过上面说到的Nginx或者Apache来当这里的Request Dispatcher。
