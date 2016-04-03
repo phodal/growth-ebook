@@ -218,10 +218,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li><a href="#上线">上线</a><ul>
-<li><a href="#容器">容器</a><ul>
+<li><a href="#运行环境">运行环境</a><ul>
 <li><a href="#虚拟机">虚拟机</a></li>
-<li><a href="#应用容器-docker">应用容器: Docker</a></li>
-<li><a href="#web容器-tomcat">Web容器: Tomcat</a></li>
+<li><a href="#容器">容器</a></li>
 <li><a href="#语言虚拟机">语言虚拟机</a></li>
 <li><a href="#语言运行环境">语言运行环境</a></li>
 <li><a href="#docker结合tomcat">Docker结合Tomcat</a></li>
@@ -2541,22 +2540,29 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>作为一个在敏捷团队里工作的开发人员，初次意识到在国内大部分的开发人员是不写测试的时候，我还是有点诧异。</p>
 <p>尽管没有写测试可以在初期走得很快，但是在后期就会遇到一堆麻烦事。传统的思维下，我们会认为一个人会在一家公司工作很久。而这件事在最近几年里变化得特别快，特别是在信息技术高速发展的今天。人们可以从不同的地方得到哪里缺人，从一个地方到另外一个地方也变得异常的快，这就意味着人员流动是常态。</p>
 <p>而代码尽管还在，但是却会随着人员流动而出现更多的问题。这时如果代码是有有效的测试，那么则可以帮助系统更好地被理解。</p>
-<h2 id="容器">容器</h2>
-<blockquote>
-<p>容器是应用服务器中位于组件和平台之间的接口集合。容器一般位于应用服务器之内，由应用服务器负责加载和维护。一个容器只能存在于一个应用服务器之内，一个应用服务器可以建立和维护多个容器。</p>
-</blockquote>
+<h2 id="运行环境">运行环境</h2>
+<p>为了将我们的应用部署到服务器上，我们需要为其配置一个运行环境。从底层到顶层有这样的运行环境及容器：</p>
+<ol type="1">
+<li>虚拟机</li>
+<li>容器</li>
+<li>语言虚拟机</li>
+<li>语言运行环境</li>
+</ol>
+<p>不同的环境有不同的选择，当然也可以结合在一起。</p>
 <h3 id="虚拟机">虚拟机</h3>
 <blockquote>
 <p>虚拟机（Virtual Machine）指通过软件模拟的具有完整硬件系统功能的、运行在一个完全隔离环境中的完整计算机系统。</p>
 </blockquote>
-<h3 id="应用容器-docker">应用容器: Docker</h3>
+<h3 id="容器">容器</h3>
 <blockquote>
-<p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）。几乎没有性能开销,可以很容易地在机器和数据中心中运行。最重要的是,他们不依赖于任何语言、框架包括系统。</p>
+<p>容器是应用服务器中位于组件和平台之间的接口集合。容器一般位于应用服务器之内，由应用服务器负责加载和维护。一个容器只能存在于一个应用服务器之内，一个应用服务器可以建立和维护多个容器。</p>
 </blockquote>
+<h4 id="应用容器-docker">应用容器: Docker</h4>
+<p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）。几乎没有性能开销,可以很容易地在机器和数据中心中运行。最重要的是,他们不依赖于任何语言、框架包括系统。</p>
 <figure>
 <img src="chapters/chapter4/what-is-vm-diagram.png" alt="Docker Containers" /><figcaption>Docker Containers</figcaption>
 </figure>
-<h3 id="web容器-tomcat">Web容器: Tomcat</h3>
+<h4 id="web容器-tomcat">Web容器: Tomcat</h4>
 <p>Tomcat 服务器是一个免费的开放源代码的Web应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP 程序的首选。对于一个初学者来说，可以这样认为，当在一台机器上配置好Apache服务器，可利用它响应HTML（标准通用标记语言下的一个应用）页面的访问请求。实际上Tomcat 部分是Apache服务器的扩展，但它是独立运行的，所以当你运行tomcat时，它实际上作为一个与Apache 独立的进程单独运行的。</p>
 <figure>
 <img src="chapters/chapter4/tomcat-architecture.png" alt="Tomcat" /><figcaption>Tomcat</figcaption>
