@@ -219,10 +219,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="#上线">上线</a><ul>
 <li><a href="#容器">容器</a><ul>
-<li><a href="#web容器">Web容器</a></li>
-<li><a href="#应用容器">应用容器</a></li>
-</ul></li>
-<li><a href="#docker">Docker</a><ul>
+<li><a href="#虚拟机">虚拟机</a></li>
+<li><a href="#应用容器-docker">应用容器: Docker</a></li>
+<li><a href="#web容器-tomcat">Web容器: Tomcat</a></li>
+<li><a href="#语言虚拟机">语言虚拟机</a></li>
+<li><a href="#语言运行环境">语言运行环境</a></li>
 <li><a href="#docker结合tomcat">Docker结合Tomcat</a></li>
 </ul></li>
 <li><a href="#lnmp架构">LNMP架构</a><ul>
@@ -2544,19 +2545,30 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <blockquote>
 <p>容器是应用服务器中位于组件和平台之间的接口集合。容器一般位于应用服务器之内，由应用服务器负责加载和维护。一个容器只能存在于一个应用服务器之内，一个应用服务器可以建立和维护多个容器。</p>
 </blockquote>
-<h3 id="web容器">Web容器</h3>
-<p>Tomcat 服务器是一个免费的开放源代码的Web应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP 程序的首选。对于一个初学者来说，可以这样认为，当在一台机器上配置好Apache服务器，可利用它响应HTML（标准通用标记语言下的一个应用）页面的访问请求。实际上Tomcat 部分是Apache服务器的扩展，但它是独立运行的，所以当你运行tomcat时，它实际上作为一个与Apache 独立的进程单独运行的。</p>
-<figure>
-<img src="chapters/chapter4/tomcat-architecture.png" alt="Tomcat" /><figcaption>Tomcat</figcaption>
-</figure>
-<h3 id="应用容器">应用容器</h3>
-<h2 id="docker">Docker</h2>
+<h3 id="虚拟机">虚拟机</h3>
+<blockquote>
+<p>虚拟机（Virtual Machine）指通过软件模拟的具有完整硬件系统功能的、运行在一个完全隔离环境中的完整计算机系统。</p>
+</blockquote>
+<h3 id="应用容器-docker">应用容器: Docker</h3>
 <blockquote>
 <p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）。几乎没有性能开销,可以很容易地在机器和数据中心中运行。最重要的是,他们不依赖于任何语言、框架包括系统。</p>
 </blockquote>
 <figure>
 <img src="chapters/chapter4/what-is-vm-diagram.png" alt="Docker Containers" /><figcaption>Docker Containers</figcaption>
 </figure>
+<h3 id="web容器-tomcat">Web容器: Tomcat</h3>
+<p>Tomcat 服务器是一个免费的开放源代码的Web应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP 程序的首选。对于一个初学者来说，可以这样认为，当在一台机器上配置好Apache服务器，可利用它响应HTML（标准通用标记语言下的一个应用）页面的访问请求。实际上Tomcat 部分是Apache服务器的扩展，但它是独立运行的，所以当你运行tomcat时，它实际上作为一个与Apache 独立的进程单独运行的。</p>
+<figure>
+<img src="chapters/chapter4/tomcat-architecture.png" alt="Tomcat" /><figcaption>Tomcat</figcaption>
+</figure>
+<h3 id="语言虚拟机">语言虚拟机</h3>
+<blockquote>
+<p>JVM是一种用于计算设备的规范，它是一个虚构出来的计算机，是通过在实际的计算机上仿真模拟各种计算机功能来实现的。</p>
+</blockquote>
+<h3 id="语言运行环境">语言运行环境</h3>
+<blockquote>
+<p>virtualenv用于创建独立的Python环境，多个Python相互独立，互不影响，</p>
+</blockquote>
 <h3 id="docker结合tomcat">Docker结合Tomcat</h3>
 <figure>
 <img src="chapters/chapter4/docker-with-tomcat.png" alt="Docker Tomcat" /><figcaption>Docker Tomcat</figcaption>
@@ -2622,9 +2634,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>对于有多套环境的开发来说，如果我们针对不同的环境都有不同的配置，那么这个灵活的开发会帮助我们更好的开发。</p>
 <p>起先，我们在本地开发的时候为本地创建了一套环境，也创建了本地的配置。接着我们需要将我们的包部署到测试环境，也生成了测试环境的相应配置。这其中如果有其他的环境，我们也需要创建相应的环境。最后，我们还需要为产品环境创建全新的配置。</p>
 <h2 id="toggle">Toggle</h2>
-<p>很少用Java作为技术栈的我，很少有Java的笔记，记录一下这个简单的feature toggle。</p>
 <h3 id="propertyplaceholder">PropertyPlaceHolder</h3>
-<p>Spring PropertyPlaceHolder</p>
 <p>在<a href="http://stackoverflow.com/questions/21725709/property-place-holder-bean-in-application-context-xml-spring">StackOverflow</a> 上有一个关于这个问题的回答。</p>
 <p>1.使用bean创建一个properties。(mvc-config.xml)</p>
 <div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;util:properties</span><span class="ot"> id=</span><span class="st">&quot;myProps&quot;</span><span class="ot"> location=</span><span class="st">&quot;WEB-INF/config/prop.properties&quot;</span><span class="kw">/&gt;</span></code></pre></div>
