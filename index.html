@@ -2587,9 +2587,11 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <img src="chapters/chapter4/aufs_layers.jpg" alt="AUFS层" /><figcaption>AUFS层</figcaption>
 </figure>
 <p>其增量的过程和我们使用Git的过程中有点像，除了在最开始的时候会有一个镜像层。随后我们的修改都可以保存下来，并且当下次我们提交修改的时候，我们也可以在旧有的提交上运行。</p>
+<p>因此，Docker与LXC的差距就如下如图所示：</p>
 <figure>
 <img src="chapters/chapter4/lxc-vs-docker.png" alt="LXC与Docker" /><figcaption>LXC与Docker</figcaption>
 </figure>
+<p>LXC时每个虚拟机只能是一个虚拟机，而Docker则是一系列的虚拟机。</p>
 <h3 id="web容器-tomcat">Web容器: Tomcat</h3>
 <blockquote>
 <p>容器是应用服务器中位于组件和平台之间的接口集合。容器一般位于应用服务器之内，由应用服务器负责加载和维护。一个容器只能存在于一个应用服务器之内，一个应用服务器可以建立和维护多个容器。</p>

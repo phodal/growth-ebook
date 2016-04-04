@@ -3282,7 +3282,11 @@ LXC主要是利用cgroups与namespace的功能，来向提供应用软件一个�
 
 其增量的过程和我们使用Git的过程中有点像，除了在最开始的时候会有一个镜像层。随后我们的修改都可以保存下来，并且当下次我们提交修改的时候，我们也可以在旧有的提交上运行。
 
+因此，Docker与LXC的差距就如下如图所示：
+
 ![LXC与Docker](chapters/chapter4/lxc-vs-docker.png)
+
+LXC时每个虚拟机只能是一个虚拟机，而Docker则是一系列的虚拟机。
 
 ###Web容器: Tomcat
 
