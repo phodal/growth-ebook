@@ -221,6 +221,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#运行环境">运行环境</a><ul>
 <li><a href="#硬件抽象层虚拟机">硬件抽象层：虚拟机</a></li>
 <li><a href="#容器">容器</a></li>
+<li><a href="#web容器-tomcat">Web容器: Tomcat</a></li>
 <li><a href="#语言虚拟机">语言虚拟机</a></li>
 <li><a href="#语言运行环境">语言运行环境</a></li>
 <li><a href="#docker结合tomcat">Docker结合Tomcat</a></li>
@@ -2560,15 +2561,20 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </figure>
 <p>借助于拟机技术，当我们需要更多的资源的时候，创建一个新的虚拟机就行了。同时，由于这些虚拟机上运行的是同样的操作系统，并且可以使用相同的配置，我们只需要编写一些脚本就可以实现其自动化。当我们的物联机发生问题时，我们也可以很快将虚拟机迁移或恢复到另外的宿主机。</p>
 <h3 id="容器">容器</h3>
+<p>对于大部分的开发团队来说，直接开发基于虚拟机的自动化工具不是一件容易的事，并且他从使用成本上来说比较高。这时候我们就需要一些更轻量级的工具容器——它可以提供轻量级的虚拟化，以便隔离进程和资源，而且不需要提供指令解释机制以及全虚拟化的其他复杂性。并且，它从启动速度上来说更快。</p>
 <blockquote>
-<p>容器是应用服务器中位于组件和平台之间的接口集合。容器一般位于应用服务器之内，由应用服务器负责加载和维护。一个容器只能存在于一个应用服务器之内，一个应用服务器可以建立和维护多个容器。</p>
+<p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。Docker可以自动化打包和部署任何应用、创建一个轻量级私有PaaS云、搭建开发测试环境、部署可扩展的Web应用等。</p>
 </blockquote>
-<h4 id="应用容器-docker">应用容器: Docker</h4>
-<p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）。几乎没有性能开销,可以很容易地在机器和数据中心中运行。最重要的是,他们不依赖于任何语言、框架包括系统。</p>
+<figure>
+<img src="chapters/chapter4/docker-execdriver-diagram.png" alt="早期Docker架构" /><figcaption>早期Docker架构</figcaption>
+</figure>
 <figure>
 <img src="chapters/chapter4/what-is-vm-diagram.png" alt="Docker Containers" /><figcaption>Docker Containers</figcaption>
 </figure>
-<h4 id="web容器-tomcat">Web容器: Tomcat</h4>
+<h3 id="web容器-tomcat">Web容器: Tomcat</h3>
+<blockquote>
+<p>容器是应用服务器中位于组件和平台之间的接口集合。容器一般位于应用服务器之内，由应用服务器负责加载和维护。一个容器只能存在于一个应用服务器之内，一个应用服务器可以建立和维护多个容器。</p>
+</blockquote>
 <p>Tomcat 服务器是一个免费的开放源代码的Web应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP 程序的首选。对于一个初学者来说，可以这样认为，当在一台机器上配置好Apache服务器，可利用它响应HTML（标准通用标记语言下的一个应用）页面的访问请求。实际上Tomcat 部分是Apache服务器的扩展，但它是独立运行的，所以当你运行tomcat时，它实际上作为一个与Apache 独立的进程单独运行的。</p>
 <figure>
 <img src="chapters/chapter4/tomcat-architecture.png" alt="Tomcat" /><figcaption>Tomcat</figcaption>
