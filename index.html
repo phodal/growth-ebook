@@ -222,8 +222,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#服务器虚拟化虚拟机">服务器虚拟化：虚拟机</a></li>
 <li><a href="#容器虚拟化docker">容器虚拟化：Docker</a></li>
 <li><a href="#web容器">Web容器</a></li>
-<li><a href="#语言虚拟机">语言虚拟机</a></li>
 <li><a href="#语言运行环境">语言运行环境</a></li>
+<li><a href="#语言虚拟机">语言虚拟机</a></li>
 <li><a href="#docker结合tomcat">Docker结合Tomcat</a></li>
 </ul></li>
 <li><a href="#lnmp架构">LNMP架构</a><ul>
@@ -2596,20 +2596,20 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <blockquote>
 <p>Web容器是应用服务器中位于组件和平台之间的接口集合。</p>
 </blockquote>
-<p>这里说的Web容器主要是以Java系的Servlet容器为主。</p>
+<p>这里说的Web容器主要是以Java系的Servlet容器为主。Servlet是指由Java编写的服务器端程序。</p>
 <h4 id="tomcat">Tomcat</h4>
 <p>Tomcat服务器是一个免费的开放源代码的Web应用服务器。它运行时占用的系统资源小，扩展性好，支持负载平衡与邮件服务等开发应用系统常用的功能。除此，它还是一个Servlet和JSP容器，独立的Servlet容器是Tomcat的默认模式。</p>
-<p>这里的内容主要以Servlet容器来展开，Servlet是由Java编写的服务器端程序。Servlet被部署在应用服务器中，并由容器来控制其生命周期。</p>
+<p>这里的内容主要以Servlet容器来展开。Servlet被部署在应用服务器中，并由容器来控制其生命周期。在运行时由Web服务器软件处理一般请求，并把Servlet调用传递给“容器”来处理。并且Tomcat也会负责对一些静态资源的处理。其架构如下图所示：</p>
 <figure>
-<img src="chapters/chapter4/tomcat-architecture.png" alt="Tomcat" /><figcaption>Tomcat</figcaption>
+<img src="chapters/chapter4/tomcat-architecture.png" alt="Tomcat架构" /><figcaption>Tomcat架构</figcaption>
 </figure>
-<h3 id="语言虚拟机">语言虚拟机</h3>
-<blockquote>
-<p>JVM是一种用于计算设备的规范，它是一个虚构出来的计算机，是通过在实际的计算机上仿真模拟各种计算机功能来实现的。</p>
-</blockquote>
 <h3 id="语言运行环境">语言运行环境</h3>
 <blockquote>
 <p>virtualenv用于创建独立的Python环境，多个Python相互独立，互不影响，</p>
+</blockquote>
+<h3 id="语言虚拟机">语言虚拟机</h3>
+<blockquote>
+<p>JVM是一种用于计算设备的规范，它是一个虚构出来的计算机，是通过在实际的计算机上仿真模拟各种计算机功能来实现的。</p>
 </blockquote>
 <h3 id="docker结合tomcat">Docker结合Tomcat</h3>
 <figure>
