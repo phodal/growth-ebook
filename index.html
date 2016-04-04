@@ -2562,12 +2562,21 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>借助于拟机技术，当我们需要更多的资源的时候，创建一个新的虚拟机就行了。同时，由于这些虚拟机上运行的是同样的操作系统，并且可以使用相同的配置，我们只需要编写一些脚本就可以实现其自动化。当我们的物联机发生问题时，我们也可以很快将虚拟机迁移或恢复到另外的宿主机。</p>
 <h3 id="容器">容器</h3>
 <p>对于大部分的开发团队来说，直接开发基于虚拟机的自动化工具不是一件容易的事，并且他从使用成本上来说比较高。这时候我们就需要一些更轻量级的工具容器——它可以提供轻量级的虚拟化，以便隔离进程和资源，而且不需要提供指令解释机制以及全虚拟化的其他复杂性。并且，它从启动速度上来说更快。</p>
+<h4 id="lxc">LXC</h4>
+<p>在介绍Docker之前，我们还是稍微提一下LXC（Linux Containers）。因为在过去我有一些使用LXC的经历，让我觉得LXC很赞。</p>
 <blockquote>
-<p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。Docker可以自动化打包和部署任何应用、创建一个轻量级私有PaaS云、搭建开发测试环境、部署可扩展的Web应用等。</p>
+<p>LXC，其名称来自Linux软件容器（Linux Containers）的缩写，一种操作系统层虚拟化（Operating system–level virtualization）技术，为Linux内核容器功能的一个用户空间接口。它将应用软件系统打包成一个软件容器（Container），内含应用软件本身的代码，以及所需要的操作系统核心和库。通过统一的名字空间和共用API来分配不同软件容器的可用硬件资源，创造出应用程序的独立沙箱运行环境，使得Linux用户可以容易的创建和管理系统或应用容器。</p>
 </blockquote>
+<figure>
+<img src="chapters/chapter4/lxc-vm.jpg" alt="LXC vs VM" /><figcaption>LXC vs VM</figcaption>
+</figure>
+<h4 id="docker">Docker</h4>
 <figure>
 <img src="chapters/chapter4/docker-execdriver-diagram.png" alt="早期Docker架构" /><figcaption>早期Docker架构</figcaption>
 </figure>
+<blockquote>
+<p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。Docker可以自动化打包和部署任何应用、创建一个轻量级私有PaaS云、搭建开发测试环境、部署可扩展的Web应用等。</p>
+</blockquote>
 <figure>
 <img src="chapters/chapter4/what-is-vm-diagram.png" alt="Docker Containers" /><figcaption>Docker Containers</figcaption>
 </figure>
