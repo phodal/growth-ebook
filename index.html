@@ -2582,9 +2582,11 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <figure>
 <img src="chapters/chapter4/basic-images.png" alt="Docker Container" /><figcaption>Docker Container</figcaption>
 </figure>
+<p>从上图中我们还可以发现一点： Docker容器是建立在Aufs基础上的。AUFS是一种Union File System，它可以不同的目录挂载到同一个虚拟文件系统下。它的目的就是为了实现上图的增量递增的过程，同时又不会影响原有的目录。即如下的流程如下：</p>
 <figure>
-<img src="chapters/chapter4/docker-execdriver-diagram.png" alt="早期Docker架构" /><figcaption>早期Docker架构</figcaption>
+<img src="chapters/chapter4/aufs_layers.jpg" alt="AUFS层" /><figcaption>AUFS层</figcaption>
 </figure>
+<p>其增量的过程和我们使用Git的过程中有点像，除了在最开始的时候会有一个镜像层。随后我们的修改都可以保存下来，并且当下次我们提交修改的时候，我们也可以在旧有的提交上运行。</p>
 <figure>
 <img src="chapters/chapter4/lxc-vs-docker.png" alt="LXC与Docker" /><figcaption>LXC与Docker</figcaption>
 </figure>

@@ -3276,7 +3276,11 @@ LXC主要是利用cgroups与namespace的功能，来向提供应用软件一个�
 
 ![Docker Container](chapters/chapter4/basic-images.png)
 
-![早期Docker架构](chapters/chapter4/docker-execdriver-diagram.png)
+从上图中我们还可以发现一点： Docker容器是建立在Aufs基础上的。AUFS是一种Union File System，它可以不同的目录挂载到同一个虚拟文件系统下。它的目的就是为了实现上图的增量递增的过程，同时又不会影响原有的目录。即如下的流程如下：
+
+![AUFS层](chapters/chapter4/aufs_layers.jpg)
+
+其增量的过程和我们使用Git的过程中有点像，除了在最开始的时候会有一个镜像层。随后我们的修改都可以保存下来，并且当下次我们提交修改的时候，我们也可以在旧有的提交上运行。
 
 ![LXC与Docker](chapters/chapter4/lxc-vs-docker.png)
 
