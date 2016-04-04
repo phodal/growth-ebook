@@ -224,7 +224,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#web容器">Web容器</a></li>
 <li><a href="#语言运行环境">语言运行环境</a></li>
 <li><a href="#语言虚拟机">语言虚拟机</a></li>
-<li><a href="#docker结合tomcat">Docker结合Tomcat</a></li>
 </ul></li>
 <li><a href="#lnmp架构">LNMP架构</a><ul>
 <li><a href="#linux">Linux</a></li>
@@ -2543,12 +2542,16 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>而代码尽管还在，但是却会随着人员流动而出现更多的问题。这时如果代码是有有效的测试，那么则可以帮助系统更好地被理解。</p>
 <h2 id="运行环境">运行环境</h2>
 <p>为了将我们的应用部署到服务器上，我们需要为其配置一个运行环境。从底层到顶层有这样的运行环境及容器：</p>
-<ol start="2" type="1">
+<ol type="1">
 <li>虚拟机</li>
 <li>容器</li>
-<li>语言虚拟机</li>
 <li>语言运行环境</li>
+<li>语言虚拟机</li>
 </ol>
+<p>实现上这是一个请求的处理过程，一个HTTP请求会先到达你的主机。如果你的主机上运行着多个虚拟机实例，那么请求就会来到这个虚拟机上。又或者是如果你是在Docker这一类容器里运行你的程序的话，那么也会先到达Docker。随后这个请求就会交由HTTP服务器来处理，如Apache、Nginx，这些HTTP服务器再将这些请求交由对应的应用或脚本来处理。随后将交由语言底层的指令来处理。</p>
+<figure>
+<img src="chapters/chapter4/docker-with-tomcat.png" alt="Docker Tomcat" /><figcaption>Docker Tomcat</figcaption>
+</figure>
 <p>不同的环境有不同的选择，当然也可以结合在一起。不过，从理论上来说在最外层还是应该有一个真机的，但是我想大家都有这个明确的概念，就不多解释了。</p>
 <h3 id="服务器虚拟化虚拟机">服务器虚拟化：虚拟机</h3>
 <p>在虚拟机技术出现之前，为了运行不同用户的应用程序，人们需要不同的物理机才能实现这样的需求。对于Web应用程序来说，有的用户的网站访问量少消耗的系统资源也少，有的用户的网站访问量大消耗的系统资源也多。虽然有不同的服务器类型可以选择，然而对于多数的访问少的用户来说他们需要支付同样的费用。这听上去相当的不合理，并且也浪费了大量的资源。并且对于系统管理员来说，管理这些系统也不是一件容易的事。在过去硬件技术革新特别快，让操作系统运行在不同的机器上也不是一件容易的事。</p>
@@ -2611,10 +2614,6 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <blockquote>
 <p>JVM是一种用于计算设备的规范，它是一个虚构出来的计算机，是通过在实际的计算机上仿真模拟各种计算机功能来实现的。</p>
 </blockquote>
-<h3 id="docker结合tomcat">Docker结合Tomcat</h3>
-<figure>
-<img src="chapters/chapter4/docker-with-tomcat.png" alt="Docker Tomcat" /><figcaption>Docker Tomcat</figcaption>
-</figure>
 <h2 id="lnmp架构">LNMP架构</h2>
 <blockquote>
 <p>LNMP是一个基于CentOS/Debian编写的Nginx、PHP、MySQL、phpMyAdmin、eAccelerator一键安装包。可以在VPS、独立主机上轻松的安装LNMP生产环境。</p>
