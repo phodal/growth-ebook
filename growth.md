@@ -3272,6 +3272,10 @@ LXC主要是利用cgroups与namespace的功能，来向提供应用软件一个�
 
 > Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。Docker可以自动化打包和部署任何应用、创建一个轻量级私有PaaS云、搭建开发测试环境、部署可扩展的Web应用等。 
 
+构建出Docker的Container是一个很有意思的过程。在这一个过程中，首先我们需要一个base images，这个基础镜像不仅包含了一个基础系统，如Ubuntu、Debian。他还包含了一系列的模块，如初始化进程、SSH服务、syslog-ng等等的一些工具。由上面原内容构建了一个基础镜像，随后的修改都将于这个镜像，我们可以用它生成新的镜像，一层层的往上叠加。而用户的进程运行在writeable的layer中。
+
+![Docker Container](chapters/chapter4/basic-images.png)
+
 ![早期Docker架构](chapters/chapter4/docker-execdriver-diagram.png)
 
 ![LXC与Docker](chapters/chapter4/lxc-vs-docker.png)
