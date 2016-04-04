@@ -221,7 +221,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#运行环境">运行环境</a><ul>
 <li><a href="#服务器虚拟化虚拟机">服务器虚拟化：虚拟机</a></li>
 <li><a href="#容器虚拟化docker">容器虚拟化：Docker</a></li>
-<li><a href="#web容器-tomcat">Web容器: Tomcat</a></li>
+<li><a href="#web容器">Web容器</a></li>
 <li><a href="#语言虚拟机">语言虚拟机</a></li>
 <li><a href="#语言运行环境">语言运行环境</a></li>
 <li><a href="#docker结合tomcat">Docker结合Tomcat</a></li>
@@ -2592,11 +2592,14 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <img src="chapters/chapter4/lxc-vs-docker.png" alt="LXC与Docker" /><figcaption>LXC与Docker</figcaption>
 </figure>
 <p>LXC时每个虚拟机只能是一个虚拟机，而Docker则是一系列的虚拟机。</p>
-<h3 id="web容器-tomcat">Web容器: Tomcat</h3>
+<h3 id="web容器">Web容器</h3>
 <blockquote>
-<p>容器是应用服务器中位于组件和平台之间的接口集合。容器一般位于应用服务器之内，由应用服务器负责加载和维护。一个容器只能存在于一个应用服务器之内，一个应用服务器可以建立和维护多个容器。</p>
+<p>Web容器是应用服务器中位于组件和平台之间的接口集合。</p>
 </blockquote>
-<p>Tomcat 服务器是一个免费的开放源代码的Web应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP 程序的首选。对于一个初学者来说，可以这样认为，当在一台机器上配置好Apache服务器，可利用它响应HTML（标准通用标记语言下的一个应用）页面的访问请求。实际上Tomcat 部分是Apache服务器的扩展，但它是独立运行的，所以当你运行tomcat时，它实际上作为一个与Apache 独立的进程单独运行的。</p>
+<p>这里说的Web容器主要是以Java系的Servlet容器为主。</p>
+<h4 id="tomcat">Tomcat</h4>
+<p>Tomcat服务器是一个免费的开放源代码的Web应用服务器。它运行时占用的系统资源小，扩展性好，支持负载平衡与邮件服务等开发应用系统常用的功能。除此，它还是一个Servlet和JSP容器，独立的Servlet容器是Tomcat的默认模式。</p>
+<p>这里的内容主要以Servlet容器来展开，Servlet是由Java编写的服务器端程序。Servlet被部署在应用服务器中，并由容器来控制其生命周期。</p>
 <figure>
 <img src="chapters/chapter4/tomcat-architecture.png" alt="Tomcat" /><figcaption>Tomcat</figcaption>
 </figure>
