@@ -2606,10 +2606,18 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </figure>
 <h3 id="语言运行环境">语言运行环境</h3>
 <p>对于Java这一类的编译语言来说，不存在太多语言运行带来的问题。而对于动态语言来说就存在这样的问题，如Ruby、Python、Node.js等等，这一个问题主要集中于开发环境。当然如果你在一个服务器上运行着几个不同的应用来说，也会存在这样的问题。这一类的工具在Python里有VirtualEnv，在Ruby里有RVM、Rbenv，在Node.js里有NVM。</p>
+<p>以Python为例，在不同的虚拟环境里，我们可以使用不同的依赖库，在这上面构建不同的应用。也可以使用不同的Python版本来构建系统，如下图所示：</p>
+<figure>
+<img src="chapters/chapter4/virtualenv.jpg" alt="VirtualEnv" /><figcaption>VirtualEnv</figcaption>
+</figure>
 <h3 id="语言虚拟机">语言虚拟机</h3>
+<p>最后一个要介绍的可能就是更加抽象的，但是也是更加实用的一个，JVM就是这方面的一个代表。</p>
 <blockquote>
 <p>JVM是一种用于计算设备的规范，它是一个虚构出来的计算机，是通过在实际的计算机上仿真模拟各种计算机功能来实现的。</p>
 </blockquote>
+<figure>
+<img src="chapters/chapter4/java-virtual-machine.jpg" alt="JVM" /><figcaption>JVM</figcaption>
+</figure>
 <h2 id="lnmp架构">LNMP架构</h2>
 <blockquote>
 <p>LNMP是一个基于CentOS/Debian编写的Nginx、PHP、MySQL、phpMyAdmin、eAccelerator一键安装包。可以在VPS、独立主机上轻松的安装LNMP生产环境。</p>
