@@ -2618,6 +2618,11 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </figure>
 <p>JVM是一种用于计算设备的规范，它是一个虚构出来的计算机，是通过在实际的计算机上仿真模拟各种计算机功能来实现的。它可以实现“编写一次，到处运行”。</p>
 <p>换句话来说，它在底层实现了环境隔离，它屏蔽了与具体操作系统平台相关的信息，使得Java程序只需生成在Java虚拟机上运行的目标代码（字节码），就可以在多种平台上不加修改地运行。</p>
+<p>基于此，只要其他编程语言的编译器能生成正确Java bytecode文件，这个语言也能实现在JVM上运行。如下图所示的是基于JVM的Jython语言的架构图：</p>
+<figure>
+<img src="chapters/chapter4/jython-arch.jpg" alt="Jython" /><figcaption>Jython</figcaption>
+</figure>
+<p>其底层是基于JVM，而编写时则是用Python语言，并且他可以使用Java的模块来编程。</p>
 <h2 id="lnmp架构">LNMP架构</h2>
 <blockquote>
 <p>LNMP是一个基于CentOS/Debian编写的Nginx、PHP、MySQL、phpMyAdmin、eAccelerator一键安装包。可以在VPS、独立主机上轻松的安装LNMP生产环境。</p>
