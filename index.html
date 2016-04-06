@@ -2545,9 +2545,11 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>为了将我们的应用部署到服务器上，我们需要为其配置一个运行环境。从底层到顶层有这样的运行环境及容器：</p>
 <ol type="1">
 <li>虚拟机</li>
-<li>容器</li>
+<li>应用容器</li>
+<li>Servlet容器</li>
 <li>语言运行环境</li>
 <li>语言虚拟机</li>
+<li>DSL</li>
 </ol>
 <p>实现上这是一个请求的处理过程，一个HTTP请求会先到达你的主机。如果你的主机上运行着多个虚拟机实例，那么请求就会来到这个虚拟机上。又或者是如果你是在Docker这一类容器里运行你的程序的话，那么也会先到达Docker。随后这个请求就会交由HTTP服务器来处理，如Apache、Nginx，这些HTTP服务器再将这些请求交由对应的应用或脚本来处理。随后将交由语言底层的指令来处理。</p>
 <figure>
@@ -2631,10 +2633,16 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </figure>
 <p>MySQL在最顶层提供了一个名为SQL的查询语言，这个查询语言只能用于查询数据库，然而它却是一种更高级的用法 。它不像通用目的语言那样目标范围涵盖一切软件问题，而是专门针对某一特定问题的计算机语言，即领域特定语言。</p>
 <h3 id="dsl">DSL</h3>
+<p>这是一门特别有意思也特别值得期待的技术，但是实现它并不是一件容易的事。</p>
+<p>作为讨论隔离环境的一部分，我们只看外部DSL。内部DSL与外部DSL最大的区别在于：外部DSL近似于创建了一种新的语法和语义的全新语言。如下图所示是两中DSL的一种对比：</p>
 <figure>
 <img src="chapters/chapter4/internal-vs-external.png" alt="内部DSL和外部DSL" /><figcaption>内部DSL和外部DSL</figcaption>
 </figure>
-<p>作为讨论隔离环境的一部分，我们只看外部DSL。</p>
+<p>在这样的外部DSL里，我们有自己的语法、自己的解析器、类型检测器等等。最简单且最常用的DSL就是Markdown，如下图所示：</p>
+<figure>
+<img src="chapters/chapter4/markdown.png" alt="Markdown" /><figcaption>Markdown</figcaption>
+</figure>
+<p>如果我们可以将我们的业务逻辑写成DSL，那么我们就不需要担心底层语言的变动过多地影响原有的业务逻辑。换句话说，这相当于创建了我们自己的语言隔离环境，我们不需要思考用何种语言来实用我们的业务。</p>
 <h2 id="lnmp架构">LNMP架构</h2>
 <blockquote>
 <p>LNMP是一个基于CentOS/Debian编写的Nginx、PHP、MySQL、phpMyAdmin、eAccelerator一键安装包。可以在VPS、独立主机上轻松的安装LNMP生产环境。</p>
