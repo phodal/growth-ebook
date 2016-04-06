@@ -2606,10 +2606,11 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </figure>
 <h3 id="语言运行环境">语言运行环境</h3>
 <p>对于Java这一类的编译语言来说，不存在太多语言运行带来的问题。而对于动态语言来说就存在这样的问题，如Ruby、Python、Node.js等等，这一个问题主要集中于开发环境。当然如果你在一个服务器上运行着几个不同的应用来说，也会存在这样的问题。这一类的工具在Python里有VirtualEnv，在Ruby里有RVM、Rbenv，在Node.js里有NVM。</p>
-<p>以Python为例，在不同的虚拟环境里，我们可以使用不同的依赖库，在这上面构建不同的应用。也可以使用不同的Python版本来构建系统，如下图所示：</p>
+<p>下图是使用VirtualEnv时的不同几个应用的架构图：</p>
 <figure>
 <img src="chapters/chapter4/virtualenv.jpg" alt="VirtualEnv" /><figcaption>VirtualEnv</figcaption>
 </figure>
+<p>如下所示，在不同的虚拟环境里，我们可以使用不同的依赖库。在这上面构建不同的应用，也可以使用不同的Python版本来构建系统。通常来说，这一类的工具主要用于本地的开发环境。</p>
 <h3 id="语言虚拟机">语言虚拟机</h3>
 <p>最后一个要介绍的可能就是更加抽象的，但是也是更加实用的一个，JVM就是这方面的一个代表。在我们的编程生涯里，我们很容易就会遇到跨平台问题——即我们在我们的开发机器上开发的软件，在我们的产品环境的机器上就没有办法运行。特别是当我们使用Mac OS或者Windows机器上开发了我们的应用，然后我们需要在Linux系统上运行，就会遇到各种问题。并且当我们使用了一个需要重新编译的库时，这种问题就更加麻烦。</p>
 <p>如下图所示的是JVM的架构示意图</p>
