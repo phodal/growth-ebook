@@ -3342,9 +3342,9 @@ MySQL在最顶层提供了一个名为SQL的查询语言，这个查询语言只
 
 ###DSL
 
+![内部DSL和外部DSL](chapters/chapter4/internal-vs-external.png)
+
 作为讨论隔离环境的一部分，我们只看外部DSL。
-
-
 
 
 LNMP架构
