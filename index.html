@@ -219,12 +219,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="#上线">上线</a><ul>
 <li><a href="#隔离与运行环境">隔离与运行环境</a><ul>
-<li><a href="#服务器虚拟化虚拟机">服务器虚拟化：虚拟机</a></li>
-<li><a href="#容器虚拟化docker">容器虚拟化：Docker</a></li>
-<li><a href="#servlet容器">Servlet容器</a></li>
-<li><a href="#语言运行环境">语言运行环境</a></li>
-<li><a href="#语言虚拟机">语言虚拟机</a></li>
-<li><a href="#dsl">DSL</a></li>
+<li><a href="#隔离硬件虚拟机">隔离硬件：虚拟机</a></li>
+<li><a href="#隔离操作系统容器虚拟化">隔离操作系统：容器虚拟化</a></li>
+<li><a href="#隔离底层servlet容器">隔离底层：Servlet容器</a></li>
+<li><a href="#隔离依赖版本虚拟环境">隔离依赖版本：虚拟环境</a></li>
+<li><a href="#隔离运行环境语言虚拟机">隔离运行环境：语言虚拟机</a></li>
+<li><a href="#隔离语言dsl">隔离语言：DSL</a></li>
 </ul></li>
 <li><a href="#lnmp架构">LNMP架构</a><ul>
 <li><a href="#linux">Linux</a></li>
@@ -2556,7 +2556,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <img src="chapters/chapter4/docker-with-tomcat.png" alt="Docker Tomcat" /><figcaption>Docker Tomcat</figcaption>
 </figure>
 <p>不同的环境有不同的选择，当然也可以结合在一起。不过，从理论上来说在最外层还是应该有一个真机的，但是我想大家都有这个明确的概念，就不多解释了。</p>
-<h3 id="服务器虚拟化虚拟机">服务器虚拟化：虚拟机</h3>
+<h3 id="隔离硬件虚拟机">隔离硬件：虚拟机</h3>
 <p>在虚拟机技术出现之前，为了运行不同用户的应用程序，人们需要不同的物理机才能实现这样的需求。对于Web应用程序来说，有的用户的网站访问量少消耗的系统资源也少，有的用户的网站访问量大消耗的系统资源也多。虽然有不同的服务器类型可以选择，然而对于多数的访问少的用户来说他们需要支付同样的费用。这听上去相当的不合理，并且也浪费了大量的资源。并且对于系统管理员来说，管理这些系统也不是一件容易的事。在过去硬件技术革新特别快，让操作系统运行在不同的机器上也不是一件容易的事。</p>
 <blockquote>
 <p>虚拟机（Virtual Machine）指通过软件模拟的具有完整硬件系统功能的、运行在一个完全隔离环境中的完整计算机系统。</p>
@@ -2566,7 +2566,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <img src="chapters/chapter4/virtual_machine.png" alt="虚拟机" /><figcaption>虚拟机</figcaption>
 </figure>
 <p>借助于虚拟机技术，当我们需要更多的资源的时候，创建一个新的虚拟机就行了。同时，由于这些虚拟机上运行的是同样的操作系统，并且可以使用相同的配置，我们只需要编写一些脚本就可以实现其自动化。当我们的物联机发生问题时，我们也可以很快将虚拟机迁移或恢复到另外的宿主机。</p>
-<h3 id="容器虚拟化docker">容器虚拟化：Docker</h3>
+<h3 id="隔离操作系统容器虚拟化">隔离操作系统：容器虚拟化</h3>
 <p>对于大部分的开发团队来说，直接开发基于虚拟机的自动化工具不是一件容易的事，并且他从使用成本上来说比较高。这时候我们就需要一些更轻量级的工具容器——它可以提供轻量级的虚拟化，以便隔离进程和资源，而且不需要提供指令解释机制以及全虚拟化的其他复杂性。并且，它从启动速度上来说更快。</p>
 <h4 id="lxc">LXC</h4>
 <p>在介绍Docker之前，我们还是稍微提一下LXC。因为在过去我有一些使用LXC的经历，让我觉得LXC很赞。</p>
@@ -2598,7 +2598,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <img src="chapters/chapter4/lxc-vs-docker.png" alt="LXC与Docker" /><figcaption>LXC与Docker</figcaption>
 </figure>
 <p>LXC时每个虚拟机只能是一个虚拟机，而Docker则是一系列的虚拟机。</p>
-<h3 id="servlet容器">Servlet容器</h3>
+<h3 id="隔离底层servlet容器">隔离底层：Servlet容器</h3>
 <p>在上面的例子里我们已经隔离开了操作系统的因素，接着我们还需要解决操作系统、开发环境引起的差异。在开发Java Web应用的过程中，我们在开始环境使用Jetty来运行我们的服务，而在生产环境使用Tomcat来运行。他们都是Servlet容器，可以在其上面运行着同一个Servlet应用。Servlet是指由Java编写的服务器端程序，它们是为响应Web应用程序上下文中的HTTP请求而设计的。它是应用服务器中位于组件和平台之间的接口集合。</p>
 <p>另外一个不得不提及的是CGI，而CGI存在一个缺陷就是，它会每个请求派生不同的进程，服务完成后才销毁。</p>
 <h4 id="tomcat">Tomcat</h4>
@@ -2607,14 +2607,14 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <figure>
 <img src="chapters/chapter4/tomcat-architecture.png" alt="Tomcat架构" /><figcaption>Tomcat架构</figcaption>
 </figure>
-<h3 id="语言运行环境">语言运行环境</h3>
+<h3 id="隔离依赖版本虚拟环境">隔离依赖版本：虚拟环境</h3>
 <p>对于Java这一类的编译语言来说，不存在太多语言运行带来的问题。而对于动态语言来说就存在这样的问题，如Ruby、Python、Node.js等等，这一个问题主要集中于开发环境。当然如果你在一个服务器上运行着几个不同的应用来说，也会存在这样的问题。这一类的工具在Python里有VirtualEnv，在Ruby里有RVM、Rbenv，在Node.js里有NVM。</p>
 <p>下图是使用VirtualEnv时的不同几个应用的架构图：</p>
 <figure>
 <img src="chapters/chapter4/virtualenv.jpg" alt="VirtualEnv" /><figcaption>VirtualEnv</figcaption>
 </figure>
 <p>如下所示，在不同的虚拟环境里，我们可以使用不同的依赖库。在这上面构建不同的应用，也可以使用不同的Python版本来构建系统。通常来说，这一类的工具主要用于本地的开发环境。</p>
-<h3 id="语言虚拟机">语言虚拟机</h3>
+<h3 id="隔离运行环境语言虚拟机">隔离运行环境：语言虚拟机</h3>
 <p>最后一个要介绍的可能就是更加抽象的，但是也是更加实用的一个，JVM就是这方面的一个代表。在我们的编程生涯里，我们很容易就会遇到跨平台问题——即我们在我们的开发机器上开发的软件，在我们的产品环境的机器上就没有办法运行。特别是当我们使用Mac OS或者Windows机器上开发了我们的应用，然后我们需要在Linux系统上运行，就会遇到各种问题。并且当我们使用了一个需要重新编译的库时，这种问题就更加麻烦。</p>
 <p>如下图所示的是JVM的架构示意图</p>
 <figure>
@@ -2632,7 +2632,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <img src="chapters/chapter4/mysql-architecture.png" alt="MySQL" /><figcaption>MySQL</figcaption>
 </figure>
 <p>MySQL在最顶层提供了一个名为SQL的查询语言，这个查询语言只能用于查询数据库，然而它却是一种更高级的用法 。它不像通用目的语言那样目标范围涵盖一切软件问题，而是专门针对某一特定问题的计算机语言，即领域特定语言。</p>
-<h3 id="dsl">DSL</h3>
+<h3 id="隔离语言dsl">隔离语言：DSL</h3>
 <p>这是一门特别有意思也特别值得期待的技术，但是实现它并不是一件容易的事。</p>
 <p>作为讨论隔离环境的一部分，我们只看外部DSL。内部DSL与外部DSL最大的区别在于：外部DSL近似于创建了一种新的语法和语义的全新语言。如下图所示是两中DSL的一种对比：</p>
 <figure>
