@@ -241,7 +241,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#客户端缓存">客户端缓存</a></li>
 <li><a href="#html5离线缓存">HTML5离线缓存</a></li>
 </ul></li>
-<li><a href="#可配置">可配置</a></li>
+<li><a href="#可配置">可配置</a><ul>
+<li><a href="#环境配置">环境配置</a></li>
+<li><a href="#变更控制">变更控制</a></li>
+<li><a href="#发布管理">发布管理</a></li>
+</ul></li>
 <li><a href="#toggle">Toggle</a><ul>
 <li><a href="#feature-toggle">Feature Toggle</a></li>
 </ul></li>
@@ -2750,9 +2754,20 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h2 id="可配置">可配置</h2>
 <p>让我们写的Web应用可配置是一项很有挑战性，也很实用的技能。</p>
 <p>起先，我们在本地开发的时候为本地创建了一套环境，也创建了本地的配置。接着我们需要将我们的包部署到测试环境，也生成了测试环境的相应配置。这其中如果有其他的环境，我们也需要创建相应的环境。最后，我们还需要为产品环境创建全新的配置。</p>
+<p>下图是Druapl框架的部署流:</p>
 <figure>
 <img src="chapters/chapter4/deployment-flow.png" alt="Drupal Deployment Flow" /><figcaption>Drupal Deployment Flow</figcaption>
 </figure>
+<p>在不同的环境下，他们使用不同的Content。这些Content的内容不仅仅可以是一些系统相当的配置，也可以是一些不同环境下的UI等等。而在这其中也会涉及到一些比较复杂的知识，下面我们就按《配置管理最佳实践》中介绍的一些知识，做一些简单的介绍。主要可以分为三个部分：</p>
+<ul>
+<li>环境配置</li>
+<li>变更控制</li>
+<li>发布管理</li>
+</ul>
+<h3 id="环境配置">环境配置</h3>
+<h3 id="变更控制">变更控制</h3>
+<h3 id="发布管理">发布管理</h3>
+<p>参考书籍：<strong>《配置管理最佳实践》</strong></p>
 <h2 id="toggle">Toggle</h2>
 <p>当我们上线了我们的新功能的时候，这时候如果有个Bug，那么我们是下线么？要知道这个版本里面包含了很多的bug修复。如果在这个设计这个新功能的时候，我们有一个可配置和Toogle，那么我们就不需要下线了。只需要切的这个toggle，就可以解决问题了。</p>
 <p>对于有多套环境的开发来说，如果我们针对不同的环境都有不同的配置，那么这个灵活的开发会帮助我们更好的开发。</p>
