@@ -4007,6 +4007,11 @@ UX入门
 
 ###自动化
 
+持续部署
+-——
+
+![](chapters/chapter6/continuous-delivery-continuous-deployment.jpg)
+
 持续学习
 ---
 
