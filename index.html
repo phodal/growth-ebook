@@ -320,14 +320,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#suggestion">Suggestion</a></li>
 <li><a href="#action">Action</a></li>
 </ul></li>
+<li><a href="#架构模式">架构模式</a><ul>
+<li><a href="#预设计式架构">预设计式架构</a></li>
+<li><a href="#演进式架构拥抱变化">演进式架构：拥抱变化</a></li>
+</ul></li>
 <li><a href="#浮现式设计">浮现式设计</a><ul>
 <li><a href="#意图导向">意图导向</a></li>
 <li><a href="#重构">重构</a></li>
 <li><a href="#模式与演进">模式与演进</a></li>
-</ul></li>
-<li><a href="#架构模式">架构模式</a><ul>
-<li><a href="#预设计式架构">预设计式架构</a></li>
-<li><a href="#演进式架构">演进式架构</a></li>
 </ul></li>
 <li><a href="#每个人都是架构师">每个人都是架构师</a><ul>
 <li><a href="#如何构建一个博客系统">如何构建一个博客系统</a></li>
@@ -3334,6 +3334,33 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="less-well">Less Well</h3>
 <h3 id="suggestion">Suggestion</h3>
 <h3 id="action">Action</h3>
+<h2 id="架构模式">架构模式</h2>
+<blockquote>
+<p>模式就是最好的架构。</p>
+</blockquote>
+<h4 id="架构的产生">架构的产生</h4>
+<p>在我开始接触架构设计的时候，我买了几本书然后我就开始学习了。我发现在这些书中都出现了一些相似的东西，如基本的分层设计、Pipe and Filters模式、MVC模式。然后，我开始意料到这些模式本身就是最好的架构。</p>
+<p>MVC模式本身也是接于分层而设计的，如下图是Spring MVC的请求处理过程：</p>
+<figure>
+<img src="chapters/chapter8/spring-mvc.png" alt="Spring MVC" /><figcaption>Spring MVC</figcaption>
+</figure>
+<p>而这个框架只是框架本身的架构，这一类也是我们预先设计好的框架。</p>
+<p>在框架之上，我们会有自己本身的业务所带来的模式。如下图是我的网上搜罗到的一个简单的发送邮件的架构：</p>
+<figure>
+<img src="chapters/chapter8/basic-paf.png" alt="发送邮件中的Pipe and Filters模式" /><figcaption>发送邮件中的Pipe and Filters模式</figcaption>
+</figure>
+<p>这样的模式则是由业务发展的过程中演进出来的。</p>
+<h3 id="预设计式架构">预设计式架构</h3>
+<p>在我们日常使用的框架多数是预先设计的构架，因为这个架构本身的目标是明确的。系统会围绕一定的架构去构建，并且在这个过程中架构会帮助我们更好地理解系统。如下图所示的是Emacs的架构：</p>
+<figure>
+<img src="chapters/chapter8/emacs-architecture.png" alt="Emcas架构" /><figcaption>Emcas架构</figcaption>
+</figure>
+<p>它采用的是交互式应用程序员应用广泛的模型-视图-控制器模式。</p>
+<p>无论是瀑布式开发——设计好系统的框架，然后对系统的每个部分进行独立的完善和设计，最后系统再集成到一起。还是敏捷式开发——先做出MVP，再一步步完善。他们都需要一定的预先式设计，只是传统的开发模式让两者看上去是等同的。</p>
+<p>在过去由于IT技术变革小，新技术产生的速率也比较低，预先设计系统的架构是一种很不错的选择。然而，技术的发展趋势是越来越快，现有的设计往往在很短的一些时间里就需要推倒重来。</p>
+<h3 id="演进式架构拥抱变化">演进式架构：拥抱变化</h3>
+<p>演进式架构则是我们日常工作的业务代码库演进出来的。由于业务本身在不断发展，我们不断地演进系统的架构。也就是这样模式下产生的架构系统会更加稳定，也更加优美。仅仅依赖于事先的设计，而不考虑架构在后期业务中的变化是一种不可取的设计模式。</p>
+<p>这不并意味着不采用预先式设计，而是不一味着去靠原先系统的架构。</p>
 <h2 id="浮现式设计">浮现式设计</h2>
 <p>设计模式不是一开始就有的，好的软件也不是一开始就设计成现在这样的，好的设计亦是如此。</p>
 <p>导致我们重构现有系统的原因有很多，但是多数是因为原来的代码变得越来越不可读，并且重构的风险太大了。在实现业务逻辑的时候，我们快速地用代码实现，没有测试，没有好的设计。</p>
@@ -3390,30 +3417,6 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>而在需求变化的过程中，一个设计的模式本身也是在不断的改变。如果我们还固执于原有的模式，那么我们就会犯下一个又一个的错误。</p>
 <p>在适当的时候改变原有的模式，进行一些演进变显得更有意义一些。如果我们不能在适当的时候引进一些新的技术来，那么旧有的技术就会不断累积。这些技术债就会不断往下叠加，那么这个系统将会接近于崩塌。而我们在一开始所设定的一些业务逻辑，也会随着系统而逝去，这个公司似乎也要到尽头了。</p>
 <p>而如果我们可以不断地演进系统——抽象服务、拆分模块等等。业务在技术不断演进地过程中，得以保留下来。</p>
-<h2 id="架构模式">架构模式</h2>
-<blockquote>
-<p>模式就是最好的架构。</p>
-</blockquote>
-<h4 id="架构的产生">架构的产生</h4>
-<p>在我开始接触架构设计的时候，我买了几本书然后我就开始学习了。我发现在这些书中都出现了一些相似的东西，如基本的分层设计、Pipe and Filters模式、MVC模式。然后，我开始意料到这些模式本身就是最好的架构。</p>
-<p>MVC模式本身也是接于分层而设计的，如下图是Spring MVC的请求处理过程：</p>
-<figure>
-<img src="chapters/chapter8/spring-mvc.png" alt="Spring MVC" /><figcaption>Spring MVC</figcaption>
-</figure>
-<p>而这个框架只是框架本身的架构，这一类也是我们预先设计好的框架。</p>
-<p>在框架之上，我们会有自己本身的业务所带来的模式。如下图是我的网上搜罗到的一个简单的发送邮件的架构：</p>
-<figure>
-<img src="chapters/chapter8/basic-paf.png" alt="发送邮件中的Pipe and Filters模式" /><figcaption>发送邮件中的Pipe and Filters模式</figcaption>
-</figure>
-<p>这样的模式则是由业务发展的过程中演进出来的。</p>
-<h3 id="预设计式架构">预设计式架构</h3>
-<p>在我们日常使用的框架多数是预先设计的构架，因为这个架构本身的目标是明确的。系统会围绕一定的架构去构建，并且在这个过程中架构会帮助我们更好地理解系统。如下图所示的是Emacs的架构：</p>
-<figure>
-<img src="chapters/chapter8/emacs-architecture.png" alt="Emcas架构" /><figcaption>Emcas架构</figcaption>
-</figure>
-<p>它采用的是交互式应用程序员应用广泛的模型-视图-控制器模式。</p>
-<h3 id="演进式架构">演进式架构</h3>
-<p>演进式架构则是我们日常工作的业务代码库演进出来的。由于业务本身在不断发展，我们不断地演进系统的架构。</p>
 <h2 id="每个人都是架构师">每个人都是架构师</h2>
 <p>每一个程序员都是架构师。平时在我们工作的时候，架构师这个Title都被那些非常有经历的开发人员占据着。然而，如果你喜欢刷刷Github，喜欢做一些有意思的东西，那么你也将是一个架构师。</p>
 <h3 id="如何构建一个博客系统">如何构建一个博客系统</h3>
