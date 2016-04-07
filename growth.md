@@ -3507,13 +3507,15 @@ application cahce是将大部分图片资源、js、css等静态资源放在mani
 
 ###环境配置
 
+数据库配置
+
 ###变更控制
 
 ###发布管理 
 
 参考书籍：**《配置管理最佳实践》**
 
-Toggle
+功能开关
 ---
 
 当我们上线了我们的新功能的时候，这时候如果有个Bug，那么我们是下线么？要知道这个版本里面包含了很多的bug修复。如果在这个设计这个新功能的时候，我们有一个可配置和Toogle，那么我们就不需要下线了。只需要切的这个toggle，就可以解决问题了。
@@ -3522,10 +3524,14 @@ Toggle
 
 ###Feature Toggle
 
+它是一种允许控制线上功能开启或者关闭的方式，通常会采取配置文件的方式来控制。
+
 ![Feature Toggle](chapters/chapter4/feature-toggle.png)
 
 自动化部署
 ---
+
+![自动化部署](chapters/chapter4/auto-deployment.png)
 
 数据分析
 ===

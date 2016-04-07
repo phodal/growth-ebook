@@ -246,7 +246,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#变更控制">变更控制</a></li>
 <li><a href="#发布管理">发布管理</a></li>
 </ul></li>
-<li><a href="#toggle">Toggle</a><ul>
+<li><a href="#功能开关">功能开关</a><ul>
 <li><a href="#feature-toggle">Feature Toggle</a></li>
 </ul></li>
 <li><a href="#自动化部署">自动化部署</a></li>
@@ -2765,17 +2765,22 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>发布管理</li>
 </ul>
 <h3 id="环境配置">环境配置</h3>
+<p>数据库配置</p>
 <h3 id="变更控制">变更控制</h3>
 <h3 id="发布管理">发布管理</h3>
 <p>参考书籍：<strong>《配置管理最佳实践》</strong></p>
-<h2 id="toggle">Toggle</h2>
+<h2 id="功能开关">功能开关</h2>
 <p>当我们上线了我们的新功能的时候，这时候如果有个Bug，那么我们是下线么？要知道这个版本里面包含了很多的bug修复。如果在这个设计这个新功能的时候，我们有一个可配置和Toogle，那么我们就不需要下线了。只需要切的这个toggle，就可以解决问题了。</p>
 <p>对于有多套环境的开发来说，如果我们针对不同的环境都有不同的配置，那么这个灵活的开发会帮助我们更好的开发。</p>
 <h3 id="feature-toggle">Feature Toggle</h3>
+<p>它是一种允许控制线上功能开启或者关闭的方式，通常会采取配置文件的方式来控制。</p>
 <figure>
 <img src="chapters/chapter4/feature-toggle.png" alt="Feature Toggle" /><figcaption>Feature Toggle</figcaption>
 </figure>
 <h2 id="自动化部署">自动化部署</h2>
+<figure>
+<img src="chapters/chapter4/auto-deployment.png" alt="自动化部署" /><figcaption>自动化部署</figcaption>
+</figure>
 <h1 id="数据分析">数据分析</h1>
 <p>有时候，对于我们的决定只要有一点点的数据支持就够了。也就是一点点的变化，可能就决定了我们产品的好坏。我们可能会因此而作出一些些改变，这些改变可能会让我们打败巨头。</p>
 <p>这一点和Growth的构建过程也很相像，在最开始的时候我只是想制定一个成长路线。而后，我发现这好像是一个不错的idea，我就开始去构建这个idea。于是它变成了Growth，这时候我需要依靠什么去分析用户喜欢的功能呢？我没有那么多的精力去和那么多的人沟通，也不能去和那么多的人沟通。</p>
