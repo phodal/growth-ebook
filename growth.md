@@ -3992,7 +3992,7 @@ UX入门
 持续交付
 ---
 
-![CD Workflow](chapters/chapter4/continuous-delivery.jpg)
+![CD Workflow](chapters/chapter6/continuous-delivery.jpg)
 
 1. 自动化
 2. DevOps
