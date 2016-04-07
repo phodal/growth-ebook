@@ -264,16 +264,17 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#关于apdex">关于Apdex</a></li>
 <li><a href="#博客性能分析">博客性能分析</a></li>
 </ul></li>
-<li><a href="#hadoop分析数据">Hadoop分析数据</a><ul>
-<li><a href="#数据源">数据源</a></li>
-<li><a href="#数据分析-2">数据分析</a></li>
-<li><a href="#学习">学习</a></li>
-</ul></li>
+<li><a href="#监测与优化">监测与优化</a></li>
 <li><a href="#seo">SEO</a><ul>
 <li><a href="#爬虫与索引">爬虫与索引</a></li>
 <li><a href="#什么样的网站需要seo">什么样的网站需要SEO？</a></li>
 <li><a href="#seo基础知识">SEO基础知识</a></li>
 <li><a href="#内容">内容</a></li>
+</ul></li>
+<li><a href="#hadoop分析数据">Hadoop分析数据</a><ul>
+<li><a href="#数据源">数据源</a></li>
+<li><a href="#数据分析-2">数据分析</a></li>
+<li><a href="#学习">学习</a></li>
 </ul></li>
 <li><a href="#ux">UX</a><ul>
 <li><a href="#什么是ux">什么是UX</a></li>
@@ -2999,16 +3000,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </tr>
 </tbody>
 </table>
-<h2 id="hadoop分析数据">Hadoop分析数据</h2>
-<blockquote>
-<p>Hadoop是一个由Apache基金会所开发的分布式系统基础架构。它可以让用户可以在不了解分布式底层细节的情况下，开发分布式程序。充分利用集群的威力进行高速运算和存储。</p>
-</blockquote>
-<p>Hadoop的框架最核心的设计就是：HDFS和MapReduce。HDFS为海量的数据提供了存储，则MapReduce为海量的数据提供了计算。</p>
-<p>HDF是一个分布式文件系统（Hadoop Distributed File System）。它有高容错性的特点，并且设计用来部署在低廉的（low-cost）硬件上；而且它提供高吞吐量（high throughput）来访问应用程序的数据，适合那些有着超大数据集（large data set）的应用程序。同时，HDFS放宽了（relax）POSIX的要求，可以以流的形式访问（streaming access）文件系统中的数据。</p>
-<p>MapReduce是Google提出的一个软件架构，用于大规模数据集（大于1TB）的并行运算。概念“Map（映射）”和“Reduce（归纳）”，及他们的主要思想，都是从函数式编程语言借来的，还有从矢量编程语言借来的特性。</p>
-<h3 id="数据源">数据源</h3>
-<h3 id="数据分析-2">数据分析</h3>
-<h3 id="学习">学习</h3>
+<h2 id="监测与优化">监测与优化</h2>
 <h2 id="seo">SEO</h2>
 <blockquote>
 <p>这是一个老的，有些过时纸，但非常平易近人，甚至在我们中间的非白皮书的读者图标微笑什么每个程序员都应该知道的关于搜索引擎优化和他们绝对概念的解释更详细，我只提一笔带过。</p>
@@ -3152,6 +3144,16 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>由社交渠道带来的流量在现在已经越来越重要了，对于一些以内容为主导的网站，而且处于发展初期，可以迅速带来流量。一些更简单的办法就是交换链接，总之这个话题有些沉重，可能会带来一些负面的影响，如黑帽SEO。。。。</p>
 <p><strong>参考来源</strong>:</p>
 <p>《SEO艺术》(The Art of SEO)</p>
+<h2 id="hadoop分析数据">Hadoop分析数据</h2>
+<blockquote>
+<p>Hadoop是一个由Apache基金会所开发的分布式系统基础架构。它可以让用户可以在不了解分布式底层细节的情况下，开发分布式程序。充分利用集群的威力进行高速运算和存储。</p>
+</blockquote>
+<p>Hadoop的框架最核心的设计就是：HDFS和MapReduce。HDFS为海量的数据提供了存储，则MapReduce为海量的数据提供了计算。</p>
+<p>HDF是一个分布式文件系统（Hadoop Distributed File System）。它有高容错性的特点，并且设计用来部署在低廉的（low-cost）硬件上；而且它提供高吞吐量（high throughput）来访问应用程序的数据，适合那些有着超大数据集（large data set）的应用程序。同时，HDFS放宽了（relax）POSIX的要求，可以以流的形式访问（streaming access）文件系统中的数据。</p>
+<p>MapReduce是Google提出的一个软件架构，用于大规模数据集（大于1TB）的并行运算。概念“Map（映射）”和“Reduce（归纳）”，及他们的主要思想，都是从函数式编程语言借来的，还有从矢量编程语言借来的特性。</p>
+<h3 id="数据源">数据源</h3>
+<h3 id="数据分析-2">数据分析</h3>
+<h3 id="学习">学习</h3>
 <h2 id="ux">UX</h2>
 <p>用户体验设计（英语：User Experience Design），是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。其目的就是保证：</p>
 <ul>
