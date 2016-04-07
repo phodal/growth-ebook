@@ -243,7 +243,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="#可配置">可配置</a></li>
 <li><a href="#toggle">Toggle</a><ul>
-<li><a href="#propertyplaceholder">PropertyPlaceHolder</a></li>
+<li><a href="#feature-toggle">Feature Toggle</a></li>
 </ul></li>
 <li><a href="#自动化部署">自动化部署</a></li>
 </ul></li>
@@ -2746,25 +2746,14 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>离线访问对基于网络的应用而言越来越重要。虽然所有浏览器都有缓存机制，但它们并不可靠，也不一定总能起到预期的作用。HTML5 使用ApplicationCache 接口可以解决由离线带来的部分难题。前提是你需要访问的web页面至少被在线访问过一次。</p>
 <h2 id="可配置">可配置</h2>
 <p>让我们写的Web应用可配置是一项很有挑战性，也很实用的技能。</p>
-<p>当我们上线了我们的新功能的时候，这时候如果有个Bug，那么我们是下线么？要知道这个版本里面包含了很多的bug修复。如果在这个设计这个新功能的时候，我们有一个可配置和Toogle，那么我们就不需要下线了。只需要切的这个toggle，就可以解决问题了。</p>
-<p>对于有多套环境的开发来说，如果我们针对不同的环境都有不同的配置，那么这个灵活的开发会帮助我们更好的开发。</p>
 <p>起先，我们在本地开发的时候为本地创建了一套环境，也创建了本地的配置。接着我们需要将我们的包部署到测试环境，也生成了测试环境的相应配置。这其中如果有其他的环境，我们也需要创建相应的环境。最后，我们还需要为产品环境创建全新的配置。</p>
 <h2 id="toggle">Toggle</h2>
-<h3 id="propertyplaceholder">PropertyPlaceHolder</h3>
-<p>在<a href="http://stackoverflow.com/questions/21725709/property-place-holder-bean-in-application-context-xml-spring">StackOverflow</a> 上有一个关于这个问题的回答。</p>
-<p>1.使用bean创建一个properties。(mvc-config.xml)</p>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;util:properties</span><span class="ot"> id=</span><span class="st">&quot;myProps&quot;</span><span class="ot"> location=</span><span class="st">&quot;WEB-INF/config/prop.properties&quot;</span><span class="kw">/&gt;</span></code></pre></div>
-<p>2.注入值</p>
-<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="fu">@Value</span>(<span class="st">&quot;#{myProps[&#39;message&#39;]}&quot;</span>)</code></pre></div>
-<p>这样就可以在<code>root context</code>和<code>mvc context</code>下工作</p>
-<p>3.在jsp中使用</p>
-<div class="sourceCode"><pre class="sourceCode jsp"><code class="sourceCode jsp"><span class="kw">&lt;spring:eval</span><span class="ot"> expression</span>=<span class="dt">&quot;@myProps.message&quot;</span><span class="ot"> var</span>=<span class="dt">&quot;messageToggle&quot;</span><span class="kw">/&gt;</span>
-
-<span class="kw">&lt;c:if</span><span class="ot"> test</span>=<span class="dt">&quot;</span>${messageToggle <span class="kw">eq</span> <span class="kw">true</span>}<span class="dt">&quot;</span><span class="kw">&gt;</span>
-    message
-<span class="kw">&lt;/c:if&gt;</span></code></pre></div>
-<p>4.在测试中使用</p>
-<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java">messageToggles = ResourceBundle.<span class="fu">getBundle</span>(<span class="st">&quot;myProps&quot;</span>);</code></pre></div>
+<p>当我们上线了我们的新功能的时候，这时候如果有个Bug，那么我们是下线么？要知道这个版本里面包含了很多的bug修复。如果在这个设计这个新功能的时候，我们有一个可配置和Toogle，那么我们就不需要下线了。只需要切的这个toggle，就可以解决问题了。</p>
+<p>对于有多套环境的开发来说，如果我们针对不同的环境都有不同的配置，那么这个灵活的开发会帮助我们更好的开发。</p>
+<h3 id="feature-toggle">Feature Toggle</h3>
+<figure>
+<img src="chapter/chapters4/feature-toggle.png" alt="Feature Toggle" /><figcaption>Feature Toggle</figcaption>
+</figure>
 <h2 id="自动化部署">自动化部署</h2>
 <h1 id="数据分析">数据分析</h1>
 <p>有时候，对于我们的决定只要有一点点的数据支持就够了。也就是一点点的变化，可能就决定了我们产品的好坏。我们可能会因此而作出一些些改变，这些改变可能会让我们打败巨头。</p>

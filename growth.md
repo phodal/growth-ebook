@@ -3493,50 +3493,18 @@ application cahce是将大部分图片资源、js、css等静态资源放在mani
 
 让我们写的Web应用可配置是一项很有挑战性，也很实用的技能。
 
-当我们上线了我们的新功能的时候，这时候如果有个Bug，那么我们是下线么？要知道这个版本里面包含了很多的bug修复。如果在这个设计这个新功能的时候，我们有一个可配置和Toogle，那么我们就不需要下线了。只需要切的这个toggle，就可以解决问题了。
-
-对于有多套环境的开发来说，如果我们针对不同的环境都有不同的配置，那么这个灵活的开发会帮助我们更好的开发。
-
 起先，我们在本地开发的时候为本地创建了一套环境，也创建了本地的配置。接着我们需要将我们的包部署到测试环境，也生成了测试环境的相应配置。这其中如果有其他的环境，我们也需要创建相应的环境。最后，我们还需要为产品环境创建全新的配置。
 
 Toggle
 ---
 
+当我们上线了我们的新功能的时候，这时候如果有个Bug，那么我们是下线么？要知道这个版本里面包含了很多的bug修复。如果在这个设计这个新功能的时候，我们有一个可配置和Toogle，那么我们就不需要下线了。只需要切的这个toggle，就可以解决问题了。
 
-###PropertyPlaceHolder
+对于有多套环境的开发来说，如果我们针对不同的环境都有不同的配置，那么这个灵活的开发会帮助我们更好的开发。
 
-在[StackOverflow](http://stackoverflow.com/questions/21725709/property-place-holder-bean-in-application-context-xml-spring) 上有一个关于这个问题的回答。
+###Feature Toggle
 
-1.使用bean创建一个properties。(mvc-config.xml)
-
-```xml
-<util:properties id="myProps" location="WEB-INF/config/prop.properties"/>
-```
-
-2.注入值
-
-```java
-@Value("#{myProps['message']}")
-```
-
-这样就可以在``root context``和``mvc context``下工作
-
-3.在jsp中使用
-
-```jsp
-<spring:eval expression="@myProps.message" var="messageToggle"/>
-
-<c:if test="${messageToggle eq true}">
-    message
-</c:if>
-```
-
-4.在测试中使用
-
-```java
-messageToggles = ResourceBundle.getBundle("myProps");
-```
-
+![Feature Toggle](chapter/chapters4/feature-toggle.png)
 
 自动化部署
 ---
