@@ -255,8 +255,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#受众群体">受众群体</a></li>
 <li><a href="#流量获取">流量获取</a></li>
 <li><a href="#移动应用">移动应用</a></li>
+</ul></li>
+<li><a href="#应用程序性能分析">应用程序性能分析</a><ul>
 <li><a href="#关于apdex">关于Apdex</a></li>
-<li><a href="#博客的apdex">博客的Apdex</a></li>
 <li><a href="#博客性能分析">博客性能分析</a></li>
 </ul></li>
 <li><a href="#hadoop分析数据">Hadoop分析数据</a><ul>
@@ -2901,7 +2902,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <img src="chapters/chapter5/ga-app.jpg" alt="Growth应用数据" /><figcaption>Growth应用数据</figcaption>
 </figure>
 <p>我们也可以从上面看到APP的安装来源等等。</p>
-<p>应用程序分析： NewRelic</p>
+<h2 id="应用程序性能分析">应用程序性能分析</h2>
 <h3 id="关于apdex">关于Apdex</h3>
 <blockquote>
 <p>Apdex联盟，一个由众多网络分析技术公司和测量工业组成的联盟组织，它们联合起来开发了“应用性能指数”即“Apdex”(Application Performance Index)，用一句话来概括，Apdex是用户对应用性能满意度的量化值。它提供了一个统一的测量和报告用户体验的方法，第一次把最终用户的体验和应用性能联系在了一起。</p>
@@ -2912,10 +2913,6 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>容忍:用户感觉到响应滞后，响应时间大于T，但能继续这个过程，如3～12秒。</li>
 <li>挫折:响应时间大于F秒的性能是不能接受的，用户可能放弃这个过程。F等于T×4，在本例子中为12秒。</li>
 </ul>
-<h3 id="博客的apdex">博客的Apdex</h3>
-<p>apdex结果如下，总体还算一般般。</p>
-<p>0.72 [0.5] Server</p>
-<p>0.84 [7.0]* Browser</p>
 <h3 id="博客性能分析">博客性能分析</h3>
 <p>接着才是重头戏，主要问题都在下面。。</p>
 <figure>
@@ -3370,7 +3367,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>增强用户体验</li>
 </ul>
 <h1 id="回顾与架构设计">回顾与架构设计</h1>
-<p>在我开始接触架构设计的时候，我对于这个知识点觉得很奇怪。因为架构设计看上去是一个很复杂的话题，然而他是属于设计的一部分。如果你懂得什么是美、什么是丑，那么我想你也是懂得设计的。而设计是一件很有意思的事——刚开始写字时，我们被要求去临摹别人的字体。</p>
+<p>在我开始接触架构设计的时候，我对于这个知识点觉得很奇怪。因为架构设计看上去是一个很复杂的话题，然而他是属于设计的一部分。如果你懂得什么是美、什么是丑，那么我想你也是懂得设计的。而设计是一件很有意思的事——刚开始写字时，我们被要求去临摹别人的字体，到了一定的时候，我们就可以真正的去设计。</p>
 <h2 id="自我总结">自我总结</h2>
 <p>总结在某种意义上相当于自己对自己的反馈：</p>
 <figure>
