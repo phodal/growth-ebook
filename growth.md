@@ -3407,6 +3407,8 @@ LNMP架构
 
 > LNMP是一个基于CentOS/Debian编写的Nginx、PHP、MySQL、phpMyAdmin、eAccelerator一键安装包。可以在VPS、独立主机上轻松的安装LNMP生产环境。
 
+由于在前面我们已经介绍过了数据库和编程语言，这里我们就只介绍LN两项
+
 ###Linux
 
 Linux是一种自由和开放源码的类UNIX操作系统内核。目前存在着许多不同的Linux发行版，可安装在各种各样的电脑硬件设备，从手机、平板电脑、路由器和影音游戏控制台，到桌上型电脑，大型电脑和超级电脑。Linux是一个领先的操作系统内核，世界上运算最快的10台超级电脑运行的都是基于Linux内核的操作系统。
@@ -3417,7 +3419,7 @@ Linux操作系统也是自由软件和开放源代码发展中最著名的例子
 
 >  Web服务器一般指网站服务器，是指驻留于因特网上某种类型计算机的程序，可以向浏览器等Web客户端提供文档，也可以放置网站文件，让全世界浏览；可以放置数据文件，让全世界下载。
 
-目前最主流的三个Web服务器是Apache Nginx IIS
+目前最主流的三个Web服务器是Apache、Nginx、IIS。
 
 ####Apache
 
@@ -3431,12 +3433,9 @@ Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（I
 
 Internet Information Services（IIS，互联网信息服务），是由微软公司提供的基于运行Microsoft Windows的互联网基本服务。最初是Windows NT版本的可选包，随后内置在Windows 2000、Windows XP Professional和Windows Server 2003一起发行，但在Windows XP Home版本上并没有IIS。
 
-代理服务器
----
+####代理服务器
 
 > 代理服务器（Proxy Server）是一种重要的服务器安全功能，它的工作主要在开放系统互联(OSI)模型的会话层，从而起到防火墙的作用。代理服务器大多被用来连接INTERNET（国际互联网）和Local Area Network（局域网）。
-
-
 
 Web缓存
 ---
@@ -3559,7 +3558,7 @@ messageToggles = ResourceBundle.getBundle("myProps");
 
 
 
-Google Analytics
+用户数据分析：Google Analytics
 ---
 
 Google Analytics是一个非常赞的分析工具，而且它不仅仅可以用于Web应用，也可以用于移动应用。
@@ -3635,6 +3634,64 @@ github.com / referral | 281
 ![Growth应用数据](chapters/chapter5/ga-app.jpg)
 
 我们也可以从上面看到APP的安装来源等等。
+
+应用程序分析： NewRelic
+
+
+
+###关于Apdex
+
+> Apdex联盟，一个由众多网络分析技术公司和测量工业组成的联盟组织，它们联合起来开发了“应用性能指数”即“Apdex”(Application Performance Index)，用一句话来概括，Apdex是用户对应用性能满意度的量化值。它提供了一个统一的测量和报告用户体验的方法，第一次把最终用户的体验和应用性能联系在了一起。
+
+任务响应时间定义为：当用户操作（鼠标点击、输入、回车）开始到系统（客户机、网络、服务器）响应从而用户能继续这个过程所经过的时间。这些等待时间定义了应用程序的“响应度”。该指数是基于应用程序响应度的三个方面：
+
+ - 满意:用户充分工作。这就是目标时间（T秒），即在此时间里用户的工作没有因应用程序的响应时间而受阻，如3秒。
+ - 容忍:用户感觉到响应滞后，响应时间大于T，但能继续这个过程，如3～12秒。
+ - 挫折:响应时间大于F秒的性能是不能接受的，用户可能放弃这个过程。F等于T×4，在本例子中为12秒。
+ 
+###博客的Apdex
+
+apdex结果如下，总体还算一般般。
+
+0.72 [0.5]  Server
+
+0.84 [7.0]* Browser
+
+
+###博客性能分析
+
+接着才是重头戏，主要问题都在下面。。
+
+ ![Breakdown Table](chapters/chapter5/run-usage.jpg)
+
+比较慢的地方就是``blog_post_list_post_content``这个函数。。。
+
+
+| Category | Segment | % Time | Avg calls(per txn) | Avg time (ms) |
+| --- | --- | --- | --- | --- |
+| Template | Block/blog_post_list_post_content | 59.4 | 4.73 | 5,220 |
+| Template | Block/blog_months | 5.6 | 1.0 | 489 |
+| Function | django.core.handlers.wsgi:WSGIHandler | 4.7 | 1.0 | 410 |
+| Template | Block/blog_post_list_post_metainfo | 3.7 | 4.73 | 322 |
+| Template | Render/base.html | 3.7 | 1.0 | 322 |
+
+Hadoop分析数据
+---
+
+> Hadoop是一个由Apache基金会所开发的分布式系统基础架构。它可以让用户可以在不了解分布式底层细节的情况下，开发分布式程序。充分利用集群的威力进行高速运算和存储。
+
+Hadoop的框架最核心的设计就是：HDFS和MapReduce。HDFS为海量的数据提供了存储，则MapReduce为海量的数据提供了计算。 
+
+HDF是一个分布式文件系统（Hadoop Distributed File System）。它有高容错性的特点，并且设计用来部署在低廉的（low-cost）硬件上；而且它提供高吞吐量（high throughput）来访问应用程序的数据，适合那些有着超大数据集（large data set）的应用程序。同时，HDFS放宽了（relax）POSIX的要求，可以以流的形式访问（streaming access）文件系统中的数据。
+
+MapReduce是Google提出的一个软件架构，用于大规模数据集（大于1TB）的并行运算。概念“Map（映射）”和“Reduce（归纳）”，及他们的主要思想，都是从函数式编程语言借来的，还有从矢量编程语言借来的特性。
+
+###数据源
+
+###数据分析
+
+###学习
+
 
 SEO
 ---
@@ -3813,24 +3870,6 @@ Total links
 **参考来源**:
 
 《SEO艺术》(The Art of SEO)
-
-Hadoop分析数据
----
-
-> Hadoop是一个由Apache基金会所开发的分布式系统基础架构。它可以让用户可以在不了解分布式底层细节的情况下，开发分布式程序。充分利用集群的威力进行高速运算和存储。
-
-Hadoop的框架最核心的设计就是：HDFS和MapReduce。HDFS为海量的数据提供了存储，则MapReduce为海量的数据提供了计算。 
-
-HDF是一个分布式文件系统（Hadoop Distributed File System）。它有高容错性的特点，并且设计用来部署在低廉的（low-cost）硬件上；而且它提供高吞吐量（high throughput）来访问应用程序的数据，适合那些有着超大数据集（large data set）的应用程序。同时，HDFS放宽了（relax）POSIX的要求，可以以流的形式访问（streaming access）文件系统中的数据。
-
-MapReduce是Google提出的一个软件架构，用于大规模数据集（大于1TB）的并行运算。概念“Map（映射）”和“Reduce（归纳）”，及他们的主要思想，都是从函数式编程语言借来的，还有从矢量编程语言借来的特性。
-
-###数据源
-
-###数据分析
-
-###学习
-
 
 UX
 ---

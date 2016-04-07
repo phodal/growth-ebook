@@ -234,7 +234,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#linux">Linux</a></li>
 <li><a href="#http服务器">HTTP服务器</a></li>
 </ul></li>
-<li><a href="#代理服务器">代理服务器</a></li>
 <li><a href="#web缓存">Web缓存</a><ul>
 <li><a href="#数据库端缓存">数据库端缓存</a></li>
 <li><a href="#应用层缓存">应用层缓存</a></li>
@@ -252,21 +251,24 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#数据分析-1">数据分析</a><ul>
 <li><a href="#数据分析的过程">数据分析的过程</a></li>
 </ul></li>
-<li><a href="#google-analytics">Google Analytics</a><ul>
+<li><a href="#用户数据分析google-analytics">用户数据分析：Google Analytics</a><ul>
 <li><a href="#受众群体">受众群体</a></li>
 <li><a href="#流量获取">流量获取</a></li>
 <li><a href="#移动应用">移动应用</a></li>
+<li><a href="#关于apdex">关于Apdex</a></li>
+<li><a href="#博客的apdex">博客的Apdex</a></li>
+<li><a href="#博客性能分析">博客性能分析</a></li>
+</ul></li>
+<li><a href="#hadoop分析数据">Hadoop分析数据</a><ul>
+<li><a href="#数据源">数据源</a></li>
+<li><a href="#数据分析-2">数据分析</a></li>
+<li><a href="#学习">学习</a></li>
 </ul></li>
 <li><a href="#seo">SEO</a><ul>
 <li><a href="#爬虫与索引">爬虫与索引</a></li>
 <li><a href="#什么样的网站需要seo">什么样的网站需要SEO？</a></li>
 <li><a href="#seo基础知识">SEO基础知识</a></li>
 <li><a href="#内容">内容</a></li>
-</ul></li>
-<li><a href="#hadoop分析数据">Hadoop分析数据</a><ul>
-<li><a href="#数据源">数据源</a></li>
-<li><a href="#数据分析-2">数据分析</a></li>
-<li><a href="#学习">学习</a></li>
 </ul></li>
 <li><a href="#ux">UX</a><ul>
 <li><a href="#什么是ux">什么是UX</a></li>
@@ -2686,6 +2688,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <blockquote>
 <p>LNMP是一个基于CentOS/Debian编写的Nginx、PHP、MySQL、phpMyAdmin、eAccelerator一键安装包。可以在VPS、独立主机上轻松的安装LNMP生产环境。</p>
 </blockquote>
+<p>由于在前面我们已经介绍过了数据库和编程语言，这里我们就只介绍LN两项</p>
 <h3 id="linux">Linux</h3>
 <p>Linux是一种自由和开放源码的类UNIX操作系统内核。目前存在着许多不同的Linux发行版，可安装在各种各样的电脑硬件设备，从手机、平板电脑、路由器和影音游戏控制台，到桌上型电脑，大型电脑和超级电脑。Linux是一个领先的操作系统内核，世界上运算最快的10台超级电脑运行的都是基于Linux内核的操作系统。</p>
 <p>Linux操作系统也是自由软件和开放源代码发展中最著名的例子。只要遵循GNU通用公共许可证,任何人和机构都可以自由地使用Linux的所有底层源代码，也可以自由地修改和再发布。严格来讲，Linux这个词本身只表示Linux内核，但在实际上人们已经习惯了用Linux来形容整个基于Linux内核，并且使用GNU 工程各种工具和数据库的操作系统（也被称为GNU/ Linux）。通常情况下，Linux被打包成供桌上型电脑和服务器使用的Linux发行版本。一些流行的主流Linux发行版本，包括Debian（及其衍生版本Ubuntu），Fedora和openSUSE等。 Linux得名于电脑业余爱好者Linus Torvalds。</p>
@@ -2693,14 +2696,14 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <blockquote>
 <p>Web服务器一般指网站服务器，是指驻留于因特网上某种类型计算机的程序，可以向浏览器等Web客户端提供文档，也可以放置网站文件，让全世界浏览；可以放置数据文件，让全世界下载。</p>
 </blockquote>
-<p>目前最主流的三个Web服务器是Apache Nginx IIS</p>
+<p>目前最主流的三个Web服务器是Apache、Nginx、IIS。</p>
 <h4 id="apache">Apache</h4>
 <p>Apache是世界使用排名第一的Web服务器软件。它可以运行在几乎所有广泛使用的计算机平台上，由于其跨平台和安全性被广泛使用，是最流行的Web服务器端软件之一。它快速、可靠并且可通过简单的API扩充，将Perl/Python等解释器编译到服务器中。</p>
 <h4 id="nginx">Nginx</h4>
 <p>Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-like 协议下发行。由俄罗斯的程序设计师Igor Sysoev所开发，供俄国大型的入口网站及搜索引擎Rambler（俄文：Рамблер）使用。其特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、新浪、网易、腾讯等。</p>
 <h4 id="iis">IIS</h4>
 <p>Internet Information Services（IIS，互联网信息服务），是由微软公司提供的基于运行Microsoft Windows的互联网基本服务。最初是Windows NT版本的可选包，随后内置在Windows 2000、Windows XP Professional和Windows Server 2003一起发行，但在Windows XP Home版本上并没有IIS。</p>
-<h2 id="代理服务器">代理服务器</h2>
+<h4 id="代理服务器">代理服务器</h4>
 <blockquote>
 <p>代理服务器（Proxy Server）是一种重要的服务器安全功能，它的工作主要在开放系统互联(OSI)模型的会话层，从而起到防火墙的作用。代理服务器大多被用来连接INTERNET（国际互联网）和Local Area Network（局域网）。</p>
 </blockquote>
@@ -2771,7 +2774,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </figure>
 <p>它并不是独立的一个环节，实现上它应该是一整个环节： 我们根据我们的想法去创建我们的产品，在使用产品的过程中我们收集一些数据，再依据这些数据来改进我们的产品。</p>
 <h3 id="数据分析的过程">数据分析的过程</h3>
-<h2 id="google-analytics">Google Analytics</h2>
+<h2 id="用户数据分析google-analytics">用户数据分析：Google Analytics</h2>
 <p>Google Analytics是一个非常赞的分析工具，而且它不仅仅可以用于Web应用，也可以用于移动应用。</p>
 <h3 id="受众群体">受众群体</h3>
 <p>如下图是Growth应用最近两星期的数据：</p>
@@ -2905,6 +2908,85 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <img src="chapters/chapter5/ga-app.jpg" alt="Growth应用数据" /><figcaption>Growth应用数据</figcaption>
 </figure>
 <p>我们也可以从上面看到APP的安装来源等等。</p>
+<p>应用程序分析： NewRelic</p>
+<h3 id="关于apdex">关于Apdex</h3>
+<blockquote>
+<p>Apdex联盟，一个由众多网络分析技术公司和测量工业组成的联盟组织，它们联合起来开发了“应用性能指数”即“Apdex”(Application Performance Index)，用一句话来概括，Apdex是用户对应用性能满意度的量化值。它提供了一个统一的测量和报告用户体验的方法，第一次把最终用户的体验和应用性能联系在了一起。</p>
+</blockquote>
+<p>任务响应时间定义为：当用户操作（鼠标点击、输入、回车）开始到系统（客户机、网络、服务器）响应从而用户能继续这个过程所经过的时间。这些等待时间定义了应用程序的“响应度”。该指数是基于应用程序响应度的三个方面：</p>
+<ul>
+<li>满意:用户充分工作。这就是目标时间（T秒），即在此时间里用户的工作没有因应用程序的响应时间而受阻，如3秒。</li>
+<li>容忍:用户感觉到响应滞后，响应时间大于T，但能继续这个过程，如3～12秒。</li>
+<li>挫折:响应时间大于F秒的性能是不能接受的，用户可能放弃这个过程。F等于T×4，在本例子中为12秒。</li>
+</ul>
+<h3 id="博客的apdex">博客的Apdex</h3>
+<p>apdex结果如下，总体还算一般般。</p>
+<p>0.72 [0.5] Server</p>
+<p>0.84 [7.0]* Browser</p>
+<h3 id="博客性能分析">博客性能分析</h3>
+<p>接着才是重头戏，主要问题都在下面。。</p>
+<figure>
+<img src="chapters/chapter5/run-usage.jpg" alt="Breakdown Table" /><figcaption>Breakdown Table</figcaption>
+</figure>
+<p>比较慢的地方就是<code>blog_post_list_post_content</code>这个函数。。。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Category</th>
+<th style="text-align: left;">Segment</th>
+<th style="text-align: left;">% Time</th>
+<th style="text-align: left;">Avg calls(per txn)</th>
+<th style="text-align: left;">Avg time (ms)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Template</td>
+<td style="text-align: left;">Block/blog_post_list_post_content</td>
+<td style="text-align: left;">59.4</td>
+<td style="text-align: left;">4.73</td>
+<td style="text-align: left;">5,220</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Template</td>
+<td style="text-align: left;">Block/blog_months</td>
+<td style="text-align: left;">5.6</td>
+<td style="text-align: left;">1.0</td>
+<td style="text-align: left;">489</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Function</td>
+<td style="text-align: left;">django.core.handlers.wsgi:WSGIHandler</td>
+<td style="text-align: left;">4.7</td>
+<td style="text-align: left;">1.0</td>
+<td style="text-align: left;">410</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Template</td>
+<td style="text-align: left;">Block/blog_post_list_post_metainfo</td>
+<td style="text-align: left;">3.7</td>
+<td style="text-align: left;">4.73</td>
+<td style="text-align: left;">322</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Template</td>
+<td style="text-align: left;">Render/base.html</td>
+<td style="text-align: left;">3.7</td>
+<td style="text-align: left;">1.0</td>
+<td style="text-align: left;">322</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hadoop分析数据">Hadoop分析数据</h2>
+<blockquote>
+<p>Hadoop是一个由Apache基金会所开发的分布式系统基础架构。它可以让用户可以在不了解分布式底层细节的情况下，开发分布式程序。充分利用集群的威力进行高速运算和存储。</p>
+</blockquote>
+<p>Hadoop的框架最核心的设计就是：HDFS和MapReduce。HDFS为海量的数据提供了存储，则MapReduce为海量的数据提供了计算。</p>
+<p>HDF是一个分布式文件系统（Hadoop Distributed File System）。它有高容错性的特点，并且设计用来部署在低廉的（low-cost）硬件上；而且它提供高吞吐量（high throughput）来访问应用程序的数据，适合那些有着超大数据集（large data set）的应用程序。同时，HDFS放宽了（relax）POSIX的要求，可以以流的形式访问（streaming access）文件系统中的数据。</p>
+<p>MapReduce是Google提出的一个软件架构，用于大规模数据集（大于1TB）的并行运算。概念“Map（映射）”和“Reduce（归纳）”，及他们的主要思想，都是从函数式编程语言借来的，还有从矢量编程语言借来的特性。</p>
+<h3 id="数据源">数据源</h3>
+<h3 id="数据分析-2">数据分析</h3>
+<h3 id="学习">学习</h3>
 <h2 id="seo">SEO</h2>
 <blockquote>
 <p>这是一个老的，有些过时纸，但非常平易近人，甚至在我们中间的非白皮书的读者图标微笑什么每个程序员都应该知道的关于搜索引擎优化和他们绝对概念的解释更详细，我只提一笔带过。</p>
@@ -3048,16 +3130,6 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>由社交渠道带来的流量在现在已经越来越重要了，对于一些以内容为主导的网站，而且处于发展初期，可以迅速带来流量。一些更简单的办法就是交换链接，总之这个话题有些沉重，可能会带来一些负面的影响，如黑帽SEO。。。。</p>
 <p><strong>参考来源</strong>:</p>
 <p>《SEO艺术》(The Art of SEO)</p>
-<h2 id="hadoop分析数据">Hadoop分析数据</h2>
-<blockquote>
-<p>Hadoop是一个由Apache基金会所开发的分布式系统基础架构。它可以让用户可以在不了解分布式底层细节的情况下，开发分布式程序。充分利用集群的威力进行高速运算和存储。</p>
-</blockquote>
-<p>Hadoop的框架最核心的设计就是：HDFS和MapReduce。HDFS为海量的数据提供了存储，则MapReduce为海量的数据提供了计算。</p>
-<p>HDF是一个分布式文件系统（Hadoop Distributed File System）。它有高容错性的特点，并且设计用来部署在低廉的（low-cost）硬件上；而且它提供高吞吐量（high throughput）来访问应用程序的数据，适合那些有着超大数据集（large data set）的应用程序。同时，HDFS放宽了（relax）POSIX的要求，可以以流的形式访问（streaming access）文件系统中的数据。</p>
-<p>MapReduce是Google提出的一个软件架构，用于大规模数据集（大于1TB）的并行运算。概念“Map（映射）”和“Reduce（归纳）”，及他们的主要思想，都是从函数式编程语言借来的，还有从矢量编程语言借来的特性。</p>
-<h3 id="数据源">数据源</h3>
-<h3 id="数据分析-2">数据分析</h3>
-<h3 id="学习">学习</h3>
 <h2 id="ux">UX</h2>
 <p>用户体验设计（英语：User Experience Design），是以用户为中心的一种设计手段，以用户需求为目标而进行的设计。设计过程注重以用户为中心，用户体验的概念从开发的最早期就开始进入整个流程，并贯穿始终。其目的就是保证：</p>
 <ul>
