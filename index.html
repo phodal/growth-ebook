@@ -239,7 +239,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#应用层缓存">应用层缓存</a></li>
 <li><a href="#前端缓存">前端缓存</a></li>
 <li><a href="#客户端缓存">客户端缓存</a></li>
-<li><a href="#html5-离线缓存">HTML5 离线缓存</a></li>
+<li><a href="#html5离线缓存">HTML5离线缓存</a></li>
 </ul></li>
 <li><a href="#可配置">可配置</a></li>
 <li><a href="#toggle">Toggle</a><ul>
@@ -2716,6 +2716,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>前端缓存</li>
 <li>客户端缓存</li>
 </ul>
+<p>不同的缓存类型适用于不同的环境下使用。</p>
 <h3 id="数据库端缓存">数据库端缓存</h3>
 <p>这个可以用以“空间换时间”来说。比如建一个表来存储另外一个表某个类型的数据的总条数，在每次更新数据的时候同事更新 数据表和统计条数的表。在需要获取某个类型的数据的条数的时候，就不需要select count去查询，直接查询统计表就可以了，这样可以提高查询的速度和数据库的性能。</p>
 <h3 id="应用层缓存">应用层缓存</h3>
@@ -2740,7 +2741,9 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>我们这里说的前端缓存可以理解为一般使用的cdn技术，利用squid等做前端缓冲技术，主要还是针对静态文件类型，比如图片，css,js,html等静态文件。</p>
 <h3 id="客户端缓存">客户端缓存</h3>
 <p>浏览器端的缓存，可以让用户请求一次之后，下一次不在从服务器端请求数据，直接从本地缓存读取，可以减轻服务器负担也可以加快用户的访问速度。</p>
-<h3 id="html5-离线缓存">HTML5 离线缓存</h3>
+<h3 id="html5离线缓存">HTML5离线缓存</h3>
+<p>application cahce是将大部分图片资源、js、css等静态资源放在manifest文件配置中。当页面打开时通过manifest文件来读取本地文件或是请求服务器文件。</p>
+<p>离线访问对基于网络的应用而言越来越重要。虽然所有浏览器都有缓存机制，但它们并不可靠，也不一定总能起到预期的作用。HTML5 使用ApplicationCache 接口可以解决由离线带来的部分难题。前提是你需要访问的web页面至少被在线访问过一次。</p>
 <h2 id="可配置">可配置</h2>
 <p>让我们写的Web应用可配置是一项很有挑战性，也很实用的技能。</p>
 <p>当我们上线了我们的新功能的时候，这时候如果有个Bug，那么我们是下线么？要知道这个版本里面包含了很多的bug修复。如果在这个设计这个新功能的时候，我们有一个可配置和Toogle，那么我们就不需要下线了。只需要切的这个toggle，就可以解决问题了。</p>
