@@ -3504,7 +3504,7 @@ Toggle
 
 ###Feature Toggle
 
-![Feature Toggle](chapter/chapters4/feature-toggle.png)
+![Feature Toggle](chapters/chapter4/feature-toggle.png)
 
 自动化部署
 ---
