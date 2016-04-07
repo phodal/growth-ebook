@@ -3495,6 +3495,8 @@ application cahce是将大部分图片资源、js、css等静态资源放在mani
 
 起先，我们在本地开发的时候为本地创建了一套环境，也创建了本地的配置。接着我们需要将我们的包部署到测试环境，也生成了测试环境的相应配置。这其中如果有其他的环境，我们也需要创建相应的环境。最后，我们还需要为产品环境创建全新的配置。
 
+![Drupal Deployment Flow](chapters/chapter4/deployment-flow.png)
+
 Toggle
 ---
 
