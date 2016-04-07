@@ -3630,8 +3630,11 @@ github.com / referral | 281
 
 ###移动应用
 
+除此，我们还可以使用它来分析移动应用，不过这受限于Google在国内的访问程度。如下图是GA收到的应用的使用数据：
+
 ![Growth应用数据](chapters/chapter5/ga-app.jpg)
 
+我们也可以从上面看到APP的安装来源等等。
 
 SEO
 ---
