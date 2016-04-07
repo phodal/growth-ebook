@@ -3533,6 +3533,15 @@ application cahce是将大部分图片资源、js、css等静态资源放在mani
 
 ![自动化部署](chapters/chapter4/auto-deployment.png)
 
+ - 获取源码
+ - 获取依赖
+ - 构建软件包
+ - 生成/上传RPM包
+ - 目标平台安装/配置
+
+ 
+
+
 数据分析
 ===
 
