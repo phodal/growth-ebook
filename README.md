@@ -1,7 +1,11 @@
 Growth: 全栈增长工程师指南
 ===
 
-不止于Full Stack，还有Growth Hacking。
+**不止于Full Stack，还有Growth Hacking**。
+
+> 《全栈增长工程师指南》是一本依据我在《[Repractise简介篇：Web开发的七天里](http://mp.weixin.qq.com/s?__biz=MjM5Mjg4NDMwMA==&mid=403171959&idx=1&sn=08f0717e2306efd7d80c8bb603e644d0#rd)》中所说的Web开发的七个步骤而展开的电子书，当然它也是一个APP，它一本关于如何成为全栈增长工程师的指南。
+
+**我们都会学习，但是有时候我们只是不知道应该学习什么而已。**
 
 在线预览：[http://growth.phodal.com/](http://growth.phodal.com/)
 
@@ -11,13 +15,14 @@ Growth: 全栈增长工程师指南
 
 Django版: [Growth In Action Django](https://github.com/phodal/growth-in-action-django)
 
+没钱棒个人场: 关注我的微信公众号（扫描下面的二维码或搜索Phodal）.
+
+![QRCode](https://raw.githubusercontent.com/phodal/growth/master/www/img/wechat.jpg)
+
 有钱捧个钱场:
 
 ![Alipay](https://raw.githubusercontent.com/phodal/growth/master/docs/alipay.png)![Wechat](https://raw.githubusercontent.com/phodal/growth/master/docs/wechat.png)
 
-没钱棒个人场: 关注我的微信公众号（搜索Phodal）.
-
-![QRCode](https://raw.githubusercontent.com/phodal/growth/master/www/img/wechat.jpg)
 
 应用下载
 ---
