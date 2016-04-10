@@ -448,6 +448,10 @@ Zsh 是一款功能强大终端（shell）软件，既可以作为一个交互�
 
 > ReText是一个使用 Markdown 语法和 reStructuredText (reST) 结构的文本编辑器，编辑的内容支持导出到 PDF、ODT 和 HTML 以及纯文本，支持即时预览、网页生成以及 HTML 语法高亮、全屏模式，可导出文件到 Google Docs 等。
 
+**Launchy** 
+
+> Launchy 是一款免费开源的协助您摒弃Windows “运行”的Dock式替代工具，既方便又实用，自带多款皮肤，作为美化工具也未尝不可。
+
 环境搭建完毕！现在，就让我们来看看如何学好一门语言！
 
 学好一门语言的艺术
