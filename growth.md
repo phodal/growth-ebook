@@ -3726,6 +3726,18 @@ github.com / referral | 281
 网站监测
 ---
 
+###可用性监测
+
+> 网站可用性是网站性能监测的重要指标之一，表示在一段时间内，网站处于“正常状态”的机率。随着我国电子政务的建设发展，政府网站用户量的增加，政府网站可用性这一常见问题将逐渐成为政府网站日常管理工作重点之一。
+
+ - DNS解析
+ - 内存、硬盘等等
+ - 网页打开速度
+
+###服务监测
+
+###安全监测
+
 应用程序性能分析
 ---
 
@@ -3755,6 +3767,10 @@ github.com / referral | 281
 | Function | django.core.handlers.wsgi:WSGIHandler | 4.7 | 1.0 | 410 |
 | Template | Block/blog_post_list_post_metainfo | 3.7 | 4.73 | 322 |
 | Template | Render/base.html | 3.7 | 1.0 | 322 |
+
+性能优化
+---
+
 
 SEO
 ---
@@ -3933,10 +3949,6 @@ Total links
 **参考来源**:
 
 《SEO艺术》(The Art of SEO)
-
-性能优化
----
-
 
 UX入门
 ---
