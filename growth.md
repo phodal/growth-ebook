@@ -3605,10 +3605,13 @@ application cahce是将大部分图片资源、js、css等静态资源放在mani
 
 要构建一个标准的RPM包，我们需要创建.spec文件，这个文件包含软件打包的全部信息——如包的Summary、Name、Version、Copyright、Vendor等等。在产生完这一个配置文件事，执行rpmbuild 命令，系统会按照步骤生成目标RPM包。
 
-生成对应的软件包后，我们就可以将其上传到Koji上，它是Fedora 社区的编译系统。
+###上传和安装软件包
 
-###目标平台安装/配置
+生成对应的软件包后，我们就可以将其上传到Koji上，它是Fedora社区的编译系统。如下图所示：
 
+![RPM Build Process](chapters/chapter4/rpm-koji.jpg)
+
+如果我们已经对我们的所有目标操作系统配置过，即配置好了软件源，那么我们就可以直接在我们的服务器上使用包管理工具安装，如``yum install``。
 
 数据分析
 ===

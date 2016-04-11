@@ -249,7 +249,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#自动化部署">自动化部署</a></li>
 <li><a href="#依赖与包仓库">依赖与包仓库</a><ul>
 <li><a href="#构建软件包">构建软件包</a></li>
-<li><a href="#目标平台安装配置">目标平台安装/配置</a></li>
+<li><a href="#上传和安装软件包">上传和安装软件包</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#数据分析">数据分析</a><ul>
@@ -2825,8 +2825,12 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <img src="chapters/chapter4/rpm-deploy.jpg" alt="RPM Build Process" /><figcaption>RPM Build Process</figcaption>
 </figure>
 <p>要构建一个标准的RPM包，我们需要创建.spec文件，这个文件包含软件打包的全部信息——如包的Summary、Name、Version、Copyright、Vendor等等。在产生完这一个配置文件事，执行rpmbuild 命令，系统会按照步骤生成目标RPM包。</p>
-<p>生成对应的软件包后，我们就可以将其上传到Koji上，它是Fedora 社区的编译系统。</p>
-<h3 id="目标平台安装配置">目标平台安装/配置</h3>
+<h3 id="上传和安装软件包">上传和安装软件包</h3>
+<p>生成对应的软件包后，我们就可以将其上传到Koji上，它是Fedora社区的编译系统。如下图所示：</p>
+<figure>
+<img src="chapters/chapter4/rpm-koji.jpg" alt="RPM Build Process" /><figcaption>RPM Build Process</figcaption>
+</figure>
+<p>如果我们已经对我们的所有目标操作系统配置过，即配置好了软件源，那么我们就可以直接在我们的服务器上使用包管理工具安装，如<code>yum install</code>。</p>
 <h1 id="数据分析">数据分析</h1>
 <p>有时候，对于我们的决定只要有一点点的数据支持就够了。也就是一点点的变化，可能就决定了我们产品的好坏。我们可能会因此而作出一些些改变，这些改变可能会让我们打败巨头。</p>
 <p>这一点和Growth的构建过程也很相像，在最开始的时候我只是想制定一个成长路线。而后，我发现这好像是一个不错的idea，我就开始去构建这个idea。于是它变成了Growth，这时候我需要依靠什么去分析用户喜欢的功能呢？我没有那么多的精力去和那么多的人沟通，也不能去和那么多的人沟通。</p>
