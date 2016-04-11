@@ -11,6 +11,12 @@ Growth: 全栈增长工程师指南
 
 **下载**: [Epub版](https://github.com/phodal/growth-ebook/releases/download/0.5.0/growth.epub)、[Mobi版](https://github.com/phodal/growth-ebook/releases/download/0.5.0/growth.mobi)、[PDF版](https://github.com/phodal/growth-ebook/releases/download/0.5.0/growth.pdf)、[RTF版](https://github.com/phodal/growth-ebook/releases/download/0.5.0/growth.rtf)
 
+我的其他电子书：
+
+ - 《[一步步搭建物联网系统](https://github.com/phodal/designiot)》
+ - 《[GitHub 漫游指南](https://github.com/phodal/github-roam)》
+ - 《[RePractise](https://github.com/phodal/repractise)》
+
 **Growth实战篇**
 
 Django版: [Growth In Action Django](https://github.com/phodal/growth-in-action-django)
