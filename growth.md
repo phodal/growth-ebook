@@ -3745,6 +3745,31 @@ github.com / referral | 281
 
 ###安全监测
 
+性能优化
+---
+
+###减少HTTP请求
+
+合并脚本和样式表，CSS Sprites，拆分初始化负载，划分主域
+
+###页面内部优化
+
+将样式表放在顶部，将脚本放在底部，尽早刷新文档的输出
+
+###启用缓存
+
+后台优化，启用页面缓存;
+
+使用gzip压缩
+
+###减少下载量
+
+使用 CDN，使用外部 JavaScript 和 CSS，添加 Expires 头，减少 DNS 查找，配置 ETag，使 AjaX 可缓存
+
+###网络连接上的优化
+
+DNS域名解析加速
+
 应用程序性能分析
 ---
 
@@ -3774,10 +3799,6 @@ github.com / referral | 281
 | Function | django.core.handlers.wsgi:WSGIHandler | 4.7 | 1.0 | 410 |
 | Template | Block/blog_post_list_post_metainfo | 3.7 | 4.73 | 322 |
 | Template | Render/base.html | 3.7 | 1.0 | 322 |
-
-性能优化
----
-
 
 SEO
 ---

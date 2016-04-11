@@ -269,11 +269,17 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#服务监测">服务监测</a></li>
 <li><a href="#安全监测">安全监测</a></li>
 </ul></li>
+<li><a href="#性能优化">性能优化</a><ul>
+<li><a href="#减少http请求">减少HTTP请求</a></li>
+<li><a href="#页面内部优化">页面内部优化</a></li>
+<li><a href="#启用缓存">启用缓存</a></li>
+<li><a href="#减少下载量">减少下载量</a></li>
+<li><a href="#网络连接上的优化">网络连接上的优化</a></li>
+</ul></li>
 <li><a href="#应用程序性能分析">应用程序性能分析</a><ul>
 <li><a href="#关于apdex">关于Apdex</a></li>
 <li><a href="#博客性能分析">博客性能分析</a></li>
 </ul></li>
-<li><a href="#性能优化">性能优化</a></li>
 <li><a href="#seo">SEO</a><ul>
 <li><a href="#爬虫与索引">爬虫与索引</a></li>
 <li><a href="#什么样的网站需要seo">什么样的网站需要SEO？</a></li>
@@ -3007,6 +3013,18 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </ul>
 <h3 id="服务监测">服务监测</h3>
 <h3 id="安全监测">安全监测</h3>
+<h2 id="性能优化">性能优化</h2>
+<h3 id="减少http请求">减少HTTP请求</h3>
+<p>合并脚本和样式表，CSS Sprites，拆分初始化负载，划分主域</p>
+<h3 id="页面内部优化">页面内部优化</h3>
+<p>将样式表放在顶部，将脚本放在底部，尽早刷新文档的输出</p>
+<h3 id="启用缓存">启用缓存</h3>
+<p>后台优化，启用页面缓存;</p>
+<p>使用gzip压缩</p>
+<h3 id="减少下载量">减少下载量</h3>
+<p>使用 CDN，使用外部 JavaScript 和 CSS，添加 Expires 头，减少 DNS 查找，配置 ETag，使 AjaX 可缓存</p>
+<h3 id="网络连接上的优化">网络连接上的优化</h3>
+<p>DNS域名解析加速</p>
 <h2 id="应用程序性能分析">应用程序性能分析</h2>
 <h3 id="关于apdex">关于Apdex</h3>
 <blockquote>
@@ -3072,7 +3090,6 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </tr>
 </tbody>
 </table>
-<h2 id="性能优化">性能优化</h2>
 <h2 id="seo">SEO</h2>
 <blockquote>
 <p>这是一个老的，有些过时纸，但非常平易近人，甚至在我们中间的非白皮书的读者图标微笑什么每个程序员都应该知道的关于搜索引擎优化和他们绝对概念的解释更详细，我只提一笔带过。</p>
