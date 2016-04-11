@@ -3528,20 +3528,43 @@ application cahce是将大部分图片资源、js、css等静态资源放在mani
 
 对应的，我们也需要在我们的代码中实现判断这些配置的逻辑。
 
-参考书籍：**《配置管理最佳实践》**
-
-功能开关
----
+###功能开关
 
 当我们上线了我们的新功能的时候，这时候如果有个Bug，那么我们是下线么？要知道这个版本里面包含了很多的bug修复。如果在这个设计这个新功能的时候，我们有一个可配置和Toogle，那么我们就不需要下线了。只需要切的这个toggle，就可以解决问题了。
 
 对于有多套环境的开发来说，如果我们针对不同的环境都有不同的配置，那么这个灵活的开发会帮助我们更好的开发。
 
-###Feature Toggle
+####Feature Toggle
 
-它是一种允许控制线上功能开启或者关闭的方式，通常会采取配置文件的方式来控制。
+它是一种允许控制线上功能开启或者关闭的方式，通常会采取配置文件的方式来控制。其过程如下图所示：
 
 ![Feature Toggle](chapters/chapter4/feature-toggle.png)
+
+当我们需要A功能的时候，我们就只需要把A功能的开关打开。当我们需要B功能，而不需要A功能的时候，我们就可以把相应的功能关掉。像在Java里的Spring框架，就可以用PropertyPlaceHolder来做相似的事。使用bean文件创建一个properties
+
+```xml
+<util:properties id="myProps" location="WEB-INF/config/prop.properties"/>
+```
+
+然后向注入这个值：
+
+```
+@Value("#{myProps['message']}")
+```
+
+我们就可以直接判断这个值是否是真，从而显示这个内容。
+
+```
+<spring:eval expression="@myProps.message" var="messageToggle"/>
+
+<c:if test="${messageToggle eq true}">
+    message
+</c:if>
+```
+
+这是一种很实用，而且很有趣的技术。
+
+参考书籍：**《配置管理最佳实践》**
 
 自动化部署
 ---

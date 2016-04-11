@@ -244,9 +244,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#可配置">可配置</a><ul>
 <li><a href="#环境配置">环境配置</a></li>
 <li><a href="#运行机制">运行机制</a></li>
-</ul></li>
-<li><a href="#功能开关">功能开关</a><ul>
-<li><a href="#feature-toggle">Feature Toggle</a></li>
+<li><a href="#功能开关">功能开关</a></li>
 </ul></li>
 <li><a href="#自动化部署">自动化部署</a></li>
 </ul></li>
@@ -2776,15 +2774,26 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>当我们的应用程序在服务器上运行得好好的时候，我们可能就不想因为修改配置而去重启机器，这时候我们就需要配置热加载。即我们修改配置后，不需要重启服务即可以使用新的配置。对应的还有一种，便是我们需要重启机器才能实现配置。</p>
 <p>无论是哪种方式都需要修改配置来实现。而在我们使用的过程中热加载可能需要消耗一些系统资源，因为我们的系统需要不断地读取配置的状态并对其进行判断。并且如果我们的应用运行在多个机器上的时候，我们可能需要一个个的上支个性。而如果我们是冷启动的话，我们就可以考虑使用自动部署的方式来完成。</p>
 <p>对应的，我们也需要在我们的代码中实现判断这些配置的逻辑。</p>
-<p>参考书籍：<strong>《配置管理最佳实践》</strong></p>
-<h2 id="功能开关">功能开关</h2>
+<h3 id="功能开关">功能开关</h3>
 <p>当我们上线了我们的新功能的时候，这时候如果有个Bug，那么我们是下线么？要知道这个版本里面包含了很多的bug修复。如果在这个设计这个新功能的时候，我们有一个可配置和Toogle，那么我们就不需要下线了。只需要切的这个toggle，就可以解决问题了。</p>
 <p>对于有多套环境的开发来说，如果我们针对不同的环境都有不同的配置，那么这个灵活的开发会帮助我们更好的开发。</p>
-<h3 id="feature-toggle">Feature Toggle</h3>
-<p>它是一种允许控制线上功能开启或者关闭的方式，通常会采取配置文件的方式来控制。</p>
+<h4 id="feature-toggle">Feature Toggle</h4>
+<p>它是一种允许控制线上功能开启或者关闭的方式，通常会采取配置文件的方式来控制。其过程如下图所示：</p>
 <figure>
 <img src="chapters/chapter4/feature-toggle.png" alt="Feature Toggle" /><figcaption>Feature Toggle</figcaption>
 </figure>
+<p>当我们需要A功能的时候，我们就只需要把A功能的开关打开。当我们需要B功能，而不需要A功能的时候，我们就可以把相应的功能关掉。像在Java里的Spring框架，就可以用PropertyPlaceHolder来做相似的事。使用bean文件创建一个properties</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;util:properties</span><span class="ot"> id=</span><span class="st">&quot;myProps&quot;</span><span class="ot"> location=</span><span class="st">&quot;WEB-INF/config/prop.properties&quot;</span><span class="kw">/&gt;</span></code></pre></div>
+<p>然后向注入这个值：</p>
+<pre><code>@Value(&quot;#{myProps[&#39;message&#39;]}&quot;)</code></pre>
+<p>我们就可以直接判断这个值是否是真，从而显示这个内容。</p>
+<pre><code>&lt;spring:eval expression=&quot;@myProps.message&quot; var=&quot;messageToggle&quot;/&gt;
+
+&lt;c:if test=&quot;${messageToggle eq true}&quot;&gt;
+    message
+&lt;/c:if&gt;</code></pre>
+<p>这是一种很实用，而且很有趣的技术。</p>
+<p>参考书籍：<strong>《配置管理最佳实践》</strong></p>
 <h2 id="自动化部署">自动化部署</h2>
 <figure>
 <img src="chapters/chapter4/auto-deployment.png" alt="自动化部署" /><figcaption>自动化部署</figcaption>
