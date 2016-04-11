@@ -253,12 +253,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li><a href="#数据分析">数据分析</a><ul>
-<li><a href="#数据分析-1">数据分析</a><ul>
-<li><a href="#数据分析的过程">数据分析的过程</a></li>
-<li><a href="#想法-构建">想法-构建</a></li>
-<li><a href="#产品-衡量">产品-衡量</a></li>
-<li><a href="#数据-学习">数据-学习</a></li>
-</ul></li>
+<li><a href="#构建-衡量-学习">构建-衡量-学习</a></li>
+<li><a href="#数据分析-1">数据分析</a></li>
 <li><a href="#用户数据分析google-analytics">用户数据分析：Google Analytics</a><ul>
 <li><a href="#受众群体">受众群体</a></li>
 <li><a href="#流量获取">流量获取</a></li>
@@ -269,16 +265,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#服务监测">服务监测</a></li>
 <li><a href="#安全监测">安全监测</a></li>
 </ul></li>
-<li><a href="#性能优化">性能优化</a><ul>
+<li><a href="#应用程序性能分析">应用程序性能分析</a><ul>
+<li><a href="#关于apdex">关于Apdex</a></li>
+<li><a href="#博客性能分析">博客性能分析</a></li>
+</ul></li>
+<li><a href="#网站性能优化">网站性能优化</a><ul>
 <li><a href="#减少http请求">减少HTTP请求</a></li>
 <li><a href="#页面内部优化">页面内部优化</a></li>
 <li><a href="#启用缓存">启用缓存</a></li>
 <li><a href="#减少下载量">减少下载量</a></li>
 <li><a href="#网络连接上的优化">网络连接上的优化</a></li>
-</ul></li>
-<li><a href="#应用程序性能分析">应用程序性能分析</a><ul>
-<li><a href="#关于apdex">关于Apdex</a></li>
-<li><a href="#博客性能分析">博客性能分析</a></li>
 </ul></li>
 <li><a href="#seo">SEO</a><ul>
 <li><a href="#爬虫与索引">爬虫与索引</a></li>
@@ -298,9 +294,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="#持续交付">持续交付</a><ul>
 <li><a href="#持续集成">持续集成</a><ul>
-<li><a href="#前提条件">前提条件</a></li>
-<li><a href="#瀑布流式开发">瀑布流式开发</a></li>
+<li><a href="#process">Process</a></li>
 <li><a href="#小步前进">小步前进</a></li>
+<li><a href="#反馈">反馈</a></li>
 </ul></li>
 <li><a href="#持续交付-1">持续交付</a><ul>
 <li><a href="#配置管理">配置管理</a></li>
@@ -2848,17 +2844,17 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>有时候，对于我们的决定只要有一点点的数据支持就够了。也就是一点点的变化，可能就决定了我们产品的好坏。我们可能会因此而作出一些些改变，这些改变可能会让我们打败巨头。</p>
 <p>这一点和Growth的构建过程也很相像，在最开始的时候我只是想制定一个成长路线。而后，我发现这好像是一个不错的idea，我就开始去构建这个idea。于是它变成了Growth，这时候我需要依靠什么去分析用户喜欢的功能呢？我没有那么多的精力去和那么多的人沟通，也不能去和那么多的人沟通。</p>
 <p>我只能借助Google Analytics来收集用户的数据。从这些数据里去学习一些东西，而这些就会变成一个新的想法。新的想法在适当的时候就会变成一个产品，接着我们就开始收集用户数据，然后循环。</p>
-<h2 id="数据分析-1">数据分析</h2>
-<p>数据分析是一个很有意思的过程，也是一个非常重要的过程。</p>
-<h3 id="数据分析的过程">数据分析的过程</h3>
-<p>他们是非常重要的一个循环：</p>
+<h2 id="构建-衡量-学习">构建-衡量-学习</h2>
+<p>构建-衡量-学习是在《精益创业》中的一个核心概念，这结合了客户开发、敏捷软件开发方法和精益生产实践。他们是非常重要的一个循环：</p>
 <figure>
 <img src="chapters/chapter5/lean-analytics.png" alt="数据分析过程" /><figcaption>数据分析过程</figcaption>
 </figure>
-<p>它并不是独立的一个环节，实现上它应该是一整个环节：我们根据我们的想法去创建我们的产品，在使用产品的过程中我们收集一些数据，再依据这些数据来改进我们的产品。</p>
-<h3 id="想法-构建">想法-构建</h3>
-<h3 id="产品-衡量">产品-衡量</h3>
-<h3 id="数据-学习">数据-学习</h3>
+<p>这一过程不仅仅可以改进我们的产品，也可以用于初创企业。它并不是独立的一个环节，实现上它应该是一整个环节：我们根据我们的想法去创建我们的产品，在使用产品的过程中我们收集一些数据，再依据这些数据来改进我们的产品。</p>
+<h4 id="想法-构建">想法-构建</h4>
+<h4 id="产品-衡量">产品-衡量</h4>
+<h4 id="数据-学习">数据-学习</h4>
+<h2 id="数据分析-1">数据分析</h2>
+<p>数据分析是一个很有意思的过程，也是一个非常重要的过程。</p>
 <h4 id="hadoop分析数据">Hadoop分析数据</h4>
 <blockquote>
 <p>Hadoop是一个由Apache基金会所开发的分布式系统基础架构。它可以让用户可以在不了解分布式底层细节的情况下，开发分布式程序。充分利用集群的威力进行高速运算和存储。</p>
@@ -3013,18 +3009,6 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </ul>
 <h3 id="服务监测">服务监测</h3>
 <h3 id="安全监测">安全监测</h3>
-<h2 id="性能优化">性能优化</h2>
-<h3 id="减少http请求">减少HTTP请求</h3>
-<p>合并脚本和样式表，CSS Sprites，拆分初始化负载，划分主域</p>
-<h3 id="页面内部优化">页面内部优化</h3>
-<p>将样式表放在顶部，将脚本放在底部，尽早刷新文档的输出</p>
-<h3 id="启用缓存">启用缓存</h3>
-<p>后台优化，启用页面缓存;</p>
-<p>使用gzip压缩</p>
-<h3 id="减少下载量">减少下载量</h3>
-<p>使用 CDN，使用外部 JavaScript 和 CSS，添加 Expires 头，减少 DNS 查找，配置 ETag，使 AjaX 可缓存</p>
-<h3 id="网络连接上的优化">网络连接上的优化</h3>
-<p>DNS域名解析加速</p>
 <h2 id="应用程序性能分析">应用程序性能分析</h2>
 <h3 id="关于apdex">关于Apdex</h3>
 <blockquote>
@@ -3090,6 +3074,18 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </tr>
 </tbody>
 </table>
+<h2 id="网站性能优化">网站性能优化</h2>
+<h3 id="减少http请求">减少HTTP请求</h3>
+<p>合并脚本和样式表，CSS Sprites，拆分初始化负载，划分主域</p>
+<h3 id="页面内部优化">页面内部优化</h3>
+<p>将样式表放在顶部，将脚本放在底部，尽早刷新文档的输出</p>
+<h3 id="启用缓存">启用缓存</h3>
+<p>后台优化，启用页面缓存;</p>
+<p>使用gzip压缩</p>
+<h3 id="减少下载量">减少下载量</h3>
+<p>使用 CDN，使用外部 JavaScript 和 CSS，添加 Expires 头，减少 DNS 查找，配置 ETag，使 AjaX 可缓存</p>
+<h3 id="网络连接上的优化">网络连接上的优化</h3>
+<p>DNS域名解析加速</p>
 <h2 id="seo">SEO</h2>
 <blockquote>
 <p>这是一个老的，有些过时纸，但非常平易近人，甚至在我们中间的非白皮书的读者图标微笑什么每个程序员都应该知道的关于搜索引擎优化和他们绝对概念的解释更详细，我只提一笔带过。</p>
@@ -3341,12 +3337,12 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </blockquote>
 <h2 id="持续集成">持续集成</h2>
 <p>更关注代码质量。持续集成是为了确保随着需求变化而变化的代码，在实现功能的同时，质量不受影响。因此，在每一次构建后会运行单元测试，保证代码级的质量。单元测试会针对每一个特定的输入去判断和观察输出的结果，而单元测试的粒度则用来平衡持续集成的质量和速度。</p>
+<h3 id="process">Process</h3>
 <figure>
 <img src="chapters/chapter6/ci.jpg" alt="CI Workflow" /><figcaption>CI Workflow</figcaption>
 </figure>
-<h3 id="前提条件">前提条件</h3>
-<h3 id="瀑布流式开发">瀑布流式开发</h3>
 <h3 id="小步前进">小步前进</h3>
+<h3 id="反馈">反馈</h3>
 <p>参考目录：</p>
 <p>-《持续交付：发布可靠软件的系统方法》</p>
 <h2 id="持续交付-1">持续交付</h2>
