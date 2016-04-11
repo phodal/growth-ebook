@@ -3587,9 +3587,12 @@ application cahce是将大部分图片资源、js、css等静态资源放在mani
 
 ###构建软件包
 
+![RPM Build Process](chapters/chapter4/rpm-deploy.jpg)
+
 ###生成、上传安装包
 
 ###目标平台安装/配置
+
 
 数据分析
 ===
