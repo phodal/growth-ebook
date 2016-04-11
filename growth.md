@@ -4128,9 +4128,11 @@ UX入门
 ###自动化
 
 持续部署
--——
+---
 
-![](chapters/chapter6/continuous-delivery-continuous-deployment.jpg)
+在持续交付之外的，还有持续部署——这个就更依赖于团队的组织结构了。
+
+![持续部署](chapters/chapter6/continuous-delivery-continuous-deployment.jpg)
 
 持续学习
 ---
