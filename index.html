@@ -246,8 +246,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#运行机制">运行机制</a></li>
 <li><a href="#功能开关">功能开关</a></li>
 </ul></li>
-<li><a href="#自动化部署">自动化部署</a></li>
-<li><a href="#依赖与包仓库">依赖与包仓库</a><ul>
+<li><a href="#自动化部署">自动化部署</a><ul>
+<li><a href="#依赖与包仓库">依赖与包仓库</a></li>
 <li><a href="#构建软件包">构建软件包</a></li>
 <li><a href="#上传和安装软件包">上传和安装软件包</a></li>
 </ul></li>
@@ -2815,7 +2815,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </ul>
 <p>这个过程可能和之前的Web项目构建过程差不多，然而却多了好几步。</p>
 <p>在前面的章节里，我们已经使用了版本管理系统来管理我们的源码。因此，在这里对于获取源码的介绍就比较简单了——我们只需要在我们的CI（持续集成）服务器上使用<code>git clone</code>这一类的方法来获取我们的源码即可。</p>
-<h2 id="依赖与包仓库">依赖与包仓库</h2>
+<h3 id="依赖与包仓库">依赖与包仓库</h3>
 <p>获取完源码后，我们就需要开始下载软件包依赖。无论是Python、Ruby、Java，还是JavaScript都需要这样的一个过程。软件开发已经从大教堂式的开发走向了集市——开源软件改变了这一切。</p>
 <figure>
 <img src="chapters/chapter4/hierarchy-vs-graph.png" alt="大教堂与集市" /><figcaption>大教堂与集市</figcaption>
