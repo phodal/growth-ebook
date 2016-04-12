@@ -98,13 +98,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="#基础知识篇">基础知识篇</a><ul>
 <li><a href="#工具只是辅助">工具只是辅助</a><ul>
-<li><a href="#webstorm还是sublime">WebStorm还是Sublime?</a></li>
+<li><a href="#webstorm-还是-sublime">WebStorm 还是 Sublime?</a></li>
 <li><a href="#语言也是一种工具">语言也是一种工具</a></li>
 </ul></li>
 <li><a href="#提高效率的工具">提高效率的工具</a><ul>
 <li><a href="#快速启动软件">快速启动软件</a></li>
 <li><a href="#ide">IDE</a></li>
-<li><a href="#debug工具">DEBUG工具</a></li>
+<li><a href="#debug-工具">DEBUG 工具</a></li>
 <li><a href="#终端或命令提示符">终端或命令提示符</a></li>
 <li><a href="#包管理">包管理</a></li>
 </ul></li>
@@ -118,21 +118,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#输出是最好的输入">输出是最好的输入</a></li>
 <li><a href="#如何应用一门新的技术">如何应用一门新的技术</a></li>
 </ul></li>
-<li><a href="#web编程基础">Web编程基础</a><ul>
+<li><a href="#web-编程基础">Web 编程基础</a><ul>
 <li><a href="#从浏览器到服务器">从浏览器到服务器</a></li>
-<li><a href="#从html到页面显示">从HTML到页面显示</a></li>
+<li><a href="#从-html-到页面显示">从 HTML 到页面显示</a></li>
 </ul></li>
 <li><a href="#html">HTML</a><ul>
 <li><a href="#helloworld">hello,world</a></li>
 <li><a href="#中文">中文？</a></li>
-<li><a href="#其他html标记">其他HTML标记</a></li>
+<li><a href="#其他-html-标记">其他 HTML 标记</a></li>
 <li><a href="#小结-1">小结</a></li>
 </ul></li>
 <li><a href="#css">CSS</a><ul>
 <li><a href="#简介">简介</a></li>
 <li><a href="#样式与目标">样式与目标</a></li>
 <li><a href="#选择器">选择器</a></li>
-<li><a href="#更有趣的css">更有趣的CSS</a></li>
+<li><a href="#更有趣的-css">更有趣的 CSS</a></li>
 </ul></li>
 <li><a href="#javascript">JavaScript</a><ul>
 <li><a href="#helloworld-1">hello,world</a></li>
@@ -373,7 +373,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 </nav>
 <h1 id="growth-全栈增长工程师指南">Growth: 全栈增长工程师指南</h1>
-<p>这是一本不止于全栈工程师的学习手册，它也包含了如何成为一个Growth Hacker的知识。</p>
+<p>这是一本不止于全栈工程师的学习手册，它也包含了如何成为一个 Growth Hacker 的知识。</p>
 <h2 id="全栈工程师是未来">全栈工程师是未来</h2>
 <blockquote>
 <p>谨以此文献给每一个为成为优秀全栈工程师奋斗的人。</p>
@@ -382,16 +382,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>同时，由于公司组织结构的变迁，以及到变化的适应度，也决定了赋予每个人的职责将会越来越多。尽管我们看到工厂化生产带来的优势，但是我们也看到了<strong>精益思想</strong>带来的变革。正是这种变革让越来越多的专家走向全栈，让组织内部有更好的交流。</p>
 <p>你还将看到专家和全栈的两种不同的学习模式，以及全栈工程师的未来。</p>
 <h3 id="技术的革新史">技术的革新史</h3>
-<p>从开始的CGI到MVC模式，再到前后端分离的架构模式，都在不断地降低技术的门槛。而这些门槛的降低，已经足以让一两个人来完成大部分的工作了。</p>
+<p>从开始的 CGI 到 MVC 模式，再到前后端分离的架构模式，都在不断地降低技术的门槛。而这些门槛的降低，已经足以让一两个人来完成大部分的工作了。</p>
 <h4 id="cgi">CGI</h4>
-<p>二十年前的网站以静态的形式出现，这样的网站并不需要太多的人去维护、管理。接着，人们发明了CGI(通用网关接口，英语：Common Gateway Interface)来实现动态的网站。下图是一个早期网站的架构图：</p>
+<p>二十年前的网站以静态的形式出现，这样的网站并不需要太多的人去维护、管理。接着，人们发明了 CGI (通用网关接口，英语：Common Gateway Interface)来实现动态的网站。下图是一个早期网站的架构图：</p>
 <figure>
-<img src="assets/article/prelude/cgi-arch.gif" alt="CGI网站架构" /><figcaption>CGI网站架构</figcaption>
+<img src="assets/article/prelude/cgi-arch.gif" alt="CGI 网站架构" /><figcaption>CGI 网站架构</figcaption>
 </figure>
 <p>当时这种网站的URL类似于：</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">https</span>://www.phodal.com/cgi-bin/getblog</code></pre></div>
 <p>(PS：这个链接是为了讲解而存在的，并没有真实存在。)</p>
-<p>用户访问上面的网页的时候就会访问，cgi-bin的路径下对应的getblog脚本。你可以用Shell返回这个网页：</p>
+<p>用户访问上面的网页的时候就会访问，cgi-bin 的路径下对应的 getblog 脚本。你可以用 Shell 返回这个网页：</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co">#!/bin/sh</span>
 <span class="kw">echo</span> Content-type: text/plain
 <span class="kw">echo</span> hello,world</code></pre></div>
@@ -399,12 +399,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <figure>
 <img src="assets/article/prelude/cgi-script.png" alt="CGI脚本文件" /><figcaption>CGI脚本文件</figcaption>
 </figure>
-<p>这简直就是一场恶梦。不过，在今天好似那些PHP新手也是这样写代码的。</p>
-<p>好了，这时候我们就可以讨论讨论MVC模式了。</p>
+<p>这简直就是一场恶梦。不过，在今天好似那些 PHP 新手也是这样写代码的。</p>
+<p>好了，这时候我们就可以讨论讨论 MVC 模式了。</p>
 <h4 id="mvc架构">MVC架构</h4>
-<p>我有理由相信Martin Fowler的《企业应用架构模式》在当时一定非常受欢迎。代码从上面的耦合状态变成了：</p>
+<p>我有理由相信 Martin Fowler 的《企业应用架构模式》在当时一定非常受欢迎。代码从上面的耦合状态变成了：</p>
 <figure>
-<img src="assets/article/prelude/caf_mvc_arch.png" alt="MVC架构" /><figcaption>MVC架构</figcaption>
+<img src="assets/article/prelude/caf_mvc_arch.png" alt="MVC 架构" /><figcaption>MVC 架构</figcaption>
 </figure>
 <p>相似大家也已经对这样的架构很熟悉了，我们就不多解释了。如果你还不是非常了解的话，可以看看这本书后面的部分。</p>
 <h4 id="后台服务化与前端一致化架构">后台服务化与前端一致化架构</h4>
@@ -412,7 +412,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <figure>
 <img src="assets/article/prelude/oneui-serviceful-arch.png" alt="后台服务化与前台一致化架构" /><figcaption>后台服务化与前台一致化架构</figcaption>
 </figure>
-<p>后台在不知不觉中已经被服务化了，即只提供API接口和服务。前端在这时已经尽量地和APP端在结合，使得他们可以保持一致。</p>
+<p>后台在不知不觉中已经被服务化了，即只提供API接口和服务。前端在这时已经尽量地和 APP 端在结合，使得他们可以保持一致。</p>
 <h3 id="软件开发的核心难题沟通">软件开发的核心难题：沟通</h3>
 <p>软件开发在过去的几十年里都是大公司的专利，小公司根本没有足够的能力去做这样的事。在计算机发明后的几十年里，开发软件是大公司才能做得起的。一般的非技术公司无法定制自己的软件系统，只能去购买现有的软件。而随着技术成本的下降，到了今天一般的小公司也可以雇佣一两个人来做同样的事。这样的演进过程还真是有意思：</p>
 <figure>
@@ -434,7 +434,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <figure>
 <img src="assets/article/prelude/scrum.png" alt="敏捷软件开发" /><figcaption>敏捷软件开发</figcaption>
 </figure>
-<p>但是据我的所知：国内的多数互联网公司是不写测试的、没有Code Review等等。当然，这也不是一篇关于如何实践敏捷的文章。敏捷与瀑布式开发在很大的区别就是：沟通问题。传统的软件开发在调研完毕后就是分析、开发等等。而敏捷开发则会强调这个过程中的沟通问题：</p>
+<p>但是据我的所知：国内的多数互联网公司是不写测试的、没有 Code Review 等等。当然，这也不是一篇关于如何实践敏捷的文章。敏捷与瀑布式开发在很大的区别就是：沟通问题。传统的软件开发在调研完毕后就是分析、开发等等。而敏捷开发则会强调这个过程中的沟通问题：</p>
 <figure>
 <img src="assets/article/prelude/scrum-communication.png" alt="敏捷软件开发的沟通模型" /><figcaption>敏捷软件开发的沟通模型</figcaption>
 </figure>
@@ -474,13 +474,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <img src="assets/article/prelude/in-out-thinking.jpeg" alt="内向与外向思维" /><figcaption>内向与外向思维</figcaption>
 </figure>
 <p>而这种思维依据于不同的事情可能会发生一些差异，但是总体上来说是相似的。当遇到一个需要创轮子的问题时，我们就会看到两种不同的方式。</p>
-<p>对于全栈工程师来说，他们喜欢依赖于外部的思维，用于产生颠覆式思维。如Angular.js这样的框架便是例子，前端结合后端开发语言Java的思维而产生。而专家则依赖于内部的条件，创造出不一样的适应式创新。如之前流行的Backbone框架，适应当时的情况而产生。</p>
+<p>对于全栈工程师来说，他们喜欢依赖于外部的思维，用于产生颠覆式思维。如 AngularJS 这样的框架便是例子，前端结合后端开发语言 Java 的思维而产生。而专家则依赖于内部的条件，创造出不一样的适应式创新。如之前流行的 Backbone 框架，适应当时的情况而产生。</p>
 <h3 id="全栈工程师的未来无栈">全栈工程师的未来：无栈</h3>
 <p>全栈工程师本身不应该仅仅局限于前端和后台的开发，而可以尝试去开拓更广泛的领域——因为全栈本身是依赖于工程师本身的学习能力，正是这种优秀的学习能力可以让他们可以接触更广泛的知识。</p>
 <h4 id="全栈的短板">全栈的短板</h4>
 <p>如果你也尝试过面试过全栈工程师，你会怎么去面试他们呢？把你知道的所有的不同领域的问题都拿出来问一遍。是的，这就是那些招聘全栈工程师的公司会问你的问题。</p>
 <p>人们以为全栈工程师什么都会，这是一个明显的误区——然而要改变这个误区很难。最后，导致的结果是大家觉得全栈工程师的水平也就那样。换句来说，人们根本不知道什么是全栈工程师。在平时的工作里，你的队伍都知道你在不同领域有丰富的知识。而在那些不了解你的人的印象里，就是猜测你什么都会。</p>
-<p>因此，这就会变成一个骂名，也是一个在目前看来很难改变的问题。在这方面只能尽可能地去了解一些通用的问题，并不能去了解所有的问题。在一次被面试全栈工程师的过程中，有一个面试官准备了几个不同语言（Javascript、Java、Python、Ruby)的问题来问我，我只想说Ciao——意大利语：你好！</p>
+<p>因此，这就会变成一个骂名，也是一个在目前看来很难改变的问题。在这方面只能尽可能地去了解一些通用的问题，并不能去了解所有的问题。在一次被面试全栈工程师的过程中，有一个面试官准备了几个不同语言（JavaScript、Java、Python、Ruby)的问题来问我，我只想说 Ciao —— 意大利语：你好！</p>
 <p>除了这个问题——人们不了解什么是全栈工程师。还有一个问题，就是刚才我们说的成为专家的老大难问题。</p>
 <h4 id="无栈">无栈</h4>
 <p>让我毫不犹豫地选择当全栈工程师有两个原因：</p>
@@ -489,8 +489,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>没有探索，哪来的真爱？你都没有探索过世界，你就说这是你最喜欢的领域。</li>
 </ol>
 <p>当我第一次看到全栈工程师这个名字的时候，我发现我已然是一个全栈工程师。因为我的学习路线比较独特：</p>
-<p>中小学：编程语言 -&gt; 高中：操作系统、内核、游戏编程 -&gt; 大学： 硬件、Web开发 -&gt; 工作：后端 + 前端</p>
-<p>而在当时我对SEO非常感兴趣，我发现这分析和Marketing似乎做得还可以。然后便往Growth Hacking发展了：</p>
+<p>中小学：编程语言 -&gt; 高中：操作系统、内核、游戏编程 -&gt; 大学： 硬件、Web 开发 -&gt; 工作：后端 + 前端</p>
+<p>而在当时我对 SEO 非常感兴趣，我发现这分析和 Marketing 似乎做得还可以。然后便往 Growth Hacking 发展了：</p>
 <figure>
 <img src="assets/article/prelude/growth-hacking.jpg" alt="Growth Hacking" /><figcaption>Growth Hacking</figcaption>
 </figure>
@@ -503,12 +503,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>《技术的本质》</li>
 </ul>
 <h1 id="基础知识篇">基础知识篇</h1>
-<p>在我们第一次开始写程序的时候，都是以Hello World开始的。或者：</p>
+<p>在我们第一次开始写程序的时候，都是以 Hello World 开始的。或者：</p>
 <div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c">printf(<span class="st">&quot;hello,world&quot;</span>);</code></pre></div>
 <p>又或许：</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="at">alert</span>(<span class="st">&#39;hello,world&#39;</span>)<span class="op">;</span></code></pre></div>
-<p>过去的十几年里，试过用二十几种不同的语言，每个都是以hello,world作为开头。在一些特定的软件，如Nginx，则是<strong>It Works</strong>。</p>
-<p>这是一个很长的故事，这个程序最早出现于1972年，由贝尔实验室成员布莱恩·柯林汉撰写的内部技术文件“A Tutorial Introduction to the Language B”》之中。不久，同作者于1974年所撰写的《Programming in C: A Tutorial》，也延用这个范例；而以本文件扩编改写的《C语言程序设计》也保留了这个范例程式。工作时，我们也会使用类似于hello,world的boilerplate来完成基本的项目创建。</p>
+<p>过去的十几年里，试过用二十几种不同的语言，每个都是以 hello,world 作为开头。在一些特定的软件，如 Nginx，则是 <strong>It Works</strong>。</p>
+<p>这是一个很长的故事，这个程序最早出现于1972年，由贝尔实验室成员布莱恩·柯林汉撰写的内部技术文件《A Tutorial Introduction to the Language B》之中。不久，同作者于1974年所撰写的《Programming in C: A Tutorial》，也延用这个范例；而以本文件扩编改写的《C语言程序设计》也保留了这个范例程式。工作时，我们也会使用类似于 hello,world 的 boilerplate 来完成基本的项目创建。</p>
 <p>同时需要注意的一点是，在每个大的项目开始之前我们应该去找寻好开发环境。搭建环境是一件非常重要的事，它决定了你能不能更好地工作。毕竟环境是生产率的一部分。高效的程序员和低效程序员间的十倍差距，至少有三倍是因为环境差异。</p>
 <p>因此在这一章里，我们将讲述几件事情：</p>
 <ol type="1">
@@ -519,47 +519,47 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ol>
 <h2 id="工具只是辅助">工具只是辅助</h2>
 <p>一个好的工具确实有助于编程，但是他只会给我们带来的是帮助。我们写出来的代码还是和我们的水平保持着一致的。</p>
-<p>什么是好的工具，这个说法就有很多了，但是有时候我们往往沉迷于事物的表面。有些时候Vim会比Visual Studio强大，当你只需要修改的是一个配置文件的时候，简单且足够快捷——在我们还未用VS打开的时候，我们已经用Vim做完这个活了。</p>
+<p>什么是好的工具，这个说法就有很多了，但是有时候我们往往沉迷于事物的表面。有些时候 Vim 会比 Visual Studio 强大，当你只需要修改的是一个配置文件的时候，简单且足够快捷——在我们还未用 VS 打开的时候，我们已经用 Vim 做完这个活了。</p>
 <blockquote>
 <p>“好的装备确实能带来一些帮助，但事实是，你的演奏水平是由你自己的手指决定的。” – 《REWORK》</p>
 </blockquote>
-<h3 id="webstorm还是sublime">WebStorm还是Sublime?</h3>
-<p>作为一个IDE有时候忽略的因素会过多，一开始的代码由类似于sublime text之类的编辑器开始会比较合适。于是我们又开始陷入IDE及Editor之战了，无聊的时候讨论一下这些东西是有点益处的。相互了解一下各自的优点，也是不错的，偶尔可以换个环境试试。</p>
-<p>刚开始学习的时候，我们只需要普通的工具，或者我们习惯了的工具去开始我们的工作。我们要的是把主要精力放在学习的东西上，而不是工具。刚开始学习一种新的语言的时候，我们不需要去讨论哪个是最好的开发工具，如Java，有时候可能是Eclipse，有时候可能是Vim，如果我们为的只是去写一个hello,world。在Eclipse浪费太多的时间是不可取的，因为他用起来的效率可不比你在键盘上敲打来得快，当你移动你的手指去动你的鼠标的时候，我想你可以用那短短的时候完成编译，运行了。</p>
+<h3 id="webstorm-还是-sublime">WebStorm 还是 Sublime?</h3>
+<p>作为一个 IDE 有时候忽略的因素会过多，一开始的代码由类似于 Sublime text 之类的编辑器开始会比较合适。于是我们又开始陷入 IDE 及 Editor 之战了，无聊的时候讨论一下这些东西是有点益处的。相互了解一下各自的优点，也是不错的，偶尔可以换个环境试试。</p>
+<p>刚开始学习的时候，我们只需要普通的工具，或者我们习惯了的工具去开始我们的工作。我们要的是把主要精力放在学习的东西上，而不是工具。刚开始学习一种新的语言的时候，我们不需要去讨论哪个是最好的开发工具，如 Java，有时候可能是 Eclipse，有时候可能是 Vim，如果我们为的只是去写一个 hello,world。在 Eclipse 上浪费太多的时间是不可取的，因为他用起来的效率可不比你在键盘上敲打来得快，当你移动你的手指去动你的鼠标的时候，我想你可以用那短短的时间完成编译，运行了。</p>
 <h4 id="工具是为了效率">工具是为了效率</h4>
-<p>寻找工具的目的和寻找捷径是一样的，我们需要更快更有效率地完成我们的工作，换句话说，我们为了获取更多的时间用于其他的事情。而这个工具的用途是要看具体的事物的，如果我们去写一个小说、博客的时候，word或者web editor会比tex studio还得快，不是么。我们用TEX来排版的时候会比我们用WORD排版的时候来得更多快，所以这个工具是相对而论的。有时候用一个顺手的工具会好很多，但是不一定会是事半功倍的。我们应该将我们的目标专注于我们的内容，而不是我们的工具上。</p>
-<p>我们用Windows自带的画图就可以完成裁剪的时候，我们就没有运行起GIMP或者Photoshop去完成这个简单的任务。效率在某些时候的重要性，会比你选择的工具有用得多，学习的开始就是要去了解那些大众推崇的东西。</p>
+<p>寻找工具的目的和寻找捷径是一样的，我们需要更快更有效率地完成我们的工作，换句话说，我们为了获取更多的时间用于其他的事情。而这个工具的用途是要看具体的事物的，如果我们去写一个小说、博客的时候，word 或者 web editor 会比 tex studio 来得快，不是么。我们用 TEX 来排版的时候会比我们用 WORD 排版的时候来得更快，所以这个工具是相对而论的。有时候用一个顺手的工具会好很多，但是不一定会是事半功倍的。我们应该将我们的目标专注于我们的内容，而不是我们的工具上。</p>
+<p>我们用 Windows 自带的画图就可以完成裁剪的时候，我们就没必要运行起 GIMP 或者 Photoshop 去完成这个简单的任务。效率在某些时候的重要性，会比你选择的工具有用得多，学习的开始就是要去了解那些大众推崇的东西。</p>
 <h4 id="了解熟悉你的工具">了解、熟悉你的工具</h4>
-<p>Windows的功能很强大，只是大部分人用的是只是一小小部分。而不是一小部分，即使我们天天用着，我们也没有学习到什么新的东西。和这个就如同我们的工具一样，我们天天用着他们，如果我们只用Word来写写东西，那么我们可以用Abiword来替换他。但是明显不太可能，因为强大的工具对于我们来说有些更大的吸引力。</p>
-<p>如果你负担得起你手上的工具的话，那么就尽可能去了解他能干什么。即使他是一些无关仅要的功能，比如Emacs的煮咖啡。有一本手册是最好不过的，手册在手边可以即时查阅，不过出于环保的情况下，就不是这样子的。手册没有办法即时同你的软件一样更新，电子版的更新会比你手上用的那个手册更新得更快。</p>
-<p>Linux下面的命令有一大堆，只是我们常用的只有一小部分——20%的命令能够完成80%的工作。如同CISC和RISC一样，我们所常用的指令会让我们忘却那些不常用的指令。而那些是最实用的，如同我们日常工作中使用的Linux一样，记忆过多的不实用的东西，不比把他们记在笔记上实在。我们只需要了解有那些功能，如何去用他。</p>
+<p>Windows 的功能很强大，只是大部分人用的是只是小小一部分。而不是一小部分，即使我们天天用着，我们也没有学习到什么新的东西。和这个就如同我们的工具一样，我们天天用着他们，如果我们只用 Word 来写写东西，那么我们可以用 Abiword 来替换他。但是明显不太可能，因为强大的工具对于我们来说有些更大的吸引力。</p>
+<p>如果你负担得起你手上的工具的话，那么就尽可能去了解他能干什么。即使他是一些无关仅要的功能，比如 Emacs 的煮咖啡。有一本手册是最好不过的，手册在手边可以即时查阅，不过出于环保的情况下，就不是这样子的。手册没有办法即时同你的软件一样更新，电子版的更新会比你手上用的那个手册更新得更快。</p>
+<p>Linux 下面的命令有一大堆，只是我们常用的只有一小部分——20%的命令能够完成80%的工作。如同 CISC 和 RISC 一样，我们所常用的指令会让我们忘却那些不常用的指令。而那些是最实用的，如同我们日常工作中使用的 Linux 一样，记忆过多的不实用的东西，不比把他们记在笔记上实在。我们只需要了解有那些功能，如何去用他。</p>
 <h3 id="语言也是一种工具">语言也是一种工具</h3>
 <p>越来越多的框架和语言出现、更新得越来越快。特别是这样一个高速发展的产业，每天都在涌现新的名词。如同我们选择语言一样，选择合适的有时候会比选得顺手的来得重要。然而，这个可以不断地被推翻。</p>
-<p>当我们熟悉用Python、Ruby、PHP等去构建一个网站的时候，Javascript用来做网站后台，这怎么可能——于是NodeJS火了。选择工具本身是一件很有趣的事，因为有着越来越多的可能性。</p>
-<p>过去PHP是主流的开发，不过现在也是，PHP为WEB而生。有一天Ruby on Rails出现了，一切就变了，变得高效，变得更Powerful。MVC一直很不错，不是么？于是越来越多的框架出现了，如Django，Laravel等等。不同的语言有着不同的框架，Javascript上也有着合适的框架，如Angular js。不同语言的使用者们用着他们合适的工具，因为学习新的东西，对于多数的人来说就是一种新的挑战。在学面向对象语言的时候，人们很容易把程序写成过程式的。</p>
+<p>当我们熟悉用 Python、Ruby、PHP 等去构建一个网站的时候，JavaScript 用来做网站后台，这怎么可能——于是 Node.js 火了。选择工具本身是一件很有趣的事，因为有着越来越多的可能性。</p>
+<p>过去 PHP 是主流的开发，不过现在也是，PHP 为 WEB 而生。有一天 Ruby on Rails 出现了，一切就变了，变得高效，变得更 Powerful。MVC 一直很不错，不是么？于是越来越多的框架出现了，如 Django，Laravel 等等。不同的语言有着不同的框架，JavaScript 上也有着合适的框架，如 AngularJS。不同语言的使用者们用着他们合适的工具，因为学习新的东西，对于多数的人来说就是一种新的挑战。在学面向对象语言的时候，人们很容易把程序写成过程式的。</p>
 <p>没有合适的工具，要么创造一个，要么选择一个合适的。</p>
 <h4 id="小结">小结</h4>
-<p>学习Django的时候习惯了有一个后台，于是开始使用Laravel的时候，寻找Administartor。需要编译的时候习惯用IDE，不需要的时候用Editor，只是因为有效率，嵌入式的时候IDE会有效率一点。</p>
-<p>以前不知道WebStorm的时候，习惯用DW来格式化HTML，Aptana来格式化Javascript。</p>
-<p>以前，习惯用Wordpress来写博客，因为可以有移动客户端，使用电脑时就不喜欢打开浏览器去写。</p>
+<p>学习 Django 的时候习惯了有一个后台，于是开始使用 Laravel 的时候，寻找 Administartor。需要编译的时候习惯用 IDE，不需要的时候用 Editor，只是因为有效率，嵌入式的时候 IDE 会有效率一点。</p>
+<p>以前不知道 WebStorm 的时候，习惯用 DW 来格式化 HTML，Aptana 来格式化 JavaScript。</p>
+<p>以前，习惯用 WordPress 来写博客，因为可以有移动客户端，使用电脑时就不喜欢打开浏览器去写。</p>
 <p>等等</p>
 <p>等</p>
 <h2 id="提高效率的工具">提高效率的工具</h2>
-<p>在提交效率的N种方法里：有一个很重要的方法是使用快捷键。熟练掌握快捷键可以让我们随着自己的感觉编写程序——有时候如果我们手感不好，是不是就说明今天不适合写代码！笑~~</p>
+<p>在提交效率的 N 种方法里：有一个很重要的方法是使用快捷键。熟练掌握快捷键可以让我们随着自己的感觉编写程序——有时候如果我们手感不好，是不是就说明今天不适合写代码！笑~~</p>
 <p>由于我们可能使用不同的操作系统来完成不同的工具。下面就先说说一些通用的、不限操作的工具：</p>
 <h3 id="快速启动软件">快速启动软件</h3>
 <p>在我还不和道有这样的工具的时候，我都是把图标放在下面的任务栏里：</p>
 <figure>
 <img src="assets/article/chapter1/windows-launch.png" alt="Windows任务栏" /><figcaption>Windows任务栏</figcaption>
 </figure>
-<p>直到有一天，我知道有这样的工具。这里不得不提到一本书《卓有成效的程序员》，在书中提到了很多提高效率的工具。使用快捷键是其中的一个，而还有一个是使用快速启动软件。于是，我在Windows上使用了Launcy:</p>
+<p>直到有一天，我知道有这样的工具。这里不得不提到一本书《卓有成效的程序员》，在书中提到了很多提高效率的工具。使用快捷键是其中的一个，而还有一个是使用快速启动软件。于是，我在 Windows 上使用了 Launcy:</p>
 <figure>
 <img src="assets/article/chapter1/launchy.png" alt="Launchy" /><figcaption>Launchy</figcaption>
 </figure>
 <p>通过这个软件，我们可以在电脑上通过输入软件名，然后运行相关的软件。我们不再需要点击某个菜单，再从菜单里选中某个软件打开。</p>
 <h3 id="ide">IDE</h3>
-<p>尽管在上一篇中，我们说过IDE和编辑器没有什么好争论的。但是如果是从头开始搭建环境的话，IDE是最好的——编辑器还需要安装相应的插件。所以，这也就是为什么面试的时候会用编辑器的原因。</p>
-<p>IDE的全称是集成开发环境，顾名思义即它集成了你需要用到的一些工具。而如果是编辑器的话，你需要自己去找寻合适的工具来做这件事。不过，这也意味着使用编辑器会有更多的自由度。如果你没有足够的时间去打造自己的开发环境就使用IDE吧。</p>
+<p>尽管在上一篇中，我们说过 IDE 和编辑器没有什么好争论的。但是如果是从头开始搭建环境的话，IDE 是最好的——编辑器还需要安装相应的插件。所以，这也就是为什么面试的时候会用编辑器的原因。</p>
+<p>IDE 的全称是集成开发环境，顾名思义即它集成了你需要用到的一些工具。而如果是编辑器的话，你需要自己去找寻合适的工具来做这件事。不过，这也意味着使用编辑器会有更多的自由度。如果你没有足够的时间去打造自己的开发环境就使用 IDE 吧。</p>
 <p>一般来说，他们都应该有下面的一些要素：</p>
 <ul>
 <li><strong>快捷键</strong></li>
@@ -568,42 +568,42 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><strong>Syntax Check</strong></li>
 </ul>
 <p>而如果是编辑器的话，就需要自己去找寻这些相应的插件。</p>
-<p>IDE一般是针对特定语言才产生的，并且优化更好。而，编辑器则需要自己去搭配。这也意味着如果你需要在多个语言上工作时，并且喜欢折腾，你可以考虑使用编辑器。</p>
-<h3 id="debug工具">DEBUG工具</h3>
-<p>不得不提及的是在有些IDE自带了Debug工具，这点可能使得使用IDE更有优势。在简单的项目是，我们可能不需要这样的Debug工具。因为我们对我们的代码库比较熟悉，一个简单的问题一眼就知道是哪里的问题。而对于那些复杂的项目来说，可能就没有那么简单了。特别是当你来到一个新的大中型项目，一个简单的逻辑在实现上可能要经过一系列的函数才能处理完。</p>
-<p>这时候我们就需要Debug工具——对于前端开发来说，我们可能使用Chrome的Dev Tools。但是对于后端来说，我们就需要使用别的工具。如下图所示的是Intellij Idea的Debug界面：</p>
+<p>IDE 一般是针对特定语言才产生的，并且优化更好。而，编辑器则需要自己去搭配。这也意味着如果你需要在多个语言上工作时，并且喜欢折腾，你可以考虑使用编辑器。</p>
+<h3 id="debug-工具">DEBUG 工具</h3>
+<p>不得不提及的是在有些 IDE 自带了 Debug 工具，这点可能使得使用 IDE 更有优势。在简单的项目是，我们可能不需要这样的 Debug 工具。因为我们对我们的代码库比较熟悉，一个简单的问题一眼就知道是哪里的问题。而对于那些复杂的项目来说，可能就没有那么简单了。特别是当你来到一个新的大中型项目，一个简单的逻辑在实现上可能要经过一系列的函数才能处理完。</p>
+<p>这时候我们就需要 Debug 工具——对于前端开发来说，我们可能使用 Chrome 的 Dev Tools。但是对于后端来说，我们就需要使用别的工具。如下图所示的是 Intellij Idea 的 Debug 界面：</p>
 <figure>
 <img src="assets/article/chapter1/idea-debug.png" alt="Intellij Idea Debug" /><figcaption>Intellij Idea Debug</figcaption>
 </figure>
-<p>在Debug的过程中，我们可以根据代码的执行流程一步步向下执行。这也意味着，当出现Bug的时候我们可以更容易找到Bug。这就是为什么他叫Debug工具的原因了。</p>
+<p>在 Debug 的过程中，我们可以根据代码的执行流程一步步向下执行。这也意味着，当出现 Bug 的时候我们可以更容易找到 Bug。这就是为什么他叫 Debug 工具的原因了。</p>
 <h3 id="终端或命令提示符">终端或命令提示符</h3>
-<p>在开始写代码的时候，使用GUI可能是难以戒掉的一个习惯。但是当你习惯了使用终端之后，或者说使用终端的工具，你会发现这是另外一片天空。对于GUI应用上同样的菜单来说，在终端上也会有同样的工具——只是你觉得记住更多的命令。而且不同的工具对于同一实现可能会不同的规范，而GUI应用则会有一致的风格。不过，总的来说使用终端是一个很有益的习惯——从速度、便捷性。忘了提到一点，当你使用Linux服务器的时候，你不得不使用终端。</p>
+<p>在开始写代码的时候，使用 GUI 可能是难以戒掉的一个习惯。但是当你习惯了使用终端之后，或者说使用终端的工具，你会发现这是另外一片天空。对于 GUI 应用上同样的菜单来说，在终端上也会有同样的工具——只是你觉得记住更多的命令。而且不同的工具对于同一实现可能会不同的规范，而 GUI 应用则会有一致的风格。不过，总的来说使用终端是一个很有益的习惯——从速度、便捷性。忘了提到一点，当你使用 Linux 服务器的时候，你不得不使用终端。</p>
 <figure>
-<img src="assets/article/chapter1/linux-server-console.jpg" alt="Linux终端截图" /><figcaption>Linux终端截图</figcaption>
+<img src="assets/article/chapter1/linux-server-console.jpg" alt="Linux 终端截图" /><figcaption>Linux 终端截图</figcaption>
 </figure>
-<p>使用终端的优点在于我们可以摆脱鼠标的操作——这可以让我们更容易集中精力于完成任务。而这也是两种不同的选择，便捷还是更快。虽是如此，但是这也意味着学习Linux会越来戴上轻松。</p>
+<p>使用终端的优点在于我们可以摆脱鼠标的操作——这可以让我们更容易集中精力于完成任务。而这也是两种不同的选择，便捷还是更快。虽是如此，但是这也意味着学习 Linux 会越来越轻松。</p>
 <figure>
-<img src="assets/article/chapter1/linux-learn-line.png" alt="Linux与Windows的学习曲线" /><figcaption>Linux与Windows的学习曲线</figcaption>
+<img src="assets/article/chapter1/linux-learn-line.png" alt="Linux 与 Windows 的学习曲线" /><figcaption>Linux 与 Windows 的学习曲线</figcaption>
 </figure>
-<p>虽然这是以Linux和Windows作了两个不同的对比，但是两个系统在终端工具上的差距是很大的。Linux自身的哲学鼓励使用命令行来完成任务，这也意味着在Linux上会有更多的工具可以在命令行下使用。虽然Windows上也可以——如使用CygWin来完成，但是这看上去并不是那么让人满意！</p>
+<p>虽然这是以 Linux 和 Windows 作了两个不同的对比，但是两个系统在终端工具上的差距是很大的。Linux 自身的哲学鼓励使用命令行来完成任务，这也意味着在 Linux 上会有更多的工具可以在命令行下使用。虽然 Windows 上也可以——如使用 CygWin 来完成，但是这看上去并不是那么让人满意！</p>
 <h3 id="包管理">包管理</h3>
-<p>虽然包管理不仅仅存在于操作系统中，还存在着语言的包管理工具。在操作系统中安装软件，最方便的东西莫过于包管理了。引自OpenSUSE官网的说明及图片:</p>
+<p>虽然包管理不仅仅存在于操作系统中，还存在着语言的包管理工具。在操作系统中安装软件，最方便的东西莫过于包管理了。引自 OpenSUSE 官网的说明及图片:</p>
 <figure>
 <img src="assets/article/chapter1/pm.png" alt="包管理" /><figcaption>包管理</figcaption>
 </figure>
-<p>Linux 发行版无非就是一堆软件包 (package) 形式的应用程序加上整体地管理这些应用程序的工具。通常这些 Linux 发行版，包括 openSUSE，都是由成千上万不同的软件包构成的。</p>
+<p>Linux 发行版无非就是一堆软件包 (package) 形式的应用程序加上整体地管理这些应用程序的工具。通常这些 Linux 发行版，包括 OpenSUSE，都是由成千上万不同的软件包构成的。</p>
 <ul>
 <li><p>软件包: 软件包不止是一个文件，内含构成软件的所有文件，包括程序本身、共享库、开发包以及使用说明等。</p></li>
 <li><p>元数据 (metadata) 包含于软件包之中，包含软件正常运行所需要的一些信息。软件包安装之后，其元数据就存储于本地的软件包数据库之中，以用于软件包检索。</p></li>
 <li><p>依赖关系 (dependencies) 是软件包管理的一个重要方面。实际上每个软件包都会涉及到其他的软件包，软件包里程序的运行需要有一个可执行的环境（要求有其他的程序、库等），软件包依赖关系正是用来描述这种关系的。</p></li>
 </ul>
-<p>我们经常会使用各式各样的包管理工具，来加速我们地日常使用。而不是Google某个软件，然后下载，接着安装。</p>
+<p>我们经常会使用各式各样的包管理工具，来加速我们地日常使用。而不是 Google 某个软件，然后下载，接着安装。</p>
 <h2 id="环境搭建">环境搭建</h2>
-<p>由于我近期工具在Mac OS X上，所以先以Mac OS X为例。</p>
+<p>由于我近期工具在 Mac OS X 上，所以先以 Mac OS X 为例。</p>
 <h3 id="os-x">OS X</h3>
 <p><strong>Homebrew</strong></p>
 <blockquote>
-<p>包管理工具，官方称之为The missing package manager for OS X。</p>
+<p>包管理工具，官方称之为 The missing package manager for OS X。</p>
 </blockquote>
 <p><strong>Homebrew Cask</strong></p>
 <blockquote>
@@ -659,19 +659,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h3 id="windows">Windows</h3>
 <p><strong>Chocolatey</strong></p>
 <blockquote>
-<p>Chocolatey是一个软件包管理工具，类似于Ubuntu下面的apt-get,不过是运行在Window环境下面。</p>
+<p>Chocolatey 是一个软件包管理工具，类似于 Ubuntu 下面的 apt-get,不过是运行在 Windows 环境下面。</p>
 </blockquote>
 <p><strong>Wox</strong></p>
 <blockquote>
-<p>Wox是一个高效的快速启动器工具，通过快捷键呼出，然后输入关键字来搜索程序进行快速启动，或者搜索本地硬盘的文件，打开百度、Google 进行搜索，甚至是通过一些插件的功能实现单词翻译、关闭屏幕、查询剪贴板历史、查询编程文档、查询天气等更多功能。它最大的特点是可以支持中文拼音的模糊匹配。</p>
+<p>Wox 是一个高效的快速启动器工具，通过快捷键呼出，然后输入关键字来搜索程序进行快速启动，或者搜索本地硬盘的文件，打开百度、Google 进行搜索，甚至是通过一些插件的功能实现单词翻译、关闭屏幕、查询剪贴板历史、查询编程文档、查询天气等更多功能。它最大的特点是可以支持中文拼音的模糊匹配。</p>
 </blockquote>
 <p><strong>PowerShell</strong></p>
 <blockquote>
-<p>Windows PowerShell是微软公司为Windows环境所开发的壳程序（shell）及脚本语言技术，采用的是命令行界面。这项全新的技术提供了丰富的控制与自动化的系统管理能力。</p>
+<p>Windows PowerShell 是微软公司为 Windows 环境所开发的壳程序（shell）及脚本语言技术，采用的是命令行界面。这项全新的技术提供了丰富的控制与自动化的系统管理能力。</p>
 </blockquote>
 <p><strong>cmder</strong></p>
 <blockquote>
-<p>cmder把conemu，msysgit和clink打包在一起，让你无需配置就能使用一个真正干净的Linux终端！她甚至还附带了漂亮的monokai配色主题。</p>
+<p>cmder 把 conemu，msysgit 和 clink 打包在一起，让你无需配置就能使用一个真正干净的 Linux 终端！她甚至还附带了漂亮的 monokai 配色主题。</p>
 </blockquote>
 <p><strong>Total Commander</strong></p>
 <blockquote>
@@ -693,19 +693,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </blockquote>
 <p><strong>ReText</strong></p>
 <blockquote>
-<p>ReText是一个使用 Markdown 语法和 reStructuredText (reST) 结构的文本编辑器，编辑的内容支持导出到 PDF、ODT 和 HTML 以及纯文本，支持即时预览、网页生成以及 HTML 语法高亮、全屏模式，可导出文件到 Google Docs 等。</p>
+<p>ReText 是一个使用 Markdown 语法和 reStructuredText (reST) 结构的文本编辑器，编辑的内容支持导出到 PDF、ODT 和 HTML 以及纯文本，支持即时预览、网页生成以及 HTML 语法高亮、全屏模式，可导出文件到 Google Docs 等。</p>
 </blockquote>
 <p><strong>Launchy</strong></p>
 <blockquote>
-<p>Launchy 是一款免费开源的协助您摒弃Windows “运行”的Dock式替代工具，既方便又实用，自带多款皮肤，作为美化工具也未尝不可。</p>
+<p>Launchy 是一款免费开源的协助您摒弃 Windows “运行”的 Dock 式替代工具，既方便又实用，自带多款皮肤，作为美化工具也未尝不可。</p>
 </blockquote>
 <p>环境搭建完毕！现在，就让我们来看看如何学好一门语言！</p>
 <h2 id="学好一门语言的艺术">学好一门语言的艺术</h2>
 <h3 id="一次语言学习体验">一次语言学习体验</h3>
-<p>在我们开始学习一门语言或者技术的时候，我们可能会从一门hello,world开始。</p>
-<p>好了，现在我是Scala语言的初学者，接着我用搜索引擎去搜索『Scala』来看看『Scala』是什么鬼：</p>
+<p>在我们开始学习一门语言或者技术的时候，我们可能会从一门 hello,world 开始。</p>
+<p>好了，现在我是 Scala 语言的初学者，接着我用搜索引擎去搜索『Scala』来看看『Scala』是什么鬼：</p>
 <blockquote>
-<p>Scala 是一门类Java 的编程语言，它结合了面向对象编程和函数式编程。</p>
+<p>Scala 是一门类 Java 的编程语言，它结合了面向对象编程和函数式编程。</p>
 </blockquote>
 <p>接着又开始看『Scala ‘hello,world’』，然后找到了这样的一个示例：</p>
 <pre><code>object HelloWorld {
@@ -713,8 +713,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
     println(&quot;Hello, world!&quot;)
   }
 }</code></pre>
-<p>GET到了5%的知识。</p>
-<p>看上去这门语言相比于Java语言来说还行。然后我找到了一本名为『Scala 指南』的电子书，有这样的一本目录：</p>
+<p>GET 到了5%的知识。</p>
+<p>看上去这门语言相比于 Java 语言来说还行。然后我找到了一本名为『Scala 指南』的电子书，有这样的一本目录：</p>
 <ul>
 <li>表达式和值</li>
 <li>函数是一等公民</li>
@@ -727,42 +727,42 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Traits</li>
 <li>…</li>
 </ul>
-<p>看上去还行， 又GET到了5%的知识点。接着，依照上面的代码和搭建指南在自己的电脑上安装了Scala的环境：</p>
+<p>看上去还行， 又 GET 到了5%的知识点。接着，依照上面的代码和搭建指南在自己的电脑上安装了 Scala 的环境：</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">brew</span> install scala</code></pre></div>
-<p>Windows用户可以用:</p>
+<p>Windows 用户可以用:</p>
 <pre><code>choco install scala</code></pre>
-<p>然后开始写一个又一个的Demo，感觉自己GET到了很多特别的知识点。</p>
+<p>然后开始写一个又一个的 Demo，感觉自己 GET 到了很多特别的知识点。</p>
 <p>到了第二天忘了！</p>
 <figure>
 <img src="assets/article/chapter1/wrong.jpg" alt="Bro Wrong" /><figcaption>Bro Wrong</figcaption>
 </figure>
 <p>接着，你又重新把昨天的知识过了一遍，还是没有多大的作用。突然间，你听到别人在讨论什么是<strong>这个世界上最好的语言</strong>——你开始加入讨论了。</p>
-<p>于是，你说出了Scala这门语言可以：</p>
+<p>于是，你说出了 Scala 这门语言可以：</p>
 <ul>
 <li>支持高阶函数。lambda，闭包…</li>
 <li>支持偏函数。 match..</li>
 <li>mixin，依赖注入..</li>
 <li>等等</li>
 </ul>
-<p>虽然隔壁的Python小哥赢得了这次辩论，然而你发现你又回想起了Scala的很多特性。</p>
+<p>虽然隔壁的 Python 小哥赢得了这次辩论，然而你发现你又回想起了 Scala 的很多特性。</p>
 <figure>
 <img src="assets/article/chapter1/popular.jpg" alt="最流行的语言" /><figcaption>最流行的语言</figcaption>
 </figure>
-<p>你发现隔壁的Python小哥之所以赢得了这场辩论是因为他把Python语言用到了各个地方——机器学习、人工智能、硬件、Web开发、移动应用等。而，你还没有用Scala写过一个真正的应用。</p>
-<p>让我想想我来能做什么？我有一个博客。对，我有一个博客，我可以用Scala把我的博客重写一遍：</p>
+<p>你发现隔壁的 Python 小哥之所以赢得了这场辩论是因为他把 Python 语言用到了各个地方——机器学习、人工智能、硬件、Web开发、移动应用等。而你还没有用 Scala 写过一个真正的应用。</p>
+<p>让我想想我来能做什么？我有一个博客。对，我有一个博客，我可以用 Scala 把我的博客重写一遍：</p>
 <ol type="1">
-<li>先找一Scala的Web框架，Play看上去很不错，就这个了。这是一个MVC框架，原来用的Express也是一个MVC框架。Router写这里，Controller类似这个，就是这样的。</li>
-<li>既然已经有PyJS，也会有Scala-js，前端就用这个了。</li>
+<li>先找一 Scala 的 Web 框架，Play 看上去很不错，就这个了。这是一个 MVC 框架，原来用的 Express 也是一个 MVC 框架。Router 写这里，Controller 类似这个，就是这样的。</li>
+<li>既然已经有 PyJS，也会有 Scala-js，前端就用这个了。</li>
 </ol>
 <p>好了，博客重写了一遍了。</p>
-<p>感觉还挺不错的，我决定向隔壁的Java小弟推销这门语言，以解救他于火海之中。</p>
+<p>感觉还挺不错的，我决定向隔壁的 Java 小弟推销这门语言，以解救他于火海之中。</p>
 <p>『让我想想我有什么杀手锏？』</p>
 <p>『这里的知识好像还缺了一点，这个是什么？』</p>
-<p>好了，你已经GET到了90%了。如下图所示：</p>
+<p>好了，你已经 GET 到了90%了。如下图所示：</p>
 <figure>
 <img src="assets/article/chapter1/learn.jpg" alt="Learn" /><figcaption>Learn</figcaption>
 </figure>
-<p>希望你能从这张图上GET到很多点。</p>
+<p>希望你能从这张图上 GET 到很多点。</p>
 <h3 id="输出是最好的输入">输出是最好的输入</h3>
 <p>上面那张图『学习金字塔』就是在说明——输出是最好的输入。</p>
 <p>如果你不试着去写点博客、整理资料、准备分享，那么你可能并没有意识到你缺少了多少东西。虽然你已经有了很多的实践，然并卵。</p>
@@ -772,26 +772,26 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </figure>
 <p>从我有限的（500+）博客写作经验里，我发现多数时候我需要更多地的参考资料才能更好也向人们展示这个过程。为了输出我们需要更多的输入，进而加速这个过程。</p>
 <p>而如果是写书的时候则是一个更高水平的学习，你需要发现别人在他们的书中欠缺的一些知识点。并且你还要展示一些在别的书中没有，而这本书会展现这个点的知识，这意味着你需要挖掘得更深。</p>
-<p>所以，如果下次有人问你如果学一门新语言、技术，那么答案就是写一本书。</p>
+<p>所以，如果下次有人问你如何学一门新语言、技术，那么答案就是写一本书。</p>
 <h3 id="如何应用一门新的技术">如何应用一门新的技术</h3>
 <p>对于多数人来说，写书不是一件容易的事，而应用新的技术则是一件迫在眉睫的事。</p>
 <p>通常来说，技术出自于对现有的技术的改进。这就意味着，在掌握现有技术的情况下，我们只需要做一些小小的改动就更可以实现技术升级。</p>
 <p>而学习一门新的技术的最好实践就是用这门技术对现有的系统行重写。</p>
 <p>第一个系统(v1)： <code>Spring MVC</code> + <code>Bootstrap</code> + <code>jQuery</code></p>
-<p>那么在那个合适的年代里， 我们需要单页面应用，就使用了Backbone。然后，我们就可以用Mustache + HTML来替换掉JSP。</p>
+<p>那么在那个合适的年代里， 我们需要单页面应用，就使用了Backbone。然后，我们就可以用 Mustache + HTML 来替换掉 JSP。</p>
 <p>第二个系统(v2)： <code>Spring MVC</code> + <code>Backbone</code> + <code>Mustache</code></p>
 <p>在这时我们已经实现了前后端分离了，这时候系统实现上变成了这样。</p>
 <p>第二个系统(v2.2)： <code>RESTful  Services</code> + <code>Backbone</code> + <code>Mustache</code></p>
 <p>或者</p>
-<p>第二个系统(v2.2)： <code>RESTful Services</code> + <code>Angular.js 1.x</code></p>
-<p>Spring只是一个RESTful服务，我们还需要一些问题，比如DOM的渲染速度太慢了。</p>
+<p>第二个系统(v2.2)： <code>RESTful Services</code> + <code>AngularJS 1.x</code></p>
+<p>Spring 只是一个 RESTful 服务，我们还需要一些问题，比如 DOM 的渲染速度太慢了。</p>
 <p>第三个系统(v3)： <code>RESTful  Services</code> + <code>React</code></p>
 <p>系统就是这样一步步演进过来的。</p>
 <p>尽管在最后系统的架构已经不是当初的架构，而系统本身的业务逻辑变化并没有发生太大的变化。</p>
 <p>特别是对于如博客这一类的系统来说，他的一些技术实现已经趋于稳定，而且是你经常使用的东西。所以，下次试试用新的技术的时候，可以先从对你的博客的重写开始。</p>
-<h2 id="web编程基础">Web编程基础</h2>
+<h2 id="web-编程基础">Web 编程基础</h2>
 <h3 id="从浏览器到服务器">从浏览器到服务器</h3>
-<p>如果你的操作系统带有cURL这个软件(在GNU/Linux、Mac OS都自带这个工具，Windows用户可以从<a href="http://curl.haxx.se/download.html" class="uri">http://curl.haxx.se/download.html</a>下载到)，那么我们可以直接用下面的命令来看这看这个过程(-v 参数可以显示一次http通信的整个过程)：</p>
+<p>如果你的操作系统带有 cURL 这个软件(在 GNU/Linux、Mac OS 都自带这个工具，Windows 用户可以从<a href="http://curl.haxx.se/download.html" class="uri">http://curl.haxx.se/download.html</a>下载到)，那么我们可以直接用下面的命令来看这看这个过程(-v 参数可以显示一次 http 通信的整个过程)：</p>
 <pre><code>curl -v https://www.phodal.com</code></pre>
 <p>我们就会看到下面的响应过程:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">*</span> Rebuilt URL to: https://www.phodal.com/
@@ -822,40 +822,40 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="kw">&lt;</span>/<span class="kw">body&gt;</span>
 <span class="kw">&lt;</span>/<span class="kw">html&gt;</span>
 <span class="kw">*</span> Connection <span class="co">#0 to host www.phodal.com left intact</span></code></pre></div>
-<p>我们尝试用cURL去访问我的网站，会根据访问的域名找出其IP，通常这个映射关系是来源于ISP缓存DNS（英语：Domain Name System）服务器[^DNSServer]。</p>
-<p>以“*”开始的前8行是一些连接相关的信息，称为<strong>响应首部</strong>。我们向域名 <a href="https://www.phodal.com/" class="uri">https://www.phodal.com/</a>发出了请求，接着DNS服务器告诉了我们网站服务器的IP，即54.69.23.11。出于安全考虑，在这里我们的示例，我们是以HTTPS协议为例，所以在这里连接的端口是443。因为使用的是HTTPS协议，所以在这里会试图去获取服务器证书，接着获取到了域名相关的证书信息。</p>
-<p>随后以“&gt;”开始的内容，便是向Web服务器发送请求。Host即是我们要访问的主机的域名，GET / 则代表着我们要访问的是根目录，如果我们要访问 <a href="https://www.phodal.com/about/" class="uri">https://www.phodal.com/about/</a>页面在这里，便是GET资源文件/about。紧随其后的是HTTP的版本号（HTTP/1.1）。User-Agent通过指向的是使用者行为的软件，通常会加上硬件平台、系统软件、应用软件和用户个人偏好等等的一些信息。Accept则指的是告知服务器发送何种媒体类型。</p>
+<p>我们尝试用 cURL 去访问我的网站，会根据访问的域名找出其 IP，通常这个映射关系是来源于 ISP 缓存 DNS（英语：Domain Name System）服务器[^DNSServer]。</p>
+<p>以“*”开始的前8行是一些连接相关的信息，称为<strong>响应首部</strong>。我们向域名 <a href="https://www.phodal.com/" class="uri">https://www.phodal.com/</a>发出了请求，接着DNS服务器告诉了我们网站服务器的IP，即54.69.23.11。出于安全考虑，在这里我们的示例，我们是以 HTTPS 协议为例，所以在这里连接的端口是 443。因为使用的是HTTPS协议，所以在这里会试图去获取服务器证书，接着获取到了域名相关的证书信息。</p>
+<p>随后以“&gt;”开始的内容，便是向Web服务器发送请求。Host即是我们要访问的主机的域名，GET / 则代表着我们要访问的是根目录，如果我们要访问 <a href="https://www.phodal.com/about/" class="uri">https://www.phodal.com/about/</a>页面在这里，便是 GET 资源文件 /about。紧随其后的是 HTTP 的版本号（HTTP/1.1）。User-Agent 通过指向的是使用者行为的软件，通常会加上硬件平台、系统软件、应用软件和用户个人偏好等等的一些信息。Accept 则指的是告知服务器发送何种媒体类型。</p>
 <p>这个过程，大致如下图所示：</p>
 <figure>
-<img src="assets/article/chapter1/server-dns-forward.jpg" alt="DNS到服务器的过程" /><figcaption>DNS到服务器的过程</figcaption>
+<img src="assets/article/chapter1/server-dns-forward.jpg" alt="DNS 到服务器的过程" /><figcaption>DNS 到服务器的过程</figcaption>
 </figure>
-<p>在图中，我们会发现解析DNS的时候，我们需要先本地DNS服务器查询。如果没有的话，再向根域名服务器查询——这个域名由哪个服务器来解析。直至最后拿到真正的服务器IP才能获取页面。</p>
-<p>当我们拿到相应的HTML、JS、CSS后，我们就开始渲染这个页面了。</p>
-<h4 id="http协议">HTTP协议</h4>
-<p>说到这里，我们不得不说说HTTP协议——超文本传输协议。它也是一个基于文本的传输协议，这就是为什么你在上面看到的都是文本的传输过程。</p>
-<h3 id="从html到页面显示">从HTML到页面显示</h3>
-<p>而浏览器接收到文本的时候，就要开始着手将HTML变成屏幕。下图是Chrome渲染页面的一个时间线：</p>
+<p>在图中，我们会发现解析 DNS 的时候，我们需要先本地 DNS 服务器查询。如果没有的话，再向根域名服务器查询——这个域名由哪个服务器来解析。直至最后拿到真正的服务器IP才能获取页面。</p>
+<p>当我们拿到相应的 HTML、JS、CSS 后，我们就开始渲染这个页面了。</p>
+<h4 id="http-协议">HTTP 协议</h4>
+<p>说到这里，我们不得不说说 HTTP 协议——超文本传输协议。它也是一个基于文本的传输协议，这就是为什么你在上面看到的都是文本的传输过程。</p>
+<h3 id="从-html-到页面显示">从 HTML 到页面显示</h3>
+<p>而浏览器接收到文本的时候，就要开始着手将 HTML 变成屏幕。下图是 Chrome 渲染页面的一个时间线：</p>
 <figure>
-<img src="assets/article/chapter1/chrome-timeline.jpg" alt="Chrome渲染的Timeline" /><figcaption>Chrome渲染的Timeline</figcaption>
+<img src="assets/article/chapter1/chrome-timeline.jpg" alt="Chrome 渲染的 Timeline" /><figcaption>Chrome 渲染的 Timeline</figcaption>
 </figure>
 <p>及其整个渲染过程如下图所示：</p>
 <figure>
 <img src="assets/article/chapter1/render-html.png" alt="Render HTML" /><figcaption>Render HTML</figcaption>
 </figure>
-<p>（PS: 需要注意的是这里用的是WebKit内核的渲染过程，即Chrome和Safari等浏览器所使用的内核。）</p>
-<p>从上面的两图可以看出来第一步都Parser HTML，而Paser HTML实质上就是将其将解析为DOM Tree。与此同时，CSS解析器会解析CSS会产生CSS规则树。</p>
-<p>随后会根据生成的DOM树和CSS规则树来构建Render Tree，接着生成Render Tree的布局，最后就是绘制出Render Tree。</p>
+<p>（PS: 需要注意的是这里用的是 WebKit 内核的渲染过程，即 Chrome 和 Safari 等浏览器所使用的内核。）</p>
+<p>从上面的两图可以看出来第一步都 Parser HTML，而 Paser HTML 实质上就是将其将解析为 DOM Tree。与此同时，CSS 解析器会解析 CSS 会产生 CSS 规则树。</p>
+<p>随后会根据生成的 DOM 树和 CSS 规则树来构建 Render Tree，接着生成 Render Tree的布局，最后就是绘制出 Render Tree。</p>
 <p>详细的内容还得参见相关的书籍~~。</p>
 <p>相关内容：</p>
 <ul>
 <li>《<a href="http://taligarsiel.com/Projects/howbrowserswork1.htm">How browsers work</a>》</li>
 </ul>
 <h2 id="html">HTML</h2>
-<p>让我们先从身边的语言下手，也就是现在无处不在的HTML+Javascript+CSS。</p>
-<p>之所以从HTML开始，是因为我们不需要配置一个复杂的开发环境，也许你还不知道开发环境是什么东西，不过这也没关系，毕竟这些知识需要慢慢的接触才能有所了解，尤其是对于普通的业余爱好者来说，当然，对于专业选手言自然不是问题。HTML是Web的核心语言，也算是比较基础的语言。</p>
+<p>让我们先从身边的语言下手，也就是现在无处不在的 HTML+Javascript+CSS。</p>
+<p>之所以从 HTML 开始，是因为我们不需要配置一个复杂的开发环境，也许你还不知道开发环境是什么东西，不过这也没关系，毕竟这些知识需要慢慢的接触才能有所了解，尤其是对于普通的业余爱好者来说，当然，对于专业选手言自然不是问题。HTML 是 Web 的核心语言，也算是比较基础的语言。</p>
 <h3 id="helloworld">hello,world</h3>
-<p>hello,world是一个传统，所以在这里也遵循这个有趣的传统，我们所要做的事情其实很简单，虽然也有一点点hack的感觉。——让我们先来新建一个文并命名为“helloworld.html”。</p>
-<p>(PS:大部分人应该都是在Windows环境下工作的，所以你需要新建一个文本，然后重命名，或者你需要一个编辑器，在这里我们推荐用<strong>Sublime Text</strong>。破解不破解，注册不注册都不会对你的使用有太多的影响。)</p>
+<p>hello,world 是一个传统，所以在这里也遵循这个有趣的传统，我们所要做的事情其实很简单，虽然也有一点点 hack 的感觉。——让我们先来新建一个文并命名为“helloworld.html”。</p>
+<p>(PS:大部分人应该都是在 Windows 环境下工作的，所以你需要新建一个文本，然后重命名，或者你需要一个编辑器，在这里我们推荐用 <strong>Sublime Text</strong> 。破解不破解，注册不注册都不会对你的使用有太多的影响。)</p>
 <ol type="1">
 <li><p>新建文件</p></li>
 <li>输入
@@ -863,30 +863,30 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><p>保存为-&gt;“helloworld.html”，</p></li>
 <li><p>双击打开这个文件。 正常情况下都应该是用你的默认浏览器打开。只要是一个正常工作的现代浏览器，都应该可以看到上面显示的是“Hello,world”。</p></li>
 </ol>
-<p>这才是最短的hello,world程序，但是呢？在Ruby中会是这样子的</p>
+<p>这才是最短的 hello,world 程序，但是呢？在 Ruby 中会是这样子的</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">2.0.0-p353</span> :001 <span class="kw">&gt;</span> p <span class="st">&quot;hello,world&quot;</span>
 <span class="st">&quot;hello,world&quot;</span>
     =<span class="kw">&gt;</span> <span class="st">&quot;hello,world&quot;</span>
 <span class="kw">2.0.0-p353</span> :002 <span class="kw">&gt;</span></code></pre></div>
-<p>等等，如果你了解过HTML的话，会觉得这一点都不符合语法规则，但是他工作了，没有什么比安装完Nginx后看到It works!更让人激动了。</p>
-<p>遗憾的是，它可能无法在所有的浏览器上工作，所以我们需要去调试其中的bug。</p>
-<h4 id="调试helloworld">调试hello,world</h4>
-<p>我们会发现我们的代码在浏览器中变成了下面的代码，如果你和我一样用的是Chrome，那么你可以右键浏览器中的空白区域，点击审查元素，就会看到下面的代码。</p>
+<p>等等，如果你了解过 HTML 的话，会觉得这一点都不符合语法规则，但是他工作了，没有什么比安装完 Nginx 后看到 It works! 更让人激动了。</p>
+<p>遗憾的是，它可能无法在所有的浏览器上工作，所以我们需要去调试其中的 bug。</p>
+<h4 id="调试-helloworld">调试 hello,world</h4>
+<p>我们会发现我们的代码在浏览器中变成了下面的代码，如果你和我一样用的是 Chrome，那么你可以右键浏览器中的空白区域，点击审查元素，就会看到下面的代码。</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;html&gt;</span>
     <span class="kw">&lt;head&gt;&lt;/head&gt;</span>
     <span class="kw">&lt;body&gt;</span>hello,world<span class="kw">&lt;/body&gt;</span>
 <span class="kw">&lt;/html&gt;</span></code></pre></div>
 <p>这个才是真正能在大部分浏览器上工作的代码，所以复制它到编辑器里吧。</p>
-<h4 id="说说helloworld">说说hello,world</h4>
-我很不喜欢其中的&lt;*&gt;&lt;/*&gt;，但是我也没有找到别的方法来代替它们，所以这是一个设计得当的语言。甚至大部分人都说这算不上是一门真正的语言，不过html的原义是
+<h4 id="说说-helloworld">说说 hello,world</h4>
+<p>我很不喜欢其中的&lt;*&gt;&lt;/*&gt;，但是我也没有找到别的方法来代替它们，所以这是一个设计得当的语言。甚至大部分人都说这算不上是一门真正的语言，不过 HTML 的原义是</p>
 <blockquote>
-超文本标记语言
+<p>超文本标记语言</p>
 </blockquote>
-<p>所以我们可以发现其中的关键词是标记——markup，也就是说html是一个markup，head是一个markup，body也是一个markup。</p>
-<p>然而，我们真正工作的代码是在body里面，至于为什么是在这里面，这个问题就太复杂了。打个比方来说：</p>
+<p>所以我们可以发现其中的关键词是标记——markup，也就是说 HTML 是一个 markup，head 是一个 markup，body 也是一个 markup。</p>
+<p>然而，我们真正工作的代码是在 body 里面，至于为什么是在这里面，这个问题就太复杂了。打个比方来说：</p>
 <ol type="1">
 <li><p>我们所使用的汉语是人类用智慧创造的，我们所正在学的这门语言同样也是人类创造的。</p></li>
-<li><p>我们在自己的语言里遵循着<strong>桌子是桌子，凳子是凳子</strong>的原则，很少有人会问为什么。</p></li>
+<li><p>我们在自己的语言里遵循着 <strong>桌子是桌子，凳子是凳子</strong> 的原则，很少有人会问为什么。</p></li>
 </ol>
 <h3 id="中文">中文？</h3>
 <p>所以我们也可以把计算机语言与现实世界里用于交流沟通的语言划上一个等号。而我们所要学习的语言，并不是我们最熟悉的汉语语言，所以我们便觉得这些很复杂，但是如果我们试着用汉语替换掉上面的代码的话</p>
@@ -907,7 +907,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="er">&lt;</span>结束语言&gt;</code></pre></div>
 <p>于是我们看到的结果便是</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="er">&lt;</span>语言&gt; <span class="er">&lt;</span>头&gt; <span class="er">&lt;</span>身体&gt;你好，世界</code></pre></div>
-<p>被Chrome浏览器解析成什么样了？</p>
+<p>被 Chrome 浏览器解析成什么样了？</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;</span><span class="er">&lt;</span>语言&gt;
         <span class="er">&lt;</span>头&gt;<span class="co">&lt;!--头--&gt;</span>
         <span class="er">&lt;</span>身体&gt;你好，世界<span class="co">&lt;!--身体--&gt;</span>
@@ -930,8 +930,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>现有的系统都是基于英语语言环境构建的，对中文支持不是很友好。</li>
 <li>中文输入的速度在某种程度上来说没有英语快。</li>
 </ol>
-<p>我们离开话题已经很远了，但是这里说的都是针对于那些不满于英语的人来说的，只有当我们可以从头构建一个中文系统的时候才是可行的，而这些就要将CPU、软件、硬件都包含在内，甚至我们还需要考虑重新设计CPU的结构，在某种程度上来说会有些不现实。或许，需要一代又一代人的努力。忘记那些吧，师夷之长技以制夷。</p>
-<h3 id="其他html标记">其他HTML标记</h3>
+<p>我们离开话题已经很远了，但是这里说的都是针对于那些不满于英语的人来说的，只有当我们可以从头构建一个中文系统的时候才是可行的，而这些就要将 CPU、软件、硬件都包含在内，甚至我们还需要考虑重新设计 CPU 的结构，在某种程度上来说会有些不现实。或许，需要一代又一代人的努力。忘记那些吧，师夷之长技以制夷。</p>
+<h3 id="其他-html-标记">其他 HTML 标记</h3>
 <p>添加一个标题，</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;html&gt;</span>
     <span class="kw">&lt;head&gt;</span>
@@ -958,21 +958,21 @@ hello,world
 <p>更多的东西可以在一些书籍上看到，这边所要说的只是一次简单的语言入门，其他的东西都和这些类似。</p>
 <h3 id="小结-1">小结</h3>
 <h4 id="美妙之处">美妙之处</h4>
-<p>我们简单地上手了一门不算是语言的语言，浏览器简化了这其中的大部分过程，虽然没有C和其他语言来得有专业感，但是我们试着去开始写代码了。我们可能在未来的某一篇中可能会看到类似的语言，诸如Python，我们所要做的就是</p>
+<p>我们简单地上手了一门不算是语言的语言，浏览器简化了这其中的大部分过程，虽然没有 C 和其他语言来得有专业感，但是我们试着去开始写代码了。我们可能在未来的某一篇中可能会看到类似的语言，诸如 Python，我们所要做的就是</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">python</span> file.py
 =<span class="kw">&gt;hello</span>,world</code></pre></div>
-<p>然后在终端上返回结果。只是因为在我看来学会html是有意义的，简单的上手，然后再慢慢地深入，如果一开始我们就去理解指针，开始去理解类。我们甚至还知道程序是怎么编译运行的时候，在这个过程中又发生了什么。虽然现在我们也没能理解这其中发生了什么，但是至少展示了</p>
+<p>然后在终端上返回结果。只是因为在我看来学会 HTML 是有意义的，简单的上手，然后再慢慢地深入，如果一开始我们就去理解指针，开始去理解类。我们甚至还知道程序是怎么编译运行的时候，在这个过程中又发生了什么。虽然现在我们也没能理解这其中发生了什么，但是至少展示了</p>
 <ol type="1">
 <li>中文编程语言在当前意义不大，不现实，效率不高兼容性差</li>
 <li>语言的语法是固定的。（ps:虽然我们也可以进行扩充，我们将会在后来支持上述的中文标记。）</li>
 <li>已经开始写代码，而不是还在配置开发环境。</li>
-<li>随身的工具才是最好的，最常用的code也才是实在的。</li>
+<li>随身的工具才是最好的，最常用的 code 也才是实在的。</li>
 </ol>
 <h4 id="更多">更多</h4>
-<p>我们还没有试着去解决“某商店里的糖一颗5块钱，小明买了3颗糖，小明一共花了多少钱”的问题。也就是说我们学会的是一个还不能解决实际问题的语言，于是我们还需要学点东西，比如Javascript, CSS。我们可以将Javascript理解为解决问题的语言，HTML则是前端显示，CSS是配置文件，这样的话，我们会在那之后学会成为一个近乎专业的程序员。我们刚刚学习了一下怎么在前端显示那些代码的行为，于是我们还需要Javascript。</p>
+<p>我们还没有试着去解决“某商店里的糖一颗5块钱，小明买了3颗糖，小明一共花了多少钱”的问题。也就是说我们学会的是一个还不能解决实际问题的语言，于是我们还需要学点东西，比如 JavaScript, CSS。我们可以将 JavaScript 理解为解决问题的语言，HTML则是前端显示，CSS 是配置文件，这样的话，我们会在那之后学会成为一个近乎专业的程序员。我们刚刚学习了一下怎么在前端显示那些代码的行为，于是我们还需要 JavaScript。</p>
 <h2 id="css">CSS</h2>
-<p>如果说HTML是建筑的框架，CSS就是房子的装修。那么Javascript呢，我听到的最有趣的说法是小三——还是先让我们回到代码上来吧。</p>
-<p>下面就是我们之前说到的代码，css将Red三个字母变成了红色。</p>
+<p>如果说 HTML 是建筑的框架，CSS 就是房子的装修。那么 JavaScript 呢，我听到的最有趣的说法是小三——还是先让我们回到代码上来吧。</p>
+<p>下面就是我们之前说到的代码，CSS 将 Red 三个字母变成了红色。</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
 <span class="kw">&lt;html&gt;</span>
 <span class="kw">&lt;head&gt;</span>
@@ -985,17 +985,17 @@ hello,world
 <p>只是，</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> para<span class="op">=</span><span class="va">document</span>.<span class="at">getElementById</span>(<span class="st">&quot;para&quot;</span>)<span class="op">;</span>
 <span class="va">para</span>.<span class="va">style</span>.<span class="at">color</span><span class="op">=</span><span class="st">&quot;blue&quot;</span><span class="op">;</span></code></pre></div>
-<p>将字体变成了蓝色，CSS+HTML让页面有序的工作着，但是Javascript却打乱了这些秩序，有着唯恐世界不乱的精彩，也难怪被冠以小三之名了——或许终于可以理解，为什么以前人们对于Javascript没有好感了——不过这里要讲的是正室，也就是CSS，这时还没有Javascript。</p>
+<p>将字体变成了蓝色，CSS+HTML 让页面有序的工作着，但是 JavaScript 却打乱了这些秩序，有着唯恐世界不乱的精彩，也难怪被冠以小三之名了——或许终于可以理解，为什么以前人们对于 JavaScript 没有好感了——不过这里要讲的是正室，也就是 CSS，这时还没有 JavaScript。</p>
 <figure>
 <img src="assets/article/chapter1/redfonts.png" alt="Red Fonts" /><figcaption>Red Fonts</figcaption>
 </figure>
 <h3 id="简介">简介</h3>
-<p>这不是一篇专业讲述CSS的书籍，所以我不会去说CSS是怎么来的，有些东西我们既然可以很容易从其他地方知道，也就不需要花太多时间去重复。诸如重构等这些的目的之一也在于去除重复的代码，不过有些重复是不可少的，也是有必要的，而通常这些东西可能是由其他地方复制过来的。</p>
-<p>到目前为止我们没有依赖于任何特殊的硬件或者是软件，对于我们来说我们最基本的需求就是一台电脑，或者可以是你的平板电脑，当然也可以是你的智能手机，因为他们都有个浏览器，而这些都是能用的，对于我们的CSS来说也不会有例外的。</p>
-<p>CSS(Cascading Style Sheets)，到今天我也没有记得他的全称，CSS还有一个中文名字是层叠式样式表，事实上翻译成什么可能并不是我们关心的内容，我们需要关心的是他能做些什么。作为三剑客之一，它的主要目的在于可以让我们方便灵活地去控制Web页面的外观表现。我们可以用它做出像淘宝一样复杂的界面，也可以像我们的书本一样简单，不过如果要和我们书本一样简单的话，可能不需要用到CSS。HTML一开始就是依照报纸的格式而设计的，我们还可以继续用上面说到的编辑器，又或者是其他的。如果你喜欢DreamWeaver那也不错，不过一开始使用IDE可无助于我们写出良好的代码。</p>
-<p>忘说了，CSS也是有版本的，和windows，Linux内核等等一样，但是更新可能没有那么频繁，HTML也是有版本的，JS也是有版本的，复杂的东西不是当前考虑的内容。</p>
+<p>这不是一篇专业讲述 CSS 的书籍，所以我不会去说 CSS 是怎么来的，有些东西我们既然可以很容易从其他地方知道，也就不需要花太多时间去重复。诸如重构等这些的目的之一也在于去除重复的代码，不过有些重复是不可少的，也是有必要的，而通常这些东西可能是由其他地方复制过来的。</p>
+<p>到目前为止我们没有依赖于任何特殊的硬件或者是软件，对于我们来说我们最基本的需求就是一台电脑，或者可以是你的平板电脑，当然也可以是你的智能手机，因为他们都有个浏览器，而这些都是能用的，对于我们的 CSS 来说也不会有例外的。</p>
+<p>CSS(Cascading Style Sheets)，到今天我也没有记得他的全称，CSS 还有一个中文名字是层叠式样式表，事实上翻译成什么可能并不是我们关心的内容，我们需要关心的是他能做些什么。作为三剑客之一，它的主要目的在于可以让我们方便灵活地去控制 Web 页面的外观表现。我们可以用它做出像淘宝一样复杂的界面，也可以像我们的书本一样简单，不过如果要和我们书本一样简单的话，可能不需要用到 CSS。HTML 一开始就是依照报纸的格式而设计的，我们还可以继续用上面说到的编辑器，又或者是其他的。如果你喜欢 DreamWeaver 那也不错，不过一开始使用 IDE 可无助于我们写出良好的代码。</p>
+<p>忘说了，CSS 也是有版本的，和 Windows，Linux 内核等等一样，但是更新可能没有那么频繁，HTML 也是有版本的，JS 也是有版本的，复杂的东西不是当前考虑的内容。</p>
 <h4 id="代码结构">代码结构</h4>
-<p>对于我们的上面的Red示例来说，如果没有一个好的结构，那么以后可能就是这样子。</p>
+<p>对于我们的上面的 Red 示例来说，如果没有一个好的结构，那么以后可能就是这样子。</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
 <span class="kw">&lt;html&gt;</span>
 <span class="kw">&lt;head&gt;</span>
@@ -1058,7 +1058,7 @@ hello,world
     <span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;para2&quot;</span><span class="kw">&gt;</span>那么以后可能就是这样子。。。。<span class="kw">&lt;/p&gt;</span>
 <span class="kw">&lt;/body&gt;</span>
 <span class="kw">&lt;/html&gt;</span></code></pre></div>
-<p>然后我们有一个像app.js一样的style.css放在同目录下，而他的内容便是</p>
+<p>然后我们有一个像 app.js 一样的 style.css 放在同目录下，而他的内容便是</p>
 <div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css"><span class="fl">.para</span><span class="kw">{</span>
     <span class="kw">font-size:</span> <span class="dt">22px</span><span class="kw">;</span>
     <span class="kw">color:</span><span class="dt">#f00</span><span class="kw">;</span>
@@ -1071,7 +1071,7 @@ hello,world
     <span class="kw">text-indent:</span> <span class="dt">2em</span><span class="kw">;</span>
     <span class="kw">padding-left:</span> <span class="dt">2em</span><span class="kw">;</span>
 <span class="kw">}</span></code></pre></div>
-<p>这代码和JS的代码有如此多的相似</p>
+<p>这代码和 JS 的代码有如此多的相似</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> para<span class="op">={</span>
     <span class="dt">font_size</span><span class="op">:</span><span class="st">&#39;22px&#39;</span><span class="op">,</span>
     <span class="dt">color</span><span class="op">:</span><span class="st">&#39;#f00&#39;</span><span class="op">,</span>
@@ -1084,10 +1084,10 @@ hello,world
     <span class="dt">color</span><span class="op">:</span>#f00<span class="op">,</span>
     <span class="dt">text_align</span><span class="op">:</span>center<span class="op">,</span>
     <span class="dt">padding_left</span><span class="op">:</span>20px<span class="op">,</span>
-<span class="op">}</span>   </code></pre></div>
+<span class="op">}</span></code></pre></div>
 <p>目测差距已经尽可能的小了，至于这些话题会在以后讨论到，如果要让我们的编译器更正确的工作，那么我们就需要非常多这样的符号，除非你乐意去理解:</p>
 <pre class="lisp"><code>(dotimes (i 4) (print i))</code></pre>
-<p>总的来说我们减少了符号的使用，但是用lisp便带入了更多的括号，不过这是一种简洁的表达方式，也许我们可以在其他语言中看到。</p>
+<p>总的来说我们减少了符号的使用，但是用 lisp 便带入了更多的括号，不过这是一种简洁的表达方式，也许我们可以在其他语言中看到。</p>
 <pre><code>\d{2}/[A-Z][a-z][a-z]/\d{4}</code></pre>
 <p>上面的代码，是为了从一堆数据中找出“某日/某月/某年”。如果一开始不理解那是正则表达式，就会觉得那个很复杂。</p>
 <p>这门语言可能是为设计师而设计的，但是设计师大部分还是不懂编程的，不过相对来说这门语言还是比其他语言简单易懂一些。</p>
@@ -1103,13 +1103,13 @@ hello,world
 <blockquote>
 <p>如果没有一个好的结构</p>
 </blockquote>
-<p>所以样式和目标在这里牵手了，问题是他们是如何在一起的呢？下面就是CSS与HTML沟通的重点所在了:</p>
+<p>所以样式和目标在这里牵手了，问题是他们是如何在一起的呢？下面就是 CSS 与 HTML 沟通的重点所在了:</p>
 <h3 id="选择器">选择器</h3>
-<p>我们用到的选择器叫做类选择器，也就是class，或者说应该称之为class选择器更合适。与类选择器最常一起出现的是ID选择器，不过这个适用于比较高级的场合，诸如用JS控制DOM的时候就需要用到ID选择器。而基本的选择器就是如下面的例子:</p>
+<p>我们用到的选择器叫做类选择器，也就是 class，或者说应该称之为 class 选择器更合适。与类选择器最常一起出现的是 ID 选择器，不过这个适用于比较高级的场合，诸如用 JS 控制 DOM 的时候就需要用到 ID 选择器。而基本的选择器就是如下面的例子:</p>
 <pre><code>p.para{
     color:#f0f;
 }</code></pre>
-<p>将代码添加到style.css的最下面会发现“如果没有一个好的结构”变成了粉红色，当然我们还会有这样的写法</p>
+<p>将代码添加到 style.css 的最下面会发现“如果没有一个好的结构”变成了粉红色，当然我们还会有这样的写法</p>
 <pre><code>p&gt;.para{
     color:#f0f;
 }</code></pre>
@@ -1118,8 +1118,8 @@ hello,world
 <pre><code>p{
     text-align:left;
 }</code></pre>
-<p>这样的元素选择器来给予所有的p元素一个左对齐。</p>
-<p>还有复杂一点的复合型选择器，下面的是HTML文件</p>
+<p>这样的元素选择器来给予所有的 p 元素一个左对齐。</p>
+<p>还有复杂一点的复合型选择器，下面的是 HTML 文件</p>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -1133,7 +1133,7 @@ hello,world
     &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<p>还有CSS文件</p>
+<p>还有 CSS 文件</p>
 <pre><code>.para{
     font-size: 22px;
     color:#f00;
@@ -1153,29 +1153,28 @@ p.para{
 div#content p {
     font-size:22px;
 }</code></pre>
-<h3 id="更有趣的css">更有趣的CSS</h3>
-<p>一个包含了para2以及para_bg的例子</p>
+<h3 id="更有趣的-css">更有趣的 CSS</h3>
+<p>一个包含了 para2 以及 para_bg 的例子</p>
 <pre><code>    &lt;div id=&quot;content&quot;&gt;
         &lt;p class=&quot;para2 para_bg&quot;&gt;那么以后可能就是这样子。。。。&lt;/p&gt;
-    &lt;/div&gt;
-    </code></pre>
+    &lt;/div&gt;</code></pre>
 <p>我们只是添加了一个黑色的背景</p>
 <pre><code>.para_bg{
     background-color:#000;
 }</code></pre>
 <p>重新改变后的网页变得比原来有趣了很多，所谓的继承与合并就是上面的例子。</p>
-<p>我们还可以用CSS3做出更多有趣的效果，而这些并不在我们的讨论范围里面，因为我们讨论的是be a geek。</p>
-<p>或许我们写的代码都是那么的简单，从HTML到Javascript，还有现在的CSS，只是总有一些核心的东西，而不是去考虑那些基础语法，基础的东西我们可以在实践的过程中一一发现。但是我们可能发现不了，或者在平时的使用中考虑不到一些有趣的用法或者说特殊的用法，这时候可以通过观察一些精致设计的代码中学习到。复杂的东西可以变得很简单，简单的东西也可以变得很复杂。</p>
+<p>我们还可以用 CSS3 做出更多有趣的效果，而这些并不在我们的讨论范围里面，因为我们讨论的是 be a geek。</p>
+<p>或许我们写的代码都是那么的简单，从 HTML 到 JavaScript，还有现在的 CSS，只是总有一些核心的东西，而不是去考虑那些基础语法，基础的东西我们可以在实践的过程中一一发现。但是我们可能发现不了，或者在平时的使用中考虑不到一些有趣的用法或者说特殊的用法，这时候可以通过观察一些精致设计的代码中学习到。复杂的东西可以变得很简单，简单的东西也可以变得很复杂。</p>
 <h2 id="javascript">JavaScript</h2>
-<p>Javascript现在已经无处不在了，也许你正打开的某个网站，他便可能是node.js+json+javascript+mustache.js完成的，虽然你还没理解上面那些是什么，也正是因为你不理解才需要去学习更多的东西。但是你只要知道Javascript已经无处不在了，它可能就在你手机上的某个app里，就在你浏览的网页里，就运行在你IDE中的某个进程里。</p>
+<p>JavaScript 现在已经无处不在了，也许你正打开的某个网站，他便可能是 node.js+json+javascript+mustache.js 完成的，虽然你还没理解上面那些是什么，也正是因为你不理解才需要去学习更多的东西。但是你只要知道 JavaScript 已经无处不在了，它可能就在你手机上的某个 app 里，就在你浏览的网页里，就运行在你 IDE 中的某个进程里。</p>
 <h3 id="helloworld-1">hello,world</h3>
-<p>这里我们还需要有一个helloworld.html，Javascript是专为网页交互而设计的脚本语言，所以我们一点点来开始这部分的旅途，先写一个符合标准的helloworld.html</p>
+<p>这里我们还需要有一个 helloworld.html，JavaScript 是专为网页交互而设计的脚本语言，所以我们一点点来开始这部分的旅途，先写一个符合标准的 helloworld.html</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
 <span class="kw">&lt;html&gt;</span>
     <span class="kw">&lt;head&gt;&lt;/head&gt;</span>
     <span class="kw">&lt;body&gt;&lt;/body&gt;</span>
 <span class="kw">&lt;/html&gt;</span></code></pre></div>
-<p>然后开始融入我们的javascript，向HTML中插入Javascript的方法，就需要用到html中的&lt;script&gt;标签，我们先用页面嵌入的方法来写helloworld。</p>
+<p>然后开始融入我们的 JavaScript，向 HTML 中插入JavaScript 的方法，就需要用到 HTML 中的 &lt;script&gt; 标签，我们先用页面嵌入的方法来写 helloworld。</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
 <span class="kw">&lt;html&gt;</span>
     <span class="kw">&lt;head&gt;</span>
@@ -1195,7 +1194,7 @@ div#content p {
 <span class="ss">    &lt;/head</span><span class="op">&gt;</span>
     <span class="op">&lt;</span>body<span class="op">&gt;&lt;</span><span class="ss">/body&gt;</span>
 <span class="ss">&lt;/html</span><span class="op">&gt;</span></code></pre></div>
-<p>没有显示hello,world?试试下面的代码</p>
+<p>没有显示 hello,world ?试试下面的代码</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
 <span class="kw">&lt;html&gt;</span>
     <span class="kw">&lt;head&gt;</span>
@@ -1210,9 +1209,9 @@ div#content p {
 <span class="ss">    &lt;/body</span><span class="op">&gt;</span>
 <span class="op">&lt;</span><span class="ss">/html&gt;</span></code></pre></div>
 <h3 id="javascriptful">JavaScriptFul</h3>
-<p>我们需要让我们的代码看上去更像是js，同时是以js结尾。就像C语言的源码是以C结尾的，我们也同样需要让我们的代码看上去更正式一点。于是我们需要在helloworld.html的同一文件夹下创建一个app.js文件，在里面写着</p>
+<p>我们需要让我们的代码看上去更像是 js，同时是以 js 结尾。就像 C 语言的源码是以 C 结尾的，我们也同样需要让我们的代码看上去更正式一点。于是我们需要在 helloworld.html 的同一文件夹下创建一个 app.js 文件，在里面写着</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="va">document</span>.<span class="at">write</span>(<span class="st">&#39;hello,world&#39;</span>)<span class="op">;</span></code></pre></div>
-<p>同时我们的helloworld.html还需要告诉我们的浏览器js代码在哪里</p>
+<p>同时我们的 helloworld.html 还需要告诉我们的浏览器 js 代码在哪里</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
 <span class="kw">&lt;html&gt;</span>
     <span class="kw">&lt;head&gt;</span>
@@ -1225,33 +1224,33 @@ div#content p {
     <span class="kw">&lt;/body&gt;</span>
 <span class="kw">&lt;/html&gt;</span></code></pre></div>
 <h4 id="从数学出发">从数学出发</h4>
-<p>让我们回到第一章讲述的小明的问题，<strong>从实际问题下手编程，更容易学会编程</strong>。小学时代的数学题最喜欢这样子了——某商店里的糖一个5块钱，小明买了3个糖，小明一共花了多少钱。在编程方面，也许我们还算是小学生。最直接的方法就是直接计算3x5=?</p>
+<p>让我们回到第一章讲述的小明的问题，<strong>从实际问题下手编程，更容易学会编程</strong>。小学时代的数学题最喜欢这样子了——某商店里的糖一个5块钱，小明买了3个糖，小明一共花了多少钱。在编程方面，也许我们还算是小学生。最直接的方法就是直接计算 3x5=?</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="va">document</span>.<span class="at">write</span>(<span class="dv">3</span><span class="op">*</span><span class="dv">5</span>)<span class="op">;</span></code></pre></div>
-<p>document.write实际也我们可以理解为输出，也就是往页面里写入3*5的结果，在有双引号的情况下会输出字符串。我们便会在浏览器上看到15，这便是一个好的开始，也是一个糟糕的开始。</p>
+<p>document.write 实际也我们可以理解为输出，也就是往页面里写入 3*5 的结果，在有双引号的情况下会输出字符串。我们便会在浏览器上看到15，这便是一个好的开始，也是一个糟糕的开始。</p>
 <h4 id="设计和编程">设计和编程</h4>
-<p>对于实际问题，如果我们只是止于所要得到的结果，很多年之后，我们就成为了code monkey。对这个问题进行再一次设计，所谓的设计有些时候会把简单的问题复杂化，有些时候会使以后的扩展更加简单。这一天因为这家商店的糖价格太高了，于是店长将价格降为了4块钱。</p>
+<p>对于实际问题，如果我们只是止于所要得到的结果，很多年之后，我们就成为了 code monkey。对这个问题进行再一次设计，所谓的设计有些时候会把简单的问题复杂化，有些时候会使以后的扩展更加简单。这一天因为这家商店的糖价格太高了，于是店长将价格降为了4块钱。</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="va">document</span>.<span class="at">write</span>(<span class="dv">3</span><span class="op">*</span><span class="dv">4</span>)<span class="op">;</span></code></pre></div>
 <p>于是我们又得到了我们的结果，但是下次我们看到这些代码的时候没有分清楚哪个是糖的数量，哪个是价格，于是我们重新设计了程序</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript">tang<span class="op">=</span><span class="dv">4</span><span class="op">;</span>
 num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <span class="va">document</span>.<span class="at">write</span>(tang<span class="op">*</span>num)<span class="op">;</span></code></pre></div>
-<p>这才能叫得上是程序设计，或许你注意到了“;”这个符号的存在，我想说的是这是另外一个标准，我们不得不去遵守，也不得不去fuck。</p>
+<p>这才能叫得上是程序设计，或许你注意到了“;”这个符号的存在，我想说的是这是另外一个标准，我们不得不去遵守，也不得不去 fuck。</p>
 <h4 id="函数">函数</h4>
 <p>记得刚开始学三角函数的时候，我们会写</p>
 <pre><code>sin 30=0.5</code></pre>
-<p>而我们的函数也是类似于此，换句话说，因为很多搞计算机的先驱都学好了数学，都把数学世界的规律带到了计算机世界，所以我们的函数也是类似于此，让我们做一个简单的开始。</p>
+<p>而我们的函数也是类似于此，换句话说，因为很多搞计算机的先驱都学好了数学，都把数学世界的规律带到了计算机世界，所以我们的函数也是类似于此，让我们从一个简单的开始。</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="at">hello</span>()<span class="op">{</span>
     <span class="cf">return</span> <span class="va">document</span>.<span class="at">write</span>(<span class="st">&quot;hello,world&quot;</span>)<span class="op">;</span>
 <span class="op">}</span>
 <span class="at">hello</span>()<span class="op">;</span></code></pre></div>
-<p>当我第一次看到函数的时候，有些小激动终于出现了。我们写了一个叫hello的函数，它返回了往页面中写入hello,world的方法，然后我们调用了hello这个函数，于是页面上有了hello,world。</p>
+<p>当我第一次看到函数的时候，有些小激动终于出现了。我们写了一个叫 hello 的函数，它返回了往页面中写入 hello,world 的方法，然后我们调用了 hello 这个函数，于是页面上有了 hello,world。</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="at">sin</span>(degree)<span class="op">{</span>
     <span class="cf">return</span> <span class="va">document</span>.<span class="at">write</span>(<span class="va">Math</span>.<span class="at">sin</span>(degree))<span class="op">;</span>
 <span class="op">}</span>
 <span class="at">sin</span>(<span class="dv">30</span>)<span class="op">;</span></code></pre></div>
-<p>在这里degree就称之为变量。 于是输出了-0.9880316240928602，而不是0.5，因为这里用的是弧度制，而不是角度制。</p>
+<p>在这里 degree 就称之为变量。 于是输出了 -0.9880316240928602，而不是 0.5，因为这里用的是弧度制，而不是角度制。</p>
 <pre><code>sin(30)</code></pre>
-<p>的输出结果有点类似于sin 30。写括号的目的在于，括号是为了方便解析，这个在不同的语言中可能是不一样的，比如在ruby中我们可以直接用类似于数学中的表达:</p>
+<p>的输出结果有点类似于sin 30。写括号的目的在于，括号是为了方便解析，这个在不同的语言中可能是不一样的，比如在 Ruby 中我们可以直接用类似于数学中的表达:</p>
 <div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span class="fl">2.0</span>.<span class="dv">0</span>-p353 :<span class="dv">004</span> &gt; <span class="dt">Math</span>.sin <span class="dv">30</span>
 =&gt; -<span class="fl">0.9880316240928618</span>
 <span class="fl">2.0</span>.<span class="dv">0</span>-p353 :<span class="dv">005</span> &gt;</code></pre></div>
@@ -1261,7 +1260,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
     <span class="va">document</span>.<span class="at">write</span>(result)<span class="op">;</span>
 <span class="op">}</span>
 <span class="at">calc</span>(<span class="dv">3</span><span class="op">,</span><span class="dv">4</span>)<span class="op">;</span></code></pre></div>
-<p>但是从某种程度上来说，我们的calc做了计算的事又做了输出的事，总的来说设计上有些不好。</p>
+<p>但是从某种程度上来说，我们的 calc 做了计算的事又做了输出的事，总的来说设计上有些不好。</p>
 <h4 id="重新设计">重新设计</h4>
 <p>我们将输出的工作移到函数的外面，</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="at">calc</span>(tang<span class="op">,</span>num)<span class="op">{</span>
@@ -1276,23 +1275,23 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
     <span class="va">document</span>.<span class="at">write</span>(<span class="at">calc</span>(tang<span class="op">,</span>num))<span class="op">;</span>
 <span class="op">}</span>
 <span class="at">printResult</span>(<span class="dv">3</span><span class="op">,</span> <span class="dv">4</span>)</code></pre></div>
-<p>看上去更专业了一点点，如果我们只需要计算的时候我们只需要调用calc，如果我们需要输出的时候我们就调用printResult的方法。</p>
-<h4 id="object和函数">object和函数</h4>
-<p>我们还没有说清楚之前我们遇到过的document.write以及Math.sin的语法为什么看上去很奇怪，所以让我们看看他们到底是什么，修改app.js为以下内容</p>
+<p>看上去更专业了一点点，如果我们只需要计算的时候我们只需要调用 calc，如果我们需要输出的时候我们就调用 printResult 的方法。</p>
+<h4 id="object-和函数">object 和函数</h4>
+<p>我们还没有说清楚之前我们遇到过的 document.write 以及 Math.sin 的语法为什么看上去很奇怪，所以让我们看看他们到底是什么，修改 app.js 为以下内容</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="va">document</span>.<span class="at">write</span>(<span class="kw">typeof</span> document)<span class="op">;</span>
 <span class="va">document</span>.<span class="at">write</span>(<span class="kw">typeof</span> Math)<span class="op">;</span></code></pre></div>
-<p>typeof document会返回document的数据类型，就会发现输出的结果是</p>
+<p>typeof document 会返回 document 的数据类型，就会发现输出的结果是</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript">object object</code></pre></div>
-<p>所以我们需要去弄清楚什么是object。对象的定义是</p>
+<p>所以我们需要去弄清楚什么是 object。对象的定义是</p>
 <blockquote>
-无序属性的集合，其属性可以包含基本值、对象或者函数。
+<p>无序属性的集合，其属性可以包含基本值、对象或者函数。</p>
 </blockquote>
-<p>创建一个object，然后观察这便是我们接下来要做的</p>
+<p>创建一个 object，然后观察这便是我们接下来要做的</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript">store<span class="op">={};</span>
 <span class="va">store</span>.<span class="at">tang</span><span class="op">=</span><span class="dv">4</span><span class="op">;</span>
 <span class="va">store</span>.<span class="at">num</span><span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <span class="va">document</span>.<span class="at">write</span>(<span class="va">store</span>.<span class="at">tang</span><span class="op">*</span><span class="va">store</span>.<span class="at">num</span>)<span class="op">;</span></code></pre></div>
-<p>我们就有了和document.write一样的用法，这也是对象的美妙之处，只是这里的对象只是包含着基本值，因为</p>
+<p>我们就有了和 document.write 一样的用法，这也是对象的美妙之处，只是这里的对象只是包含着基本值，因为</p>
 <pre><code>typeof story.tang=&quot;number&quot;</code></pre>
 <p>一个包含对象的对象应该是这样子的。</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript">store<span class="op">={};</span>
@@ -1303,8 +1302,8 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <span class="kw">var</span> wall<span class="op">=</span><span class="kw">new</span> <span class="at">Object</span>()<span class="op">;</span>
 <span class="va">wall</span>.<span class="at">store</span><span class="op">=</span>store<span class="op">;</span>
 <span class="va">document</span>.<span class="at">write</span>(<span class="kw">typeof</span> <span class="va">wall</span>.<span class="at">store</span>)<span class="op">;</span></code></pre></div>
-<p>而我们用到的document.write和上面用到的document.writeln都是属于这个无序属性集合中的函数。</p>
-<p>下面代码说的就是这个无序属性集中中的函数。</p>
+<p>而我们用到的 document.write 和上面用到的 document.writeln 都是属于这个无序属性集合中的函数。</p>
+<p>下面代码说的就是这个无序属性集合中的函数。</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> IO<span class="op">=</span><span class="kw">new</span> <span class="at">Object</span>()<span class="op">;</span>
 <span class="kw">function</span> <span class="at">print</span>(result)<span class="op">{</span>
     <span class="va">document</span>.<span class="at">write</span>(result)<span class="op">;</span>
@@ -1312,11 +1311,11 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <span class="va">IO</span>.<span class="at">print</span><span class="op">=</span>print<span class="op">;</span>
 <span class="va">IO</span>.<span class="at">print</span>(<span class="st">&quot;a obejct with function&quot;</span>)<span class="op">;</span>
 <span class="va">IO</span>.<span class="at">print</span>(<span class="kw">typeof</span> <span class="va">IO</span>.<span class="at">print</span>)<span class="op">;</span></code></pre></div>
-<p>我们定义了一个叫IO的对象，声明对象可以用</p>
+<p>我们定义了一个叫 IO 的对象，声明对象可以用</p>
 <pre><code>var store={};</code></pre>
 <p>又或者是</p>
 <pre><code>var store=new Object{};</code></pre>
-<p>两者是等价的，但是用后者的可读性会更好一点，我们定义了一个叫print的函数，他的作用也就是document.write，IO中的print函数是等价于print()函数，这也就是对象和函数之间的一些区别，对象可以包含函数，对象是无序属性的集合，其属性可以包含基本值、对象或者函数。</p>
+<p>两者是等价的，但是用后者的可读性会更好一点，我们定义了一个叫print的函数，他的作用也就是 document.write，IO 中的print 函数是等价于 print() 函数，这也就是对象和函数之间的一些区别，对象可以包含函数，对象是无序属性的集合，其属性可以包含基本值、对象或者函数。</p>
 <p>复杂一点的对象应该是下面这样的一种情况。</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> Person<span class="op">={</span><span class="dt">name</span><span class="op">:</span><span class="st">&quot;phodal&quot;</span><span class="op">,</span><span class="dt">weight</span><span class="op">:</span><span class="dv">50</span><span class="op">,</span><span class="dt">height</span><span class="op">:</span><span class="dv">166</span><span class="op">};</span>
 <span class="kw">function</span> <span class="at">dream</span>()<span class="op">{</span>
@@ -1345,14 +1344,14 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <span class="va">document</span>.<span class="at">write</span>(<span class="kw">typeof</span> person<span class="op">+</span><span class="st">&quot;&lt;br&gt;&quot;</span>)<span class="op">;</span>
 <span class="va">document</span>.<span class="at">write</span>(<span class="kw">typeof</span> <span class="va">person</span>.<span class="at">future</span><span class="op">+</span><span class="st">&quot;&lt;br&gt;&quot;</span>)<span class="op">;</span>
 <span class="va">document</span>.<span class="at">write</span>(<span class="va">person</span>.<span class="at">future</span>()<span class="op">+</span><span class="st">&quot;&lt;br&gt;&quot;</span>)<span class="op">;</span></code></pre></div>
-<p>只是在这个时候Person是一个函数，但是我们声明的person却变成了一个对象<strong>一个Javascript函数也是一个对象，并且，所有的对象从技术上讲也只不过是函数。</strong>这里的“&lt;br&gt;”是HTML中的元素，称之为DOM，在这里起的是换行的作用，我们会在稍后介绍它，这里我们先关心下this。this关键字表示函数的所有者或作用域，也就是这里的Person。</p>
+<p>只是在这个时候 Person 是一个函数，但是我们声明的 person 却变成了一个对象 <strong>一个Javascript函数也是一个对象，并且，所有的对象从技术上讲也只不过是函数。</strong> 这里的“&lt;br&gt;”是 HTML 中的元素，称之为 DOM，在这里起的是换行的作用，我们会在稍后介绍它，这里我们先关心下 this。this 关键字表示函数的所有者或作用域，也就是这里的 Person。</p>
 <p>上面的方法显得有点不可取，换句话说和一开始的</p>
 <pre><code>document.write(3*4);</code></pre>
 <p>一样，不具有灵活性，因此在我们完成功能之后，我们需要对其进行优化，这就是程序设计的真谛——解决完实际问题后，我们需要开始真正的设计，而不是解决问题时的编程。</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> Person<span class="op">=</span><span class="kw">function</span>(name<span class="op">,</span>weight<span class="op">,</span>height)<span class="op">{</span>
     <span class="kw">this</span>.<span class="at">name</span><span class="op">=</span>name<span class="op">;</span>
     <span class="kw">this</span>.<span class="at">weight</span><span class="op">=</span>weight<span class="op">;</span>
-    <span class="kw">this</span>.<span class="at">height</span><span class="op">=</span>height<span class="op">;</span> 
+    <span class="kw">this</span>.<span class="at">height</span><span class="op">=</span>height<span class="op">;</span>
     <span class="kw">this</span>.<span class="at">future</span><span class="op">=</span><span class="kw">function</span>()<span class="op">{</span>
         <span class="cf">return</span> <span class="st">&quot;future&quot;</span><span class="op">;</span>
     <span class="op">};</span>
@@ -1362,9 +1361,9 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <span class="va">document</span>.<span class="at">write</span>(<span class="va">phodal</span>.<span class="at">weight</span><span class="op">+</span><span class="st">&quot;&lt;br&gt;&quot;</span>)<span class="op">;</span>
 <span class="va">document</span>.<span class="at">write</span>(<span class="va">phodal</span>.<span class="at">height</span><span class="op">+</span><span class="st">&quot;&lt;br&gt;&quot;</span>)<span class="op">;</span>
 <span class="va">document</span>.<span class="at">write</span>(<span class="va">phodal</span>.<span class="at">future</span>()<span class="op">+</span><span class="st">&quot;&lt;br&gt;&quot;</span>)<span class="op">;</span></code></pre></div>
-<p>于是，产生了这样一个可重用的Javascript对象,this关键字确立了属性的所有者。</p>
+<p>于是，产生了这样一个可重用的 JavaScript 对象, this 关键字确立了属性的所有者。</p>
 <h3 id="其他">其他</h3>
-<p>Javascript还有一个很强大的特性，也就是原型继承，不过这里我们先不考虑这些部分，用尽量少的代码及关键字来实际我们所要表达的核心功能，这才是这里的核心，其他的东西我们可以从其他书本上学到。</p>
+<p>JavaScript 还有一个很强大的特性，也就是原型继承，不过这里我们先不考虑这些部分，用尽量少的代码及关键字来实际我们所要表达的核心功能，这才是这里的核心，其他的东西我们可以从其他书本上学到。</p>
 <p>所谓的继承，</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> Chinese<span class="op">=</span><span class="kw">function</span>()<span class="op">{</span>
     <span class="kw">this</span>.<span class="at">country</span><span class="op">=</span><span class="st">&quot;China&quot;</span><span class="op">;</span>
@@ -1373,7 +1372,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <span class="kw">var</span> Person<span class="op">=</span><span class="kw">function</span>(name<span class="op">,</span>weight<span class="op">,</span>height)<span class="op">{</span>
     <span class="kw">this</span>.<span class="at">name</span><span class="op">=</span>name<span class="op">;</span>
     <span class="kw">this</span>.<span class="at">weight</span><span class="op">=</span>weight<span class="op">;</span>
-    <span class="kw">this</span>.<span class="at">height</span><span class="op">=</span>height<span class="op">;</span> 
+    <span class="kw">this</span>.<span class="at">height</span><span class="op">=</span>height<span class="op">;</span>
     <span class="kw">this</span>.<span class="at">futrue</span><span class="op">=</span><span class="kw">function</span>()<span class="op">{</span>
         <span class="cf">return</span> <span class="st">&quot;future&quot;</span><span class="op">;</span>
     <span class="op">}</span>
@@ -1382,14 +1381,14 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 
 <span class="kw">var</span> phodal<span class="op">=</span><span class="kw">new</span> <span class="at">Chinese</span>(<span class="st">&quot;phodal&quot;</span><span class="op">,</span><span class="dv">50</span><span class="op">,</span><span class="dv">166</span>)<span class="op">;</span>
 <span class="va">document</span>.<span class="at">write</span>(<span class="va">phodal</span>.<span class="at">country</span>)<span class="op">;</span></code></pre></div>
-<p>完整的Javascript应该由下列三个部分组成:</p>
+<p>完整的 JavaScript 应该由下列三个部分组成:</p>
 <ul>
 <li>核心(ECMAScript)——核心语言功能</li>
 <li>文档对象模型(DOM)——访问和操作网页内容的方法和接口</li>
 <li>浏览器对象模型(BOM)——与浏览器交互的方法和接口</li>
 </ul>
-<p>我们在上面讲的都是ECMAScript，也就是语法相关的，但是JS真正强大的，或者说我们最需要的可能就是对DOM的操作，这也就是为什么jQuery等库可以流行的原因之一，而核心语言功能才是真正在哪里都适用的，至于BOM，真正用到的机会很少，因为没有完善的统一的标准。</p>
-<p>一个简单的DOM示例,</p>
+<p>我们在上面讲的都是 ECMAScript，也就是语法相关的，但是 JS 真正强大的，或者说我们最需要的可能就是对 DOM 的操作，这也就是为什么 jQuery 等库可以流行的原因之一，而核心语言功能才是真正在哪里都适用的，至于 BOM，真正用到的机会很少，因为没有完善的统一的标准。</p>
+<p>一个简单的 DOM 示例,</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
 <span class="kw">&lt;html&gt;</span>
 <span class="kw">&lt;head&gt;</span>
@@ -1402,17 +1401,17 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <span class="kw">&lt;/body&gt;</span>
     <span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span><span class="ot"> src=</span><span class="st">&quot;app.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span>
 <span class="kw">&lt;/html&gt;</span></code></pre></div>
-<p>我们需要修改一下helloworld.html添加</p>
+<p>我们需要修改一下 helloworld.html 添加</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> id=</span><span class="st">&quot;para&quot;</span><span class="ot"> style=</span><span class="st">&quot;color:red&quot;</span><span class="kw">&gt;</span>Red<span class="kw">&lt;/p&gt;</span></code></pre></div>
-<p>同时还需要将script标签移到body下面，如果没有意外的话我们会看到页面上用红色的字体显示Red，修改app.js。</p>
+<p>同时还需要将 script 标签移到 body 下面，如果没有意外的话我们会看到页面上用红色的字体显示 Red，修改 app.js。</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> para<span class="op">=</span><span class="va">document</span>.<span class="at">getElementById</span>(<span class="st">&quot;para&quot;</span>)<span class="op">;</span>
 <span class="va">para</span>.<span class="va">style</span>.<span class="at">color</span><span class="op">=</span><span class="st">&quot;blue&quot;</span><span class="op">;</span></code></pre></div>
-<p>接着，字体就变成了蓝色，有了DOM我们就可以对页面进行操作，可以说我们看到的绝大部分的页面效果都是通过DOM操作实现的。</p>
+<p>接着，字体就变成了蓝色，有了 DOM 我们就可以对页面进行操作，可以说我们看到的绝大部分的页面效果都是通过 DOM 操作实现的。</p>
 <h4 id="美妙之处-1">美妙之处</h4>
-<p>这里说到的Javascript仅仅只是其中的一小小部分，忽略掉的东西很多，只关心的是如何去设计一个实用的app，作为一门编程语言，他还有其他强大的内制函数，要学好需要一本有价值的参考书。这里提到的只是其中的不到20%的东西，其他的80%或者更多会在你解决问题的时候出现。</p>
+<p>这里说到的 JavaScript 仅仅只是其中的一小小部分，忽略掉的东西很多，只关心的是如何去设计一个实用的 app，作为一门编程语言，他还有其他强大的内制函数，要学好需要一本有价值的参考书。这里提到的只是其中的不到20%的东西，其他的80%或者更多会在你解决问题的时候出现。</p>
 <ul>
 <li>我们可以创建一个对象或者函数，它可以包含基本值、对象或者函数。</li>
-<li>我们可以用Javascript修改页面的属性，虽然只是简单的示例。</li>
+<li>我们可以用 JavaScript 修改页面的属性，虽然只是简单的示例。</li>
 <li>我们还可以去解决实际的编程问题。</li>
 </ul>
 <h1 id="前端与后台">前端与后台</h1>
