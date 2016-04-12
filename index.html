@@ -1509,7 +1509,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 }</code></pre></div>
 <p>在多数时候，Controller不应该直接与数据层的一部分，而将业务逻辑放在Controller层又是一种错误，这时就有了Service层，如下图：</p>
 <figure>
-<img src="chapters/images/service-mvc.png" alt="Service MVC" /><figcaption>Service MVC</figcaption>
+<img src="chapters/chapter2/service-mvc.png" alt="Service MVC" /><figcaption>Service MVC</figcaption>
 </figure>
 <p>Domain（业务）是一个相当复杂的层级，这里是业务的核心。一个合理的Controller只应该做自己应该做的事，它不应该处理业务相关的代码：</p>
 <p>我们在Controller层应该做的事是：</p>
@@ -1590,7 +1590,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>产生这种服务的主要原因之一是因为移动应用的流行。在移动应用中，我们实际上只需要一个API接口来连接数据库，并作一些相应的业务逻辑处理。对于不同的应用产商来说，他们打造API的方式可能稍有不同，然而他们都只是将后台作为一个服务。</p>
 <p>在一些更特殊的例子里，即有网页版和移动应用端，他们也开始使用同一个API。前端作为一个单页面的应用，或者有后台渲染的应用。其架构如下图所示：</p>
 <figure>
-<img src="chapters/images/baas-diagram.png" alt="Backend As A Service" /><figcaption>Backend As A Service</figcaption>
+<img src="chapters/chapter2/baas-diagram.png" alt="Backend As A Service" /><figcaption>Backend As A Service</figcaption>
 </figure>
 <h3 id="api演进史">API演进史</h3>
 <p>在早期的工作中，我们会发现我们会将大量的业务逻辑放置到View层——如迭代出某个结果。</p>

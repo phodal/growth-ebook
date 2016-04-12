@@ -1673,7 +1673,7 @@ public ModelAndView processUserDisable(HttpServletRequest request, ModelMap mode
 
 在多数时候，Controller不应该直接与数据层的一部分，而将业务逻辑放在Controller层又是一种错误，这时就有了Service层，如下图：
 
-![Service MVC](chapters/images/service-mvc.png)
+![Service MVC](chapters/chapter2/service-mvc.png)
 
 Domain（业务）是一个相当复杂的层级，这里是业务的核心。一个合理的Controller只应该做自己应该做的事，它不应该处理业务相关的代码：
 
@@ -1777,7 +1777,7 @@ MVVM 在使用当中，通常还会利用双向绑定技术，使得 Model 变�
 
 在一些更特殊的例子里，即有网页版和移动应用端，他们也开始使用同一个API。前端作为一个单页面的应用，或者有后台渲染的应用。其架构如下图所示：
 
-![Backend As A Service](chapters/images/baas-diagram.png)
+![Backend As A Service](chapters/chapter2/baas-diagram.png)
 
 ###API演进史
 
