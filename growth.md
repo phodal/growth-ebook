@@ -4382,7 +4382,7 @@ So，如何开始修改代码？
 
 总结在某种意义上相当于自己对自己的反馈：
 
-![Output is Input](chapters/images/output-input.png)
+![Output is Input](chapters/chapter8/output-input.png)
 
 当我们向自己输入更多反馈的时候，我们就可以更好地调整我们的方向。它属于输出的一部分，而我们也在不断调整我们的输入的时候，我们也在导向更好地输出。
 
@@ -4492,7 +4492,7 @@ MVC模式本身也是接于分层而设计的，如下图是Spring MVC的请求�
 
 而下图算是最近两年来想要的一个答案：
 
-![浮现式设计](chapters/images/emergent-design.jpg)
+![浮现式设计](chapters/chapter8/emergent-design.jpg)
 
 浮现式设计是一种敏捷技术，强调在开发过程中不断演进。软件本身就不应该是一开始就设计好的，他需要经历一个演化的过程。
 
