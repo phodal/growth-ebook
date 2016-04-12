@@ -70,7 +70,7 @@ Django版: [Growth In Action Django](https://github.com/phodal/growth-in-action-
     *   [HTML](http://growth.phodal.com/#html)
         *   [hello,world](http://growth.phodal.com/#helloworld)
         *   [中文？](http://growth.phodal.com/#中文)
-        *   [其他 html 标记](http://growth.phodal.com/#其他html标记)
+        *   [其他 HTML 标记](http://growth.phodal.com/#其他html标记)
         *   [小结](http://growth.phodal.com/#小结-1)
     *   [CSS](http://growth.phodal.com/#css)
         *   [简介](http://growth.phodal.com/#简介)
