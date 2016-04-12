@@ -125,7 +125,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#html">HTML</a><ul>
 <li><a href="#helloworld">hello,world</a></li>
 <li><a href="#中文">中文？</a></li>
-<li><a href="#其他html标记">其他html标记</a></li>
+<li><a href="#其他html标记">其他HTML标记</a></li>
 <li><a href="#小结-1">小结</a></li>
 </ul></li>
 <li><a href="#css">CSS</a><ul>
@@ -851,11 +851,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>《<a href="http://taligarsiel.com/Projects/howbrowserswork1.htm">How browsers work</a>》</li>
 </ul>
 <h2 id="html">HTML</h2>
-<p>让我们先从身边的语言下手，也就是现在无处不在的html+javascript+css。</p>
-<p>之所以从html开始，是因为我们不需要配置一个复杂的开发环境，也许你还不知道开发环境是什么东西，不过这也没关系，毕竟这些知识需要慢慢的接触才能有所了解，尤其是对于普通的业余爱好者来说，当然，对于专业选手言自然不是问题。HTML是Web的核心语言，也算是比较基础的语言。</p>
+<p>让我们先从身边的语言下手，也就是现在无处不在的HTML+Javascript+CSS。</p>
+<p>之所以从HTML开始，是因为我们不需要配置一个复杂的开发环境，也许你还不知道开发环境是什么东西，不过这也没关系，毕竟这些知识需要慢慢的接触才能有所了解，尤其是对于普通的业余爱好者来说，当然，对于专业选手言自然不是问题。HTML是Web的核心语言，也算是比较基础的语言。</p>
 <h3 id="helloworld">hello,world</h3>
 <p>hello,world是一个传统，所以在这里也遵循这个有趣的传统，我们所要做的事情其实很简单，虽然也有一点点hack的感觉。——让我们先来新建一个文并命名为“helloworld.html”。</p>
-<p>(PS:大部分人应该都是在windows环境下工作的，所以你需要新建一个文本，然后重命名，或者你需要一个编辑器，在这里我们推荐用<strong>sublime text</strong>。破解不破解，注册不注册都不会对你的使用有太多的影响。)</p>
+<p>(PS:大部分人应该都是在Windows环境下工作的，所以你需要新建一个文本，然后重命名，或者你需要一个编辑器，在这里我们推荐用<strong>Sublime Text</strong>。破解不破解，注册不注册都不会对你的使用有太多的影响。)</p>
 <ol type="1">
 <li><p>新建文件</p></li>
 <li>输入
@@ -863,15 +863,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><p>保存为-&gt;“helloworld.html”，</p></li>
 <li><p>双击打开这个文件。 正常情况下都应该是用你的默认浏览器打开。只要是一个正常工作的现代浏览器，都应该可以看到上面显示的是“Hello,world”。</p></li>
 </ol>
-<p>这才是最短的hello,world程序，但是呢？在ruby中会是这样子的</p>
+<p>这才是最短的hello,world程序，但是呢？在Ruby中会是这样子的</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">2.0.0-p353</span> :001 <span class="kw">&gt;</span> p <span class="st">&quot;hello,world&quot;</span>
 <span class="st">&quot;hello,world&quot;</span>
     =<span class="kw">&gt;</span> <span class="st">&quot;hello,world&quot;</span>
 <span class="kw">2.0.0-p353</span> :002 <span class="kw">&gt;</span></code></pre></div>
-<p>等等，如果你了解过html的话，会觉得这一点都不符合语法规则，但是他工作了，没有什么比安装完Nginx后看到It works!更让人激动了。</p>
+<p>等等，如果你了解过HTML的话，会觉得这一点都不符合语法规则，但是他工作了，没有什么比安装完Nginx后看到It works!更让人激动了。</p>
 <p>遗憾的是，它可能无法在所有的浏览器上工作，所以我们需要去调试其中的bug。</p>
 <h4 id="调试helloworld">调试hello,world</h4>
-<p>我们会发现我们的代码在浏览器中变成了下面的代码，如果你和我一样用的是chrome，那么你可以右键浏览器中的空白区域，点击审查元素，就会看到下面的代码。</p>
+<p>我们会发现我们的代码在浏览器中变成了下面的代码，如果你和我一样用的是Chrome，那么你可以右键浏览器中的空白区域，点击审查元素，就会看到下面的代码。</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;html&gt;</span>
     <span class="kw">&lt;head&gt;&lt;/head&gt;</span>
     <span class="kw">&lt;body&gt;</span>hello,world<span class="kw">&lt;/body&gt;</span>
@@ -907,7 +907,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="er">&lt;</span>结束语言&gt;</code></pre></div>
 <p>于是我们看到的结果便是</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="er">&lt;</span>语言&gt; <span class="er">&lt;</span>头&gt; <span class="er">&lt;</span>身体&gt;你好，世界</code></pre></div>
-<p>被chrome浏览器解析成什么样了？</p>
+<p>被Chrome浏览器解析成什么样了？</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;</span><span class="er">&lt;</span>语言&gt;
         <span class="er">&lt;</span>头&gt;<span class="co">&lt;!--头--&gt;</span>
         <span class="er">&lt;</span>身体&gt;你好，世界<span class="co">&lt;!--身体--&gt;</span>
@@ -930,8 +930,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>现有的系统都是基于英语语言环境构建的，对中文支持不是很友好。</li>
 <li>中文输入的速度在某种程度上来说没有英语快。</li>
 </ol>
-<p>我们离开话题已经很远了，但是这里说的都是针对于那些不满于英语的人来说的，只有当我们可以从头构建一个中文系统的时候才是可行的，而这些就要将cpu、软件、硬件都包含在内，甚至我们还需要考虑重新设计cpu的结构，在某种程度上来说会有些不现实。或许，需要一代又一代人的努力。忘记那些吧，师夷长之技以治夷。</p>
-<h3 id="其他html标记">其他html标记</h3>
+<p>我们离开话题已经很远了，但是这里说的都是针对于那些不满于英语的人来说的，只有当我们可以从头构建一个中文系统的时候才是可行的，而这些就要将CPU、软件、硬件都包含在内，甚至我们还需要考虑重新设计CPU的结构，在某种程度上来说会有些不现实。或许，需要一代又一代人的努力。忘记那些吧，师夷之长技以制夷。</p>
+<h3 id="其他html标记">其他HTML标记</h3>
 <p>添加一个标题，</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;html&gt;</span>
     <span class="kw">&lt;head&gt;</span>
@@ -958,7 +958,7 @@ hello,world
 <p>更多的东西可以在一些书籍上看到，这边所要说的只是一次简单的语言入门，其他的东西都和这些类似。</p>
 <h3 id="小结-1">小结</h3>
 <h4 id="美妙之处">美妙之处</h4>
-<p>我们简单地上手了一门不算是语言的语言，浏览器简化了这其中的大部分过程，虽然没有C和其他语言来得有专业感，但是我们试着去开始写代码了。我们可能在未来的某一篇中可能会看到类似的语言，诸如python，我们所要做的就是</p>
+<p>我们简单地上手了一门不算是语言的语言，浏览器简化了这其中的大部分过程，虽然没有C和其他语言来得有专业感，但是我们试着去开始写代码了。我们可能在未来的某一篇中可能会看到类似的语言，诸如Python，我们所要做的就是</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">python</span> file.py
 =<span class="kw">&gt;hello</span>,world</code></pre></div>
 <p>然后在终端上返回结果。只是因为在我看来学会html是有意义的，简单的上手，然后再慢慢地深入，如果一开始我们就去理解指针，开始去理解类。我们甚至还知道程序是怎么编译运行的时候，在这个过程中又发生了什么。虽然现在我们也没能理解这其中发生了什么，但是至少展示了</p>
@@ -969,7 +969,7 @@ hello,world
 <li>随身的工具才是最好的，最常用的code也才是实在的。</li>
 </ol>
 <h4 id="更多">更多</h4>
-<p>我们还没有试着去解决“某商店里的糖一颗5块钱，小明买了3颗糖，小明一共花了多少钱”的问题。也就是说我们学会的是一个还不能解决实际问题的语言，于是我们还需要学点东西，比如javascript,css。我们可以将Javascript理解为解决问题的语言，html则是前端显示，css是配置文件，这样的话，我们会在那之后学会成为一个近乎专业的程序员。我们刚刚学习了一下怎么在前端显示那些代码的行为，于是我们还需要Javascript。</p>
+<p>我们还没有试着去解决“某商店里的糖一颗5块钱，小明买了3颗糖，小明一共花了多少钱”的问题。也就是说我们学会的是一个还不能解决实际问题的语言，于是我们还需要学点东西，比如Javascript, CSS。我们可以将Javascript理解为解决问题的语言，HTML则是前端显示，CSS是配置文件，这样的话，我们会在那之后学会成为一个近乎专业的程序员。我们刚刚学习了一下怎么在前端显示那些代码的行为，于是我们还需要Javascript。</p>
 <h2 id="css">CSS</h2>
 <p>如果说HTML是建筑的框架，CSS就是房子的装修。那么Javascript呢，我听到的最有趣的说法是小三——还是先让我们回到代码上来吧。</p>
 <p>下面就是我们之前说到的代码，css将Red三个字母变成了红色。</p>
