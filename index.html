@@ -1957,11 +1957,11 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <pre><code>$ git status</code></pre>
 <p>来看现在的状态，如下图是添加之前的：</p>
 <figure>
-<img src="chapters/images/before-add.png" alt="Before add" /><figcaption>Before add</figcaption>
+<img src="chapters/chapter3/before-add.png" alt="Before add" /><figcaption>Before add</figcaption>
 </figure>
 <p>下面是添加之后 的</p>
 <figure>
-<img src="chapters/images/after-add.png" alt="After add" /><figcaption>After add</figcaption>
+<img src="chapters/chapter3/after-add.png" alt="After add" /><figcaption>After add</figcaption>
 </figure>
 <p>可以看到状态的变化是从黄色到绿色，即unstage到add。</p>
 <p>在完成添加之后，我们就可以写入相应的提交信息——如这次修改添加了什么内容 、这次修改修复了什么问题等等。在我们的工作流程里，我们使用Jira这样的工具来管理我们的项目，也会在我们的Commit Message里写上作者的名字，如下：</p>
@@ -2110,7 +2110,7 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <h3 id="测试金字塔">测试金字塔</h3>
 <p>测试金字塔是由Mike Cohn提出的，主要观点是：底层单元测试应多于依赖GUI的高层端到端测试。其结构图如下所示：</p>
 <figure>
-<img src="chapters/images/test-pyramid.png" alt="测试金字塔" /><figcaption>测试金字塔</figcaption>
+<img src="chapters/chapter3/test-pyramid.png" alt="测试金字塔" /><figcaption>测试金字塔</figcaption>
 </figure>
 <p>从结构上来说，上面的金字塔可以分成三部分：</p>
 <ol type="1">
@@ -2428,7 +2428,7 @@ public void setNumber(String number) {
 System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;amount&quot;</span> + amount);</code></pre></div>
 <p>按下上述的快捷键，会弹出下面的对话框</p>
 <figure>
-<img src="chapters/images/extract-method.png" alt="Extrct Method" /><figcaption>Extrct Method</figcaption>
+<img src="chapters/chapter3/extract-method.png" alt="Extrct Method" /><figcaption>Extrct Method</figcaption>
 </figure>
 <p>输入</p>
 <pre><code> printDetails</code></pre>
@@ -2504,7 +2504,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 }</code></pre></div>
 <p>在<code>add(one,two)</code>很愉快地按上个快捷键吧，就会弹出</p>
 <figure>
-<img src="chapters/images/inline.jpg" alt="Inline Method" /><figcaption>Inline Method</figcaption>
+<img src="chapters/chapter3/inline.jpg" alt="Inline Method" /><figcaption>Inline Method</figcaption>
 </figure>
 <p>再轻轻地回车，Refactor就这么结束了。。</p>
 <p><strong>Intellij Idea 内联临时变量</strong></p>
@@ -2541,7 +2541,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p><strong>重构</strong></p>
 <p>选中<code>basePrice</code>很愉快地拿鼠标点上面的重构</p>
 <figure>
-<img src="chapters/images/replace.jpg" alt="Replace Temp With Query" /><figcaption>Replace Temp With Query</figcaption>
+<img src="chapters/chapter3/replace.jpg" alt="Replace Temp With Query" /><figcaption>Replace Temp With Query</figcaption>
 </figure>
 <p>便会返回</p>
 <div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">import java.lang.System;</span>

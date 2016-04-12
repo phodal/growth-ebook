@@ -2317,11 +2317,11 @@ $ git status
 
 来看现在的状态，如下图是添加之前的：
 
-![Before add](chapters/images/before-add.png)
+![Before add](chapters/chapter3/before-add.png)
 
 下面是添加之后 的
 
-![After add](chapters/images/after-add.png)
+![After add](chapters/chapter3/after-add.png)
 
 可以看到状态的变化是从黄色到绿色，即unstage到add。
 
@@ -2529,7 +2529,7 @@ Tasking
 
 测试金字塔是由Mike Cohn提出的，主要观点是：底层单元测试应多于依赖GUI的高层端到端测试。其结构图如下所示：
 
-![测试金字塔](chapters/images/test-pyramid.png)
+![测试金字塔](chapters/chapter3/test-pyramid.png)
 
 从结构上来说，上面的金字塔可以分成三部分：
 
@@ -2995,7 +2995,7 @@ System.out.println("amount" + amount);
 
 按下上述的快捷键，会弹出下面的对话框
 
-![Extrct Method](chapters/images/extract-method.png)
+![Extrct Method](chapters/chapter3/extract-method.png)
 
 输入
 
@@ -3105,7 +3105,7 @@ public class extract {
 
 在``add(one,two)``很愉快地按上个快捷键吧，就会弹出
 
-![Inline Method](chapters/images/inline.jpg)
+![Inline Method](chapters/chapter3/inline.jpg)
 
 再轻轻地回车，Refactor就这么结束了。。
 
@@ -3169,7 +3169,7 @@ public class replaceTemp {
 
 选中``basePrice``很愉快地拿鼠标点上面的重构
 
-![Replace Temp With Query](chapters/images/replace.jpg)
+![Replace Temp With Query](chapters/chapter3/replace.jpg)
 
 便会返回
 
