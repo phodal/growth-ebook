@@ -262,6 +262,15 @@ Django版: [Growth In Action Django](https://github.com/phodal/growth-in-action-
         *   [CQRS](http://growth.phodal.com/#cqrs)
         *   [CQRS 结合微服务](http://growth.phodal.com/#cqrs结合微服务)
 
+Contributors
+---
+
+ - [aidewoode](https://github.com/aidewoode)
+ - [Evan Lau](https://github.com/lolosssss)
+ - [loveisbug](https://github.com/loveisbug)
+ - [wangcongyi](https://github.com/wangcongyi)
+ - [wangyufeng0615](https://github.com/wangyufeng0615)
+
 License
 ---
 
