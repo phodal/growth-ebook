@@ -268,7 +268,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#收集数据">收集数据</a></li>
 <li><a href="#分析数据">分析数据</a></li>
 <li><a href="#展示数据">展示数据</a></li>
-<li><a href="#改进">改进</a></li>
 </ul></li>
 <li><a href="#用户数据分析google-analytics">用户数据分析：Google Analytics</a><ul>
 <li><a href="#受众群体">受众群体</a></li>
@@ -2908,7 +2907,6 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>收集数据</li>
 <li>分析数据</li>
 <li>展示数据</li>
-<li>改进</li>
 </ul>
 <p>值得注意的是：在分析数据的过程中，需要不同的人员来参与，需要跨域多个领域的知识点——分析、设计、开发、商业和研究等领域。因此，在这样的领域里，回归敏捷也是一种不错的选择（源于：《敏捷数据科学》）：</p>
 <ul>
@@ -2929,16 +2927,9 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>在一些以科学研究为目的的数据收集中，我们可以从一些公开的数据中获取这些资料。</p>
 <p>而在一些特殊的情况里，我们就需要通过爬虫来完成这样的工作。</p>
 <h3 id="分析数据">分析数据</h3>
-<p>现在，我们终于可以真正的去分析数据了——我的意思是，我们要开始写代码了。</p>
-<h4 id="hadoop-分析数据">Hadoop 分析数据</h4>
-<blockquote>
-<p>Hadoop 是一个由 Apache 基金会所开发的分布式系统基础架构。它可以让用户可以在不了解分布式底层细节的情况下，开发分布式程序。充分利用集群的威力进行高速运算和存储。</p>
-</blockquote>
-<p>Hadoop 的框架最核心的设计就是：HDFS 和 MapReduce。HDFS 为海量的数据提供了存储，则 MapReduce 为海量的数据提供了计算。</p>
-<p>HDF 是一个分布式文件系统（Hadoop Distributed File System）。它有高容错性的特点，并且设计用来部署在低廉的（low-cost）硬件上；而且它提供高吞吐量（high throughput）来访问应用程序的数据，适合那些有着超大数据集（large data set）的应用程序。同时，HDFS 放宽了（relax）POSIX 的要求，可以以流的形式访问（streaming access）文件系统中的数据。</p>
-<p>MapReduce 是 Google 提出的一个软件架构，用于大规模数据集（大于1TB）的并行运算。概念“Map（映射）”和“Reduce（归纳）”，及他们的主要思想，都是从函数式编程语言借来的，还有从矢量编程语言借来的特性。</p>
+<p>现在，我们终于可以真正的去分析数据了——我的意思是，我们要开始写代码了。从海量的数据中过滤出我们想要的数据，并通过算法来对其进行分析。</p>
+<p>不过一般来说，我们都利用现有的工具来完成大部分的工作，而这取决于我们如要分析的数据的数量级了。如果只是一般的数量 级，我们可以考虑用R语言、Python、Octave等单机工具来完成。如果是大数据，那么我们就需要考虑用Hadoop、Spark来完成这个级别的工作。</p>
 <h3 id="展示数据">展示数据</h3>
-<h3 id="改进">改进</h3>
 <p>参考来源: <strong>精益数据分析</strong>。</p>
 <h2 id="用户数据分析google-analytics">用户数据分析：Google Analytics</h2>
 <p>Google Analytics 是一个非常赞的分析工具，而且它不仅仅可以用于 Web 应用，也可以用于移动应用。</p>
