@@ -2329,8 +2329,8 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
    <span class="bu">print</span> <span class="st">&#39;Current fruit :&#39;</span>, i</code></pre></div>
 <p>那如果换成下面的代码会不会更容易阅读呢？</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">fruits <span class="op">=</span> [<span class="st">&#39;banana&#39;</span>, <span class="st">&#39;apple&#39;</span>,  <span class="st">&#39;mango&#39;</span>]
-<span class="cf">for</span> i <span class="op">in</span> fruits:        <span class="co"># Second Example</span>
-   <span class="bu">print</span> <span class="st">&#39;Current fruit :&#39;</span>, i</code></pre></div>
+<span class="cf">for</span> fruit <span class="op">in</span> fruits:        <span class="co"># Second Example</span>
+   <span class="bu">print</span> <span class="st">&#39;Current fruit :&#39;</span>, fruit</code></pre></div>
 <p>而命令还存在于对函数的命名上，如我们可能会用getNumber来表示去获取一个数值，但是要知道这样的命名并不是在所有的语言中都可以这样用。如在Java中存在getter和setter这种模式，如下的代码所示：</p>
 <pre><code>public String getNumber() {
   return number;
