@@ -386,7 +386,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h4 id="cgi">CGI</h4>
 <p>二十年前的网站以静态的形式出现，这样的网站并不需要太多的人去维护、管理。接着，人们发明了CGI(通用网关接口，英语：Common Gateway Interface)来实现动态的网站。下图是一个早期网站的架构图：</p>
 <figure>
-<img src="chapters/prelude/cgi-arch.gif" alt="CGI网站架构" /><figcaption>CGI网站架构</figcaption>
+<img src="assets/article/prelude/cgi-arch.gif" alt="CGI网站架构" /><figcaption>CGI网站架构</figcaption>
 </figure>
 <p>当时这种网站的URL类似于：</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">https</span>://www.phodal.com/cgi-bin/getblog</code></pre></div>
@@ -397,55 +397,55 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="kw">echo</span> hello,world</code></pre></div>
 <p>Blabla，各种代码混乱地夹杂在一起。不得不说一句：这样的代码在2012年，我也看了有一些。简单地来说，这个时代的代码结构就是这样的：</p>
 <figure>
-<img src="chapters/prelude/cgi-script.png" alt="CGI脚本文件" /><figcaption>CGI脚本文件</figcaption>
+<img src="assets/article/prelude/cgi-script.png" alt="CGI脚本文件" /><figcaption>CGI脚本文件</figcaption>
 </figure>
 <p>这简直就是一场恶梦。不过，在今天好似那些PHP新手也是这样写代码的。</p>
 <p>好了，这时候我们就可以讨论讨论MVC模式了。</p>
 <h4 id="mvc架构">MVC架构</h4>
 <p>我有理由相信Martin Fowler的《企业应用架构模式》在当时一定非常受欢迎。代码从上面的耦合状态变成了：</p>
 <figure>
-<img src="chapters/prelude/caf_mvc_arch.png" alt="MVC架构" /><figcaption>MVC架构</figcaption>
+<img src="assets/article/prelude/caf_mvc_arch.png" alt="MVC架构" /><figcaption>MVC架构</figcaption>
 </figure>
 <p>相似大家也已经对这样的架构很熟悉了，我们就不多解释了。如果你还不是非常了解的话，可以看看这本书后面的部分。</p>
 <h4 id="后台服务化与前端一致化架构">后台服务化与前端一致化架构</h4>
 <p>在今天看来，我们可以看到如下图所示的架构：</p>
 <figure>
-<img src="chapters/prelude/oneui-serviceful-arch.png" alt="后台服务化与前台一致化架构" /><figcaption>后台服务化与前台一致化架构</figcaption>
+<img src="assets/article/prelude/oneui-serviceful-arch.png" alt="后台服务化与前台一致化架构" /><figcaption>后台服务化与前台一致化架构</figcaption>
 </figure>
 <p>后台在不知不觉中已经被服务化了，即只提供API接口和服务。前端在这时已经尽量地和APP端在结合，使得他们可以保持一致。</p>
 <h3 id="软件开发的核心难题沟通">软件开发的核心难题：沟通</h3>
 <p>软件开发在过去的几十年里都是大公司的专利，小公司根本没有足够的能力去做这样的事。在计算机发明后的几十年里，开发软件是大公司才能做得起的。一般的非技术公司无法定制自己的软件系统，只能去购买现有的软件。而随着技术成本的下降，到了今天一般的小公司也可以雇佣一两个人来做同样的事。这样的演进过程还真是有意思：</p>
 <figure>
-<img src="chapters/prelude/develop-history.png" alt="开发演进" /><figcaption>开发演进</figcaption>
+<img src="assets/article/prelude/develop-history.png" alt="开发演进" /><figcaption>开发演进</figcaption>
 </figure>
 <p>在这其中的每一个过程实质上都是为了解决沟通的问题。从瀑布到敏捷是为了解决组织内沟通的问题，从敏捷到精益不仅仅优化了组织内的沟通问题，还强化了与外部的关系。换句话说，精益结合了一部分的互联网思维。</p>
 <h4 id="瀑布式">瀑布式</h4>
 <p>在最开始的时候，我们预先设计好我们的功能，然后编码，在适当的时候发布我们的软件：</p>
 <figure>
-<img src="chapters/prelude/old-se.jpg" alt="预先式设计的瀑布流" /><figcaption>预先式设计的瀑布流</figcaption>
+<img src="assets/article/prelude/old-se.jpg" alt="预先式设计的瀑布流" /><figcaption>预先式设计的瀑布流</figcaption>
 </figure>
 <p>然而这种开发方式很难应对市场的变化——当我们花费了几年的时间开发出了一个软件，而这个软件是几年前人们才需要的。同时，由于软件开发本身的复杂度的限制，复制的系统在后期需要大量的系统集成工作。这样的集成工作可能要花费上大量的时间——几星期、几个月。</p>
 <figure>
-<img src="chapters/prelude/waterfall-process.png" alt="瀑布流的沟通模型" /><figcaption>瀑布流的沟通模型</figcaption>
+<img src="assets/article/prelude/waterfall-process.png" alt="瀑布流的沟通模型" /><figcaption>瀑布流的沟通模型</figcaption>
 </figure>
 <p>当人们意识到这个问题的时候，开始改进工作流程。出现了敏捷软件开发，这可以解释为什么产品经理会经常改需求。如果一个功能本身是没必要出现的话，那么为什么要花功夫去开发。但是如果一个功能在设计的初期就没有好好设计，那么改需求也是必然的。</p>
 <h4 id="敏捷式">敏捷式</h4>
 <p>现有的互联网公司的工作流程和敏捷软件开发在很多部分上是相似的，都有迭代、分析等等的过程：</p>
 <figure>
-<img src="chapters/prelude/scrum.png" alt="敏捷软件开发" /><figcaption>敏捷软件开发</figcaption>
+<img src="assets/article/prelude/scrum.png" alt="敏捷软件开发" /><figcaption>敏捷软件开发</figcaption>
 </figure>
 <p>但是据我的所知：国内的多数互联网公司是不写测试的、没有Code Review等等。当然，这也不是一篇关于如何实践敏捷的文章。敏捷与瀑布式开发在很大的区别就是：沟通问题。传统的软件开发在调研完毕后就是分析、开发等等。而敏捷开发则会强调这个过程中的沟通问题：</p>
 <figure>
-<img src="chapters/prelude/scrum-communication.png" alt="敏捷软件开发的沟通模型" /><figcaption>敏捷软件开发的沟通模型</figcaption>
+<img src="assets/article/prelude/scrum-communication.png" alt="敏捷软件开发的沟通模型" /><figcaption>敏捷软件开发的沟通模型</figcaption>
 </figure>
 <p>在整个过程中都不断地强调沟通问题，然而这时还存在一个问题：组织结构本身的问题。这样的组织结构，如下图所示：</p>
 <figure>
-<img src="chapters/prelude/scrum-issues.png" alt="组织结构" /><figcaption>组织结构</figcaption>
+<img src="assets/article/prelude/scrum-issues.png" alt="组织结构" /><figcaption>组织结构</figcaption>
 </figure>
 <p>如果市场部门/产品经理没有与研发团队坐一起来分析问题，那么问题就多了。当一个需求在实现的过程中遇到问题，到底是哪个部门的问题？</p>
 <p>同样的如果我们的研发部门是这样子的结构：</p>
 <figure>
-<img src="chapters/prelude/tech-org.png" alt="研发部门" /><figcaption>研发部门</figcaption>
+<img src="assets/article/prelude/tech-org.png" alt="研发部门" /><figcaption>研发部门</figcaption>
 </figure>
 <p>那么在研发、上线的过程中仍然会遇到各种的沟通问题。</p>
 <p>现在，让我们回过头来看看大公司的专家与小公司的全栈。</p>
@@ -460,18 +460,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>而不知你是否也注意到一点：专家们也在强调<strong>“一专多长”</strong>。因为单纯依靠于一个领域的技术而存在的专家已经很少了，技术专家们不得不依据于公司的需求去开拓不同的领域。毕竟“公司是指全部资本由股东出资构成，以营利为目的而依法设立的一种企业组织形式；”，管理人们假设技术本身是相通的，既然你在技术领域里有相当高的长板，那么进入一个新的技术也不是一件难的事。</p>
 <p>作为一个技术人员，我们是这个领域中的某个子领域专家。而作为这样一个专家，我们要扩展向另外一个领域的学习也不是一件很难的事。借鉴于我们先前的学习经验，我们可以很快的掌握这个新子域的知识。如我们所见，我们可以很快地补齐图中的短板：</p>
 <figure>
-<img src="chapters/prelude/bucket.jpg" alt="木桶" /><figcaption>木桶</figcaption>
+<img src="assets/article/prelude/bucket.jpg" alt="木桶" /><figcaption>木桶</figcaption>
 </figure>
 <p>在近来的探索中发现有一点非常有意思：如果依赖于20/80法则的话，那么成为专家和全栈的学习时间是相当的。在最开始的时候，我们要在我们的全栈工程和专家都在某个技术领域达到80分的水平。</p>
 <p>那么专家，还需要80%的时间去深入这个技术领域。而全栈工程师，则可以依赖于这80%的时候去开拓四个新的领域：</p>
 <figure>
-<img src="chapters/prelude/expert-vs-fullstack.png" alt="全栈与专家学习时间" /><figcaption>全栈与专家学习时间</figcaption>
+<img src="assets/article/prelude/expert-vs-fullstack.png" alt="全栈与专家学习时间" /><figcaption>全栈与专家学习时间</figcaption>
 </figure>
 <p>尽管理论上是如此，但是专家存在跨领域的学习障碍——套用现有模式。而全栈也存在学习障碍——如何成为专家，但是懂得如何学习新的领域。</p>
 <h4 id="解决问题的思路不同的方式">解决问题的思路：不同的方式</h4>
 <p>有意思的是——成为专家还是成为全栈，取决于人的天性，这也是两种不同的性格决定的。成为管理者还是技术人员看上去就像一种简单的划分，而在技术人员里成为专家还是全栈就是另外一种划分。这取决于人们对于一个问题的思考方式：这件事情是借由外部来解决，还是由内部解决。下面这张图刚好可以表达我的想法：</p>
 <figure>
-<img src="chapters/prelude/in-out-thinking.jpeg" alt="内向与外向思维" /><figcaption>内向与外向思维</figcaption>
+<img src="assets/article/prelude/in-out-thinking.jpeg" alt="内向与外向思维" /><figcaption>内向与外向思维</figcaption>
 </figure>
 <p>而这种思维依据于不同的事情可能会发生一些差异，但是总体上来说是相似的。当遇到一个需要创轮子的问题时，我们就会看到两种不同的方式。</p>
 <p>对于全栈工程师来说，他们喜欢依赖于外部的思维，用于产生颠覆式思维。如Angular.js这样的框架便是例子，前端结合后端开发语言Java的思维而产生。而专家则依赖于内部的条件，创造出不一样的适应式创新。如之前流行的Backbone框架，适应当时的情况而产生。</p>
@@ -492,7 +492,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>中小学：编程语言 -&gt; 高中：操作系统、内核、游戏编程 -&gt; 大学： 硬件、Web开发 -&gt; 工作：后端 + 前端</p>
 <p>而在当时我对SEO非常感兴趣，我发现这分析和Marketing似乎做得还可以。然后便往Growth Hacking发展了：</p>
 <figure>
-<img src="chapters/prelude/growth-hacking.jpg" alt="Growth Hacking" /><figcaption>Growth Hacking</figcaption>
+<img src="assets/article/prelude/growth-hacking.jpg" alt="Growth Hacking" /><figcaption>Growth Hacking</figcaption>
 </figure>
 <p>而这就是全栈学习带来的优势，学过的东西多，学习能力就变强。学习能力往上提的同时，你就更容易进入一个新的领域。</p>
 <p>参考书籍</p>
@@ -550,11 +550,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h3 id="快速启动软件">快速启动软件</h3>
 <p>在我还不和道有这样的工具的时候，我都是把图标放在下面的任务栏里：</p>
 <figure>
-<img src="chapters/chapter1/windows-launch.png" alt="Windows任务栏" /><figcaption>Windows任务栏</figcaption>
+<img src="assets/article/chapter1/windows-launch.png" alt="Windows任务栏" /><figcaption>Windows任务栏</figcaption>
 </figure>
 <p>直到有一天，我知道有这样的工具。这里不得不提到一本书《卓有成效的程序员》，在书中提到了很多提高效率的工具。使用快捷键是其中的一个，而还有一个是使用快速启动软件。于是，我在Windows上使用了Launcy:</p>
 <figure>
-<img src="chapters/chapter1/launchy.png" alt="Launchy" /><figcaption>Launchy</figcaption>
+<img src="assets/article/chapter1/launchy.png" alt="Launchy" /><figcaption>Launchy</figcaption>
 </figure>
 <p>通过这个软件，我们可以在电脑上通过输入软件名，然后运行相关的软件。我们不再需要点击某个菜单，再从菜单里选中某个软件打开。</p>
 <h3 id="ide">IDE</h3>
@@ -573,23 +573,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>不得不提及的是在有些IDE自带了Debug工具，这点可能使得使用IDE更有优势。在简单的项目是，我们可能不需要这样的Debug工具。因为我们对我们的代码库比较熟悉，一个简单的问题一眼就知道是哪里的问题。而对于那些复杂的项目来说，可能就没有那么简单了。特别是当你来到一个新的大中型项目，一个简单的逻辑在实现上可能要经过一系列的函数才能处理完。</p>
 <p>这时候我们就需要Debug工具——对于前端开发来说，我们可能使用Chrome的Dev Tools。但是对于后端来说，我们就需要使用别的工具。如下图所示的是Intellij Idea的Debug界面：</p>
 <figure>
-<img src="chapters/chapter1/idea-debug.png" alt="Intellij Idea Debug" /><figcaption>Intellij Idea Debug</figcaption>
+<img src="assets/article/chapter1/idea-debug.png" alt="Intellij Idea Debug" /><figcaption>Intellij Idea Debug</figcaption>
 </figure>
 <p>在Debug的过程中，我们可以根据代码的执行流程一步步向下执行。这也意味着，当出现Bug的时候我们可以更容易找到Bug。这就是为什么他叫Debug工具的原因了。</p>
 <h3 id="终端或命令提示符">终端或命令提示符</h3>
 <p>在开始写代码的时候，使用GUI可能是难以戒掉的一个习惯。但是当你习惯了使用终端之后，或者说使用终端的工具，你会发现这是另外一片天空。对于GUI应用上同样的菜单来说，在终端上也会有同样的工具——只是你觉得记住更多的命令。而且不同的工具对于同一实现可能会不同的规范，而GUI应用则会有一致的风格。不过，总的来说使用终端是一个很有益的习惯——从速度、便捷性。忘了提到一点，当你使用Linux服务器的时候，你不得不使用终端。</p>
 <figure>
-<img src="chapters/chapter1/linux-server-console.jpg" alt="Linux终端截图" /><figcaption>Linux终端截图</figcaption>
+<img src="assets/article/chapter1/linux-server-console.jpg" alt="Linux终端截图" /><figcaption>Linux终端截图</figcaption>
 </figure>
 <p>使用终端的优点在于我们可以摆脱鼠标的操作——这可以让我们更容易集中精力于完成任务。而这也是两种不同的选择，便捷还是更快。虽是如此，但是这也意味着学习Linux会越来戴上轻松。</p>
 <figure>
-<img src="chapters/chapter1/linux-learn-line.png" alt="Linux与Windows的学习曲线" /><figcaption>Linux与Windows的学习曲线</figcaption>
+<img src="assets/article/chapter1/linux-learn-line.png" alt="Linux与Windows的学习曲线" /><figcaption>Linux与Windows的学习曲线</figcaption>
 </figure>
 <p>虽然这是以Linux和Windows作了两个不同的对比，但是两个系统在终端工具上的差距是很大的。Linux自身的哲学鼓励使用命令行来完成任务，这也意味着在Linux上会有更多的工具可以在命令行下使用。虽然Windows上也可以——如使用CygWin来完成，但是这看上去并不是那么让人满意！</p>
 <h3 id="包管理">包管理</h3>
 <p>虽然包管理不仅仅存在于操作系统中，还存在着语言的包管理工具。在操作系统中安装软件，最方便的东西莫过于包管理了。引自OpenSUSE官网的说明及图片:</p>
 <figure>
-<img src="chapters/chapter1/pm.png" alt="包管理" /><figcaption>包管理</figcaption>
+<img src="assets/article/chapter1/pm.png" alt="包管理" /><figcaption>包管理</figcaption>
 </figure>
 <p>Linux 发行版无非就是一堆软件包 (package) 形式的应用程序加上整体地管理这些应用程序的工具。通常这些 Linux 发行版，包括 openSUSE，都是由成千上万不同的软件包构成的。</p>
 <ul>
@@ -734,7 +734,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>然后开始写一个又一个的Demo，感觉自己GET到了很多特别的知识点。</p>
 <p>到了第二天忘了！</p>
 <figure>
-<img src="chapters/chapter1/wrong.jpg" alt="Bro Wrong" /><figcaption>Bro Wrong</figcaption>
+<img src="assets/article/chapter1/wrong.jpg" alt="Bro Wrong" /><figcaption>Bro Wrong</figcaption>
 </figure>
 <p>接着，你又重新把昨天的知识过了一遍，还是没有多大的作用。突然间，你听到别人在讨论什么是<strong>这个世界上最好的语言</strong>——你开始加入讨论了。</p>
 <p>于是，你说出了Scala这门语言可以：</p>
@@ -746,7 +746,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 <p>虽然隔壁的Python小哥赢得了这次辩论，然而你发现你又回想起了Scala的很多特性。</p>
 <figure>
-<img src="chapters/chapter1/popular.jpg" alt="最流行的语言" /><figcaption>最流行的语言</figcaption>
+<img src="assets/article/chapter1/popular.jpg" alt="最流行的语言" /><figcaption>最流行的语言</figcaption>
 </figure>
 <p>你发现隔壁的Python小哥之所以赢得了这场辩论是因为他把Python语言用到了各个地方——机器学习、人工智能、硬件、Web开发、移动应用等。而，你还没有用Scala写过一个真正的应用。</p>
 <p>让我想想我来能做什么？我有一个博客。对，我有一个博客，我可以用Scala把我的博客重写一遍：</p>
@@ -760,7 +760,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>『这里的知识好像还缺了一点，这个是什么？』</p>
 <p>好了，你已经GET到了90%了。如下图所示：</p>
 <figure>
-<img src="chapters/chapter1/learn.jpg" alt="Learn" /><figcaption>Learn</figcaption>
+<img src="assets/article/chapter1/learn.jpg" alt="Learn" /><figcaption>Learn</figcaption>
 </figure>
 <p>希望你能从这张图上GET到很多点。</p>
 <h3 id="输出是最好的输入">输出是最好的输入</h3>
@@ -768,7 +768,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>如果你不试着去写点博客、整理资料、准备分享，那么你可能并没有意识到你缺少了多少东西。虽然你已经有了很多的实践，然并卵。</p>
 <p>因为你一直在完成功能、完成工作，你总会有意、无意地漏掉一些知识，而你也没有意识到这些知识的重要性。</p>
 <figure>
-<img src="chapters/chapter1/output-input.png" alt="Output is Input" /><figcaption>Output is Input</figcaption>
+<img src="assets/article/chapter1/output-input.png" alt="Output is Input" /><figcaption>Output is Input</figcaption>
 </figure>
 <p>从我有限的（500+）博客写作经验里，我发现多数时候我需要更多地的参考资料才能更好也向人们展示这个过程。为了输出我们需要更多的输入，进而加速这个过程。</p>
 <p>而如果是写书的时候则是一个更高水平的学习，你需要发现别人在他们的书中欠缺的一些知识点。并且你还要展示一些在别的书中没有，而这本书会展现这个点的知识，这意味着你需要挖掘得更深。</p>
@@ -827,7 +827,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>随后以“&gt;”开始的内容，便是向Web服务器发送请求。Host即是我们要访问的主机的域名，GET / 则代表着我们要访问的是根目录，如果我们要访问 <a href="https://www.phodal.com/about/" class="uri">https://www.phodal.com/about/</a>页面在这里，便是GET资源文件/about。紧随其后的是HTTP的版本号（HTTP/1.1）。User-Agent通过指向的是使用者行为的软件，通常会加上硬件平台、系统软件、应用软件和用户个人偏好等等的一些信息。Accept则指的是告知服务器发送何种媒体类型。</p>
 <p>这个过程，大致如下图所示：</p>
 <figure>
-<img src="chapters/chapter1/server-dns-forward.jpg" alt="DNS到服务器的过程" /><figcaption>DNS到服务器的过程</figcaption>
+<img src="assets/article/chapter1/server-dns-forward.jpg" alt="DNS到服务器的过程" /><figcaption>DNS到服务器的过程</figcaption>
 </figure>
 <p>在图中，我们会发现解析DNS的时候，我们需要先本地DNS服务器查询。如果没有的话，再向根域名服务器查询——这个域名由哪个服务器来解析。直至最后拿到真正的服务器IP才能获取页面。</p>
 <p>当我们拿到相应的HTML、JS、CSS后，我们就开始渲染这个页面了。</p>
@@ -836,11 +836,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h3 id="从html到页面显示">从HTML到页面显示</h3>
 <p>而浏览器接收到文本的时候，就要开始着手将HTML变成屏幕。下图是Chrome渲染页面的一个时间线：</p>
 <figure>
-<img src="chapters/chapter1/chrome-timeline.jpg" alt="Chrome渲染的Timeline" /><figcaption>Chrome渲染的Timeline</figcaption>
+<img src="assets/article/chapter1/chrome-timeline.jpg" alt="Chrome渲染的Timeline" /><figcaption>Chrome渲染的Timeline</figcaption>
 </figure>
 <p>及其整个渲染过程如下图所示：</p>
 <figure>
-<img src="chapters/chapter1/render-html.png" alt="Render HTML" /><figcaption>Render HTML</figcaption>
+<img src="assets/article/chapter1/render-html.png" alt="Render HTML" /><figcaption>Render HTML</figcaption>
 </figure>
 <p>（PS: 需要注意的是这里用的是WebKit内核的渲染过程，即Chrome和Safari等浏览器所使用的内核。）</p>
 <p>从上面的两图可以看出来第一步都Parser HTML，而Paser HTML实质上就是将其将解析为DOM Tree。与此同时，CSS解析器会解析CSS会产生CSS规则树。</p>
@@ -987,7 +987,7 @@ hello,world
 <span class="va">para</span>.<span class="va">style</span>.<span class="at">color</span><span class="op">=</span><span class="st">&quot;blue&quot;</span><span class="op">;</span></code></pre></div>
 <p>将字体变成了蓝色，CSS+HTML让页面有序的工作着，但是Javascript却打乱了这些秩序，有着唯恐世界不乱的精彩，也难怪被冠以小三之名了——或许终于可以理解，为什么以前人们对于Javascript没有好感了——不过这里要讲的是正室，也就是CSS，这时还没有Javascript。</p>
 <figure>
-<img src="chapters/chapter1/redfonts.png" alt="Red Fonts" /><figcaption>Red Fonts</figcaption>
+<img src="assets/article/chapter1/redfonts.png" alt="Red Fonts" /><figcaption>Red Fonts</figcaption>
 </figure>
 <h3 id="简介">简介</h3>
 <p>这不是一篇专业讲述CSS的书籍，所以我不会去说CSS是怎么来的，有些东西我们既然可以很容易从其他地方知道，也就不需要花太多时间去重复。诸如重构等这些的目的之一也在于去除重复的代码，不过有些重复是不可少的，也是有必要的，而通常这些东西可能是由其他地方复制过来的。</p>
@@ -1007,7 +1007,7 @@ hello,world
 <span class="kw">&lt;/html&gt;</span></code></pre></div>
 <p>虽然我们看到的还是一样的:</p>
 <figure>
-<img src="chapters/chapter1/nostyle.png" alt="No Style" /><figcaption>No Style</figcaption>
+<img src="assets/article/chapter1/nostyle.png" alt="No Style" /><figcaption>No Style</figcaption>
 </figure>
 <p>于是我们就按各种书上的建议重新写了上面的代码</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
@@ -1509,7 +1509,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 }</code></pre></div>
 <p>在多数时候，Controller不应该直接与数据层的一部分，而将业务逻辑放在Controller层又是一种错误，这时就有了Service层，如下图：</p>
 <figure>
-<img src="chapters/chapter2/service-mvc.png" alt="Service MVC" /><figcaption>Service MVC</figcaption>
+<img src="assets/article/chapter2/service-mvc.png" alt="Service MVC" /><figcaption>Service MVC</figcaption>
 </figure>
 <p>Domain（业务）是一个相当复杂的层级，这里是业务的核心。一个合理的Controller只应该做自己应该做的事，它不应该处理业务相关的代码：</p>
 <p>我们在Controller层应该做的事是：</p>
@@ -1573,7 +1573,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <h3 id="更多-1">更多</h3>
 <p>在前后端解耦合的系统中，通常系统的架构模式就变成了MVP，又或者是MVVM。</p>
 <figure>
-<img src="chapters/chapter2/mvc-mvvm-mvp.png" alt="MVC、MVVM、MVP对比" /><figcaption>MVC、MVVM、MVP对比</figcaption>
+<img src="assets/article/chapter2/mvc-mvvm-mvp.png" alt="MVC、MVVM、MVP对比" /><figcaption>MVC、MVVM、MVP对比</figcaption>
 </figure>
 <p>三者间很大的不同在于层级间的通讯模型、使用场景。</p>
 <h4 id="mvp">MVP</h4>
@@ -1590,18 +1590,18 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>产生这种服务的主要原因之一是因为移动应用的流行。在移动应用中，我们实际上只需要一个API接口来连接数据库，并作一些相应的业务逻辑处理。对于不同的应用产商来说，他们打造API的方式可能稍有不同，然而他们都只是将后台作为一个服务。</p>
 <p>在一些更特殊的例子里，即有网页版和移动应用端，他们也开始使用同一个API。前端作为一个单页面的应用，或者有后台渲染的应用。其架构如下图所示：</p>
 <figure>
-<img src="chapters/chapter2/baas-diagram.png" alt="Backend As A Service" /><figcaption>Backend As A Service</figcaption>
+<img src="assets/article/chapter2/baas-diagram.png" alt="Backend As A Service" /><figcaption>Backend As A Service</figcaption>
 </figure>
 <h3 id="api演进史">API演进史</h3>
 <p>在早期的工作中，我们会发现我们会将大量的业务逻辑放置到View层——如迭代出某个结果。</p>
 <p>而在今天，当我们有大量的逻辑一致时，我们怎么办，重复实现三次？</p>
 <p>如下所示是笔者之前重构的系统的一个架构缩略图：</p>
 <figure>
-<img src="chapters/chapter2/duplicate-business-logic.png" alt="重复逻辑的系统架构" /><figcaption>重复逻辑的系统架构</figcaption>
+<img src="assets/article/chapter2/duplicate-business-logic.png" alt="重复逻辑的系统架构" /><figcaption>重复逻辑的系统架构</figcaption>
 </figure>
 <p>上面系统产生的主要原因是：技术本身的演进所造成的，并非是系统在一开始没有考虑到这个问题。</p>
 <figure>
-<img src="chapters/chapter2/api-history.png" alt="API演进史" /><figcaption>API演进史</figcaption>
+<img src="assets/article/chapter2/api-history.png" alt="API演进史" /><figcaption>API演进史</figcaption>
 </figure>
 <p>从早期到现在的互联网公司都有这样的问题，也会有同样的过程：</p>
 <p>第一阶段： 因为创始人对于某个领域的看好，他们就创建了这样的一个桌面网站。这个时间点，大概可以在2000年左右。</p>
@@ -1610,13 +1610,13 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>第四阶段： 由于手机性能的不断提高，并且移动网络速度不断提升，人们便开始在手机上制作单页面应用。</p>
 <p>由于他们使用的是相同业务逻辑、代码逻辑相同而<strong>技术栈不同</strong>的代码，当有一个新的需求出现时，他们需要重复多次实现，如下图所示：</p>
 <figure>
-<img src="chapters/chapter2/duplicate-business-logic-with-domain.png" alt="重复业务逻辑的系统架构" /><figcaption>重复业务逻辑的系统架构</figcaption>
+<img src="assets/article/chapter2/duplicate-business-logic-with-domain.png" alt="重复业务逻辑的系统架构" /><figcaption>重复业务逻辑的系统架构</figcaption>
 </figure>
 <p>随后——也就是今天，各种新的解决方案出现了，如React、混合应用、原生+Web的混合式应用、他们的目的就是解决上述的问题。不过，这些解决方案只是为了解决在前端中可能出现的问题，详细的内容可以见《前端演进史》。</p>
 <p>而人们也借此机会在统一后台——因为我们可以借助于混合应用或混合式应用（即原生+内嵌WebView，可以同时解决性能和跨平台问题）统一移动端，借助于响应式设计的理念可以统一桌面、平板和手机端。</p>
 <p>因此，我们需要的就只是这样的一个API：</p>
 <figure>
-<img src="chapters/chapter2/one-api.png" alt="One API" /><figcaption>One API</figcaption>
+<img src="assets/article/chapter2/one-api.png" alt="One API" /><figcaption>One API</figcaption>
 </figure>
 <h3 id="后台即服务-1">后台即服务</h3>
 <p>现在，让我们来看看一个采用后台即服务的网站架构会是怎样的？</p>
@@ -1689,7 +1689,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>从架构上来说，使用搜索引擎的优点是：分离存储、查询部分。从开发上来说，它可以让我们更关注于业务本身的价值，而不是去实现这样一个搜索逻辑。</p>
 <p>如下图所示的Lucene应用的架构：</p>
 <figure>
-<img src="chapters/chapter2/lucene-arch.jpg" alt="Lucene应用架构" /><figcaption>Lucene应用架构</figcaption>
+<img src="assets/article/chapter2/lucene-arch.jpg" alt="Lucene应用架构" /><figcaption>Lucene应用架构</figcaption>
 </figure>
 <p>可以从图中看到系统明显被划分成两部分：</p>
 <ol type="1">
@@ -1716,7 +1716,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <h3 id="ajax">Ajax</h3>
 <p>AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。这个功能在之前的很多年来一直被Web开发者所忽视，直到最近Gmail、Google Suggest和Google Maps的出现，才使人们开始意识到其重要性。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。传统的网页如果需要更新内容，必须重载整个网页页面。</p>
 <figure>
-<img src="chapters/chapter2/ajax_request.png" alt="Ajax请求" /><figcaption>Ajax请求</figcaption>
+<img src="assets/article/chapter2/ajax_request.png" alt="Ajax请求" /><figcaption>Ajax请求</figcaption>
 </figure>
 <p>说起Ajax，我们就需要用JavaScript向服务器发送一个HTTP请求。这个过程要从XMLHttpRequest开始说起，它是一个 JavaScript 对象。它最初由微软设计，随后被 Mozilla、Apple和Google采纳。如今，该对象已经被W3C组织标准化。</p>
 <p>如下的所示的是一个Ajax请求的示例代码：</p>
@@ -1764,13 +1764,13 @@ thePerson <span class="op">=</span> thePeople[<span class="dv">0</span>]<span cl
 <p>在人们大规模地开始Web应用的时候，我们在授权的时候遇到了一些问题，而这些问题不是Cookie所能解决的。Cookie存在一些明显的问题：不能支持跨域、并且不是无状态的、不能使用CDN、与系统耦合等等。除了解决上面的问题，它还可以提高性能等等。基于Session的授权机制需要服务端来保存这个状态，而使用JWT则可以跳过这个问题，并且使我们设计出来的API满足RESTful规范。即，我们API的状态应该是没有状态的。因此人们提出了JWT来解决这一系列的问题。</p>
 <p>通过JWT我们可以更方便地写出适用于前端应用的认证方案，如登陆、注册这些功能。当我们使用JWT来实现我们的注册、登陆功能时，我们在登陆的时候将向我们的服务器发送我们的用户名和密码，服务器验证后将生成对应的Token。在下次我们进行页面操作的时候，如访问/Dashboard时，发出的HTTP请求的Header中会包含这个Token。服务器在接收到请求后，将对这个Token进行验证并判断这个Token是否已经过期了。</p>
 <figure>
-<img src="chapters/chapter2/jwt-process.jpeg" alt="JWT流程" /><figcaption>JWT流程</figcaption>
+<img src="assets/article/chapter2/jwt-process.jpeg" alt="JWT流程" /><figcaption>JWT流程</figcaption>
 </figure>
 <p>需要注意的一点是：在使用JWT的时候也需要注意安全问题，在允许的情况下应该使用HTTPS协议。</p>
 <h3 id="websocket">WebSocket</h3>
 <p>在一些网站上为了实现推送技术，都采用了轮询的技术。即在特定的的时间间隔里，由浏览器对服务器发出HTTP请求，然后浏览器便可以从服务器获取最新的技术。如下图所示的是Google Chrome申请开发者账号时发出的对应的请求：</p>
 <figure>
-<img src="chapters/chapter2/chrome-ajax-poll.jpg" alt="Chrome Ajax轮询" /><figcaption>Chrome Ajax轮询</figcaption>
+<img src="assets/article/chapter2/chrome-ajax-poll.jpg" alt="Chrome Ajax轮询" /><figcaption>Chrome Ajax轮询</figcaption>
 </figure>
 <p>从上图中我们可以看到，Chrome的前台正在不断地向后台查询API的结果。由于浏览器需要不断的向服务器发出请求，而HTTP的Header是非常长的，即使是一个很小的数据也会占用大量的带宽和服务器资源。为了解决这个问题，HTML5推出了一种在单个TCP连接上进行全双工通讯的协议WebSocket。</p>
 <p>WebSocket可以让客户端和服务器之间存在持久的连接，而且双方都可以随时开始发送数据。</p>
@@ -1785,7 +1785,7 @@ thePerson <span class="op">=</span> thePeople[<span class="dv">0</span>]<span cl
 <h2 id="编码过程">编码过程</h2>
 <p>整个编程的过程如下图所示：</p>
 <figure>
-<img src="chapters/chapter3/coding.png" alt="编码过程" /><figcaption>编码过程</figcaption>
+<img src="assets/article/chapter3/coding.png" alt="编码过程" /><figcaption>编码过程</figcaption>
 </figure>
 <p>步骤如下所示：</p>
 <ol type="1">
@@ -1810,7 +1810,7 @@ thePerson <span class="op">=</span> thePeople[<span class="dv">0</span>]<span cl
 <h3 id="web应用的构建过程">Web应用的构建过程</h3>
 <p>在刚创建项目的时候，我们都会有一个完整的构建思路。如下图便是这样的一个例子：</p>
 <figure>
-<img src="chapters/chapter3/build-web-project.png" alt="构建过程" /><figcaption>构建过程</figcaption>
+<img src="assets/article/chapter3/build-web-project.png" alt="构建过程" /><figcaption>构建过程</figcaption>
 </figure>
 <p>这是一个后台语言用的是Java，前台语言用的是JavaScript项目的构建流程。</p>
 <p><strong>Compile</strong>。对于那些不是用浏览器的前端项目来说，如ES6、CoffeeScript，他们还需要将代码编译成浏览器使用的JavaScript版本。对于Java语言来说，他需要一个编译的过程，在这个编译的过程中，会检查一些语法问题。</p>
@@ -1913,7 +1913,7 @@ gulp.task(&#39;default&#39;, function () {
 </blockquote>
 <p>虽然基于Git的工作流可能并不是一个非常好的实践，但是在这里我们以这个工作流做为实践来开展我们的项目。如下图所示是一个基于Git的项目流：</p>
 <figure>
-<img src="chapters/chapter3/gitflow.png" alt="基于Git的工作流" /><figcaption>基于Git的工作流</figcaption>
+<img src="assets/article/chapter3/gitflow.png" alt="基于Git的工作流" /><figcaption>基于Git的工作流</figcaption>
 </figure>
 <p>我们日常会工作在“develop”分支（那条线）上，通常来说每个迭代我们会发布一个新的版本，而这个新的版本将会直接上线到产品环境。那么上线到产品环境的这个版本就需要打一个版本号——这样不仅可以方便跟踪我们的系统，而且当出错的时候我们也可以直接回滚到上一个版本。如果在上线的时候有些Bug不得不去修复，并且由于上线的新功能很重要，我们就需要一些Hotfix。而从整个过程来看，版本控制起了一个非常大的作用。</p>
 <p>不仅仅如此，版本控制的最大重要是在开发的过程中扮演的角色。通过版本管理系统，我们可以：</p>
@@ -1957,11 +1957,11 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <pre><code>$ git status</code></pre>
 <p>来看现在的状态，如下图是添加之前的：</p>
 <figure>
-<img src="chapters/chapter3/before-add.png" alt="Before add" /><figcaption>Before add</figcaption>
+<img src="assets/article/chapter3/before-add.png" alt="Before add" /><figcaption>Before add</figcaption>
 </figure>
 <p>下面是添加之后 的</p>
 <figure>
-<img src="chapters/chapter3/after-add.png" alt="After add" /><figcaption>After add</figcaption>
+<img src="assets/article/chapter3/after-add.png" alt="After add" /><figcaption>After add</figcaption>
 </figure>
 <p>可以看到状态的变化是从黄色到绿色，即unstage到add。</p>
 <p>在完成添加之后，我们就可以写入相应的提交信息——如这次修改添加了什么内容 、这次修改修复了什么问题等等。在我们的工作流程里，我们使用Jira这样的工具来管理我们的项目，也会在我们的Commit Message里写上作者的名字，如下：</p>
@@ -2110,7 +2110,7 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <h3 id="测试金字塔">测试金字塔</h3>
 <p>测试金字塔是由Mike Cohn提出的，主要观点是：底层单元测试应多于依赖GUI的高层端到端测试。其结构图如下所示：</p>
 <figure>
-<img src="chapters/chapter3/test-pyramid.png" alt="测试金字塔" /><figcaption>测试金字塔</figcaption>
+<img src="assets/article/chapter3/test-pyramid.png" alt="测试金字塔" /><figcaption>测试金字塔</figcaption>
 </figure>
 <p>从结构上来说，上面的金字塔可以分成三部分：</p>
 <ol type="1">
@@ -2137,7 +2137,7 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <p>服务测试顾名思义便是对服务进行测试，而服务可以是有不同的类型，不同层次的测试。如第三方的API服务、我们程序提供的服务，虽然他们他应该在这一个层级上进行测试，但是对他们的测试会稍有不同。</p>
 <p>对于第三方的提供的API服务或者其他类似的服务，在这一个层级的测试，我们都不会真实地去测试他们能不能工作——这些依赖性的服务只会在功能测试上进行测试。在这里的测试，我们只会保证我们的功能代码是可以正常工作的，所以我们会使用一些虚假的API测试数据来进行测试。这一类提供API的Mock Server可以模拟被测系统外部依赖模块行为的通用服务。我们只要保证我们的功能代码是正常工作的，那么依赖他的服务也会是正常工作的。</p>
 <figure>
-<img src="chapters/chapter3/mock-server.png" alt="Mock Server" /><figcaption>Mock Server</figcaption>
+<img src="assets/article/chapter3/mock-server.png" alt="Mock Server" /><figcaption>Mock Server</figcaption>
 </figure>
 <p>而对于我们提供的服务来说，这一类的服务不一定是API的服务，还有可能是多个函数组成的功能性服务。当我们在测试这些服务的时候，实际上是在测试这个函数结合在一起是不是正常的。</p>
 <p>一个服务可能依赖于多个函数，因而我们会发现服务测试的数量是少于单元测试的。</p>
@@ -2239,7 +2239,7 @@ $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
 <h3 id="红-绿-重构">红-绿-重构</h3>
 <p>测试驱动开发的主要过程是: 红 —&gt; 绿 -&gt; 重构</p>
 <figure>
-<img src="chapters/chapter3/tdd.jpg" alt="TDD" /><figcaption>TDD</figcaption>
+<img src="assets/article/chapter3/tdd.jpg" alt="TDD" /><figcaption>TDD</figcaption>
 </figure>
 <ol type="1">
 <li>先写一个失败的单元测试。即我们并没有实现这个方法，但是已经有了这个方法的测试。</li>
@@ -2428,7 +2428,7 @@ public void setNumber(String number) {
 System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;amount&quot;</span> + amount);</code></pre></div>
 <p>按下上述的快捷键，会弹出下面的对话框</p>
 <figure>
-<img src="chapters/chapter3/extract-method.png" alt="Extrct Method" /><figcaption>Extrct Method</figcaption>
+<img src="assets/article/chapter3/extract-method.png" alt="Extrct Method" /><figcaption>Extrct Method</figcaption>
 </figure>
 <p>输入</p>
 <pre><code> printDetails</code></pre>
@@ -2504,7 +2504,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 }</code></pre></div>
 <p>在<code>add(one,two)</code>很愉快地按上个快捷键吧，就会弹出</p>
 <figure>
-<img src="chapters/chapter3/inline.jpg" alt="Inline Method" /><figcaption>Inline Method</figcaption>
+<img src="assets/article/chapter3/inline.jpg" alt="Inline Method" /><figcaption>Inline Method</figcaption>
 </figure>
 <p>再轻轻地回车，Refactor就这么结束了。。</p>
 <p><strong>Intellij Idea 内联临时变量</strong></p>
@@ -2541,7 +2541,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p><strong>重构</strong></p>
 <p>选中<code>basePrice</code>很愉快地拿鼠标点上面的重构</p>
 <figure>
-<img src="chapters/chapter3/replace.jpg" alt="Replace Temp With Query" /><figcaption>Replace Temp With Query</figcaption>
+<img src="assets/article/chapter3/replace.jpg" alt="Replace Temp With Query" /><figcaption>Replace Temp With Query</figcaption>
 </figure>
 <p>便会返回</p>
 <div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">import java.lang.System;</span>
@@ -2626,7 +2626,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </ol>
 <p>实现上这是一个请求的处理过程，一个HTTP请求会先到达你的主机。如果你的主机上运行着多个虚拟机实例，那么请求就会来到这个虚拟机上。又或者是如果你是在Docker这一类容器里运行你的程序的话，那么也会先到达Docker。随后这个请求就会交由HTTP服务器来处理，如Apache、Nginx，这些HTTP服务器再将这些请求交由对应的应用或脚本来处理。随后将交由语言底层的指令来处理。</p>
 <figure>
-<img src="chapters/chapter4/docker-with-tomcat.png" alt="Docker Tomcat" /><figcaption>Docker Tomcat</figcaption>
+<img src="assets/article/chapter4/docker-with-tomcat.png" alt="Docker Tomcat" /><figcaption>Docker Tomcat</figcaption>
 </figure>
 <p>不同的环境有不同的选择，当然也可以结合在一起。不过，从理论上来说在最外层还是应该有一个真机的，但是我想大家都有这个明确的概念，就不多解释了。</p>
 <h3 id="隔离硬件虚拟机">隔离硬件：虚拟机</h3>
@@ -2636,7 +2636,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </blockquote>
 <p>这是一个很有意思的技术，它可以让我们在一个主机上同时运行几个不同的操作系统。我们可以为这几个操作系统使用不同的硬件，在这之上的应用可以使用不同的技术栈来运行，并且从理论上互相不影响。其架构如下图所示：</p>
 <figure>
-<img src="chapters/chapter4/virtual_machine.png" alt="虚拟机" /><figcaption>虚拟机</figcaption>
+<img src="assets/article/chapter4/virtual_machine.png" alt="虚拟机" /><figcaption>虚拟机</figcaption>
 </figure>
 <p>借助于虚拟机技术，当我们需要更多的资源的时候，创建一个新的虚拟机就行了。同时，由于这些虚拟机上运行的是同样的操作系统，并且可以使用相同的配置，我们只需要编写一些脚本就可以实现其自动化。当我们的物联机发生问题时，我们也可以很快将虚拟机迁移或恢复到另外的宿主机。</p>
 <h3 id="隔离操作系统容器虚拟化">隔离操作系统：容器虚拟化</h3>
@@ -2648,7 +2648,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </blockquote>
 <p>我们可以将之以上面说到的虚拟机作一个简单的对比，其架构图如下所示：</p>
 <figure>
-<img src="chapters/chapter4/lxc-vm.jpg" alt="LXC vs VM" /><figcaption>LXC vs VM</figcaption>
+<img src="assets/article/chapter4/lxc-vm.jpg" alt="LXC vs VM" /><figcaption>LXC vs VM</figcaption>
 </figure>
 <p>我们会发现虚拟机中多了一层Hypervisor——运行在物理服务器和操作系统之间，它可以让多个操作系统和应用共享一套基础物理硬件。这一层级可以协调访问服务器上的所有物理设备和虚拟机，然而由于这一层级的存在，它也将消耗更多的能量。据爱立信研究院和阿尔托大学发表的论文表示：Docker、LXC与Xen、KVM在完成相同的工作时要少消耗10%的能耗。</p>
 <p>LXC主要是利用cgroups与namespace的功能，来向提供应用软件一个独立的操作系统运行环境。cgroups（即Control Groups）j Linux内核提供的一种可以限制、记录、隔离进程组所使用的物理资源的机制。而由namespace来责任隔离控制。</p>
@@ -2659,16 +2659,16 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </blockquote>
 <p>构建出Docker的Container是一个很有意思的过程。在这一个过程中，首先我们需要一个base images，这个基础镜像不仅包含了一个基础系统，如Ubuntu、Debian。他还包含了一系列的模块，如初始化进程、SSH服务、syslog-ng等等的一些工具。由上面原内容构建了一个基础镜像，随后的修改都将于这个镜像，我们可以用它生成新的镜像，一层层的往上叠加。而用户的进程运行在writeable的layer中。</p>
 <figure>
-<img src="chapters/chapter4/basic-images.png" alt="Docker Container" /><figcaption>Docker Container</figcaption>
+<img src="assets/article/chapter4/basic-images.png" alt="Docker Container" /><figcaption>Docker Container</figcaption>
 </figure>
 <p>从上图中我们还可以发现一点： Docker容器是建立在Aufs基础上的。AUFS是一种Union File System，它可以不同的目录挂载到同一个虚拟文件系统下。它的目的就是为了实现上图的增量递增的过程，同时又不会影响原有的目录。即如下的流程如下：</p>
 <figure>
-<img src="chapters/chapter4/aufs_layers.jpg" alt="AUFS层" /><figcaption>AUFS层</figcaption>
+<img src="assets/article/chapter4/aufs_layers.jpg" alt="AUFS层" /><figcaption>AUFS层</figcaption>
 </figure>
 <p>其增量的过程和我们使用Git的过程中有点像，除了在最开始的时候会有一个镜像层。随后我们的修改都可以保存下来，并且当下次我们提交修改的时候，我们也可以在旧有的提交上运行。</p>
 <p>因此，Docker与LXC的差距就如下如图所示：</p>
 <figure>
-<img src="chapters/chapter4/lxc-vs-docker.png" alt="LXC与Docker" /><figcaption>LXC与Docker</figcaption>
+<img src="assets/article/chapter4/lxc-vs-docker.png" alt="LXC与Docker" /><figcaption>LXC与Docker</figcaption>
 </figure>
 <p>LXC时每个虚拟机只能是一个虚拟机，而Docker则是一系列的虚拟机。</p>
 <h3 id="隔离底层servlet容器">隔离底层：Servlet容器</h3>
@@ -2678,43 +2678,43 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>在开发Java Web应用的过程中，我们在开始环境使用Jetty来运行我们的服务，而在生产环境使用Tomcat来运行。他们都是Servlet容器，可以在其上面运行着同一个Servlet应用。Servlet是指由Java编写的服务器端程序，它们是为响应Web应用程序上下文中的HTTP请求而设计的。它是应用服务器中位于组件和平台之间的接口集合。</p>
 <p>Tomcat服务器是一个免费的开放源代码的Web应用服务器。它运行时占用的系统资源小，扩展性好，支持负载平衡与邮件服务等开发应用系统常用的功能。除此，它还是一个Servlet和JSP容器，独立的Servlet容器是Tomcat的默认模式。其架构如下图所示：</p>
 <figure>
-<img src="chapters/chapter4/tomcat-architecture.png" alt="Tomcat架构" /><figcaption>Tomcat架构</figcaption>
+<img src="assets/article/chapter4/tomcat-architecture.png" alt="Tomcat架构" /><figcaption>Tomcat架构</figcaption>
 </figure>
 <p>Servlet被部署在应用服务器中，并由容器来控制其生命周期。在运行时由Web服务器软件处理一般请求，并把Servlet调用传递给“容器”来处理。并且Tomcat也会负责对一些静态资源的处理。</p>
 <h3 id="隔离依赖版本虚拟环境">隔离依赖版本：虚拟环境</h3>
 <p>对于Java这一类的编译语言来说，不存在太多语言运行带来的问题。而对于动态语言来说就存在这样的问题，如Ruby、Python、Node.js等等，这一个问题主要集中于开发环境。当然如果你在一个服务器上运行着几个不同的应用来说，也会存在这样的问题。这一类的工具在Python里有VirtualEnv，在Ruby里有RVM、Rbenv，在Node.js里有NVM。</p>
 <p>下图是使用VirtualEnv时的不同几个应用的架构图：</p>
 <figure>
-<img src="chapters/chapter4/virtualenv.jpg" alt="VirtualEnv" /><figcaption>VirtualEnv</figcaption>
+<img src="assets/article/chapter4/virtualenv.jpg" alt="VirtualEnv" /><figcaption>VirtualEnv</figcaption>
 </figure>
 <p>如下所示，在不同的虚拟环境里，我们可以使用不同的依赖库。在这上面构建不同的应用，也可以使用不同的Python版本来构建系统。通常来说，这一类的工具主要用于本地的开发环境。</p>
 <h3 id="隔离运行环境语言虚拟机">隔离运行环境：语言虚拟机</h3>
 <p>最后一个要介绍的可能就是更加抽象的，但是也是更加实用的一个，JVM就是这方面的一个代表。在我们的编程生涯里，我们很容易就会遇到跨平台问题——即我们在我们的开发机器上开发的软件，在我们的产品环境的机器上就没有办法运行。特别是当我们使用Mac OS或者Windows机器上开发了我们的应用，然后我们需要在Linux系统上运行，就会遇到各种问题。并且当我们使用了一个需要重新编译的库时，这种问题就更加麻烦。</p>
 <p>如下图所示的是JVM的架构示意图</p>
 <figure>
-<img src="chapters/chapter4/java-virtual-machine.jpg" alt="JVM" /><figcaption>JVM</figcaption>
+<img src="assets/article/chapter4/java-virtual-machine.jpg" alt="JVM" /><figcaption>JVM</figcaption>
 </figure>
 <p>JVM是一种用于计算设备的规范，它是一个虚构出来的计算机，是通过在实际的计算机上仿真模拟各种计算机功能来实现的。它可以实现“编写一次，到处运行”。</p>
 <p>换句话来说，它在底层实现了环境隔离，它屏蔽了与具体操作系统平台相关的信息，使得Java程序只需生成在Java虚拟机上运行的目标代码（字节码），就可以在多种平台上不加修改地运行。</p>
 <p>基于此，只要其他编程语言的编译器能生成正确Java bytecode文件，这个语言也能实现在JVM上运行。如下图所示的是基于JVM的Jython语言的架构图：</p>
 <figure>
-<img src="chapters/chapter4/jython-arch.jpg" alt="Jython" /><figcaption>Jython</figcaption>
+<img src="assets/article/chapter4/jython-arch.jpg" alt="Jython" /><figcaption>Jython</figcaption>
 </figure>
 <p>其底层是基于JVM，而编写时则是用Python语言，并且他可以使用Java的模块来编程。</p>
 <p>常见拥有同样架构的工具，还有MySQL，如下图是所示的是MySQL的架构图：</p>
 <figure>
-<img src="chapters/chapter4/mysql-architecture.png" alt="MySQL" /><figcaption>MySQL</figcaption>
+<img src="assets/article/chapter4/mysql-architecture.png" alt="MySQL" /><figcaption>MySQL</figcaption>
 </figure>
 <p>MySQL在最顶层提供了一个名为SQL的查询语言，这个查询语言只能用于查询数据库，然而它却是一种更高级的用法 。它不像通用目的语言那样目标范围涵盖一切软件问题，而是专门针对某一特定问题的计算机语言，即领域特定语言。</p>
 <h3 id="隔离语言dsl">隔离语言：DSL</h3>
 <p>这是一门特别有意思也特别值得期待的技术，但是实现它并不是一件容易的事。</p>
 <p>作为讨论隔离环境的一部分，我们只看外部DSL。内部DSL与外部DSL最大的区别在于：外部DSL近似于创建了一种新的语法和语义的全新语言。如下图所示是两中DSL的一种对比：</p>
 <figure>
-<img src="chapters/chapter4/internal-vs-external.png" alt="内部DSL和外部DSL" /><figcaption>内部DSL和外部DSL</figcaption>
+<img src="assets/article/chapter4/internal-vs-external.png" alt="内部DSL和外部DSL" /><figcaption>内部DSL和外部DSL</figcaption>
 </figure>
 <p>在这样的外部DSL里，我们有自己的语法、自己的解析器、类型检测器等等。最简单且最常用的DSL就是Markdown，如下图所示：</p>
 <figure>
-<img src="chapters/chapter4/markdown.png" alt="Markdown" /><figcaption>Markdown</figcaption>
+<img src="assets/article/chapter4/markdown.png" alt="Markdown" /><figcaption>Markdown</figcaption>
 </figure>
 <p>如果我们可以将我们的业务逻辑写成DSL，那么我们就不需要担心底层语言的变动过多地影响原有的业务逻辑。换句话说，这相当于创建了我们自己的语言隔离环境，我们不需要思考用何种语言来实用我们的业务。</p>
 <h2 id="lnmp架构">LNMP架构</h2>
@@ -2782,7 +2782,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>起先，我们在本地开发的时候为本地创建了一套环境，也创建了本地的配置。接着我们需要将我们的包部署到测试环境，也生成了测试环境的相应配置。这其中如果有其他的环境，我们也需要创建相应的环境。最后，我们还需要为产品环境创建全新的配置。</p>
 <p>下图是Druapl框架的部署流:</p>
 <figure>
-<img src="chapters/chapter4/deployment-flow.png" alt="Drupal Deployment Flow" /><figcaption>Drupal Deployment Flow</figcaption>
+<img src="assets/article/chapter4/deployment-flow.png" alt="Drupal Deployment Flow" /><figcaption>Drupal Deployment Flow</figcaption>
 </figure>
 <p>在不同的环境下，他们使用不同的Content。这些Content的内容不仅仅可以是一些系统相当的配置，也可以是一些不同环境下的UI等等。而在这其中也会涉及到一些比较复杂的知识，下面只是做一些简单的介绍。</p>
 <h3 id="环境配置">环境配置</h3>
@@ -2806,7 +2806,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h4 id="feature-toggle">Feature Toggle</h4>
 <p>它是一种允许控制线上功能开启或者关闭的方式，通常会采取配置文件的方式来控制。其过程如下图所示：</p>
 <figure>
-<img src="chapters/chapter4/feature-toggle.png" alt="Feature Toggle" /><figcaption>Feature Toggle</figcaption>
+<img src="assets/article/chapter4/feature-toggle.png" alt="Feature Toggle" /><figcaption>Feature Toggle</figcaption>
 </figure>
 <p>当我们需要A功能的时候，我们就只需要把A功能的开关打开。当我们需要B功能，而不需要A功能的时候，我们就可以把相应的功能关掉。像在Java里的Spring框架，就可以用PropertyPlaceHolder来做相似的事。使用bean文件创建一个properties</p>
 <div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;util:properties</span><span class="ot"> id=</span><span class="st">&quot;myProps&quot;</span><span class="ot"> location=</span><span class="st">&quot;WEB-INF/config/prop.properties&quot;</span><span class="kw">/&gt;</span></code></pre></div>
@@ -2823,7 +2823,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h2 id="自动化部署">自动化部署</h2>
 <p>优化我们开发流程有一个很重要的步骤就是：让部署自动化。通过部署自动化，我们可以大大缩减我们的开发周期，加快软件交付流程。下图是一个自动化部署的流程图：</p>
 <figure>
-<img src="chapters/chapter4/auto-deployment.png" alt="自动化部署" /><figcaption>自动化部署</figcaption>
+<img src="assets/article/chapter4/auto-deployment.png" alt="自动化部署" /><figcaption>自动化部署</figcaption>
 </figure>
 <p>从下图中我们可以得到下面的五个步骤：</p>
 <ul>
@@ -2838,7 +2838,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="依赖与包仓库">依赖与包仓库</h3>
 <p>获取完源码后，我们就需要开始下载软件包依赖。无论是Python、Ruby、Java，还是JavaScript都需要这样的一个过程。软件开发已经从大教堂式的开发走向了集市——开源软件改变了这一切。</p>
 <figure>
-<img src="chapters/chapter4/hierarchy-vs-graph.png" alt="大教堂与集市" /><figcaption>大教堂与集市</figcaption>
+<img src="assets/article/chapter4/hierarchy-vs-graph.png" alt="大教堂与集市" /><figcaption>大教堂与集市</figcaption>
 </figure>
 <p>过去我们需要大系统的内部构建我们使用的依赖，现在我们更多地借助于外部的库来实现这些功能。这也意味着，如果在这一个节点里出现了意外——软件被删除，那么这个系统将陷入瘫痪的状态。如之前在NPM圈发生了“一个 17 行的模块引发的血案”——即left-pad 工具模块被作者从NPM上撤下，所有直接或者间接依赖这个模块的NPM的软件包都挂掉了。因为我们依赖于公有的包服务，所以系统便严重依赖于外部条件。</p>
 <p>这时候一种简单、有效的方案就是搭建自己的包服务。如使用Java技术栈的项目，就会使用Nexus搭建自己的Maven私有服务。我们的软件依赖包将会依赖于我们自己的服务，此时会产生的主要问题可能就是：我们的软件包不是最新的。但是对于追求稳定的项目来说，这个并不是必须的需求，反而这也是一个优势。</p>
@@ -2846,13 +2846,13 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>在一些编译型语言里，在我们运行包测试后，我们将会得到一个软件包。如jar包，它是Java中所特有一种压缩文档。Jar包无法直接安装使用，虽然我们可以直接运行这个Jar包，但是我们需要通过一些手段将这个Jar包拷贝到我们的服务器上，然后运行。在特定的时候，我们还需要修改配置才能完成我们的工作。</p>
 <p>因此，使用RPM或者DEB包会是一种更好的选择。RPM全称是 Red Hat Package Manager（Red Hat包管理器），它工作于Red Hat Linux以及其它Linux和UNIX 系统，可被任何人使用。如下图是RPM包的构建过程：</p>
 <figure>
-<img src="chapters/chapter4/rpm-deploy.jpg" alt="RPM Build Process" /><figcaption>RPM Build Process</figcaption>
+<img src="assets/article/chapter4/rpm-deploy.jpg" alt="RPM Build Process" /><figcaption>RPM Build Process</figcaption>
 </figure>
 <p>要构建一个标准的RPM包，我们需要创建.spec文件，这个文件包含软件打包的全部信息——如包的Summary、Name、Version、Copyright、Vendor等等。在产生完这一个配置文件事，执行rpmbuild 命令，系统会按照步骤生成目标RPM包。</p>
 <h3 id="上传和安装软件包">上传和安装软件包</h3>
 <p>生成对应的软件包后，我们就可以将其上传到Koji上，它是Fedora社区的编译系统。如下图所示：</p>
 <figure>
-<img src="chapters/chapter4/rpm-koji.jpg" alt="RPM Build Process" /><figcaption>RPM Build Process</figcaption>
+<img src="assets/article/chapter4/rpm-koji.jpg" alt="RPM Build Process" /><figcaption>RPM Build Process</figcaption>
 </figure>
 <p>如果我们已经对我们的所有目标操作系统配置过，即配置好了软件源，那么我们就可以直接在我们的服务器上使用包管理工具安装，如<code>yum install</code>。</p>
 <h1 id="数据分析">数据分析</h1>
@@ -2862,7 +2862,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h2 id="构建-衡量-学习">构建-衡量-学习</h2>
 <p>构建-衡量-学习是在《精益创业》中的一个核心概念，这结合了客户开发、敏捷软件开发方法和精益生产实践。他们是非常重要的一个循环：</p>
 <figure>
-<img src="chapters/chapter5/lean-analytics.png" alt="数据分析过程" /><figcaption>数据分析过程</figcaption>
+<img src="assets/article/chapter5/lean-analytics.png" alt="数据分析过程" /><figcaption>数据分析过程</figcaption>
 </figure>
 <p>这一过程不仅仅可以改进我们的产品，也可以用于初创企业。它并不是独立的一个环节，实现上它应该是一整个环节：我们根据我们的想法去创建我们的产品，在使用产品的过程中我们收集一些数据，再依据这些数据来改进我们的产品。</p>
 <h3 id="想法-构建">想法-构建</h3>
@@ -2873,7 +2873,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>我们并不缺少Idea，我们只是一直没有去记录。随着时间的增长，我发现我的GitHub上的Idea墙(<a href="https://github.com/phodal/ideas/issues">ideas</a>)一直在不断地增加。以至于，我有一个新的Idea就是整理这个Idea墙。</p>
 <p>而作为一个程序员，我们本身就可以具备构建一个系统的能力，只是对于大多数人来说需要多加的练习。有意思的一点是，这里的构建系统与一般的构建系统有一点不太一样的是，我们需要快速地构建出一个MVP产品。MVP简单地来说，就是最小可用的产品。如下图的右边所示：</p>
 <figure>
-<img src="chapters/chapter5/mvp.png" alt="MVP" /><figcaption>MVP</figcaption>
+<img src="assets/article/chapter5/mvp.png" alt="MVP" /><figcaption>MVP</figcaption>
 </figure>
 <p>在每一层级上都实现一定的功能，使得这个系统可用，而非构建一个非常完整的系统。随后，我们就可以寻找一些种子用户来改进我们的产品。</p>
 <h3 id="产品-衡量">产品-衡量</h3>
@@ -2909,7 +2909,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="受众群体">受众群体</h3>
 <p>如下图是Growth应用最近两星期的数据：</p>
 <figure>
-<img src="chapters/chapter5/growth-ga.png" alt="Growth GA" /><figcaption>Growth GA</figcaption>
+<img src="assets/article/chapter5/growth-ga.png" alt="Growth GA" /><figcaption>Growth GA</figcaption>
 </figure>
 <p>这是Google Analytics中的“受众群体”的概览，在这个视图中：</p>
 <ol type="1">
@@ -2990,7 +2990,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="流量获取">流量获取</h3>
 <p>除此，不得不说的一点就是流量获取，如下图所示是我博客的热门渠道：</p>
 <figure>
-<img src="chapters/chapter5/phodal-traffic.png" alt="Phodal.com Traffic" /><figcaption>Phodal.com Traffic</figcaption>
+<img src="assets/article/chapter5/phodal-traffic.png" alt="Phodal.com Traffic" /><figcaption>Phodal.com Traffic</figcaption>
 </figure>
 <p>可以直接得到一个不错的结论是我的博客的主要流量来源是搜索引擎，再细细一看数据：</p>
 <table>
@@ -3035,7 +3035,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="移动应用">移动应用</h3>
 <p>除此，我们还可以使用它来分析移动应用，不过这受限于Google在国内的访问程度。如下图是GA收到的应用的使用数据：</p>
 <figure>
-<img src="chapters/chapter5/ga-app.jpg" alt="Growth应用数据" /><figcaption>Growth应用数据</figcaption>
+<img src="assets/article/chapter5/ga-app.jpg" alt="Growth应用数据" /><figcaption>Growth应用数据</figcaption>
 </figure>
 <p>我们也可以从上面看到APP的安装来源等等。</p>
 <h2 id="网站监测">网站监测</h2>
@@ -3064,7 +3064,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="博客性能分析">博客性能分析</h3>
 <p>接着才是重头戏，主要问题都在下面。。</p>
 <figure>
-<img src="chapters/chapter5/run-usage.jpg" alt="Breakdown Table" /><figcaption>Breakdown Table</figcaption>
+<img src="assets/article/chapter5/run-usage.jpg" alt="Breakdown Table" /><figcaption>Breakdown Table</figcaption>
 </figure>
 <p>比较慢的地方就是<code>blog_post_list_post_content</code>这个函数。。。</p>
 <table>
@@ -3142,7 +3142,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>确定搜索意图及返回相关、新鲜的内容</li>
 </ul>
 <figure>
-<img src="chapters/chapter5/search-engine-arch.jpg" alt="search-engine-arch" /><figcaption>search-engine-arch</figcaption>
+<img src="assets/article/chapter5/search-engine-arch.jpg" alt="search-engine-arch" /><figcaption>search-engine-arch</figcaption>
 </figure>
 <p><strong>为什么需要SEO?</strong></p>
 <p>这是一个有趣的问题，答案总会来源于<code>为网站带来更多的流量</code>。</p>
@@ -3166,7 +3166,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="什么样的网站需要seo">什么样的网站需要SEO？</h3>
 <p>下图是我的博客的流量来源</p>
 <figure>
-<img src="chapters/chapter5/my-website-seo.jpg" alt="What Site Need SEO" /><figcaption>What Site Need SEO</figcaption>
+<img src="assets/article/chapter5/my-website-seo.jpg" alt="What Site Need SEO" /><figcaption>What Site Need SEO</figcaption>
 </figure>
 <p>正常情况下除了像<code>腾讯</code>这类的<code>QQ空间</code>自我封闭的网站外都需要SEO，或者不希望泄露一些用户隐私如<code>Facebook</code>、<code>人人</code>等等</p>
 <ul>
@@ -3294,7 +3294,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p><strong>UX需要什么</strong></p>
 <p>从下图中我们可以看到一些UX所需要的知识体系：</p>
 <figure>
-<img src="chapters/chapter5/ux_design.jpg" alt="UX" /><figcaption>UX</figcaption>
+<img src="assets/article/chapter5/ux_design.jpg" alt="UX" /><figcaption>UX</figcaption>
 </figure>
 <p>即</p>
 <ul>
@@ -3309,19 +3309,19 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </ul>
 <p>交互设计便是<code>用户体验设计的重点</code>。我们再来看看另外的这张图片</p>
 <figure>
-<img src="chapters/chapter5/ux-field.jpg" alt="Fields Of User Experience Design" /><figcaption>Fields Of User Experience Design</figcaption>
+<img src="assets/article/chapter5/ux-field.jpg" alt="Fields Of User Experience Design" /><figcaption>Fields Of User Experience Design</figcaption>
 </figure>
 <h3 id="什么是简单">什么是简单？</h3>
 <p>一个好的软件应该是简单的，并且是令人愉快的。</p>
 <p>在不同的UX书籍里，似乎就会说到【简约至上】。简单就是“单纯清楚、不复杂”。而这里的简单并不仅仅只是不复杂那么简单。对于一个软件来说，简单实际上是你一下子就能找到你想要的东西，如：</p>
 <figure>
-<img src="chapters/chapter5/search-phodal.jpg" alt="Search Phodal" /><figcaption>Search Phodal</figcaption>
+<img src="assets/article/chapter5/search-phodal.jpg" alt="Search Phodal" /><figcaption>Search Phodal</figcaption>
 </figure>
 <p>而我们并不可能在一开始就得到这样的结果，这需要一个复杂的过程。而在这个过程开始之前，我们一定要知道的一点是：我们的用户到底需要什么?</p>
 <p>如果我们无法知道这一点，而只是一直在假想客户需要什么，那么这会变成一条死路。</p>
 <p>接着在找寻的过程中，发现了一个有意思的图，即精益画布：</p>
 <figure>
-<img src="chapters/chapter5/lean.jpg" alt="Lean" /><figcaption>Lean</figcaption>
+<img src="assets/article/chapter5/lean.jpg" alt="Lean" /><figcaption>Lean</figcaption>
 </figure>
 <p>首先，我们需要知道几个用户而存在的问题——即客户最需要解决的三个问题。并且针对三个问题提出对应的解决方案，这也就是产品的主要功能。</p>
 <p>那么，这两点结合起来对于用户来说就是简单——这个软件能解决客户存在的主要问题。</p>
@@ -3329,16 +3329,16 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="进阶">进阶</h3>
 <p>而实际上有用则是位于用户体验的最底层，如下图所示：</p>
 <figure>
-<img src="chapters/chapter5/layer.jpg" alt="UX" /><figcaption>UX</figcaption>
+<img src="assets/article/chapter5/layer.jpg" alt="UX" /><figcaption>UX</figcaption>
 </figure>
 <p>这时候就需要尽量往可用靠拢。怎样对两者进行一个简单的划分？</p>
 <p>下图就是实用的软件：</p>
 <figure>
-<img src="chapters/chapter5/ie-alert.jpg" alt="IE Alert" /><figcaption>IE Alert</figcaption>
+<img src="assets/article/chapter5/ie-alert.jpg" alt="IE Alert" /><figcaption>IE Alert</figcaption>
 </figure>
 <p>而下图就便好一点了：</p>
 <figure>
-<img src="chapters/chapter5/popup.jpg" alt="jQuery Popup" /><figcaption>jQuery Popup</figcaption>
+<img src="assets/article/chapter5/popup.jpg" alt="jQuery Popup" /><figcaption>jQuery Popup</figcaption>
 </figure>
 <p>要达到可用的级别，并不是一件困难的事：<strong>遵循现有软件的模式</strong>。</p>
 <p>换句话说，这时候你需要的是一本<strong>Cookbook</strong>。这本<strong>Cookbook</strong>上面就会列出诸多现有的设计模式，只需要参考便使用就差不多了。</p>
@@ -3347,7 +3347,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="用户体验要素">用户体验要素</h3>
 <p>尽管对于这方面没有非常好的认识，但是还是让我们来看看我们现在可以到哪种程度。如在一开始所说的，我们需要满足用户的需求，这就是我们的目标：</p>
 <figure>
-<img src="chapters/chapter5/ux-elements.png" alt="用户体验要素" /><figcaption>用户体验要素</figcaption>
+<img src="assets/article/chapter5/ux-elements.png" alt="用户体验要素" /><figcaption>用户体验要素</figcaption>
 </figure>
 <p>而在最上面的视觉设计则需要更专业的人来设计。</p>
 <p><strong>参考目录</strong></p>
@@ -3361,7 +3361,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="流">流</h3>
 <p>在《认知设计》一书中，提到了下面的学习体验，即“流”(Flow)。而在我们学习的过程中，我们也会有类似的学习过程。</p>
 <figure>
-<img src="chapters/chapter5/learn-design.png" alt="Learn Design" /><figcaption>Learn Design</figcaption>
+<img src="assets/article/chapter5/learn-design.png" alt="Learn Design" /><figcaption>Learn Design</figcaption>
 </figure>
 <p>如在早期我学习Emcas和GNU/Linux的时候，也曾经放弃过，虽然在当时我已经读过Linux内核。然而，在应用之前进行理论学习并没有卵用。</p>
 <p>通常我们会有类似于下面的学习体验，对于一本书来说有下面的体验似乎也是一件很不错的事:</p>
@@ -3384,7 +3384,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>更关注代码质量。持续集成是为了确保随着需求变化而变化的代码，在实现功能的同时，质量不受影响。因此，在每一次构建后会运行单元测试，保证代码级的质量。单元测试会针对每一个特定的输入去判断和观察输出的结果，而单元测试的粒度则用来平衡持续集成的质量和速度。</p>
 <h3 id="process">Process</h3>
 <figure>
-<img src="chapters/chapter6/ci.jpg" alt="CI Workflow" /><figcaption>CI Workflow</figcaption>
+<img src="assets/article/chapter6/ci.jpg" alt="CI Workflow" /><figcaption>CI Workflow</figcaption>
 </figure>
 <h3 id="小步前进">小步前进</h3>
 <h3 id="反馈">反馈</h3>
@@ -3392,7 +3392,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>-《持续交付：发布可靠软件的系统方法》</p>
 <h2 id="持续交付-1">持续交付</h2>
 <figure>
-<img src="chapters/chapter6/continuous-delivery.jpg" alt="CD Workflow" /><figcaption>CD Workflow</figcaption>
+<img src="assets/article/chapter6/continuous-delivery.jpg" alt="CD Workflow" /><figcaption>CD Workflow</figcaption>
 </figure>
 <ol type="1">
 <li>自动化</li>
@@ -3408,7 +3408,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h2 id="持续部署">持续部署</h2>
 <p>在持续交付之外的，还有持续部署——这个就更依赖于团队的组织结构了。</p>
 <figure>
-<img src="chapters/chapter6/continuous-delivery-continuous-deployment.jpg" alt="持续部署" /><figcaption>持续部署</figcaption>
+<img src="assets/article/chapter6/continuous-delivery-continuous-deployment.jpg" alt="持续部署" /><figcaption>持续部署</figcaption>
 </figure>
 <h2 id="持续学习">持续学习</h2>
 <p>如果说<code>持续交付则是一种对卓越的追求</code>,那么<code>持续学习应该就是追求软件卓越</code>。 如果说<code>持续集成是一种软件开发实践</code>,那么对于技术人员来说——<code>持续写作应该就是持续学习的实践</code></p>
@@ -3545,7 +3545,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h2 id="自我总结">自我总结</h2>
 <p>总结在某种意义上相当于自己对自己的反馈：</p>
 <figure>
-<img src="chapters/chapter8/output-input.png" alt="Output is Input" /><figcaption>Output is Input</figcaption>
+<img src="assets/article/chapter8/output-input.png" alt="Output is Input" /><figcaption>Output is Input</figcaption>
 </figure>
 <p>当我们向自己输入更多反馈的时候，我们就可以更好地调整我们的方向。它属于输出的一部分，而我们也在不断调整我们的输入的时候，我们也在导向更好地输出。</p>
 <h3 id="吾日三省吾身">吾日三省吾身</h3>
@@ -3563,7 +3563,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="retro的过程">Retro的过程</h3>
 <p>它不仅仅可以帮助我们发现团队里的问题，也可以集思广益的寻找出一些合适的解决方案。Retro的过程和我们之前说的数据分析是差不多的，如下图所示：</p>
 <figure>
-<img src="chapters/chapter8/retro-feature.jpg" alt="Retro流程" /><figcaption>Retro流程</figcaption>
+<img src="assets/article/chapter8/retro-feature.jpg" alt="Retro流程" /><figcaption>Retro流程</figcaption>
 </figure>
 <p>即：</p>
 <ol type="1">
@@ -3587,7 +3587,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </ol>
 <p>该模式的特点是会让我们更多的关注less well，关注我们做的不好的那些。</p>
 <figure>
-<img src="chapters/chapter8/happy-retro.jpg" alt="Retro" /><figcaption>Retro</figcaption>
+<img src="assets/article/chapter8/happy-retro.jpg" alt="Retro" /><figcaption>Retro</figcaption>
 </figure>
 <p><strong>Well</strong>。我们在Well里记录一些让我们开心的事，如最近天气好、迭代及时完成、没有加班等等，这些事从理论上来说应该继续保持（KEEP）下去。</p>
 <p><strong>Less Well</strong>。关注于在这个迭代的过程中，发生了一些什么不愉快的事。一般来说，我们就会对Less Well加以细致的讨论，找出问题的根源，并试图找到一个解决方案。换句话来说，就是改变（CHANGE)。</p>
@@ -3601,18 +3601,18 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>在我开始接触架构设计的时候，我买了几本书然后我就开始学习了。我发现在这些书中都出现了一些相似的东西，如基本的分层设计、Pipe and Filters模式、MVC模式。然后，我开始意料到这些模式本身就是最好的架构。</p>
 <p>MVC模式本身也是接于分层而设计的，如下图是Spring MVC的请求处理过程：</p>
 <figure>
-<img src="chapters/chapter8/spring-mvc.png" alt="Spring MVC" /><figcaption>Spring MVC</figcaption>
+<img src="assets/article/chapter8/spring-mvc.png" alt="Spring MVC" /><figcaption>Spring MVC</figcaption>
 </figure>
 <p>而这个框架只是框架本身的架构，这一类也是我们预先设计好的框架。</p>
 <p>在框架之上，我们会有自己本身的业务所带来的模式。如下图是我的网上搜罗到的一个简单的发送邮件的架构：</p>
 <figure>
-<img src="chapters/chapter8/basic-paf.png" alt="发送邮件中的Pipe and Filters模式" /><figcaption>发送邮件中的Pipe and Filters模式</figcaption>
+<img src="assets/article/chapter8/basic-paf.png" alt="发送邮件中的Pipe and Filters模式" /><figcaption>发送邮件中的Pipe and Filters模式</figcaption>
 </figure>
 <p>这样的模式则是由业务发展的过程中演进出来的。</p>
 <h3 id="预设计式架构">预设计式架构</h3>
 <p>在我们日常使用的框架多数是预先设计的构架，因为这个架构本身的目标是明确的。系统会围绕一定的架构去构建，并且在这个过程中架构会帮助我们更好地理解系统。如下图所示的是Emacs的架构：</p>
 <figure>
-<img src="chapters/chapter8/emacs-architecture.png" alt="Emcas架构" /><figcaption>Emcas架构</figcaption>
+<img src="assets/article/chapter8/emacs-architecture.png" alt="Emcas架构" /><figcaption>Emcas架构</figcaption>
 </figure>
 <p>它采用的是交互式应用程序员应用广泛的模型-视图-控制器模式。</p>
 <p>无论是瀑布式开发——设计好系统的框架，然后对系统的每个部分进行独立的完善和设计，最后系统再集成到一起。还是敏捷式开发——先做出MVP，再一步步完善。他们都需要一定的预先式设计，只是传统的开发模式让两者看上去是等同的。</p>
@@ -3625,7 +3625,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>导致我们重构现有系统的原因有很多，但是多数是因为原来的代码变得越来越不可读，并且重构的风险太大了。在实现业务逻辑的时候，我们快速地用代码实现，没有测试，没有好的设计。</p>
 <p>而下图算是最近两年来想要的一个答案：</p>
 <figure>
-<img src="chapters/chapter8/emergent-design.jpg" alt="浮现式设计" /><figcaption>浮现式设计</figcaption>
+<img src="assets/article/chapter8/emergent-design.jpg" alt="浮现式设计" /><figcaption>浮现式设计</figcaption>
 </figure>
 <p>浮现式设计是一种敏捷技术，强调在开发过程中不断演进。软件本身就不应该是一开始就设计好的，他需要经历一个演化的过程。</p>
 <h3 id="意图导向">意图导向</h3>
@@ -3737,7 +3737,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>对于一个优秀的团队来说，不存在一个人对所有的技术栈都擅长的情况——除非这个团队所从事的范围比较小。在一个复杂的系统里，每个人都负责系统的相应的一部分。尽管到目前为止并没有好的机会去构建自己的团队，但是也希望总有一天有这样的机会。在这样的团队里，只需要有一个人负责整个系统的架构。其中的人可以在自己擅长的层级里构建自己的架构。因此，让我们再回到我们的博客中去，现在我们已经决定使用动态的博客。然后呢？</p>
 <p>作为一个博客我们至少有前后台，这样我们可能就需要两个开发人员。</p>
 <figure>
-<img src="chapters/chapter8/blog-basic.png" alt="前后台" /><figcaption>前后台</figcaption>
+<img src="assets/article/chapter8/blog-basic.png" alt="前后台" /><figcaption>前后台</figcaption>
 </figure>
 <p>（PS：当然，我们也可以使用React，但是在这里先让我们忽略掉这个框架，紧耦合会削弱系统的健壮性。）</p>
 <p>接着，作为一个前端开发人员，我们还需要考虑的两个问题是：</p>
@@ -3747,11 +3747,11 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </ol>
 <p>第二个问题不需要和后台开发人员做沟通就可以做决定了。而第一个问题，我们则需要和后台开发人员做决定。单页面应用的天然优势就是：由于系统本身是解耦的，他与后台模板系统脱离。这样在我们更换前端或者后台的时候，我们都不需要去考虑使用何种技术——因为我们使用API作为接口。现在，我们决定做成单页面应用，那么我们就需要定义一个API。而在这时，我们就可以决定在前台使用何种框架：Angular.js、Backbone、Vue.js、jQuery，接着我们的架构可以进一步完善：</p>
 <figure>
-<img src="chapters/chapter8/blog-with-frontend.png" alt="含前端的架构" /><figcaption>含前端的架构</figcaption>
+<img src="assets/article/chapter8/blog-with-frontend.png" alt="含前端的架构" /><figcaption>含前端的架构</figcaption>
 </figure>
 <p>在这时，后台人员也可以自由地选择自己的框架、语言。后台开发人员只需要关注于生成一个RESTful API即可，而他也需要一个好的Model层来与数据库交付。</p>
 <figure>
-<img src="chapters/chapter8/blog-with-fe-be.png" alt="含前端后台的架构" /><figcaption>含前端后台的架构</figcaption>
+<img src="assets/article/chapter8/blog-with-fe-be.png" alt="含前端后台的架构" /><figcaption>含前端后台的架构</figcaption>
 </figure>
 <p>现在，我们似乎已经完成了大部分的工作？我们还需要：</p>
 <ol type="1">
@@ -3770,14 +3770,14 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="从mvc与微服务">从MVC与微服务</h3>
 <p>在我初识架构是什么的时候，我看到了MVC模式架构。这种模式是基于分层的结构，要理解起逻辑也很简单。这个模式如下图所示：</p>
 <figure>
-<img src="chapters/chapter8/spring-mvc.png" alt="Spring MVC" /><figcaption>Spring MVC</figcaption>
+<img src="assets/article/chapter8/spring-mvc.png" alt="Spring MVC" /><figcaption>Spring MVC</figcaption>
 </figure>
 <p>由我们的Front controller来处理由客户端（浏览器）发过来的请求，实际上这里的Front controller是DispatcherServlet。DispatcherServlet负责将请求派发到特定的handler，接着交由对应的Controller来处理这个请求。依据请求的内容，Controller将创建相应model。随后这个model将传到前端框架中渲染，最后再返回给浏览器。</p>
 <p>但是这样的架构充满了太多的问题，如view与controller的紧密耦合、controller粒度难以把控的问题等等。</p>
 <h4 id="django-mtv">Django MTV</h4>
 <p>我使用Django差不多有四年了，主要是用在我的博客上。与MVC模式一对比，我发现Django在分层上还是很有鲜明特性的：</p>
 <figure>
-<img src="chapters/chapter8/django-mtv.png" alt="Django MTV架构" /><figcaption>Django MTV架构</figcaption>
+<img src="assets/article/chapter8/django-mtv.png" alt="Django MTV架构" /><figcaption>Django MTV架构</figcaption>
 </figure>
 <p>在Django中没有Controller的概念，Controller做的事都交由URL Dispatcher，而这是一个高级的URL Dispatcher。它使用正则表达式匹配URL，然后调用合适的Python函数。然后这个函数就交由相应的View层来处理，而这个View层则是处理业务逻辑的地方。处理完后，model将传到Template层来处理。</p>
 <p>对比如下图如示：</p>
@@ -3810,12 +3810,12 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>从上面的对比中，我们可以发现Django把View分层了。以Django对于MVC的解释来说，视图用来描述要展现给用户的数据。 而在ROR等其他的MVC框架中，控制器负责决定向用户展现哪些数据，而视图决定如何展现数据。</p>
 <p>联想起我最近在学的Scala中的Play框架，我发现了其中诸多的相似之处：</p>
 <figure>
-<img src="chapters/chapter8/playarchtectureasyncrequest.png" alt="Play框架异步请求" /><figcaption>Play框架异步请求</figcaption>
+<img src="assets/article/chapter8/playarchtectureasyncrequest.png" alt="Play框架异步请求" /><figcaption>Play框架异步请求</figcaption>
 </figure>
 <p>虽然在Play中，也有Controller的概念。但是对于URL的处理先交给了Routes来处理，随后再交给Controller中的函数来处理。</p>
 <p>不过与一般MVC架构的最大不同之处，怕是在于Django的APP架构。Django中有一个名为APP的概念，它是实现某种功能的Web应用程序，。如果我们要设计一个博客系统的话，那么在这个项目中，Blogpost是一个APP、评论是一个APP、用户管理是一个APP等等。每个APP之中，都会有自己的Model、View和Controller。其架构如下图所示：</p>
 <figure>
-<img src="chapters/chapter8/django_app_arch.jpg" alt="Django APP架构" /><figcaption>Django APP架构</figcaption>
+<img src="assets/article/chapter8/django_app_arch.jpg" alt="Django APP架构" /><figcaption>Django APP架构</figcaption>
 </figure>
 <p>当我们需要创建一个新的功能的时候，我们只需要创建一个新的APP即可——为这个APP配置新的URL、创建新的Model以及新的View。如果功能上没有与原来的代码重复的话，那么这就是一个独立的APP，并且我们可以将这个APP的代码Copy/Paste到一个新的项目中，并且不需要做修改。</p>
 <p>与一般的MVC架构相比，我们会发现我们细化了这些业务逻辑原来的三层结构，会随着APP的数量发生变化。如果我们有三个APP的话，那么我们相当于有3*三层，但是他不是等于九层。这样做可以从代码上直接减少逻辑的思考，让我们可以更加集中注意力于业务实现，同时也利于我们后期维护。</p>
@@ -3823,12 +3823,12 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h4 id="微服务与reactive">微服务与Reactive</h4>
 <p>在微服务架构中，它提倡将单一应用程序划分成一组小的服务，这些服务之间互相协调、互相配合。每个服务运行在其独立的进程中，服务与服务间采用轻量级的通信机制互相沟通。每个服务都应该有自己独立的数据库来存储数据。</p>
 <figure>
-<img src="chapters/chapter8/decentralised-data.png" alt="分散数据" /><figcaption>分散数据</figcaption>
+<img src="assets/article/chapter8/decentralised-data.png" alt="分散数据" /><figcaption>分散数据</figcaption>
 </figure>
 <p>Django从某种意义上有点接近微服务的概念，只是实际上并没有。因为它没有实现Play框架的异步请求机制。抱句话来说，应用很容易就会在调用JDBC、Streaming API、HTTP请求等一系列的请求中发生阻塞。</p>
 <p>这些服务都是独立的，对于服务的请求也是独立的。使用微服务来构建的应用，不会因为一个服务的瘫痪让整个系统瘫痪。最后，这一个个的微服务将合并成这个系统。</p>
 <figure>
-<img src="chapters/chapter8/combinedlist.png" alt="Combined List" /><figcaption>Combined List</figcaption>
+<img src="assets/article/chapter8/combinedlist.png" alt="Combined List" /><figcaption>Combined List</figcaption>
 </figure>
 <p>我们将我们后台的服务变成微服务的架构，在我们的前台使用Reactive编程，这样我们就可以结合两者的优势，解耦出更好的架构模式。然而，这其中还有一个让人不爽的问题，即数据库。如果我们使用多个数据库，那么维护成本也随着上升。而如果我们可以在后台使用类似于微服务的Django MTV架构，并且它可以支持异步请求的话，并在前台使用Reactive来编程，是不是就会更爽一点？</p>
 <h3 id="cqrs">CQRS</h3>
@@ -3840,7 +3840,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>对于这个架构的深入思考是起源于之前在理解DDD。据说在DDD领域中被广泛使用。理解CQRS可以用分离Model和API集合来处理读取和写入请求开始，即CQS（Command Query Separation，命令查询分离）模式。CQS模式最早由软件大师Bertrand Meyer（Eiffel语言之父，面向对象开-闭原则 OCP 提出者）提出。他认为，对象的行为仅有两种：命令和查询。</p>
 <p>这个类型的架构如下图所示：</p>
 <figure>
-<img src="chapters/chapter8/cqrs-2.png" alt="CQS Basic" /><figcaption>CQS Basic</figcaption>
+<img src="assets/article/chapter8/cqrs-2.png" alt="CQS Basic" /><figcaption>CQS Basic</figcaption>
 </figure>
 <blockquote>
 <p>除了编写优化的查询类型，它可以让我们轻松换API的一部分读一些缓存机制，甚至移动读取API的请求到另一台服务器。</p>
@@ -3848,37 +3848,37 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>对于读取和写入相差不多的应用来说，这种架构看起来还是不错的。而这种架构还存在一个瓶颈问题，使用同一个RDBMS。对于写入多、读取少的应用来说，这种架构还是存在着不合理性。</p>
 <p>为了解决这个问题，人们自然是使用缓存来解决这个问题了。我们在我们的应用服务外有一个HTTP服务器，而在HTTP服务器之外有一个缓存服务器，用于缓存用户常驻的一些资源。如下图所示：</p>
 <figure>
-<img src="chapters/chapter8/cache-website-blog.png" alt="带缓存的Web架构" /><figcaption>带缓存的Web架构</figcaption>
+<img src="assets/article/chapter8/cache-website-blog.png" alt="带缓存的Web架构" /><figcaption>带缓存的Web架构</figcaption>
 </figure>
 <p>而实际上这样的服务器可能是多余的——我们为什么不直接生成HTML就好了？</p>
 <h4 id="编辑-发布分离">编辑-发布分离</h4>
 <p>或许你听过Martin Folwer提出的编辑-发布分享式架构：即文章在编辑时是一个形式，而发表时是另一个形式，比如用markdown编辑，而用html发表。</p>
 <figure>
-<img src="chapters/chapter8/edit-pub.jpg" alt="编辑-发布分离" /><figcaption>编辑-发布分离</figcaption>
+<img src="assets/article/chapter8/edit-pub.jpg" alt="编辑-发布分离" /><figcaption>编辑-发布分离</figcaption>
 </figure>
 <p>而最典型的应用就是流行于GitHub的Hexo、Jekyll框架之类的静态网站。如下图所示的是Hexo的工作流：</p>
 <figure>
-<img src="chapters/chapter8/hexo-workflow.png" alt="Hexo站点工作流" /><figcaption>Hexo站点工作流</figcaption>
+<img src="assets/article/chapter8/hexo-workflow.png" alt="Hexo站点工作流" /><figcaption>Hexo站点工作流</figcaption>
 </figure>
 <p>我们在本地生成我们的项目，然后可以创建一个新的博客、开始编写内容等等。接着，我们可以在本地运行起这个服务，除了查看博客的内容，还可以修改样式等等。完成上面的工作后，我们就可以生成静态内容，然后部署我们的应用到GitHub Page上。这一切看上去都完美，我们有两个不同的数据源——一个是md格式的文本，一个是最后生成的html。它们已经实现了读写/分离：</p>
 <figure>
-<img src="chapters/chapter8/cqrs-separate-storage.png" alt="CQRS进阶" /><figcaption>CQRS进阶</figcaption>
+<img src="assets/article/chapter8/cqrs-separate-storage.png" alt="CQRS进阶" /><figcaption>CQRS进阶</figcaption>
 </figure>
 <p>但是作为一个前端开发人员，没有JSON，用不了Ajax请求，我怎么把我的博客做成一个单页面应用？</p>
 <h4 id="编辑-发布-开发分离">编辑-发布-开发分离</h4>
 <p>因为我们需要交我们的博客转为JSON，而不是一个hexo之类的格式。有了这些JSON文件的存在，我们就可以把Git当成一个NoSQL数据库。同时这些JSON文件也可以直接当成API来</p>
 <figure>
-<img src="chapters/chapter8/git-internals-commits.png" alt="Git As NoSQL DB" /><figcaption>Git As NoSQL DB</figcaption>
+<img src="assets/article/chapter8/git-internals-commits.png" alt="Git As NoSQL DB" /><figcaption>Git As NoSQL DB</figcaption>
 </figure>
 <p>其次，这些博客还需要hexo一样生成HTML。</p>
 <p>并且，开发人员在开发的时候不会影响到编辑的使用，于是就有了下面的架构：</p>
 <figure>
-<img src="chapters/chapter8/travis-edit-publish-code.png" alt="基于git的编辑-发布分离" /><figcaption>基于git的编辑-发布分离</figcaption>
+<img src="assets/article/chapter8/travis-edit-publish-code.png" alt="基于git的编辑-发布分离" /><figcaption>基于git的编辑-发布分离</figcaption>
 </figure>
 <p>在这其中我们有两种不同的数据形式，即存储着Markdown数据的JSON文件和最后生成的HTML。</p>
 <p>对博客数量不是很大的网站，或者说一般的网站来说，用上面的技术都不是问题。然而有大量数据的网站怎么办？使用EventBus：</p>
 <figure>
-<img src="chapters/chapter8/cqrs-arch.png" alt="CQRS和EventBus" /><figcaption>CQRS和EventBus</figcaption>
+<img src="assets/article/chapter8/cqrs-arch.png" alt="CQRS和EventBus" /><figcaption>CQRS和EventBus</figcaption>
 </figure>
 <p>在我之前玩的一个Demo中，使用Python中的Scrapy爬虫来抓取现有的动态网站，并将其变成静态网站部署到AWS S3上。</p>
 <p>但是上面仅仅只是实现了文章的显示，我们还存在一些问题：</p>
@@ -3892,7 +3892,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h4 id="nginx-as-dispatcher">Nginx as Dispatcher</h4>
 <p>最常见的解耦应用的方式中，就有一种是基于Nginx来分发URL请求。在这种情况下，对于API的使用者，或者最终用户来说，他们都是同一个API。只是在后台里，这个API已经是不同的几个API组成，如下图所示：</p>
 <figure>
-<img src="chapters/chapter8/nginx-microservices.png" alt="Nginx解耦微服务" /><figcaption>Nginx解耦微服务</figcaption>
+<img src="assets/article/chapter8/nginx-microservices.png" alt="Nginx解耦微服务" /><figcaption>Nginx解耦微服务</figcaption>
 </figure>
 <p>客户端的请求来到API Gateway，根据不同的请求类型，这些URL被分发到不同的Service，如Review Service、Order Service等等。</p>
 <p>对于我们想要设计的系统来说也是如此，我们可以通过这个Dispatcher来解耦我们的服务。</p>
@@ -3901,7 +3901,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>从源头上来说，我们把能缓存的内容变成了静态的HTML，通过CDN来分发。并且，我们还可以将把不同的服务独立出来。</p>
 <p>从实现上来说，我们将博客的数据变成了两部分： 一个以Git + JSON格式存在的API，它除了可以用于生成HTML，另外一部分作为API来使用。</p>
 <figure>
-<img src="chapters/chapter8/dispatcher-services.png" alt="CQRS结合微服务" /><figcaption>CQRS结合微服务</figcaption>
+<img src="assets/article/chapter8/dispatcher-services.png" alt="CQRS结合微服务" /><figcaption>CQRS结合微服务</figcaption>
 </figure>
 <p>最后，我们可以通过上面说到的Nginx或者Apache来当这里的Request Dispatcher。</p>
 <section class="footnotes">
