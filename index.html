@@ -274,9 +274,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#流量获取">流量获取</a></li>
 <li><a href="#移动应用">移动应用</a></li>
 </ul></li>
-<li><a href="#网站性能监测与分析">网站性能监测与分析</a><ul>
-<li><a href="#可用性监测">可用性监测</a></li>
-<li><a href="#性能分析">性能分析</a></li>
+<li><a href="#网站性能">网站性能</a><ul>
+<li><a href="#网站性能监测">网站性能监测</a></li>
+<li><a href="#应用性能指数">应用性能指数</a></li>
 </ul></li>
 <li><a href="#网站性能优化">网站性能优化</a><ul>
 <li><a href="#减少http请求">减少HTTP请求</a></li>
@@ -3064,18 +3064,19 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <img src="assets/article/chapter5/ga-app.jpg" alt="Growth 应用数据" /><figcaption>Growth 应用数据</figcaption>
 </figure>
 <p>我们也可以从上面看到 APP 的安装来源等等。</p>
-<h2 id="网站性能监测与分析">网站性能监测与分析</h2>
+<h2 id="网站性能">网站性能</h2>
 <p>网站性能直接影响到了网站的响应时间、吞吐量等等，也是运维、开发一系列技术的体现。</p>
-<h3 id="可用性监测">可用性监测</h3>
+<h3 id="网站性能监测">网站性能监测</h3>
+<p>网站性能监测</p>
 <blockquote>
-<p>网站可用性是网站性能监测的重要指标之一，表示在一段时间内，网站处于“正常状态”的机率。随着我国电子政务的建设发展，政府网站用户量的增加，政府网站可用性这一常见问题将逐渐成为政府网站日常管理工作重点之一。</p>
+<p>网站可用性是网站性能监测的重要指标之一，表示在一段时间内，网站处于“正常状态”的机率。</p>
 </blockquote>
 <ul>
 <li>DNS 解析</li>
 <li>内存、硬盘等等</li>
 <li>网页打开速度</li>
 </ul>
-<h3 id="性能分析">性能分析</h3>
+<h3 id="应用性能指数">应用性能指数</h3>
 <blockquote>
 <p>Apdex 联盟，一个由众多网络分析技术公司和测量工业组成的联盟组织，它们联合起来开发了“应用性能指数”即“Apdex”(Application Performance Index)，用一句话来概括，Apdex 是用户对应用性能满意度的量化值。它提供了一个统一的测量和报告用户体验的方法，第一次把最终用户的体验和应用性能联系在了一起。</p>
 </blockquote>
@@ -3088,11 +3089,25 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h2 id="网站性能优化">网站性能优化</h2>
 <p>针对网站性能优化领域，网上已经有相当多的总结，这里只罗列一些常见（我用过）的策略。</p>
 <h3 id="减少http请求">减少HTTP请求</h3>
-<p>合并脚本和样式表，CSS Sprites，拆分初始化负载，划分主域</p>
+<p>从网上查找的情况分类来看，有下面的一些情况：</p>
+<ul>
+<li>合并JavaScript和CSS。只是这种方式需要好好评估，因为合并过多的JavaScript，可能会导致JavaScript文件过大。一个大的文件将增加Load时间，导致不好的用户体验。</li>
+<li>CSS Sprites。即将一个页面涉及到的所有零星图片都包含到一张大图中去。值得注意的是，像Logo这一类文件将不要加到里面去了。</li>
+<li>拆分初始化负载。将页面加载时需要的一堆JavaScript文件，分成两部分：渲染页面所必需的和其他的。页面初始化时，只加载必须的，其余的等会加载。</li>
+<li>划分主域。将资源划分的请求划分到几个不同的域名上，来加速资源请求。</li>
+</ul>
+<p>对于我这样的懒人来说，我使用Google出品的PageSpeed。它主要的功能是针对前端页面而进行服务器端的优化，对前端设计人员来说，可以省去优化css、js以及图片的过程。它可以对CSS和JavaScript压缩、合并、级联、内联，生成一个新的Script和CSS文件 。还有图像优化：剥离元数据、动态调整，重新压缩，如针对Chrome浏览器生成WebP文件。还可以推迟图像和JavaScript加载。</p>
 <h3 id="页面内部优化">页面内部优化</h3>
-<p>将样式表放在顶部，将脚本放在底部，尽早刷新文档的输出</p>
+<ul>
+<li>将样式表放在顶部</li>
+<li>将脚本放在底部</li>
+<li>尽早刷新文档的输出</li>
+</ul>
 <h3 id="启用缓存">启用缓存</h3>
-<p>后台优化，启用页面缓存;</p>
+<ul>
+<li>后台优化</li>
+<li>启用页面缓存;</li>
+</ul>
 <h3 id="减少下载量">减少下载量</h3>
 <ul>
 <li>使用 CDN</li>
@@ -3100,7 +3115,10 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>缓存： 使用 gzip 压缩、添加 Expires 头、配置 ETag、使 AjaX 可缓存</li>
 </ul>
 <h3 id="网络连接上的优化">网络连接上的优化</h3>
-<p>DNS 域名解析加速、减少 DNS 查找</p>
+<ul>
+<li>DNS 域名解析加速</li>
+<li>减少 DNS 查找</li>
+</ul>
 <h2 id="seo">SEO</h2>
 <blockquote>
 <p>这是一个老的，有些过时纸，但非常平易近人，甚至在我们中间的非白皮书的读者图标微笑什么每个程序员都应该知道的关于搜索引擎优化和他们绝对概念的解释更详细，我只提一笔带过。</p>
