@@ -296,7 +296,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="#持续交付">持续交付</a><ul>
 <li><a href="#持续集成">持续集成</a><ul>
-<li><a href="#process">Process</a></li>
+<li><a href="#持续集成流程">持续集成流程</a></li>
 </ul></li>
 <li><a href="#持续交付-1">持续交付</a><ul>
 <li><a href="#配置管理">配置管理</a></li>
@@ -3366,7 +3366,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </blockquote>
 <h2 id="持续集成">持续集成</h2>
 <p>更关注代码质量。持续集成是为了确保随着需求变化而变化的代码，在实现功能的同时，质量不受影响。因此，在每一次构建后会运行单元测试，保证代码级的质量。单元测试会针对每一个特定的输入去判断和观察输出的结果，而单元测试的粒度则用来平衡持续集成的质量和速度。</p>
-<h3 id="process">Process</h3>
+<h3 id="持续集成流程">持续集成流程</h3>
 <p>在前面的内容里，我们已经介绍了持续集成的各项基础设施——如使用版本管理、编写测试、自动化部署。因此，我们就可以对这个工作流展开进入介绍。持续集成重要就是要保证整个过程是<strong>可持续</strong>的。如下图是一个持续集成的工作流：</p>
 <figure>
 <img src="assets/article/chapter6/ci.jpg" alt="CI Workflow" /><figcaption>CI Workflow</figcaption>
@@ -3378,6 +3378,18 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>小步前进是一系列步骤的集合，其目的是：集成越早问题越小。即当我们的代码越早的提交到源码服务器，那么其他人就可以尽可能早的和我们的代码集成到一起。这也意味着，每天结束时，我们在本地的修改要尽可能小，并且这些修改还要保证不会破坏持续集成。</p>
 <p>我们需要频繁地在本地提交我们的代码，编写独立的测试——如果我们在最后才编写测试，这会拖慢整个流程，它使得我们不能尽可能早的提交代码。</p>
 <h4 id="尽早反馈">尽早反馈</h4>
+<blockquote>
+<p>反馈越早，那么问题越小。</p>
+</blockquote>
+<p>无论是精益还是敏捷都在强调一点——尽早反馈，反馈对于提高敏捷开发流程效力非常重要。从日常的：</p>
+<ul>
+<li>Code Review</li>
+<li>静态代码分析</li>
+<li>自动集成测试</li>
+<li>自动验收测试</li>
+<li>高频率发布</li>
+</ul>
+<p>我们都在做尽可能小的反馈，这些实践对于我们完成一个好的持续集成来说是非常重要的基础。</p>
 <p>参考目录：</p>
 <p>-《持续交付：发布可靠软件的系统方法》</p>
 <h2 id="持续交付-1">持续交付</h2>
