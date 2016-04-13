@@ -300,11 +300,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#持续集成流程">持续集成流程</a></li>
 </ul></li>
 <li><a href="#持续交付-1">持续交付</a><ul>
-<li><a href="#配置管理">配置管理</a></li>
-<li><a href="#持续集成-1">持续集成</a></li>
-<li><a href="#测试">测试</a></li>
-<li><a href="#构建与部署">构建与部署</a></li>
-<li><a href="#自动化">自动化</a></li>
+<li><a href="#搭建基础设施">搭建基础设施</a></li>
 <li><a href="#持续部署">持续部署</a></li>
 </ul></li>
 <li><a href="#持续学习">持续学习</a><ul>
@@ -317,7 +313,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#遗留代码">遗留代码</a><ul>
 <li><a href="#什么是遗留代码">什么是遗留代码</a></li>
 <li><a href="#遗留代码的来源">遗留代码的来源</a></li>
-<li><a href="#遗留代码的问题">遗留代码的问题</a></li>
 </ul></li>
 <li><a href="#如何修改遗留代码">如何修改遗留代码</a><ul>
 <li><a href="#守-找到测试点">守: 找到测试点</a></li>
@@ -3409,20 +3404,38 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p>参考资料：</p>
 <p>-《持续交付：发布可靠软件的系统方法》</p>
 <h2 id="持续交付-1">持续交付</h2>
+<p>持续交付依赖于一系列的工具和实践，下图是一个持续交付的工作流：</p>
 <figure>
 <img src="assets/article/chapter6/continuous-delivery.jpg" alt="CD Workflow" /><figcaption>CD Workflow</figcaption>
 </figure>
+<p>还有一系列与开发无关的技能：</p>
 <ol type="1">
 <li>自动化</li>
 <li>DevOps</li>
 <li>云基础设施</li>
 <li>以软件为中心的哲学</li>
 </ol>
-<h3 id="配置管理">配置管理</h3>
-<h3 id="持续集成-1">持续集成</h3>
-<h3 id="测试">测试</h3>
-<h3 id="构建与部署">构建与部署</h3>
-<h3 id="自动化">自动化</h3>
+<h3 id="搭建基础设施">搭建基础设施</h3>
+<p>在我们使我们的项目可以持续交付软件包的时候，我们需要</p>
+<h4 id="本地开发环境">本地开发环境</h4>
+<p>在本地编写代码时，我们需要设置本地的开发环境。假设我们要开始一个Java Web项目，在我们的开发机器上，我们需要安装：</p>
+<ul>
+<li>版本管理工具，如git，用于管理源代码。</li>
+<li>IDE，如Intellij IDEA，用于搭建开发环境。</li>
+<li>构建工具，如gradle，用于安装依赖、运行测试、构建工程等等。</li>
+<li>语法检测工具，如checkstyle，用于检查代码语法。</li>
+<li>单元测试框架，如JUnit，用于进行单元测试。</li>
+<li>集成测试框架，如Cucumber、Selenium，用于做行为测试。</li>
+</ul>
+<p>除此，在我们的项目代码里，我们还需要：</p>
+<ul>
+<li><code>CI运行脚本</code>，用于在CI上运行指定的测试。</li>
+<li><code>上传包脚本</code>，用于上传build完的软件包。</li>
+<li><code>部署脚本</code>，用于在本地部署包到测试环境。</li>
+<li><code>监控代码</code>，用于监测网站性能和用户行为。</li>
+</ul>
+<p>当然我们还需要辅助一些测试工具来测试网站，如性能测试、网络测试等等。</p>
+<h4 id="测试环境">测试环境</h4>
 <h3 id="持续部署">持续部署</h3>
 <p>在持续交付之外的，还有持续部署——这个就更依赖于团队的组织结构了。</p>
 <figure>
@@ -3497,7 +3510,6 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="什么是遗留代码">什么是遗留代码</h3>
 <p>什么是遗留代码？没有自动化测试的代码就是遗留代码，不管它是十年前写的，还是昨天写的。</p>
 <h3 id="遗留代码的来源">遗留代码的来源</h3>
-<h3 id="遗留代码的问题">遗留代码的问题</h3>
 <h2 id="如何修改遗留代码">如何修改遗留代码</h2>
 <blockquote>
 <p>即使是最训练有素的开发团队，也不能保证始终编写出清晰高效的代码。</p>
