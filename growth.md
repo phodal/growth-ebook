@@ -3790,7 +3790,7 @@ github.com / referral | 281
 
 我们也可以从上面看到 APP 的安装来源等等。
 
-网站性能监测
+网站性能监测与分析
 ---
 
 网站性能直接影响到了网站的响应时间、吞吐量等等，也是运维、开发一系列技术的体现。
@@ -3803,14 +3803,7 @@ github.com / referral | 281
  - 内存、硬盘等等
  - 网页打开速度
 
-###服务监测
-
-###安全监测
-
-应用程序性能分析
----
-
-###关于 Apdex
+###性能分析
 
 > Apdex 联盟，一个由众多网络分析技术公司和测量工业组成的联盟组织，它们联合起来开发了“应用性能指数”即“Apdex”(Application Performance Index)，用一句话来概括，Apdex 是用户对应用性能满意度的量化值。它提供了一个统一的测量和报告用户体验的方法，第一次把最终用户的体验和应用性能联系在了一起。
 
@@ -3819,23 +3812,7 @@ github.com / referral | 281
  - 满意:用户充分工作。这就是目标时间（T秒），即在此时间里用户的工作没有因应用程序的响应时间而受阻，如3秒。
  - 容忍:用户感觉到响应滞后，响应时间大于 T，但能继续这个过程，如3～12秒。
  - 挫折:响应时间大于 F 秒的性能是不能接受的，用户可能放弃这个过程。F 等于 T×4，在本例子中为12秒。
-
-###博客性能分析
-
-接着才是重头戏，主要问题都在下面。。
-
- ![Breakdown Table](assets/article/chapter5/run-usage.jpg)
-
-比较慢的地方就是 ``blog_post_list_post_content`` 这个函数。。。
-
-
-| Category | Segment | % Time | Avg calls(per txn) | Avg time (ms) |
-| --- | --- | --- | --- | --- |
-| Template | Block/blog_post_list_post_content | 59.4 | 4.73 | 5,220 |
-| Template | Block/blog_months | 5.6 | 1.0 | 489 |
-| Function | django.core.handlers.wsgi:WSGIHandler | 4.7 | 1.0 | 410 |
-| Template | Block/blog_post_list_post_metainfo | 3.7 | 4.73 | 322 |
-| Template | Render/base.html | 3.7 | 1.0 | 322 |
+ 
 
 网站性能优化
 ---

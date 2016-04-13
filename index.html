@@ -274,14 +274,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#流量获取">流量获取</a></li>
 <li><a href="#移动应用">移动应用</a></li>
 </ul></li>
-<li><a href="#网站性能监测">网站性能监测</a><ul>
+<li><a href="#网站性能监测与分析">网站性能监测与分析</a><ul>
 <li><a href="#可用性监测">可用性监测</a></li>
-<li><a href="#服务监测">服务监测</a></li>
-<li><a href="#安全监测">安全监测</a></li>
-</ul></li>
-<li><a href="#应用程序性能分析">应用程序性能分析</a><ul>
-<li><a href="#关于-apdex">关于 Apdex</a></li>
-<li><a href="#博客性能分析">博客性能分析</a></li>
+<li><a href="#性能分析">性能分析</a></li>
 </ul></li>
 <li><a href="#网站性能优化">网站性能优化</a><ul>
 <li><a href="#减少http请求">减少HTTP请求</a></li>
@@ -3069,7 +3064,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <img src="assets/article/chapter5/ga-app.jpg" alt="Growth 应用数据" /><figcaption>Growth 应用数据</figcaption>
 </figure>
 <p>我们也可以从上面看到 APP 的安装来源等等。</p>
-<h2 id="网站性能监测">网站性能监测</h2>
+<h2 id="网站性能监测与分析">网站性能监测与分析</h2>
 <p>网站性能直接影响到了网站的响应时间、吞吐量等等，也是运维、开发一系列技术的体现。</p>
 <h3 id="可用性监测">可用性监测</h3>
 <blockquote>
@@ -3080,10 +3075,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>内存、硬盘等等</li>
 <li>网页打开速度</li>
 </ul>
-<h3 id="服务监测">服务监测</h3>
-<h3 id="安全监测">安全监测</h3>
-<h2 id="应用程序性能分析">应用程序性能分析</h2>
-<h3 id="关于-apdex">关于 Apdex</h3>
+<h3 id="性能分析">性能分析</h3>
 <blockquote>
 <p>Apdex 联盟，一个由众多网络分析技术公司和测量工业组成的联盟组织，它们联合起来开发了“应用性能指数”即“Apdex”(Application Performance Index)，用一句话来概括，Apdex 是用户对应用性能满意度的量化值。它提供了一个统一的测量和报告用户体验的方法，第一次把最终用户的体验和应用性能联系在了一起。</p>
 </blockquote>
@@ -3093,60 +3085,6 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>容忍:用户感觉到响应滞后，响应时间大于 T，但能继续这个过程，如3～12秒。</li>
 <li>挫折:响应时间大于 F 秒的性能是不能接受的，用户可能放弃这个过程。F 等于 T×4，在本例子中为12秒。</li>
 </ul>
-<h3 id="博客性能分析">博客性能分析</h3>
-<p>接着才是重头戏，主要问题都在下面。。</p>
-<figure>
-<img src="assets/article/chapter5/run-usage.jpg" alt="Breakdown Table" /><figcaption>Breakdown Table</figcaption>
-</figure>
-<p>比较慢的地方就是 <code>blog_post_list_post_content</code> 这个函数。。。</p>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Category</th>
-<th style="text-align: left;">Segment</th>
-<th style="text-align: left;">% Time</th>
-<th style="text-align: left;">Avg calls(per txn)</th>
-<th style="text-align: left;">Avg time (ms)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Template</td>
-<td style="text-align: left;">Block/blog_post_list_post_content</td>
-<td style="text-align: left;">59.4</td>
-<td style="text-align: left;">4.73</td>
-<td style="text-align: left;">5,220</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Template</td>
-<td style="text-align: left;">Block/blog_months</td>
-<td style="text-align: left;">5.6</td>
-<td style="text-align: left;">1.0</td>
-<td style="text-align: left;">489</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Function</td>
-<td style="text-align: left;">django.core.handlers.wsgi:WSGIHandler</td>
-<td style="text-align: left;">4.7</td>
-<td style="text-align: left;">1.0</td>
-<td style="text-align: left;">410</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Template</td>
-<td style="text-align: left;">Block/blog_post_list_post_metainfo</td>
-<td style="text-align: left;">3.7</td>
-<td style="text-align: left;">4.73</td>
-<td style="text-align: left;">322</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Template</td>
-<td style="text-align: left;">Render/base.html</td>
-<td style="text-align: left;">3.7</td>
-<td style="text-align: left;">1.0</td>
-<td style="text-align: left;">322</td>
-</tr>
-</tbody>
-</table>
 <h2 id="网站性能优化">网站性能优化</h2>
 <p>针对网站性能优化领域，网上已经有相当多的总结，这里只罗列一些常见（我用过）的策略。</p>
 <h3 id="减少http请求">减少HTTP请求</h3>
