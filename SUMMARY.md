@@ -12,7 +12,7 @@
     *   [Web 编程基础](chapters/1.3-web-basic.md)
     *   [HTML入门](chapters/1.4.0-html.md)
     *   [CSS入门](chapters/1.4.1-css.md)
-    *   [JavaScript入门](chapters/1.4.2-js.md
+    *   [JavaScript入门](chapters/1.4.2-js.md)
 *   [前端与后台](chapters/2.0.0-back-front.md)
     *   [如何选择后台语言?](chapters/2.1.0-backend-language.md)
     *   [MVC](chapters/2.1.2-mvc.md)
@@ -44,9 +44,6 @@
     *   [数据分析](chapters/5.1.1-da.md)
     *   [Google Analytics初入](chapters/5.1.2-ga.md)
     *   [SEO(搜索引擎优化)](chapters/5.3.0-seo.md)
-    *   [网站监测](chapters/5.2.1-monitoring.md)
-    *   [应用程序性能分析](chapters/5.2.2-apdex.md)
-    *   [网站性能优化](chapters/5.2.3-performance.md)
     *   [UX入门](chapters/5.4.0-first-ux.md)
     *   [认识设计](chapters/5.4.1-learn-design.md)
 *   [持续交付](chapters/6.0.0-cd.md)
