@@ -1,6 +1,6 @@
 # Summary
 
-*   [Growth: 全栈增长工程师指南](README.md)
+*   [Growth: 全栈增长工程师指南](README_GITBOOK.md)
     *   [全栈工程师是未来](chapters/0.0.0-prelude.md)
 *   [基础知识篇](chapters/1.0.md)
     *   [工具只是辅助](chapters/1.1.0-setup.md)
