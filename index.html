@@ -1926,8 +1926,15 @@ gulp.task(&#39;default&#39;, function () {
 <p>如果是第一次使用 Git，你需要设置署名和邮箱：</p>
 <pre><code>$ git config --global user.name &quot;用户名&quot;
 $ git config --global user.email &quot;电子邮箱&quot;</code></pre>
-<p>将代码仓库 clone 到本地，其实就是将代码复制到你的机器里，并交由 Git 来管理：</p>
-<pre><code>$ git clone git@github.com:someone/symfony-docs-chs.git</code></pre>
+<p>你可以在 <a href="https://github.com">GitHub</a> 新建免费的公开仓库或在 <a href="https://coding.net">Coding.net</a> 新建免费的私有仓库。</p>
+<p>按照 <a href="https://help.github.com/articles/generating-an-ssh-key/">GitHub 的文档</a> 或 <a href="https://coding.net/help/doc/account/ssh-key.html">Coding.net 的文档</a> 配置 SSH Key，然后将代码仓库 clone 到本地，其实就是将代码复制到你的机器里，并交由 Git 来管理：</p>
+<pre><code>$ git clone git@github.com:username/repository.git
+或
+$ git clone git@git.coding.net:username/repository.git</code></pre>
+<p>或使用 HTTPS 地址进行 clone：</p>
+<pre><code>$ git clone https://username:password@github.com/username/repository.git
+或
+$ git clone https://username:password@git.coding.net/username/repository.git</code></pre>
 <p>你可以修改复制到本地的代码了（ symfony-docs-chs 项目里都是 rst 格式的文档）。当你觉得完成了一定的工作量，想做个阶段性的提交：</p>
 <p>向这个本地的代码仓库添加当前目录的所有改动：</p>
 <pre><code>$ git add .</code></pre>

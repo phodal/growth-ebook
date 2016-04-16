@@ -2285,10 +2285,22 @@ $ git config --global user.name "用户名"
 $ git config --global user.email "电子邮箱"
 ```
 
-将代码仓库 clone 到本地，其实就是将代码复制到你的机器里，并交由 Git 来管理：
+你可以在 [GitHub](https://github.com) 新建免费的公开仓库或在 [Coding.net](https://coding.net) 新建免费的私有仓库。
+
+按照 [GitHub 的文档](https://help.github.com/articles/generating-an-ssh-key/) 或 [Coding.net 的文档](https://coding.net/help/doc/account/ssh-key.html) 配置 SSH Key，然后将代码仓库 clone 到本地，其实就是将代码复制到你的机器里，并交由 Git 来管理：
 
 ```
-$ git clone git@github.com:someone/symfony-docs-chs.git
+$ git clone git@github.com:username/repository.git
+或
+$ git clone git@git.coding.net:username/repository.git
+```
+
+或使用 HTTPS 地址进行 clone：
+
+```
+$ git clone https://username:password@github.com/username/repository.git
+或
+$ git clone https://username:password@git.coding.net/username/repository.git
 ```
 
 你可以修改复制到本地的代码了（ symfony-docs-chs 项目里都是 rst 格式的文档）。当你觉得完成了一定的工作量，想做个阶段性的提交：
