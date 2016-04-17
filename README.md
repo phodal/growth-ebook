@@ -28,8 +28,6 @@
 
 在线预览：[http://growth.phodal.com/](http://growth.phodal.com/)
 
-GitBook阅读: [http://gitbook-growth.phodal.com/](http://gitbook-growth.phodal.com/)
-
 **下载**: [Epub版](https://github.com/phodal/growth-ebook/releases/download/0.9.9/growth.epub)、[Mobi版](https://github.com/phodal/growth-ebook/releases/download/0.9.9/growth.mobi)、[PDF版](https://github.com/phodal/growth-ebook/releases/download/0.9.9/growth.pdf)、[RTF版](https://github.com/phodal/growth-ebook/releases/download/0.9.9/growth.rtf)
 
 **Growth实战篇**
