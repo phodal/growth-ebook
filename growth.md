@@ -4170,7 +4170,7 @@ UX 入门
 
 ![Learn Design](assets/article/chapter5/learn-design.png)
 
-如在早期我学习 Emcas 和 GNU/Linux 的时候，也曾经放弃过，虽然在当时我已经读过 Linux 内核。然而，在应用之前进行理论学习并没有卵用。
+如在早期我学习 Emacs 和 GNU/Linux 的时候，也曾经放弃过，虽然在当时我已经读过 Linux 内核。然而，在应用之前进行理论学习并没有卵用。
 
 通常我们会有类似于下面的学习体验，对于一本书来说有下面的体验似乎也是一件很不错的事:
 
@@ -4599,7 +4599,7 @@ MVC 模式本身也是接于分层而设计的，如下图是 Spring MVC 的请�
 
 在我们日常使用的框架多数是预先设计的构架，因为这个架构本身的目标是明确的。系统会围绕一定的架构去构建，并且在这个过程中架构会帮助我们更好地理解系统。如下图所示的是 Emacs 的架构：
 
-![Emcas 架构](assets/article/chapter8/emacs-architecture.png)
+![Emacs 架构](assets/article/chapter8/emacs-architecture.png)
 
 它采用的是交互式应用程序员应用广泛的模型-视图-控制器模式。
 
