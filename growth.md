@@ -9,7 +9,7 @@ Growth: 全栈增长工程师指南
 
 > 谨以此文献给每一个为成为优秀全栈工程师奋斗的人。
 
-技术在过去的几十年里进步很快，也将在未来的几十年里发展得更快。今天技术的门槛下降得越来越快，原本需要一个团队做出来的Web应用，现在只需要一两个人就可以了。
+技术在过去的几十年里进步很快，也将在未来的几十年里发展得更快。今天技术的门槛下降得越来越快，原本需要一个团队做出来的 Web 应用，现在只需要一两个人就可以了。
 
 同时，由于公司组织结构的变迁，以及到变化的适应度，也决定了赋予每个人的职责将会越来越多。尽管我们看到工厂化生产带来的优势，但是我们也看到了**精益思想**带来的变革。正是这种变革让越来越多的专家走向全栈，让组织内部有更好的交流。
 
@@ -121,7 +121,7 @@ Blabla，各种代码混乱地夹杂在一起。不得不说一句：这样的�
 
 **全栈**
 
-相似的，我们所看到的那些关于成为全栈工程师的文章，多数是初创公司的CTO写的。而这些初创公司的CTO也多数是全栈工程师，他们需要招聘全栈工程师来帮助他们解决问题。
+相似的，我们所看到的那些关于成为全栈工程师的文章，多数是初创公司的 CTO 写的。而这些初创公司的 CTO 也多数是全栈工程师，他们需要招聘全栈工程师来帮助他们解决问题。
 
 ####两种不同的学习模型
 
@@ -296,10 +296,10 @@ IDE 的全称是集成开发环境，顾名思义即它集成了你需要用到�
 
 一般来说，他们都应该有下面的一些要素：
 
- - **快捷键**
- - **Code HighLight**
- - **Auto Complete**
- - **Syntax Check**
+ - **shortcut（快捷键）**
+ - **Code HighLight（代码高亮）**
+ - **Auto Complete（自动补全）**
+ - **Syntax Check（语法检查）**
 
 而如果是编辑器的话，就需要自己去找寻这些相应的插件。
 
@@ -350,19 +350,19 @@ Linux 发行版无非就是一堆软件包 (package) 形式的应用程序加上
 
 ###OS X
 
-**Homebrew**
+**[Homebrew](http://brew.sh/)**
 
 > 包管理工具，官方称之为 The missing package manager for OS X。
 
-**Homebrew Cask**
+**[Homebrew Cask](https://caskroom.github.io/)**
 
 > brew-cask 允许你使用命令行安装 OS X 应用。
 
-**iTerm2**
+**[iTerm2](https://www.iterm2.com/)**
 
 > iTerm2 是最常用的终端应用，是 Terminal 应用的替代品。
 
-**Zsh**
+**[Zsh](http://www.zsh.org/)**
 
 Zsh 是一款功能强大终端（shell）软件，既可以作为一个交互式终端，也可以作为一个脚本解释器。它在兼容 Bash 的同时 (默认不兼容，除非设置成 emulate sh) 还有提供了很多改进，例如：
 
@@ -372,33 +372,33 @@ Zsh 是一款功能强大终端（shell）软件，既可以作为一个交互�
  - 更好的数组处理
  - 可定制性高
 
-**Oh My Zsh**
+**[Oh My Zsh](http://ohmyz.sh/)**
 
 > Oh My Zsh 同时提供一套插件和工具，可以简化命令行操作。
 
-**Sublime Text 2**
+**[Sublime Text 2](https://www.sublimetext.com/)**
 
 > 强大的文件编辑器。   
 
-**MacDown**
+**[MacDown](http://macdown.uranusjr.com/)**
 
 > MacDown 是 Markdown 编辑器。
 
-**CheatSheet**
+**[CheatSheet](https://www.mediaatelier.com/CheatSheet/)**
 
 > CheatSheet 能够显示当前程序的快捷键列表，默认的快捷键是长按⌘。
 
-**SourceTree**
+**[SourceTree](https://www.sourcetreeapp.com/)**
 
 > SourceTree 是 Atlassian 公司出品的一款优秀的 Git 图形化客户端。
 
-**Alfred**
+**[Alfred](https://www.alfredapp.com/)**
 
 > Mac 用户不用鼠标键盘的必备神器，配合大量 Workflows，习惯之后可以大大减少操作时间。
 
 上手简单，调教成本在后期自定义 Workflows，不过有大量雷锋使用者提供的现成扩展，访问这里挑选喜欢的，并可以极其简单地根据自己的需要修改。
 
-**Vimium**
+**[Vimium](https://vimium.github.io/)**
 
 > Vimium 是一个 Google Chrome 扩展，让你可以纯键盘操作 Chrome。
 
@@ -409,30 +409,30 @@ Zsh 是一款功能强大终端（shell）软件，既可以作为一个交互�
 
 ###Windows
 
-**Chocolatey**
+**[Chocolatey](https://chocolatey.org/)**
 
 > Chocolatey 是一个软件包管理工具，类似于 Ubuntu 下面的 apt-get,不过是运行在 Windows 环境下面。
 
-**Wox**
+**[Wox](http://www.getwox.com/)**
 
 > Wox 是一个高效的快速启动器工具，通过快捷键呼出，然后输入关键字来搜索程序进行快速启动，或者搜索本地硬盘的文件，打开百度、Google 进行搜索，甚至是通过一些插件的功能实现单词翻译、关闭屏幕、查询剪贴板历史、查询编程文档、查询天气等更多功能。它最大的特点是可以支持中文拼音的模糊匹配。
 
-**PowerShell**
+**[PowerShell](https://msdn.microsoft.com/en-us/powershell/mt173057.aspx)**
 
 > Windows PowerShell 是微软公司为 Windows 环境所开发的壳程序（shell）及脚本语言技术，采用的是命令行界面。这项全新的技术提供了丰富的控制与自动化的系统管理能力。
 
-**cmder**
+**[cmder](http://cmder.net/)**
 
 > cmder 把 conemu，msysgit 和 clink 打包在一起，让你无需配置就能使用一个真正干净的 Linux 终端！她甚至还附带了漂亮的 monokai 配色主题。
 
-**Total Commander**
+**[Total Commander](http://www.ghisler.com/)**
 
 > Total Commander 是一款应用于 Windows 平台的文件管理器 ，它包含两个并排的窗口，这种设计可以让用户方便地对不同位置的“文件或文件夹”进行操作，例如复制、移动、删除、比较等，相对 Windows 资源管理器而言方便很多，极大地提高了文件操作的效率，被广大软件爱好者亲切地简称为：TC 。
 
 ###GNU/Linux
 
 
-**Zsh**
+**[Zsh](http://www.zsh.org/)**
 
 Zsh 是一款功能强大终端（shell）软件，既可以作为一个交互式终端，也可以作为一个脚本解释器。它在兼容 Bash 的同时 (默认不兼容，除非设置成 emulate sh) 还有提供了很多改进，例如：
 
@@ -442,15 +442,15 @@ Zsh 是一款功能强大终端（shell）软件，既可以作为一个交互�
  - 更好的数组处理
  - 可定制性高
 
-**Oh My Zsh**
+**[Oh My Zsh](http://ohmyz.sh/)**
 
 > Oh My Zsh 同时提供一套插件和工具，可以简化命令行操作。
 
-**ReText**
+**[ReText](https://github.com/retext-project/retext)**
 
 > ReText 是一个使用 Markdown 语法和 reStructuredText (reST) 结构的文本编辑器，编辑的内容支持导出到 PDF、ODT 和 HTML 以及纯文本，支持即时预览、网页生成以及 HTML 语法高亮、全屏模式，可导出文件到 Google Docs 等。
 
-**Launchy**
+**[Launchy](http://www.launchy.net/)**
 
 > Launchy 是一款免费开源的协助您摒弃 Windows “运行”的 Dock 式替代工具，既方便又实用，自带多款皮肤，作为美化工具也未尝不可。
 
@@ -688,7 +688,7 @@ HTML
 
 ###hello,world
 
-hello,world 是一个传统，所以在这里也遵循这个有趣的传统，我们所要做的事情其实很简单，虽然也有一点点 hack 的感觉。——让我们先来新建一个文并命名为"helloworld.html"。
+hello,world 是一个传统，所以在这里也遵循这个有趣的传统，我们所要做的事情其实很简单，虽然也有一点点 hack 的感觉。——让我们先来新建一个文件并命名为"helloworld.html"。
 
 (PS:大部分人应该都是在 Windows 环境下工作的，所以你需要新建一个文本，然后重命名，或者你需要一个编辑器，在这里我们推荐用 **Sublime Text** 。破解不破解，注册不注册都不会对你的使用有太多的影响。)
 
@@ -877,7 +877,7 @@ $ python file.py
 
 ####更多
 
-我们还没有试着去解决“某商店里的糖一颗5块钱，小明买了3颗糖，小明一共花了多少钱”的问题。也就是说我们学会的是一个还不能解决实际问题的语言，于是我们还需要学点东西，比如 JavaScript, CSS。我们可以将 JavaScript 理解为解决问题的语言，HTML则是前端显示，CSS 是配置文件，这样的话，我们会在那之后学会成为一个近乎专业的程序员。我们刚刚学习了一下怎么在前端显示那些代码的行为，于是我们还需要 JavaScript。
+我们还没有试着去解决“某商店里的糖一颗5块钱，小明买了3颗糖，小明一共花了多少钱”的问题。也就是说我们学会的是一个还不能解决实际问题的语言，于是我们还需要学点东西，比如 JavaScript, CSS。我们可以将 JavaScript 理解为解决问题的语言，HTML 则是前端显示，CSS 是配置文件，这样的话，我们会在那之后学会成为一个近乎专业的程序员。我们刚刚学习了一下怎么在前端显示那些代码的行为，于是我们还需要 JavaScript。
 
 CSS
 ---
@@ -1855,7 +1855,7 @@ MVVM 在使用当中，通常还会利用双向绑定技术，使得 Model 变�
 
 ###数据库
 
-当我们开始一个Web应用的时候，如创建一个用户管理系统的时候，我们就需要不断由于经常对文件进行查询、修改、插入和删除等操作。不仅仅如此，我们还需要定义数据之前的关系，如这个用户对应这个密码。在一些更复杂的情况下，我们还需要寻找中这些用户对应的一些操作数据等等。如果我们还是这些工作交给文件来处理，那么我们便是在向自己挖坑。
+当我们开始一个 Web 应用的时候，如创建一个用户管理系统的时候，我们就需要不断由于经常对文件进行查询、修改、插入和删除等操作。不仅仅如此，我们还需要定义数据之前的关系，如这个用户对应这个密码。在一些更复杂的情况下，我们还需要寻找中这些用户对应的一些操作数据等等。如果我们还是这些工作交给文件来处理，那么我们便是在向自己挖坑。
 
 > 数据库，简单来说可视为电子化的文件柜——存储电子文件的处所，用户可以对文件中的数据运行新增、截取、更新、删除等操作。
 
