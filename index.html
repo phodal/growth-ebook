@@ -1782,7 +1782,7 @@ thePerson <span class="op">=</span> thePeople[<span class="dv">0</span>]<span cl
 <p>构建系统(build system)是用来从源代码生成用户可以使用的目标的自动化工具。目标可以包括库、可执行文件、或者生成的脚本等等。</p>
 </blockquote>
 <p>常用的构建工具包括 GNU Make、GNU autotools、CMake、Apache Ant（主要用于JAVA）。此外，所有的集成开发环境（IDE）比如 Qt Creator、Microsoft Visual Studio 和 Eclipse 都对他们支持的语言添加了自己的构建系统配置工具。通常 IDE 中的构建系统只是基于控制台的构建系统（比如 Autotool 和 CMake ）的前端。</p>
-<p>对比于 Web 应用开发来说，构建系统应该还包括应用打包(如 Java 中的 Jar 包，或者用于部署的 RPM 包、源代码分析、测试覆盖率分析等等。</p>
+<p>对比于 Web 应用开发来说，构建系统应该还包括应用打包（如 Java 中的 Jar 包，或者用于部署的 RPM 包）、源代码分析、测试覆盖率分析等等。</p>
 <h3 id="web-应用的构建过程">Web 应用的构建过程</h3>
 <p>在刚创建项目的时候，我们都会有一个完整的构建思路。如下图便是这样的一个例子：</p>
 <figure>
@@ -1995,7 +1995,7 @@ $ git clone https://username:password@git.coding.net/username/repository.git</co
 <h3 id="tasking-开发任务">Tasking 开发任务</h3>
 <p>现在，让我们简单地来 Tasking 如何开发一个博客。作为一个程序员，如果我们要去开始一个博客系统的话，那么我们会怎么做？</p>
 <ol type="1">
-<li>让规划一下我们所需要的功能——如后台、评论、Social 等等，并且我们还应该设计我们博客的 Mockup。</li>
+<li>先规划一下我们所需要的功能——如后台、评论、Social 等等，并且我们还应该设计我们博客的 Mockup。</li>
 <li>随后我们就可以简单地设计一下系统的架构，如传统的前后端结合。</li>
 <li>我们就可以进行技术选型了——使用哪个后端框架、使用哪个前端框架。</li>
 <li>创建我们的 hello,world，然后开始进行一个功能的编码工作。</li>
@@ -2467,8 +2467,8 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="内联函数">内联函数</h3>
 <p>继续走这重构一书的复习之路，接着便是内联，除了内联变量，当然还有内联函数。</p>
 <p>快捷键</p>
-<p>Mac: <code>alt</code>+<code>command</code>+<code>M</code></p>
-<p>Windows/Linux: <code>Ctrl</code>+<code>Alt</code>+<code>M</code></p>
+<p>Mac: <code>alt</code>+<code>command</code>+<code>N</code></p>
+<p>Windows/Linux: <code>Ctrl</code>+<code>Alt</code>+<code>N</code></p>
 <p>鼠标: Refactor | Inline</p>
 <p><strong>重构之前</strong></p>
 <div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> extract {
@@ -2634,7 +2634,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <img src="assets/article/chapter4/lxc-vm.jpg" alt="LXC vs VM" /><figcaption>LXC vs VM</figcaption>
 </figure>
 <p>我们会发现虚拟机中多了一层 Hypervisor——运行在物理服务器和操作系统之间，它可以让多个操作系统和应用共享一套基础物理硬件。这一层级可以协调访问服务器上的所有物理设备和虚拟机，然而由于这一层级的存在，它也将消耗更多的能量。据爱立信研究院和阿尔托大学发表的论文表示：Docker、LXC 与 Xen、KVM 在完成相同的工作时要少消耗10%的能耗。</p>
-<p>LXC 主要是利用 cgroups 与 namespace 的功能，来向提供应用软件一个独立的操作系统运行环境。cgroups（即Control Groups）j Linux 内核提供的一种可以限制、记录、隔离进程组所使用的物理资源的机制。而由 namespace 来责任隔离控制。</p>
+<p>LXC 主要是利用 cgroups 与 namespace 的功能，来向提供应用软件一个独立的操作系统运行环境。cgroups（即Control Groups）是 Linux 内核提供的一种可以限制、记录、隔离进程组所使用的物理资源的机制。而由 namespace 来责任隔离控制。</p>
 <p>与虚拟机相比，LXC 隔离性方面有所不足，这就意味着在实现可移植部署会遇到一些困难。这时候，我们就需要 Docker 来提供一个抽象层，并提供一个管理机制。</p>
 <h4 id="docker">Docker</h4>
 <blockquote>
@@ -2644,7 +2644,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <figure>
 <img src="assets/article/chapter4/basic-images.png" alt="Docker Container" /><figcaption>Docker Container</figcaption>
 </figure>
-<p>从上图中我们还可以发现一点： Docker 容器是建立在 Aufs 基础上的。AUFS 是一种 Union File System，它可以不同的目录挂载到同一个虚拟文件系统下。它的目的就是为了实现上图的增量递增的过程，同时又不会影响原有的目录。即如下的流程如下：</p>
+<p>从上图中我们还可以发现一点： Docker 容器是建立在 Aufs 基础上的。AUFS 是一种 Union File System，它可以把不同的目录挂载到同一个虚拟文件系统下。它的目的就是为了实现上图的增量递增的过程，同时又不会影响原有的目录。即如下的流程如下：</p>
 <figure>
 <img src="assets/article/chapter4/aufs_layers.jpg" alt="AUFS 层" /><figcaption>AUFS 层</figcaption>
 </figure>
@@ -2738,7 +2738,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="应用层缓存">应用层缓存</h3>
 <p>应用层缓存这块跟开发人员关系最大，也是平时经常接触的。</p>
 <ul>
-<li>缓存数据库的查询结果,减少数据的压力。这个在大型网站是必须做的。</li>
+<li>缓存数据库的查询结果，减少数据的压力。这个在大型网站是必须做的。</li>
 <li>缓存磁盘文件的数据。比如常用的数据可以放到内存，不用每次都去读取磁盘，特别是密集计算的程序，比如中文分词的词库。</li>
 <li>缓存某个耗时的计算操作，比如数据统计。</li>
 </ul>
@@ -2747,14 +2747,14 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>嵌入式，也就是缓存和应用在同一个机器。比如单机的文件缓存，java 中用 hashMap 来缓存数据等等。这种缓存速度快，没有网络消耗。</li>
 <li>分布式缓存，把缓存的数据独立到不同的机器，通过网络来请求数据，比如常用的 memcache 就是这一类。</li>
 </ul>
-<p>分布式缓存一般可以分为几种:</p>
+<p>分布式缓存一般可以分为几种：</p>
 <ul>
 <li>按应用切分数据到不同的缓存服务器，这是一种比较简单和实用的方式。</li>
-<li>按照某种规则（hash,路由等等）把数据存储到不同的缓存服务器</li>
+<li>按照某种规则（hash，路由等等）把数据存储到不同的缓存服务器</li>
 <li>代理模式，应用在获取数据的时候都由代理透明的处理，缓存机制有代理服务器来处理</li>
 </ul>
 <h3 id="前端缓存">前端缓存</h3>
-<p>我们这里说的前端缓存可以理解为一般使用的 cdn 技术，利用 squid 等做前端缓冲技术，主要还是针对静态文件类型，比如图片，css,js,html 等静态文件。</p>
+<p>我们这里说的前端缓存可以理解为一般使用的 cdn 技术，利用 squid 等做前端缓冲技术，主要还是针对静态文件类型，比如图片、css、js、html 等静态文件。</p>
 <h3 id="客户端缓存">客户端缓存</h3>
 <p>浏览器端的缓存，可以让用户请求一次之后，下一次不在从服务器端请求数据，直接从本地缓存读取，可以减轻服务器负担也可以加快用户的访问速度。</p>
 <h3 id="html5-离线缓存">HTML5 离线缓存</h3>
@@ -2831,7 +2831,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <figure>
 <img src="assets/article/chapter4/rpm-deploy.jpg" alt="RPM Build Process" /><figcaption>RPM Build Process</figcaption>
 </figure>
-<p>要构建一个标准的 RPM 包，我们需要创建 .spec文件，这个文件包含软件打包的全部信息——如包的 Summary、Name、Version、Copyright、Vendor 等等。在产生完这一个配置文件事，执行 rpmbuild 命令，系统会按照步骤生成目标 RPM 包。</p>
+<p>要构建一个标准的 RPM 包，我们需要创建 .spec文件，这个文件包含软件打包的全部信息——如包的 Summary、Name、Version、Copyright、Vendor 等等。在产生完这一个配置文件后，执行 rpmbuild 命令，系统会按照步骤生成目标 RPM 包。</p>
 <h3 id="上传和安装软件包">上传和安装软件包</h3>
 <p>生成对应的软件包后，我们就可以将其上传到 Koji 上，它是 Fedora 社区的编译系统。如下图所示：</p>
 <figure>
@@ -3077,21 +3077,21 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </ul>
 <h3 id="网站性能-1">网站性能</h3>
 <p>针对网站性能优化领域，网上已经有相当多的总结，这里只罗列一些常见（我用过）的策略。</p>
-<h5 id="减少http请求">减少HTTP请求</h5>
+<h5 id="减少-http-请求">减少 HTTP 请求</h5>
 <p>从网上查找的情况分类来看，有下面的一些情况：</p>
 <ul>
-<li>合并JavaScript和CSS。只是这种方式需要好好评估，因为合并过多的JavaScript，可能会导致JavaScript文件过大。一个大的文件将增加Load时间，导致不好的用户体验。</li>
-<li>CSS Sprites。即将一个页面涉及到的所有零星图片都包含到一张大图中去。值得注意的是，像Logo这一类文件将不要加到里面去了。</li>
-<li>拆分初始化负载。将页面加载时需要的一堆JavaScript文件，分成两部分：渲染页面所必需的和其他的。页面初始化时，只加载必须的，其余的等会加载。</li>
+<li>合并 JavaScript 和 CSS。只是这种方式需要好好评估，因为合并过多的 JavaScript，可能会导致 JavaScript 文件过大。一个大的文件将增加 Load时间，导致不好的用户体验。</li>
+<li>CSS Sprites。即将一个页面涉及到的所有零星图片都包含到一张大图中去。值得注意的是，像 Logo 这一类文件将不要加到里面去了。</li>
+<li>拆分初始化负载。将页面加载时需要的一堆 JavaScript 文件，分成两部分：渲染页面所必需的和其他的。页面初始化时，只加载必须的，其余的等会加载。</li>
 <li>划分主域。将资源划分的请求划分到几个不同的域上，来加速资源请求。</li>
 </ul>
-<p>对于我这样的懒人来说，我使用Google出品的PageSpeed。它主要的功能是针对前端页面而进行服务器端的优化，对前端设计人员来说，可以省去优化css、js以及图片的过程。它可以对CSS和JavaScript压缩、合并、级联、内联，生成一个新的Script和CSS文件 。还有图像优化：剥离元数据、动态调整，重新压缩，如针对Chrome浏览器生成WebP文件。还可以推迟图像和JavaScript加载。</p>
+<p>对于我这样的懒人来说，我使用 Google 出品的 <a href="https://developers.google.com/speed/pagespeed/?hl=zh-CN">PageSpeed</a>。它主要的功能是针对前端页面而进行服务器端的优化，对前端设计人员来说，可以省去优化 css、js 以及图片的过程。它可以对 CSS 和 JavaScript 压缩、合并、级联、内联，生成一个新的 Script 和 CSS 文件 。还有图像优化：剥离元数据、动态调整，重新压缩，如针对 Chrome 浏览器生成 WebP 文件。还可以推迟图像和 JavaScript 加载。</p>
 <h4 id="页面内部优化">页面内部优化</h4>
-<p>HTML页面内的优化的目的便是：<strong>尽快渲染出页面</strong>。常见的优化策略便是：</p>
+<p>HTML 页面内的优化的目的便是：<strong>尽快渲染出页面</strong>。常见的优化策略便是：</p>
 <ul>
-<li>将CSS放在顶部，即早点渲染出页面及其样式。</li>
-<li>将JavaScript放在底部。如果有后台渲染机制，那么就应该将JS放到页面底部来加速页面加载。如果是单页面应用，那么这个JS就应该在页面顶部。</li>
-<li>压缩HTML。在我们写模板的过程中，一些判断可能会导致页面有过多的空格。压缩这些HTML，可以稍微提高一下页面速度。</li>
+<li>将 CSS 放在顶部，即早点渲染出页面及其样式。</li>
+<li>将 JavaScript 放在底部。如果有后台渲染机制，那么就应该将 JS 放到页面底部来加速页面加载。如果是单页面应用，那么这个 JS 就应该在页面顶部。</li>
+<li>压缩 HTML。在我们写模板的过程中，一些判断可能会导致页面有过多的空格。压缩这些 HTML，可以稍微提高一下页面速度。</li>
 </ul>
 <p>这里的大部分内容都应该通过修改代码来完成。</p>
 <h4 id="启用缓存">启用缓存</h4>
@@ -3150,7 +3150,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <figure>
 <img src="assets/article/chapter5/my-website-seo.jpg" alt="What Site Need SEO" /><figcaption>What Site Need SEO</figcaption>
 </figure>
-<p>正常情况下除了像<code>腾讯</code>这类的<code>QQ空间</code>自我封闭的网站外都需要SEO，或者不希望泄露一些用户隐私如<code>Facebook</code>、<code>人人</code>等等</p>
+<p>正常情况下除了像<code>腾讯</code>这类的<code>QQ空间</code>自我封闭的网站外都需要 SEO，或者不希望泄露一些用户隐私如<code>Facebook</code>、<code>人人</code>等等。</p>
 <ul>
 <li>如果你和我的网站一样需要靠搜索带来流量</li>
 <li>如果你只有很少的用户访问，却有很多的内容。</li>
@@ -3170,7 +3170,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>PowerPoint 和 PDF 文件中的链接</li>
 <li>指向被 meta Robtots 标签、rel=“NoFollow” 和 robots.txt 屏蔽的页面的链接</li>
 <li>页面上有上几百个链接</li>
-<li>frame(框架结构)和 iframe 里的链接</li>
+<li>frame（框架结构）和 iframe 里的链接</li>
 </ul>
 <p>对于现在的网站来还有下面的原因，通过来说是因为内容是动态生成的，而不是静态的</p>
 <ul>
@@ -3377,15 +3377,15 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <li>源码服务器</li>
 <li>持续集成服务器</li>
 </ul>
-<p>我们已经实现了前两点，针对于第三点——持续集成服务器，我们可以以Jenkins为例做一些简单的说明。它是一种基于 Java 开发的持续集成工具，并提供了用于监控持续重复工作的软件平台。</p>
+<p>我们已经实现了前两点，针对于第三点——持续集成服务器，我们可以以 Jenkins 为例做一些简单的说明。它是一种基于 Java 开发的持续集成工具，并提供了用于监控持续重复工作的软件平台。</p>
 <p>它可以让整个开发流程到部署都实现自动化。由于每个功能可以一点点的加在 build 中，那么这样就能保证每次的新 build 可以交付新的功能。同时，我们可以根据用户的反馈情况及时调整开发方向，降低项目风险。</p>
 <h3 id="持续集成流程">持续集成流程</h3>
 <p>我们就可以对这个工作流展开进入介绍。持续集成重要就是要保证整个过程是<strong>可持续</strong>的。如下图是一个持续集成的工作流：</p>
 <figure>
 <img src="assets/article/chapter6/ci.jpg" alt="CI Workflow" /><figcaption>CI Workflow</figcaption>
 </figure>
-<p>不同的开发者在自己的机器上开发功能代码。在完成一定的本地提交后，这些代码将会提交给源代码控制服务器。不过，在那之前我们应该在本地跑测试来减少持续集成失败的情况。接着，我们的CI会定时去获取源码服务器是否有代码修改。如果有代码修改，那么我们的集成服务器将会获取这些代码。然后，构建这个项目，运行测试，再输出返回结果。最后，我们可以开发一些小工具来提醒用户CI是否运行成功。</p>
-<p>如果这个过程中，我们我们的CI运行失败的话，那么我们就不能再提交新的代码——除了修复CI的代码外。持续集成变红不能过夜，要么快速解决，要么回退。</p>
+<p>不同的开发者在自己的机器上开发功能代码。在完成一定的本地提交后，这些代码将会提交给源代码控制服务器。不过，在那之前我们应该在本地跑测试来减少持续集成失败的情况。接着，我们的CI会定时去获取源码服务器是否有代码修改。如果有代码修改，那么我们的集成服务器将会获取这些代码。然后，构建这个项目，运行测试，再输出返回结果。最后，我们可以开发一些小工具来提醒用户 CI 是否运行成功。</p>
+<p>如果这个过程中，我们我们的 CI 运行失败的话，那么我们就不能再提交新的代码——除了修复 CI 的代码外。持续集成变红不能过夜，要么快速解决，要么回退。</p>
 <p>在这个过程中，有两点值得注意，一个是小步前进，一个是迟早反馈。</p>
 <h4 id="小步前进">小步前进</h4>
 <p>小步前进是一系列步骤的集合，其目的是：集成越早问题越小。即当我们的代码越早的提交到源码服务器，那么其他人就可以尽可能早的和我们的代码集成到一起。这也意味着，每天结束时，我们在本地的修改要尽可能小，并且这些修改还要保证不会破坏持续集成。</p>
@@ -3420,36 +3420,36 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <h3 id="基础设施">基础设施</h3>
 <p>在我们使我们的项目可以持续交付软件包的时候，我们需要</p>
 <h4 id="本地开发环境">本地开发环境</h4>
-<p>在本地编写代码时，我们需要设置本地的开发环境。假设我们要开始一个Java Web项目，在我们的开发机器上，我们需要安装：</p>
+<p>在本地编写代码时，我们需要设置本地的开发环境。假设我们要开始一个 Java Web 项目，在我们的开发机器上，我们需要安装：</p>
 <ul>
-<li>版本管理工具，如git，用于管理源代码。</li>
+<li>版本管理工具，如 git，用于管理源代码。</li>
 <li>IDE，如Intellij IDEA，用于搭建开发环境。</li>
-<li>构建工具，如gradle，用于安装依赖、运行测试、构建工程等等。</li>
-<li>语法检测工具，如checkstyle，用于检查代码语法。</li>
-<li>单元测试框架，如JUnit，用于进行单元测试。</li>
-<li>集成测试框架，如Cucumber、Selenium，用于做行为测试。</li>
+<li>构建工具，如 gradle，用于安装依赖、运行测试、构建工程等等。</li>
+<li>语法检测工具，如 checkstyle，用于检查代码语法。</li>
+<li>单元测试框架，如 JUnit，用于进行单元测试。</li>
+<li>集成测试框架，如 Cucumber、Selenium，用于做行为测试。</li>
 </ul>
 <p>除此，在我们的项目代码里，我们还需要：</p>
 <ul>
-<li><code>CI运行脚本</code>，用于在CI上运行指定的测试。</li>
-<li><code>上传包脚本</code>，用于上传build完的软件包。</li>
+<li><code>CI运行脚本</code>，用于在 CI 上运行指定的测试。</li>
+<li><code>上传包脚本</code>，用于上传 build 完的软件包。</li>
 <li><code>部署脚本</code>，用于在本地部署包到测试环境。</li>
 <li><code>监控代码</code>，用于监测网站性能和用户行为。</li>
 </ul>
 <p>当然我们还需要辅助一些测试工具来测试网站，如性能测试、网络测试等等。</p>
 <h4 id="持续集成环境">持续集成环境</h4>
 <p>为什么在这里会出现一个持续集成环境？我也不知道，只是想到了这里。由于我们需要持续集成，所以我们也需要一个运行持续集成服务器的机器。</p>
-<p>持续集成服务器是由两部分组成的：Master和Agent。即一个用于控制其他运行持续集成服务的机器，以及执行指令的机器。因此，我们需要在一台机器上安装Master软件，在另外一台机器上作为Agent。在我们的Agent上，我们需要安装相对应的运行服务的软件，如</p>
+<p>持续集成服务器是由两部分组成的：Master 和 Agent。即一个用于控制其他运行持续集成服务的机器，以及执行指令的机器。因此，我们需要在一台机器上安装 Master 软件，在另外一台机器上作为 Agent。在我们的 Agent上，我们需要安装相对应的运行服务的软件，如</p>
 <ul>
 <li>指定版本的语言环境 ，如Java、Python。</li>
 <li>构建工具。</li>
 <li>版本管理工具，及对应的密钥。</li>
-<li>打包工具，如RPM。</li>
+<li>打包工具，如 RPM。</li>
 <li>虚拟桌面，即可以模拟桌面浏览器的软件。</li>
 </ul>
 <p>同时，我们还需要有一个地方放置我们的RPM包。</p>
 <h4 id="测试环境">测试环境</h4>
-<p>相比于上面两个环境来说，测试环境就比较简单了。我们只需要创建几个不同的环境，即开发者的测试环境、QA环境、模拟线上环境，在这几个不同的环境上有不同的配置。</p>
+<p>相比于上面两个环境来说，测试环境就比较简单了。我们只需要创建几个不同的环境，即开发者的测试环境、QA 环境、模拟线上环境，在这几个不同的环境上有不同的配置。</p>
 <h3 id="持续部署">持续部署</h3>
 <p>在持续交付之外的，还有持续部署——这个就更依赖于团队的组织结构了。其与持续交付的对比如下图所示：</p>
 <figure>
@@ -3528,7 +3528,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <blockquote>
 <p>没有自动化测试的代码就是遗留代码，不管它是十年前写的，还是昨天写的。</p>
 </blockquote>
-<p>从一个新手程序员到一个老鸟，我们的编程水平都在不断增加。但是我们过去写的代码一直都在那里，但是我们一直都没有足够的勇气去动他们。因为我们知道如果我们一不小心改错了什么，就会导致一些意外的Bug。这些Bug可能会对我们的编程生涯造成一些影响。</p>
+<p>从一个新手程序员到一个老鸟，我们的编程水平都在不断增加。但是我们过去写的代码一直都在那里，但是我们一直都没有足够的勇气去动他们。因为我们知道如果我们一不小心改错了什么，就会导致一些意外的 Bug。这些 Bug 可能会对我们的编程生涯造成一些影响。</p>
 <p>而我们不知道这样做的后果，是因为我们没有对原来的代码进行测试。如果我们的代码都是经过测试的，那么我们在修改中出的错，都会在测试中加以体现。长此以往，没有人敢去修改这些代码。</p>
 <p>既然他在旧的系统中工作得很好，那么我们就没有理由去修改他们。当有新的需求出现时，我们就可以重新设计一个新的系统。</p>
 <h2 id="如何修改遗留代码">如何修改遗留代码</h2>
@@ -3553,7 +3553,10 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 </ul>
 <p>不过，我想你只要有前面的那些步骤。你为什么还需要看这一章的内容呢？</p>
 <p>参考书籍：</p>
-<p><strong>《修改代码的艺术》</strong> <strong>《持续交付指南：修改代码的9条最佳实践》</strong></p>
+<ul>
+<li><strong>《修改代码的艺术》</strong></li>
+<li><strong>《持续交付指南：修改代码的9条最佳实践》</strong></li>
+</ul>
 <h2 id="网站重构">网站重构</h2>
 <blockquote>
 <p>网站重构应包含结构、行为、表现三层次的分离以及优化，行内分工优化，以及以技术与数据、人文为主导的交互优化等。</p>
@@ -3805,7 +3808,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <figure>
 <img src="assets/article/chapter8/blog-with-frontend.png" alt="含前端的架构" /><figcaption>含前端的架构</figcaption>
 </figure>
-<p>在这时，后台人员也可以自由地选择自己的框架、语言。后台开发人员只需要关注于生成一个 RESTful API 即可，而他也需要一个好的Model 层来与数据库交付。</p>
+<p>在这时，后台人员也可以自由地选择自己的框架、语言。后台开发人员只需要关注于生成一个 RESTful API 即可，而他也需要一个好的 Model 层来与数据库交付。</p>
 <figure>
 <img src="assets/article/chapter8/blog-with-fe-be.png" alt="含前端后台的架构" /><figcaption>含前端后台的架构</figcaption>
 </figure>
@@ -3874,7 +3877,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <img src="assets/article/chapter8/django_app_arch.jpg" alt="Django APP 架构" /><figcaption>Django APP 架构</figcaption>
 </figure>
 <p>当我们需要创建一个新的功能的时候，我们只需要创建一个新的 APP 即可——为这个 APP 配置新的 URL、创建新的 Model 以及新的 View。如果功能上没有与原来的代码重复的话，那么这就是一个独立的 APP，并且我们可以将这个 APP 的代码 Copy/Paste 到一个新的项目中，并且不需要做修改。</p>
-<p>与一般的 MVC 架构相比，我们会发现我们细化了这些业务逻辑原来的三层结构，会随着APP的数量发生变化。如果我们有三个APP的话，那么我们相当于有3*三层，但是他不是等于九层。这样做可以从代码上直接减少逻辑的思考，让我们可以更加集中注意力于业务实现，同时也利于我们后期维护。</p>
+<p>与一般的 MVC 架构相比，我们会发现我们细化了这些业务逻辑原来的三层结构，会随着 APP 的数量发生变化。如果我们有三个 APP 的话，那么我们相当于有3*三层，但是他不是等于九层。这样做可以从代码上直接减少逻辑的思考，让我们可以更加集中注意力于业务实现，同时也利于我们后期维护。</p>
 <p>虽是如此，后来我意识到了这样的架构并没有太多的先进之处。而这实际上是一个美好但是不现实的东西，因为我们还是使用同一个数据库。</p>
 <h4 id="微服务与-reactive">微服务与 Reactive</h4>
 <p>在微服务架构中，它提倡将单一应用程序划分成一组小的服务，这些服务之间互相协调、互相配合。每个服务运行在其独立的进程中，服务与服务间采用轻量级的通信机制互相沟通。每个服务都应该有自己独立的数据库来存储数据。</p>
