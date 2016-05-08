@@ -684,7 +684,7 @@ HTML
 
 让我们先从身边的语言下手，也就是现在无处不在的 HTML+Javascript+CSS。
 
-之所以从 HTML 开始，是因为我们不需要配置一个复杂的开发环境，也许你还不知道开发环境是什么东西，不过这也没关系，毕竟这些知识需要慢慢的接触才能有所了解，尤其是对于普通的业余爱好者来说，当然，对于专业选手言自然不是问题。HTML 是 Web 的核心语言，也算是比较基础的语言。
+之所以从 HTML 开始，是因为我们不需要配置一个复杂的开发环境，也许你还不知道开发环境是什么东西，不过这也没关系，毕竟这些知识需要慢慢的接触才能有所了解，尤其是对于普通的业余爱好者来说，当然，对于专业选手而言自然不是问题。HTML 是 Web 的核心语言，也算是比较基础的语言。
 
 ###hello,world
 
@@ -732,7 +732,7 @@ hello,world 是一个传统，所以在这里也遵循这个有趣的传统，�
 
 > 超文本标记语言
 
-所以我们可以发现其中的关键词是标记——markup，也就是说 HTML 是一个 markup，head 是一个 markup，body 也是一个 markup。
+所以我们可以发现其中的关键词是标记——markup，也就是说 html 是一个 markup，head 是一个 markup，body 也是一个 markup。
 
 然而，我们真正工作的代码是在 body 里面，至于为什么是在这里面，这个问题就太复杂了。打个比方来说：
 
@@ -790,10 +790,7 @@ hello,world 是一个传统，所以在这里也遵循这个有趣的传统，�
 </body></html>		
 ```
 
-以
-    <!--开头，-->
-
-结尾的是注释，写给人看的代码，不是给机器看的，所以机器不会去理解这些代码。
+以`<!--`开头，`-->`结尾的是注释，写给人看的代码，不是给机器看的，所以机器不会去理解这些代码。
 
 但是当我们把代码改成
 
@@ -917,7 +914,7 @@ para.style.color="blue";
 
 CSS(Cascading Style Sheets)，到今天我也没有记得他的全称，CSS 还有一个中文名字是层叠式样式表，事实上翻译成什么可能并不是我们关心的内容，我们需要关心的是他能做些什么。作为三剑客之一，它的主要目的在于可以让我们方便灵活地去控制 Web 页面的外观表现。我们可以用它做出像淘宝一样复杂的界面，也可以像我们的书本一样简单，不过如果要和我们书本一样简单的话，可能不需要用到 CSS。HTML 一开始就是依照报纸的格式而设计的，我们还可以继续用上面说到的编辑器，又或者是其他的。如果你喜欢 DreamWeaver 那也不错，不过一开始使用 IDE 可无助于我们写出良好的代码。
 
-忘说了，CSS 也是有版本的，和 Windows，Linux 内核等等一样，但是更新可能没有那么频繁，HTML 也是有版本的，JS 也是有版本的，复杂的东西不是当前考虑的内容。
+忘说了，CSS 也是有版本的，和 Windows，Linux 内核等等一样，但是更新可能没有那么频繁，HTML 也是有版本的，JavaScript 也是有版本的，复杂的东西不是当前考虑的内容。
 
 ####代码结构
 
@@ -929,8 +926,8 @@ CSS(Cascading Style Sheets)，到今天我也没有记得他的全称，CSS 还�
 <head>
 </head>
 <body>
-	<p style="font-size: 22px;color:#f00;text-align: center;padding-left: 20px;">如果没有一个好的结构</p>
-	<p style="	font-size:44px;color:#3ed;text-indent: 2em;padding-left: 2em;">那么以后可能就是这样子。。。。</p>
+	<p style="font-size: 22px;color: #f00;text-align: center;padding-left: 20px;">如果没有一个好的结构</p>
+	<p style="font-size: 44px;color: #3ed;text-indent: 2em;padding-left: 2em;">那么以后可能就是这样子。。。。</p>
 </body>
 </html>
 ```
@@ -949,13 +946,13 @@ CSS(Cascading Style Sheets)，到今天我也没有记得他的全称，CSS 还�
 	<style type="text/css">
 		.para{
 			font-size: 22px;
-			color:#f00;
+			color: #f00;
 			text-align: center;
 			padding-left: 20px;
 		}
 		.para2{
-			font-size:44px;
-			color:#3ed;
+			font-size: 44px;
+			color: #3ed;
 			text-indent: 2em;
 			padding-left: 2em;
 		}
@@ -1005,13 +1002,13 @@ CSS(Cascading Style Sheets)，到今天我也没有记得他的全称，CSS 还�
 ```CSS
 .para{
 	font-size: 22px;
-	color:#f00;
+	color: #f00;
 	text-align: center;
 	padding-left: 20px;
 }
 .para2{
-	font-size:44px;
-	color:#3ed;
+	font-size: 44px;
+	color: #3ed;
 	text-indent: 2em;
 	padding-left: 2em;
 }
@@ -1021,10 +1018,10 @@ CSS(Cascading Style Sheets)，到今天我也没有记得他的全称，CSS 还�
 
 ```javascript
 var para={
-	font_size:'22px',
-	color:'#f00',
-	text_align:'center',
-	padding_left:'20px',
+	font_size: '22px',
+	color: '#f00',
+	text_align: 'center',
+	padding_left: '20px',
 }
 ```
 
@@ -1032,10 +1029,10 @@ var para={
 
 ```javascript
 var para={
-	font_size:22px,
-	color:#f00,
-	text_align:center,
-	padding_left:20px,
+	font_size: 22px,
+	color: #f00,
+	text_align: center,
+	padding_left: 20px,
 }
 ```
 
@@ -1062,7 +1059,7 @@ var para={
 ```css
 .para{
 	font-size: 22px;
-	color:#f00;
+	color: #f00;
 	text-align: center;
 	padding-left: 20px;
 }
@@ -1078,78 +1075,91 @@ var para={
 
 我们用到的选择器叫做类选择器，也就是 class，或者说应该称之为 class 选择器更合适。与类选择器最常一起出现的是 ID 选择器，不过这个适用于比较高级的场合，诸如用 JS 控制 DOM 的时候就需要用到 ID 选择器。而基本的选择器就是如下面的例子:
 
-	p.para{
-		color:#f0f;
-	}
+```css
+p.para{
+	color: #f0f;
+}
+```
 
 将代码添加到 style.css 的最下面会发现“如果没有一个好的结构”变成了粉红色，当然我们还会有这样的写法
 
-	p>.para{
-		color:#f0f;
-	}
+```css
+p>.para{
+	color: #f0f;
+}
+```
 
-为了产生上面的特殊的样式，虽然不好看，但是我们终于理解什么叫层叠样式了，下面的代码的重要度比上面高，也因此有更高的优先规则。
+为了产生上面的特殊的样式，虽然不好看，但是我们终于理解什么叫层叠样式了，下面的代码的权重比上面高，也因此有更高的优先规则。
 
 而通常我们可以通过一个
 
-    p{
-    	text-align:left;
-    }
+```css
+p{
+	text-align: left;
+}
+```
 
 这样的元素选择器来给予所有的 p 元素一个左对齐。
 
 还有复杂一点的复合型选择器，下面的是 HTML 文件
 
-	<!DOCTYPE html>
-	<html>
-	<head>
-		<title>CSS example</title>
-		<link href="./style.css" rel="stylesheet" type="text/css" />
-	</head>
-	<body>
-		<p class="para">如果没有一个好的结构</p>
-		<div id="content">
-			<p class="para2">那么以后可能就是这样子。。。。</p>
-		</div>
-	</body>
-	</html>
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS example</title>
+	<link href="./style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<p class="para">如果没有一个好的结构</p>
+	<div id="content">
+		<p class="para2">那么以后可能就是这样子。。。。</p>
+	</div>
+</body>
+</html>
+```
 
 还有 CSS 文件
 
+```css
+.para{
+	font-size: 22px;
+	color: #f00;
+	text-align: center;
+	padding-left: 20px;
+}	
+.para2{
+	font-size: 44px;
+	color: #3ed;
+	text-indent: 2em;
+	padding-left: 2em;
+}
 
-	.para{
-		font-size: 22px;
-		color:#f00;
-		text-align: center;
-		padding-left: 20px;
-	}
-	.para2{
-		font-size:44px;
-		color:#3ed;
-		text-indent: 2em;
-		padding-left: 2em;
-	}
-
-	p.para{
-		color:#f0f;
-	}
-	div#content p {
-		font-size:22px;
-	}
+p.para{
+	color: #f0f;
+}
+div#content p {
+	font-size: 22px;
+}
+```
 
 ###更有趣的 CSS
 
 一个包含了 para2 以及 para_bg 的例子
 
-		<div id="content">
-			<p class="para2 para_bg">那么以后可能就是这样子。。。。</p>
-		</div>
+```html
+<div id="content">
+	<p class="para2 para_bg">那么以后可能就是这样子。。。。</p>
+</div>
+```
 
 我们只是添加了一个黑色的背景
 
-	.para_bg{
-		background-color:#000;
-	}
+```css
+.para_bg{
+	background-color: #000;
+}
+```
 
 重新改变后的网页变得比原来有趣了很多，所谓的继承与合并就是上面的例子。
 
@@ -1901,7 +1911,7 @@ User.sync({force: true}).then(function () {
 
 > 搜索引擎指自动从因特网搜集信息，经过一定整理以后，提供给用户进行查询的系统。
 
-但是这样说往得不是非常准备。因为有相当多的网站采用了搜索引擎作为基础的存储服务架构，而且他们并非自动从互联网上搜索信息。搜索引擎应该分成三个部分来组成：
+但是这样说往得不是非常准确。因为有相当多的网站采用了搜索引擎作为基础的存储服务架构，而且他们并非自动从互联网上搜索信息。搜索引擎应该分成三个部分来组成：
 
 1. 索引服务
 2. 搜索服务
@@ -1958,7 +1968,7 @@ jQuery 还是一个不错的选择，不仅仅对于学习来说，而且对于�
 
 ###Ajax
 
-AJAX 即 “Asynchronous JavaScript And XML”（异步 JavaScript 和 XML），是指一种创建交互式网页应用的网页开发技术。这个功能在之前的很多年来一直被 Web 开发者所忽视，直到最近 Gmail、Google Suggest 和 Google Maps 的出现，才使人们开始意识到其重要性。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。传统的网页如果需要更新内容，必须重载整个网页页面。
+AJAX 即 “Asynchronous JavaScript And XML”（异步 JavaScript 和 XML），是指一种创建交互式网页应用的网页开发技术。这个功能在之前的很多年来一直被 Web 开发者所忽视，直到 Gmail、Google Suggest 和 Google Maps 的出现，才使人们开始意识到其重要性。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。传统的网页如果需要更新内容，必须重载整个网页页面。
 
 ![Ajax 请求](assets/article/chapter2/ajax_request.png)
 
@@ -2040,7 +2050,7 @@ thePerson.getChildren("age")[0].value() == "12" // True
 
 ###WebSocket
 
-在一些网站上为了实现推送技术，都采用了轮询的技术。即在特定的的时间间隔里，由浏览器对服务器发出 HTTP 请求，然后浏览器便可以从服务器获取最新的技术。如下图所示的是 Google Chrome 申请开发者账号时发出的对应的请求：
+在一些网站上为了实现推送技术，都采用了轮询的技术。即在特定的的时间间隔里，由浏览器对服务器发出 HTTP 请求，然后浏览器便可以从服务器获取最新的消息。如下图所示的是 Google Chrome 申请开发者账号时发出的对应的请求：
 
 ![Chrome Ajax 轮询](assets/article/chapter2/chrome-ajax-poll.jpg)
 
@@ -2219,7 +2229,7 @@ gulp.task('default', function () {
 
 2. Webpack 是一款模块加载器兼打包工具，它能把各种资源，例如 JS（含JSX）、coffee、样式（含less/sass）、图片等都作为模块来使用和处理。
 
-3. Babel 是一个转换编译器，它能将 ES6 转换成可以在浏览器中运行的代码。
+3. Babel 是一个转换编译器，它能将 ES6 转换成ES5，以便在较低版本的浏览器中正确运行。
 
 ####打包
 
@@ -2691,7 +2701,7 @@ class HomepageTestCase(LiveServerTestCase):
 
 ###Stub
 
-Stub 从字面意义上来说是存根，存根可以理解为我们保留了一些预留的结果。这个时候我们相当于构建了这样一个特殊的测试场景，用于替换诸如网络或者 IO 口调度等高度不可预期的测试。如当我们需要去验证某个 API 被调用并返回了一个结果，举例在最小物联网系统设计中返回的 json，我们可以在本地构建一个
+Stub 从字面意义上来说是存根，存根可以理解为我们保留了一些预留的结果。这个时候我们相当于构建了这样一个特殊的测试场景，用于替换诸如网络或者 IO 调度等高度不可预期的测试。如当我们需要去验证某个 API 被调用并返回了一个结果，举例在最小物联网系统设计中返回的 json，我们可以在本地构建一个
 
 ```javascript
 [{"id":1,"temperature":14,"sensors1":15,"sensors2":12,"led1":1}]
@@ -3243,7 +3253,7 @@ public class replaceTemp {
 重构到设计模式
 ---
 
-> 模式和重构之间存在着天然联系，模式是你想到达的目的地，而重构则是从其他地方到达这个目的地的条条道理——Martin Fowler《重构》
+> 模式和重构之间存在着天然联系，模式是你想到达的目的地，而重构则是从其他地方到达这个目的地的条条道路——Martin Fowler《重构》
 
 ###过度设计与设计模式
 
