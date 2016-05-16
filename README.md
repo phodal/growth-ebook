@@ -1,7 +1,7 @@
 [Growth: 全栈增长工程师指南](https://github.com/phodal/growth-ebook)
 ===
 
-> 依据在《[Repractise简介篇：Web开发的七天里](http://mp.weixin.qq.com/s?__biz=MjM5Mjg4NDMwMA==&mid=403171959&idx=1&sn=08f0717e2306efd7d80c8bb603e644d0#rd)》中所说的 Web 开发的七个步骤而展开的电子书。当然它也是一个 APP，它一本关于如何成为全栈增长工程师的指南。
+> 依据在《[Repractise简介篇：Web开发的七天里](http://mp.weixin.qq.com/s?__biz=MjM5Mjg4NDMwMA==&mid=403171959&idx=1&sn=08f0717e2306efd7d80c8bb603e644d0#rd)》中所说的 Web 开发的七个步骤而展开的电子书。当然它也是一个 APP，它是一本关于如何成为全栈增长工程师的指南。
 
 简介
 --
