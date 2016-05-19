@@ -1,6 +1,8 @@
 [Growth: 全栈增长工程师指南](https://github.com/phodal/growth-ebook)
 ===
 
+### 同系列《[Growth全栈增长工程师实战](https://github.com/phodal/growth-in-action)》
+
 > 依据在《[Repractise简介篇：Web开发的七天里](http://mp.weixin.qq.com/s?__biz=MjM5Mjg4NDMwMA==&mid=403171959&idx=1&sn=08f0717e2306efd7d80c8bb603e644d0#rd)》中所说的 Web 开发的七个步骤而展开的电子书。当然它也是一个 APP，它是一本关于如何成为全栈增长工程师的指南。
 
 简介
@@ -33,11 +35,6 @@
 GitHub直接下载：[Epub版](https://github.com/phodal/growth-ebook/releases/download/0.9.9/growth.epub)、[Mobi版](https://github.com/phodal/growth-ebook/releases/download/0.9.9/growth.mobi)、[PDF版](https://github.com/phodal/growth-ebook/releases/download/0.9.9/growth.pdf)、[RTF版](https://github.com/phodal/growth-ebook/releases/download/0.9.9/growth.rtf)
 
 百度盘：http://pan.baidu.com/s/1qYuy5Bm
-
-
-**Growth实战篇**
-
-Django版: [Growth In Action Django](https://github.com/phodal/growth-in-action-python)
 
 没钱棒个人场: 关注我的微信公众号（扫描下面的二维码或搜索 Phodal）.
 
