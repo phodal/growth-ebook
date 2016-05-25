@@ -123,7 +123,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#html">HTML</a><ul>
 <li><a href="#helloworld">hello,world</a></li>
 <li><a href="#中文">中文？</a></li>
-<li><a href="#其他-html-标记">其他 HTML 标记</a></li>
+<li><a href="#其它-html-标记">其它 HTML 标记</a></li>
 <li><a href="#小结-1">小结</a></li>
 </ul></li>
 <li><a href="#css">CSS</a><ul>
@@ -547,7 +547,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>而如果是编辑器的话，就需要自己去找寻这些相应的插件。</p>
 <p>IDE 一般是针对特定语言才产生的，并且优化更好。而，编辑器则需要自己去搭配。这也意味着如果你需要在多个语言上工作时，并且喜欢折腾，你可以考虑使用编辑器。</p>
 <h3 id="debug-工具">DEBUG 工具</h3>
-<p>不得不提及的是在有些 IDE 自带了 Debug 工具，这点可能使得使用 IDE 更有优势。在简单的项目是，我们可能不需要这样的 Debug 工具。因为我们对我们的代码库比较熟悉，一个简单的问题一眼就知道是哪里的问题。而对于那些复杂的项目来说，可能就没有那么简单了。特别是当你来到一个新的大中型项目，一个简单的逻辑在实现上可能要经过一系列的函数才能处理完。</p>
+<p>不得不提及的是在有些 IDE 自带了 Debug 工具，这点可能使得使用 IDE 更有优势。在简单的项目里，我们可能不需要这样的 Debug 工具。因为我们对我们的代码库比较熟悉，一个简单的问题一眼就知道是哪里的问题。而对于那些复杂的项目来说，可能就没有那么简单了。特别是当你来到一个新的大中型项目，一个简单的逻辑在实现上可能要经过一系列的函数才能处理完。</p>
 <p>这时候我们就需要 Debug 工具——对于前端开发来说，我们可能使用 Chrome 的 Dev Tools。但是对于后端来说，我们就需要使用别的工具。如下图所示的是 Intellij Idea 的 Debug 界面：</p>
 <figure>
 <img src="assets/article/chapter1/idea-debug.png" alt="Intellij Idea Debug" /><figcaption>Intellij Idea Debug</figcaption>
@@ -811,7 +811,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h4 id="http-协议">HTTP 协议</h4>
 <p>说到这里，我们不得不说说 HTTP 协议——超文本传输协议。它也是一个基于文本的传输协议，这就是为什么你在上面看到的都是文本的传输过程。</p>
 <h3 id="从-html-到页面显示">从 HTML 到页面显示</h3>
-<p>而浏览器接收到文本的时候，就要开始着手将 HTML 变成屏幕。下图是 Chrome 渲染页面的一个时间线：</p>
+<p>而浏览器接收到文本的时候，就要开始着手将 HTML 变成屏幕上显示的内容。下图是 Chrome 渲染页面的一个时间线：</p>
 <figure>
 <img src="assets/article/chapter1/chrome-timeline.jpg" alt="Chrome 渲染的 Timeline" /><figcaption>Chrome 渲染的 Timeline</figcaption>
 </figure>
@@ -820,7 +820,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <img src="assets/article/chapter1/render-html.png" alt="Render HTML" /><figcaption>Render HTML</figcaption>
 </figure>
 <p>（PS: 需要注意的是这里用的是 WebKit 内核的渲染过程，即 Chrome 和 Safari 等浏览器所使用的内核。）</p>
-<p>从上面的两图可以看出来第一步都 Parser HTML，而 Paser HTML 实质上就是将其将解析为 DOM Tree。与此同时，CSS 解析器会解析 CSS 会产生 CSS 规则树。</p>
+<p>从上面的两图可以看出来第一步都 Parse HTML，而 Parse HTML 实质上就是将其将解析为 DOM Tree。与此同时，CSS 解析器会解析 CSS 会产生 CSS 规则树。</p>
 <p>随后会根据生成的 DOM 树和 CSS 规则树来构建 Render Tree，接着生成 Render Tree的布局，最后就是绘制出 Render Tree。</p>
 <p>详细的内容还得参见相关的书籍~~。</p>
 <p>相关内容：</p>
@@ -907,7 +907,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>中文输入的速度在某种程度上来说没有英语快。</li>
 </ol>
 <p>我们离开话题已经很远了，但是这里说的都是针对于那些不满于英语的人来说的，只有当我们可以从头构建一个中文系统的时候才是可行的，而这些就要将 CPU、软件、硬件都包含在内，甚至我们还需要考虑重新设计 CPU 的结构，在某种程度上来说会有些不现实。或许，需要一代又一代人的努力。忘记那些吧，师夷之长技以制夷。</p>
-<h3 id="其他-html-标记">其他 HTML 标记</h3>
+<h3 id="其它-html-标记">其它 HTML 标记</h3>
 <p>添加一个标题，</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;html&gt;</span>
     <span class="kw">&lt;head&gt;</span>
@@ -931,7 +931,7 @@ hello,world
 <span class="kw">&lt;/ul&gt;</span>
 <span class="kw">&lt;/body&gt;</span>
 <span class="kw">&lt;/html&gt;</span></code></pre></div>
-<p>更多的东西可以在一些书籍上看到，这边所要说的只是一次简单的语言入门，其他的东西都和这些类似。</p>
+<p>更多的东西可以在一些书籍上看到，这边所要说的只是一次简单的语言入门，其它的东西都和这些类似。</p>
 <h3 id="小结-1">小结</h3>
 <h4 id="美妙之处">美妙之处</h4>
 <p>我们简单地上手了一门不算是语言的语言，浏览器简化了这其中的大部分过程，虽然没有 C 和其他语言来得有专业感，但是我们试着去开始写代码了。我们可能在未来的某一篇中可能会看到类似的语言，诸如 Python，我们所要做的就是</p>
@@ -1207,9 +1207,9 @@ div<span class="fl">#content</span> p <span class="kw">{</span>
 <p>对于实际问题，如果我们只是止于所要得到的结果，很多年之后，我们就成为了 code monkey。对这个问题进行再一次设计，所谓的设计有些时候会把简单的问题复杂化，有些时候会使以后的扩展更加简单。这一天因为这家商店的糖价格太高了，于是店长将价格降为了4块钱。</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="va">document</span>.<span class="at">write</span>(<span class="dv">3</span><span class="op">*</span><span class="dv">4</span>)<span class="op">;</span></code></pre></div>
 <p>于是我们又得到了我们的结果，但是下次我们看到这些代码的时候没有分清楚哪个是糖的数量，哪个是价格，于是我们重新设计了程序</p>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript">tang<span class="op">=</span><span class="dv">4</span><span class="op">;</span>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript">price<span class="op">=</span><span class="dv">4</span><span class="op">;</span>
 num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
-<span class="va">document</span>.<span class="at">write</span>(tang<span class="op">*</span>num)<span class="op">;</span></code></pre></div>
+<span class="va">document</span>.<span class="at">write</span>(price<span class="op">*</span>num)<span class="op">;</span></code></pre></div>
 <p>这才能叫得上是程序设计，或许你注意到了“;”这个符号的存在，我想说的是这是另外一个标准，我们不得不去遵守，也不得不去 fuck。</p>
 <h4 id="函数">函数</h4>
 <p>记得刚开始学三角函数的时候，我们会写</p>
@@ -1231,24 +1231,24 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 =&gt; -<span class="fl">0.9880316240928618</span>
 <span class="fl">2.0</span>.<span class="dv">0</span>-p353 :<span class="dv">005</span> &gt;</code></pre></div>
 <p>我们可以在函数中传入多个变量，于是我们再回到小明的问题，就会这样去编写代码。</p>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="at">calc</span>(tang<span class="op">,</span>num)<span class="op">{</span>
-    result<span class="op">=</span>tang<span class="op">*</span>num<span class="op">;</span>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="at">calc</span>(price<span class="op">,</span>num)<span class="op">{</span>
+    result<span class="op">=</span>price<span class="op">*</span>num<span class="op">;</span>
     <span class="va">document</span>.<span class="at">write</span>(result)<span class="op">;</span>
 <span class="op">}</span>
 <span class="at">calc</span>(<span class="dv">3</span><span class="op">,</span><span class="dv">4</span>)<span class="op">;</span></code></pre></div>
 <p>但是从某种程度上来说，我们的 calc 做了计算的事又做了输出的事，总的来说设计上有些不好。</p>
 <h4 id="重新设计">重新设计</h4>
 <p>我们将输出的工作移到函数的外面，</p>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="at">calc</span>(tang<span class="op">,</span>num)<span class="op">{</span>
-    <span class="cf">return</span> tang<span class="op">*</span>num<span class="op">;</span>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="at">calc</span>(price<span class="op">,</span>num)<span class="op">{</span>
+    <span class="cf">return</span> price<span class="op">*</span>num<span class="op">;</span>
 <span class="op">}</span>
 <span class="va">document</span>.<span class="at">write</span>(<span class="at">calc</span>(<span class="dv">3</span><span class="op">,</span><span class="dv">4</span>))<span class="op">;</span></code></pre></div>
 <p>接着我们用一种更有意思的方法来写这个问题的解决方案</p>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="at">calc</span>(tang<span class="op">,</span>num)<span class="op">{</span>
-    <span class="cf">return</span> tang<span class="op">*</span>num<span class="op">;</span>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="at">calc</span>(price<span class="op">,</span>num)<span class="op">{</span>
+    <span class="cf">return</span> price<span class="op">*</span>num<span class="op">;</span>
 <span class="op">}</span>
-<span class="kw">function</span> <span class="at">printResult</span>(tang<span class="op">,</span>num)<span class="op">{</span>
-    <span class="va">document</span>.<span class="at">write</span>(<span class="at">calc</span>(tang<span class="op">,</span>num))<span class="op">;</span>
+<span class="kw">function</span> <span class="at">printResult</span>(price<span class="op">,</span>num)<span class="op">{</span>
+    <span class="va">document</span>.<span class="at">write</span>(<span class="at">calc</span>(price<span class="op">,</span>num))<span class="op">;</span>
 <span class="op">}</span>
 <span class="at">printResult</span>(<span class="dv">3</span><span class="op">,</span> <span class="dv">4</span>)</code></pre></div>
 <p>看上去更专业了一点点，如果我们只需要计算的时候我们只需要调用 calc，如果我们需要输出的时候我们就调用 printResult 的方法。</p>
@@ -1264,16 +1264,16 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 </blockquote>
 <p>创建一个 object，然后观察这便是我们接下来要做的</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript">store<span class="op">={};</span>
-<span class="va">store</span>.<span class="at">tang</span><span class="op">=</span><span class="dv">4</span><span class="op">;</span>
-<span class="va">store</span>.<span class="at">num</span><span class="op">=</span><span class="dv">3</span><span class="op">;</span>
-<span class="va">document</span>.<span class="at">write</span>(<span class="va">store</span>.<span class="at">tang</span><span class="op">*</span><span class="va">store</span>.<span class="at">num</span>)<span class="op">;</span></code></pre></div>
+<span class="va">store</span>.<span class="at">candyPrice</span><span class="op">=</span><span class="dv">4</span><span class="op">;</span>
+<span class="va">store</span>.<span class="at">candyNum</span><span class="op">=</span><span class="dv">3</span><span class="op">;</span>
+<span class="va">document</span>.<span class="at">write</span>(<span class="va">store</span>.<span class="at">candyPrice</span> <span class="op">*</span> <span class="va">store</span>.<span class="at">candyNum</span>)<span class="op">;</span></code></pre></div>
 <p>我们就有了和 document.write 一样的用法，这也是对象的美妙之处，只是这里的对象只是包含着基本值，因为</p>
-<pre><code>typeof story.tang=&quot;number&quot;</code></pre>
+<pre><code>typeof story.candyPrice=&quot;number&quot;</code></pre>
 <p>一个包含对象的对象应该是这样子的。</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript">store<span class="op">={};</span>
-<span class="va">store</span>.<span class="at">tang</span><span class="op">=</span><span class="dv">4</span><span class="op">;</span>
-<span class="va">store</span>.<span class="at">num</span><span class="op">=</span><span class="dv">3</span><span class="op">;</span>
-<span class="va">document</span>.<span class="at">writeln</span>(<span class="va">store</span>.<span class="at">tang</span><span class="op">*</span><span class="va">store</span>.<span class="at">num</span>)<span class="op">;</span>
+<span class="va">store</span>.<span class="at">candyPrice</span><span class="op">=</span><span class="dv">4</span><span class="op">;</span>
+<span class="va">store</span>.<span class="at">candyNum</span><span class="op">=</span><span class="dv">3</span><span class="op">;</span>
+<span class="va">document</span>.<span class="at">writeln</span>(<span class="va">store</span>.<span class="at">candyPrice</span> <span class="op">*</span> <span class="va">store</span>.<span class="at">candyNum</span>)<span class="op">;</span>
 
 <span class="kw">var</span> wall<span class="op">=</span><span class="kw">new</span> <span class="at">Object</span>()<span class="op">;</span>
 <span class="va">wall</span>.<span class="at">store</span><span class="op">=</span>store<span class="op">;</span>
@@ -1290,7 +1290,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>我们定义了一个叫 IO 的对象，声明对象可以用</p>
 <pre><code>var store={};</code></pre>
 <p>又或者是</p>
-<pre><code>var store=new Object{};</code></pre>
+<pre><code>var store=new Object();</code></pre>
 <p>两者是等价的，但是用后者的可读性会更好一点，我们定义了一个叫print的函数，他的作用也就是 document.write，IO 中的print 函数是等价于 print() 函数，这也就是对象和函数之间的一些区别，对象可以包含函数，对象是无序属性的集合，其属性可以包含基本值、对象或者函数。</p>
 <p>复杂一点的对象应该是下面这样的一种情况。</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> Person<span class="op">={</span><span class="dt">name</span><span class="op">:</span><span class="st">&quot;phodal&quot;</span><span class="op">,</span><span class="dt">weight</span><span class="op">:</span><span class="dv">50</span><span class="op">,</span><span class="dt">height</span><span class="op">:</span><span class="dv">166</span><span class="op">};</span>
@@ -1384,7 +1384,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <span class="va">para</span>.<span class="va">style</span>.<span class="at">color</span><span class="op">=</span><span class="st">&quot;blue&quot;</span><span class="op">;</span></code></pre></div>
 <p>接着，字体就变成了蓝色，有了 DOM 我们就可以对页面进行操作，可以说我们看到的绝大部分的页面效果都是通过 DOM 操作实现的。</p>
 <h4 id="美妙之处-1">美妙之处</h4>
-<p>这里说到的 JavaScript 仅仅只是其中的一小小部分，忽略掉的东西很多，只关心的是如何去设计一个实用的 app，作为一门编程语言，他还有其他强大的内制函数，要学好需要一本有价值的参考书。这里提到的只是其中的不到20%的东西，其他的80%或者更多会在你解决问题的时候出现。</p>
+<p>这里说到的 JavaScript 仅仅只是其中的一小小部分，忽略掉的东西很多，只关心的是如何去设计一个实用的 app，作为一门编程语言，它还有其他强大的内制函数，要学好需要一本有价值的参考书。这里提到的只是其中不到20%的东西，其他的80%或者更多会在你解决问题的时候出现。</p>
 <ul>
 <li>我们可以创建一个对象或者函数，它可以包含基本值、对象或者函数。</li>
 <li>我们可以用 JavaScript 修改页面的属性，虽然只是简单的示例。</li>
@@ -1394,8 +1394,8 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <blockquote>
 <p>前端 Front-end 和后端 Back-end 是描述进程开始和结束的通用词汇。前端作用于采集输入信息，后端进行处理。</p>
 </blockquote>
-<p>这种说法给人一种很模糊的感觉，但是他说得又很对，它负责视觉展示。在 MVC 结构或者 MVP 中，负责视觉显示的部分只有 View 层，而今天大多数所谓的 View 层已经超越了 View 层。前端是一个很神奇的概念，但是而今的前端已经发生了很大的变化。你引入了 Backbone、Angluar，你的架构变成了 MVP、MVVM。尽管发生了一些架构上的变化，但是项目的开发并没有因此而发生变化。这其中涉及到了一些职责的问题，如果某一个层级中有太多的职责，那么它是不是加重了一些人的负担？</p>
-<p>后台在过去的岁月里起着很重要的作用，当然在未来也是。就最几年的解耦趋势来看，它在变得更小，变成一系列的服务。并向前台提供很多 RESTful API，看上去有点像提供一些辅助性的工作。</p>
+<p>这种说法给人一种很模糊的感觉，但是他说得又很对，它负责视觉展示。在 MVC 或者 MVP 结构中，负责视觉显示的部分只有 View 层，而今天大多数所谓的 View 层已经超越了 View 层。前端是一个很神奇的概念，但是而今的前端已经发生了很大的变化。你引入了 Backbone、Angluar，你的架构变成了 MVP、MVVM。尽管发生了一些架构上的变化，但是项目的开发并没有因此而发生变化。这其中涉及到了一些职责的问题，如果某一个层级中有太多的职责，那么它是不是加重了一些人的负担？</p>
+<p>后台在过去的岁月里起着很重要的作用，当然在未来也是。就最近几年的解耦趋势来看，它在变得更小，变成一系列的服务。并向前台提供很多 RESTful API，看上去有点像提供一些辅助性的工作。</p>
 <p>因此在这一章里，我们将讲述详细介绍：</p>
 <ol type="1">
 <li>后台语言与选型</li>
@@ -1500,7 +1500,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>模型用于封装与应用程序的业务逻辑相关的数据以及对数据的处理方法。</p>
 </blockquote>
 <p>它是介于数据与控制器之间的层级，拥有对数据直接访问的权力——增删改查(CRUD)。Web 应用中，数据通常是由数据库来存储，有时也会用搜索引擎来存储</p>
-<p>因此在实现这个层级与数据库交付时，可以使用 SQL 语句，也可以使用 ORM 框架。</p>
+<p>因此在实现这个层级与数据库交互时，可以使用 SQL 语句，也可以使用 ORM 框架。</p>
 <p>SQL(Structured Query Language，即结构化查询语言)， 语句是数据库的查询语言</p>
 <p>ORM(Object Relational Mapping)，即对象关系映射，主要是将数据库中的关系数据映射称为程序中的对象。</p>
 <h3 id="view">View</h3>
@@ -1523,7 +1523,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
   &lt;a<span class="ot"> href</span>=<span class="dt">&quot;</span>&lt;%= request.getRequestURI() %&gt;<span class="dt">&quot;</span>&gt;&lt;h3&gt;Try Again&lt;/h3&gt;&lt;/a&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></div>
-<p>上面的 JSP 代码在经过程序解析、处理后，会变成相对应的 HTML。而我们可以发现在这里的 View 层不仅仅只有模板的作用，我们会发现这里的 View 层还计划了部分的逻辑。我们可以在后面细细看这些问题，对于前端的 View 层来说，他可能是这样的：</p>
+<p>上面的 JSP 代码在经过程序解析、处理后，会变成相对应的 HTML。而我们可以发现在这里的 View 层不仅仅只有模板的作用，还加入了部分的逻辑。我们可以在后面细细看这些问题，对于前端的 View 层来说，它可能是这样的：</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;information pure-g&quot;</span><span class="kw">&gt;</span>
     {{#.}}
     <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;pure-u-1 &quot;</span><span class="kw">&gt;</span>
@@ -1568,7 +1568,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <img src="assets/article/chapter2/baas-diagram.png" alt="Backend As A Service" /><figcaption>Backend As A Service</figcaption>
 </figure>
 <h3 id="api-演进史">API 演进史</h3>
-<p>在早期的工作中，我们会发现我们会将大量的业务逻辑放置到 View 层——如迭代出某个结果。</p>
+<p>在早期的工作中，我们会将大量的业务逻辑放置到 View 层——如迭代出某个结果。</p>
 <p>而在今天，当我们有大量的逻辑一致时，我们怎么办，重复实现三次？</p>
 <p>如下所示是笔者之前重构的系统的一个架构缩略图：</p>
 <figure>
@@ -1580,7 +1580,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 </figure>
 <p>从早期到现在的互联网公司都有这样的问题，也会有同样的过程：</p>
 <p>第一阶段： 因为创始人对于某个领域的看好，他们就创建了这样的一个桌面网站。这个时间点，大概可以在2000年左右。</p>
-<p>第二阶段： 前“智能手机”出现了，人们需要开发移动版本的网站来适用用户的需要。这时由于当时的开发环境，以及技术条件所限，当时的网站只会是桌面模板的简化。这时还没有普及 Ajax 请求、SPA 这些事物。</p>
+<p>第二阶段： 前“智能手机”出现了，人们需要开发移动版本的网站来适用用户的需要。由于当时的开发环境，以及技术条件所限，网站只会是桌面模板的简化。这时还没有普及 Ajax 请求、SPA 这些事物。</p>
 <p>第三阶段： 手机应用的制作开始流行起来了。由于需要制作手机应用，人们就需要在网站上创建 API。由于当时的业务或者项目需求，这个 API 是直接耦合在系统中的。</p>
 <p>第四阶段： 由于手机性能的不断提高，并且移动网络速度不断提升，人们便开始在手机上制作单页面应用。</p>
 <p>由于他们使用的是相同业务逻辑、代码逻辑相同而<strong>技术栈不同</strong>的代码，当有一个新的需求出现时，他们需要重复多次实现，如下图所示：</p>
@@ -1617,7 +1617,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <p>每天我们都会修改、查看大量的不同类型的文件。而由于工作繁忙，我们可能没有办法一一地去分类这些文件。有时选择的便是，优先先按日期把文件一划分，接着再在随后的日子里归档。而这种存储方式大量的依赖于人来索引的工作，在很多时候往往显得不是很靠谱。并且当我们将数据存储进去后，往往很难进行修改。大量的 Log 文件就需要专门的工作来分析和使用，依赖于人来解析这些日志往往显得不是很靠谱。这时我们就需要一些重量级的工具，如用 Logstash、ElasticSearch、Kibana 来处理 Nginx 访问日志。</p>
 <p>而对于那些非专业人员来说，使用 Excel 这样的工具往往显得比较方便。他们不需要去操作数据库，也不需要专业的知识来处理这些知识。只是从某种意义上来说，Excel 应该归属于数据库的范畴。</p>
 <h3 id="数据库">数据库</h3>
-<p>当我们开始一个 Web 应用的时候，如创建一个用户管理系统的时候，我们就需要不断由于经常对文件进行查询、修改、插入和删除等操作。不仅仅如此，我们还需要定义数据之前的关系，如这个用户对应这个密码。在一些更复杂的情况下，我们还需要寻找中这些用户对应的一些操作数据等等。如果我们还是这些工作交给文件来处理，那么我们便是在向自己挖坑。</p>
+<p>当我们开始一个 Web 应用的时候，如创建一个用户管理系统，我们就需要不断对文件进行查询、修改、插入和删除等操作。不仅如此，我们还需要定义数据之间的关系，如这个用户对应这个密码。在一些更复杂的情况下，我们还需要寻找这些用户中对应的一些操作数据等等。如果还是将这些工作交给文件来处理，那么我们便是在向自己挖坑。</p>
 <blockquote>
 <p>数据库，简单来说可视为电子化的文件柜——存储电子文件的处所，用户可以对文件中的数据运行新增、截取、更新、删除等操作。</p>
 </blockquote>
@@ -1648,7 +1648,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
   <span class="op">}</span>)<span class="op">;</span>
 <span class="op">}</span>)<span class="op">;</span></code></pre></div>
 <p>上面定义的 Model，在程序初始化的时候将会创建相应的数据库字段。并且会创建一个 firstName 为 ‘John’，lastName 为 ‘Hancock’ 的用户。而这个过程中，我们并不需要操作数据库。</p>
-<p>像如 MongoDB 这类的数据库，也是存在数据模型，但说的却是嵌入子文档。在业务量大的情况下，数据库在考验公司的技术能力，想想便觉得 Amazon RDS 挺好的。</p>
+<p>像 MongoDB 这类的数据库，也存在数据模型，但说的却是嵌入子文档。在业务量大的情况下，数据库在考验公司的技术能力，想想便觉得 Amazon RDS 挺好的。</p>
 <h3 id="搜索引擎">搜索引擎</h3>
 <p>尽管百科上对于搜索引擎的定义是这样的：</p>
 <blockquote>
@@ -1660,7 +1660,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <li>搜索服务</li>
 <li>索引数据</li>
 </ol>
-<p>索引服务便是用于将数据存储到索引数据中，而搜索服务正是搜索引擎存在的意义。对于查询条件复杂的网站来说，采用搜索引擎就意味着减少了非常多的繁琐数据处理事务。在一些架构中，人们用数据库存储数据，并使用工具来将数据注入到搜索引擎中。</p>
+<p>索引服务用于将数据存储到索引数据中，而搜索服务正是搜索引擎存在的意义。对于查询条件复杂的网站来说，采用搜索引擎就意味着减少了非常多的繁琐数据处理事务。在一些架构中，人们用数据库存储数据，并使用工具来将数据注入到搜索引擎中。</p>
 <p>从架构上来说，使用搜索引擎的优点是：分离存储、查询部分。从开发上来说，它可以让我们更关注于业务本身的价值，而不是去实现这样一个搜索逻辑。</p>
 <p>如下图所示的 Lucene 应用的架构：</p>
 <figure>
@@ -1736,14 +1736,14 @@ thePerson <span class="op">=</span> thePeople[<span class="dv">0</span>]<span cl
 <blockquote>
 <p>JSON Web Token (JWT) 是一种基于 token 的认证方案。</p>
 </blockquote>
-<p>在人们大规模地开始 Web 应用的时候，我们在授权的时候遇到了一些问题，而这些问题不是 Cookie 所能解决的。Cookie 存在一些明显的问题：不能支持跨域、并且不是无状态的、不能使用CDN、与系统耦合等等。除了解决上面的问题，它还可以提高性能等等。基于 Session 的授权机制需要服务端来保存这个状态，而使用 JWT 则可以跳过这个问题，并且使我们设计出来的 API 满足 RESTful 规范。即，我们 API 的状态应该是没有状态的。因此人们提出了 JWT 来解决这一系列的问题。</p>
-<p>通过 JWT 我们可以更方便地写出适用于前端应用的认证方案，如登陆、注册这些功能。当我们使用 JWT 来实现我们的注册、登陆功能时，我们在登陆的时候将向我们的服务器发送我们的用户名和密码，服务器验证后将生成对应的 Token。在下次我们进行页面操作的时候，如访问 /Dashboard 时，发出的 HTTP 请求的 Header 中会包含这个 Token。服务器在接收到请求后，将对这个 Token 进行验证并判断这个 Token 是否已经过期了。</p>
+<p>在人们大规模地开始 Web 应用的时候，我们在授权的时候遇到了一些问题，而这些问题不是 Cookie 所能解决的。Cookie 存在一些明显的问题：不支持跨域、并且不是无状态的、不能使用CDN、与系统耦合等等。除了解决上面的问题，它还可以提高性能等等。基于 Session 的授权机制需要服务端来保存这个状态，而使用 JWT 则可以跳过这个问题，并且使我们设计出来的 API 满足 RESTful 规范。即，我们 API 的状态应该是没有状态的。因此人们提出了 JWT 来解决这一系列的问题。</p>
+<p>通过 JWT 我们可以更方便地写出适用于前端应用的认证方案，如登陆、注册这些功能。当我们使用 JWT 来实现我们的注册、登陆功能时，我们在登陆的时候将向服务器发送用户名和密码，服务器验证后将生成对应的 Token。在下次我们进行页面操作的时候，如访问 /Dashboard 时，发出的 HTTP 请求的 Header 中会包含这个 Token。服务器在接收到请求后，将对这个 Token 进行验证并判断这个 Token 是否已经过期了。</p>
 <figure>
 <img src="assets/article/chapter2/jwt-process.jpeg" alt="JWT 流程" /><figcaption>JWT 流程</figcaption>
 </figure>
 <p>需要注意的一点是：在使用 JWT 的时候也需要注意安全问题，在允许的情况下应该使用 HTTPS 协议。</p>
 <h3 id="websocket">WebSocket</h3>
-<p>在一些网站上为了实现推送技术，都采用了轮询的技术。即在特定的的时间间隔里，由浏览器对服务器发出 HTTP 请求，然后浏览器便可以从服务器获取最新的消息。如下图所示的是 Google Chrome 申请开发者账号时发出的对应的请求：</p>
+<p>在一些网站上为了实现推送技术，都采用了轮询的技术。即在特定的时间间隔里，由浏览器向服务器发出 HTTP 请求，然后浏览器便可以从服务器获取最新的消息。如下图所示的是 Google Chrome 申请开发者账号时发出的对应的请求：</p>
 <figure>
 <img src="assets/article/chapter2/chrome-ajax-poll.jpg" alt="Chrome Ajax 轮询" /><figcaption>Chrome Ajax 轮询</figcaption>
 </figure>
