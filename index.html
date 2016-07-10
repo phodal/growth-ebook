@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Growth: 全栈增长工程师指南 - </title>
+  <title>Growth: 全栈增长工程师指南 – </title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
 div.sourceCode { overflow-x: auto; }
@@ -1067,7 +1067,7 @@ hello,world
     <span class="dt">padding_left</span><span class="op">:</span> 20px<span class="op">,</span>
 <span class="op">}</span></code></pre></div>
 <p>目测差距已经尽可能的小了，至于这些话题会在以后讨论到，如果要让我们的编译器更正确的工作，那么我们就需要非常多这样的符号，除非你乐意去理解:</p>
-<pre class="lisp"><code>(dotimes (i 4) (print i))</code></pre>
+<div class="sourceCode"><pre class="sourceCode lisp"><code class="sourceCode commonlisp">(<span class="kw">dotimes</span> (i <span class="dv">4</span>) (<span class="kw">print</span> i))</code></pre></div>
 <p>总的来说我们减少了符号的使用，但是用 lisp 便带入了更多的括号，不过这是一种简洁的表达方式，也许我们可以在其他语言中看到。</p>
 <pre><code>\d{2}/[A-Z][a-z][a-z]/\d{4}</code></pre>
 <p>上面的代码，是为了从一堆数据中找出“某日/某月/某年”。如果一开始不理解那是正则表达式，就会觉得那个很复杂。</p>
@@ -1436,22 +1436,22 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">层次</th>
-<th style="text-align: left;">职责</th>
+<th>层次</th>
+<th>职责</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">表现层</td>
-<td style="text-align: left;">提供服务、显示信息、用户请求、HTTP请求和命令行调用。</td>
+<td>表现层</td>
+<td>提供服务、显示信息、用户请求、HTTP请求和命令行调用。</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">领域层</td>
-<td style="text-align: left;">逻辑处理，系统中真正的核心。</td>
+<td>领域层</td>
+<td>逻辑处理，系统中真正的核心。</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">数据层</td>
-<td style="text-align: left;">与数据库、消息系统、事物管理器和其他软件包通讯。</td>
+<td>数据层</td>
+<td>与数据库、消息系统、事物管理器和其他软件包通讯。</td>
 </tr>
 </tbody>
 </table>
@@ -1659,7 +1659,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <blockquote>
 <p>搜索引擎指自动从因特网搜集信息，经过一定整理以后，提供给用户进行查询的系统。</p>
 </blockquote>
-<p>但是这样说往得不是非常准确。因为有相当多的网站采用了搜索引擎作为基础的存储服务架构，而且他们并非自动从互联网上搜索信息。搜索引擎应该分成三个部分来组成：</p>
+<p>但是这样描述并不是非常准确，因为有相当多的网站采用了搜索引擎作为基础的存储服务架构，而且他们并非自动从互联网上搜索信息。搜索引擎应该分成三个部分来组成：</p>
 <ol type="1">
 <li>索引服务</li>
 <li>搜索服务</li>
@@ -2946,61 +2946,61 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">浏览器</th>
-<th style="text-align: left;">会话</th>
-<th style="text-align: left;">新会话百分比</th>
+<th>浏览器</th>
+<th>会话</th>
+<th>新会话百分比</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Chrome</td>
-<td style="text-align: left;">5048</td>
-<td style="text-align: left;">75.99%</td>
+<td>Chrome</td>
+<td>5048</td>
+<td>75.99%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Firefox</td>
-<td style="text-align: left;">694</td>
-<td style="text-align: left;">78.39%</td>
+<td>Firefox</td>
+<td>694</td>
+<td>78.39%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Safari</td>
-<td style="text-align: left;">666</td>
-<td style="text-align: left;">78.68%</td>
+<td>Safari</td>
+<td>666</td>
+<td>78.68%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Internet Explorer</td>
-<td style="text-align: left;">284</td>
-<td style="text-align: left;">87.68%</td>
+<td>Internet Explorer</td>
+<td>284</td>
+<td>87.68%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Safari (in-app)</td>
-<td style="text-align: left;">92</td>
-<td style="text-align: left;">86.96%</td>
+<td>Safari (in-app)</td>
+<td>92</td>
+<td>86.96%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Android Browser</td>
-<td style="text-align: left;">72</td>
-<td style="text-align: left;">87.50%</td>
+<td>Android Browser</td>
+<td>72</td>
+<td>87.50%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Edge</td>
-<td style="text-align: left;">63</td>
-<td style="text-align: left;">79.37%</td>
+<td>Edge</td>
+<td>63</td>
+<td>79.37%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Maxthon</td>
-<td style="text-align: left;">51</td>
-<td style="text-align: left;">68.63%</td>
+<td>Maxthon</td>
+<td>51</td>
+<td>68.63%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">UC Browser</td>
-<td style="text-align: left;">41</td>
-<td style="text-align: left;">80.49%</td>
+<td>UC Browser</td>
+<td>41</td>
+<td>80.49%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Opera</td>
-<td style="text-align: left;">34</td>
-<td style="text-align: left;">64.71%</td>
+<td>Opera</td>
+<td>34</td>
+<td>64.71%</td>
 </tr>
 </tbody>
 </table>
@@ -3015,30 +3015,30 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">来源/媒介</th>
-<th style="text-align: left;">会话</th>
+<th>来源/媒介</th>
+<th>会话</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">baidu / organic</td>
-<td style="text-align: left;">2031</td>
+<td>baidu / organic</td>
+<td>2031</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">google / organic</td>
-<td style="text-align: left;">1314</td>
+<td>google / organic</td>
+<td>1314</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">(direct) / (none)</td>
-<td style="text-align: left;">1311</td>
+<td>(direct) / (none)</td>
+<td>1311</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">bing / organic</td>
-<td style="text-align: left;">349</td>
+<td>bing / organic</td>
+<td>349</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">github.com / referral</td>
-<td style="text-align: left;">281</td>
+<td>github.com / referral</td>
+<td>281</td>
 </tr>
 </tbody>
 </table>
@@ -3758,36 +3758,36 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">x</th>
-<th style="text-align: left;">动态博客</th>
-<th style="text-align: left;">静态博客</th>
-<th style="text-align: left;">半动态的静态博客</th>
+<th>x</th>
+<th>动态博客</th>
+<th>静态博客</th>
+<th>半动态的静态博客</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">价格</td>
-<td style="text-align: left;">几十到几百元</td>
-<td style="text-align: left;">几元</td>
-<td style="text-align: left;">依赖于更新频率 几元~几十元</td>
+<td>价格</td>
+<td>几十到几百元</td>
+<td>几元</td>
+<td>依赖于更新频率 几元~几十元</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">难度</td>
-<td style="text-align: left;">容易</td>
-<td style="text-align: left;">稍有难度</td>
-<td style="text-align: left;">难度稍大</td>
+<td>难度</td>
+<td>容易</td>
+<td>稍有难度</td>
+<td>难度稍大</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">运维</td>
-<td style="text-align: left;">不容易</td>
-<td style="text-align: left;">容易</td>
-<td style="text-align: left;">容易</td>
+<td>运维</td>
+<td>不容易</td>
+<td>容易</td>
+<td>容易</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">数据存储</td>
-<td style="text-align: left;">数据库</td>
-<td style="text-align: left;">无</td>
-<td style="text-align: left;">基于 git 的数据库</td>
+<td>数据存储</td>
+<td>数据库</td>
+<td>无</td>
+<td>基于 git 的数据库</td>
 </tr>
 </tbody>
 </table>
@@ -3847,26 +3847,26 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">传统的MVC架构</th>
-<th style="text-align: left;">Django 架构</th>
+<th>传统的MVC架构</th>
+<th>Django 架构</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Model</td>
-<td style="text-align: left;">Model(Data Access Logic)</td>
+<td>Model</td>
+<td>Model(Data Access Logic)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">View</td>
-<td style="text-align: left;">Template(Presentation Logic)</td>
+<td>View</td>
+<td>Template(Presentation Logic)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">View</td>
-<td style="text-align: left;">View(Business Logic)</td>
+<td>View</td>
+<td>View(Business Logic)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Controller</td>
-<td style="text-align: left;">Django itself</td>
+<td>Controller</td>
+<td>Django itself</td>
 </tr>
 </tbody>
 </table>
