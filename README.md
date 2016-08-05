@@ -34,11 +34,11 @@ GitHub直接下载：[Epub版](https://github.com/phodal/growth-ebook/releases/d
 
 没钱棒个人场: 关注我的微信公众号（扫描下面的二维码或搜索 Phodal）.
 
-![QRCode](https://raw.githubusercontent.com/phodal/growth/master/www/img/wechat.jpg)
+![QRCode](./marketing/wp.jpg)
 
 有钱捧个钱场:
 
-![Alipay](https://raw.githubusercontent.com/phodal/growth/master/docs/alipay.png)![Wechat](https://raw.githubusercontent.com/phodal/growth/master/docs/wechat.png)
+![Alipay](./marketing/alipay.png)![Wechat](./marketing/wechat.png)
 
 
 应用下载
