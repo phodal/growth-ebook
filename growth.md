@@ -349,7 +349,7 @@ Linux 发行版无非就是一堆软件包 (package) 形式的应用程序加上
 环境搭建
 ---
 
-由于我近期工具在 Mac OS X 上，所以先以 Mac OS X 为例。
+由于我近期工作在 Mac OS X 上，所以先以 Mac OS X 为例。
 
 ###OS X
 
