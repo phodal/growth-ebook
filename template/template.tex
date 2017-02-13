@@ -16,6 +16,8 @@
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
 % use upquote if available, for straight quotes in verbatim environments
+\usepackage{titling}
+\usepackage{lipsum}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[utf8]{inputenc}
@@ -203,6 +205,19 @@ $endif$
 \renewcommand{\figurename}{图}
 \renewcommand{\tablename}{表}
 \renewcommand{\appendixname}{附录}
+
+\pretitle{\begin{center}\Huge\bfseries\vskip 5em}
+\posttitle{\par\end{center}\vskip 24em}
+\preauthor{\begin{center}\Large\ttfamily}
+\postauthor{\end{center}}
+\predate{\par\large\centering}
+\postdate{\par}
+
+\title{Growth: 全栈增长工程师指南}
+\author{黄峰达(Phodal) \\ \href{https://github.com/phodal/growth-ebook}{https://github.com/phodal/growth-ebook}}
+\date{\today}   
+
+\maketitle
 
 $for(include-before)$
 $include-before$
