@@ -1,6 +1,16 @@
 [Growth: 全栈增长工程师指南](https://github.com/phodal/growth-ebook)
 ===
 
+Growth 纸质版《全栈应用开发：精益实践》，现已上市：
+
+![全栈应用开发：精益实践](marketing/growth-paper.jpeg)
+
+京东：[https://www.amazon.cn/dp/B0722YJR89](https://www.amazon.cn/dp/B0722YJR89)
+
+当当：[http://product.dangdang.com/25077858.html](http://product.dangdang.com/25077858.html)
+
+亚马逊：[https://www.amazon.cn/dp/B0722YJR89](https://www.amazon.cn/dp/B0722YJR89)
+
 配合《[Growth: 全栈增长工程师实战](https://github.com/phodal/growth-in-action)》效果最佳。
 
 > 依据在《[Repractise简介篇：Web开发的七天里](http://mp.weixin.qq.com/s?__biz=MjM5Mjg4NDMwMA==&mid=403171959&idx=1&sn=08f0717e2306efd7d80c8bb603e644d0#rd)》中所说的 Web 开发的七个步骤而展开的电子书。当然它也是一个 APP，它是一本关于如何成为全栈增长工程师的指南。
