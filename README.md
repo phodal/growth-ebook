@@ -5,7 +5,7 @@ Growth 纸质版《全栈应用开发：精益实践》，现已上市：
 
 ![全栈应用开发：精益实践](marketing/growth-paper.jpeg)
 
-京东：[https://www.amazon.cn/dp/B0722YJR89](https://www.amazon.cn/dp/B0722YJR89)
+京东：[http://item.jd.com/12195442.html](http://item.jd.com/12195442.html)
 
 当当：[http://product.dangdang.com/25077858.html](http://product.dangdang.com/25077858.html)
 
