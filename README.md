@@ -42,7 +42,7 @@ GitHub直接下载：[Epub版](https://github.com/phodal/growth-ebook/releases/d
 
 百度盘：http://pan.baidu.com/s/1qYuy5Bm
 
-没钱棒个人场: 关注我的微信公众号（扫描下面的二维码或搜索 Phodal）.
+没钱捧个人场: 关注我的微信公众号（扫描下面的二维码或搜索 Phodal）.
 
 ![QRCode](./marketing/wp.jpg)
 
