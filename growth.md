@@ -2009,7 +2009,7 @@ JSON 格式的数据具有以下的一些特点：
 如下所示的是一个简单的对比过程：
 
 ```javascript
-myJSON = {"age" : 12, "name" : "Danielle"}
+myJSON = '{"age" : 12, "name" : "Danielle"}'
 ```
 
 如果我们要取出上面数值中的age，那么我们只需要这样做：

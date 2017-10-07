@@ -375,12 +375,12 @@ Warning: 请与
 <img src="assets/article/prelude/cgi-arch.gif" alt="CGI 网站架构" /><figcaption>CGI 网站架构</figcaption>
 </figure>
 <p>当时这种网站的URL类似于：</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">https</span>://www.phodal.com/cgi-bin/getblog</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">https</span>://www.phodal.com/cgi-bin/getblog</code></pre></div>
 <p>(PS：这个链接是为了讲解而存在的，并没有真实存在。)</p>
 <p>用户访问上面的网页的时候就会访问，cgi-bin 的路径下对应的 getblog 脚本。你可以用 Shell 返回这个网页：</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co">#!/bin/sh</span>
-<span class="kw">echo</span> Content-type: text/plain
-<span class="kw">echo</span> hello,world</code></pre></div>
+<span class="bu">echo</span> Content-type: text/plain
+<span class="bu">echo</span> hello,world</code></pre></div>
 <p>Blabla，各种代码混乱地夹杂在一起。不得不说一句：这样的代码在2012年，我也看了有一些。简单地来说，这个时代的代码结构就是这样的：</p>
 <figure>
 <img src="assets/article/prelude/cgi-script.png" alt="CGI脚本文件" /><figcaption>CGI脚本文件</figcaption>
@@ -719,7 +719,7 @@ Warning: 请与
 <li>…</li>
 </ul>
 <p>看上去还行， 又 GET 到了5%的知识点。接着，依照上面的代码和搭建指南在自己的电脑上安装了 Scala 的环境：</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">brew</span> install scala</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">brew</span> install scala</code></pre></div>
 <p>Windows 用户可以用:</p>
 <pre><code>choco install scala</code></pre>
 <p>然后开始写一个又一个的 Demo，感觉自己 GET 到了很多特别的知识点。</p>
@@ -785,34 +785,34 @@ Warning: 请与
 <p>如果你的操作系统带有 cURL 这个软件(在 GNU/Linux、Mac OS 都自带这个工具，Windows 用户可以从<a href="http://curl.haxx.se/download.html" class="uri">http://curl.haxx.se/download.html</a>下载到)，那么我们可以直接用下面的命令来看这看这个过程(-v 参数可以显示一次 http 通信的整个过程)：</p>
 <pre><code>curl -v https://www.phodal.com</code></pre>
 <p>我们就会看到下面的响应过程:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">*</span> Rebuilt URL to: https://www.phodal.com/
-<span class="kw">*</span>   Trying 54.69.23.11...
-<span class="kw">*</span> Connected to www.phodal.com (54.69.23.11) <span class="kw">port</span> 443 (#0)
-<span class="kw">*</span> TLS 1.2 connection using TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
-<span class="kw">*</span> Server certificate: www.phodal.com
-<span class="kw">*</span> Server certificate: COMODO RSA Domain Validation Secure Server CA
-<span class="kw">*</span> Server certificate: COMODO RSA Certification Authority
-<span class="kw">*</span> Server certificate: AddTrust External CA Root
-<span class="kw">&gt;</span> <span class="kw">GET</span> / HTTP/1.1
-<span class="kw">&gt;</span> <span class="kw">Host</span>: www.phodal.com
-<span class="kw">&gt;</span> <span class="kw">User-Agent</span>: curl/7.43.0
-<span class="kw">&gt;</span> <span class="kw">Accept</span>: */*
-<span class="kw">&gt;</span>
-<span class="kw">&lt;</span> <span class="kw">HTTP/1.1</span> 403 Forbidden
-<span class="kw">&lt;</span> <span class="kw">Server</span>: phodal/0.19.4
-<span class="kw">&lt;</span> <span class="kw">Date</span>: Tue, 13 Oct 2015 05:32:13 GMT
-<span class="kw">&lt;</span> <span class="kw">Content-Type</span>: text/html<span class="kw">;</span> <span class="ot">charset=</span>utf-8
-<span class="kw">&lt;</span> <span class="kw">Content-Length</span>: 170
-<span class="kw">&lt;</span> <span class="kw">Connection</span>: keep-alive
-<span class="kw">&lt;</span>
-<span class="kw">&lt;html&gt;</span>
-<span class="kw">&lt;head&gt;&lt;</span>title<span class="kw">&gt;</span>403 Forbidden<span class="kw">&lt;</span>/title<span class="kw">&gt;&lt;</span>/head<span class="kw">&gt;</span>
-<span class="kw">&lt;body</span> bgcolor=<span class="st">&quot;white&quot;</span><span class="kw">&gt;</span>
-<span class="kw">&lt;center&gt;&lt;</span>h<span class="kw">1&gt;</span>403 Forbidden<span class="kw">&lt;</span>/h<span class="kw">1&gt;&lt;</span>/center<span class="kw">&gt;</span>
-<span class="kw">&lt;hr&gt;&lt;</span>center<span class="kw">&gt;</span>phodal/0.19.<span class="kw">4&lt;</span>/center<span class="kw">&gt;</span>
-<span class="kw">&lt;</span>/<span class="kw">body&gt;</span>
-<span class="kw">&lt;</span>/<span class="kw">html&gt;</span>
-<span class="kw">*</span> Connection <span class="co">#0 to host www.phodal.com left intact</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">*</span> Rebuilt URL to: https://www.phodal.com/
+<span class="ex">*</span>   Trying 54.69.23.11...
+<span class="ex">*</span> Connected to www.phodal.com (54.69.23.11) <span class="ex">port</span> 443 (#0)
+<span class="ex">*</span> TLS 1.2 connection using TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+<span class="ex">*</span> Server certificate: www.phodal.com
+<span class="ex">*</span> Server certificate: COMODO RSA Domain Validation Secure Server CA
+<span class="ex">*</span> Server certificate: COMODO RSA Certification Authority
+<span class="ex">*</span> Server certificate: AddTrust External CA Root
+<span class="op">&gt;</span> <span class="ex">GET</span> / HTTP/1.1
+<span class="op">&gt;</span> <span class="ex">Host</span>: www.phodal.com
+<span class="op">&gt;</span> <span class="ex">User-Agent</span>: curl/7.43.0
+<span class="op">&gt;</span> <span class="ex">Accept</span>: */*
+<span class="op">&gt;</span>
+<span class="op">&lt;</span> <span class="ex">HTTP/1.1</span> 403 Forbidden
+<span class="op">&lt;</span> <span class="ex">Server</span>: phodal/0.19.4
+<span class="op">&lt;</span> <span class="ex">Date</span>: Tue, 13 Oct 2015 05:32:13 GMT
+<span class="op">&lt;</span> <span class="ex">Content-Type</span>: text/html<span class="kw">;</span> <span class="va">charset=</span>utf-8
+<span class="op">&lt;</span> <span class="ex">Content-Length</span>: 170
+<span class="op">&lt;</span> <span class="ex">Connection</span>: keep-alive
+<span class="op">&lt;</span>
+<span class="op">&lt;</span><span class="ex">html</span><span class="op">&gt;</span>
+<span class="op">&lt;</span><span class="fu">head</span><span class="op">&gt;&lt;</span>title<span class="op">&gt;</span>403 Forbidden<span class="op">&lt;</span>/title<span class="op">&gt;&lt;</span>/head<span class="op">&gt;</span>
+<span class="op">&lt;</span><span class="ex">body</span> bgcolor=<span class="st">&quot;white&quot;</span><span class="op">&gt;</span>
+<span class="op">&lt;</span><span class="ex">center</span><span class="op">&gt;&lt;</span>h<span class="op">1&gt;</span>403 Forbidden<span class="op">&lt;</span>/h<span class="op">1&gt;&lt;</span>/center<span class="op">&gt;</span>
+<span class="op">&lt;</span><span class="ex">hr</span><span class="op">&gt;&lt;</span>center<span class="op">&gt;</span>phodal/0.19.<span class="op">4&lt;</span>/center<span class="op">&gt;</span>
+<span class="op">&lt;</span>/<span class="ex">body</span><span class="op">&gt;</span>
+<span class="op">&lt;</span>/<span class="ex">html</span><span class="op">&gt;</span>
+<span class="ex">*</span> Connection <span class="co">#0 to host www.phodal.com left intact</span></code></pre></div>
 <p>我们尝试用 cURL 去访问我的网站，会根据访问的域名找出其 IP，通常这个映射关系是来源于 ISP 缓存 DNS（英语：Domain Name System）服务器[^DNSServer]。</p>
 <p>以“*”开始的前8行是一些连接相关的信息，称为<strong>响应首部</strong>。我们向域名 <a href="https://www.phodal.com/" class="uri">https://www.phodal.com/</a>发出了请求，接着 DNS服务器告诉了我们网站服务器的 IP，即54.69.23.11。出于安全考虑，在这里我们的示例，我们是以 HTTPS 协议为例，所以在这里连接的端口是 443。因为使用的是 HTTPS 协议，所以在这里会试图去获取服务器证书，接着获取到了域名相关的证书信息。</p>
 <p>随后以“&gt;”开始的内容，便是向Web服务器发送请求。Host 即是我们要访问的主机的域名，GET / 则代表着我们要访问的是根目录，如果我们要访问 <a href="https://www.phodal.com/about/" class="uri">https://www.phodal.com/about/</a>页面在这里，便是 GET 资源文件 /about。紧随其后的是 HTTP 的版本号（HTTP/1.1）。User-Agent 通常指向的是使用者行为的软件，通常会加上硬件平台、系统软件、应用软件和用户个人偏好等等的一些信息。Accept 则指的是告知服务器发送何种媒体类型。</p>
@@ -855,10 +855,10 @@ Warning: 请与
 <li><p>双击打开这个文件。 正常情况下都应该是用你的默认浏览器打开。只要是一个正常工作的现代浏览器，都应该可以看到上面显示的是“Hello,world”。</p></li>
 </ol>
 <p>这才是最短的 hello,world 程序，但是呢？在 Ruby 中会是这样子的</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">2.0.0-p353</span> :001 <span class="kw">&gt;</span> p <span class="st">&quot;hello,world&quot;</span>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">2.0.0-p353</span> :001 <span class="op">&gt;</span> p <span class="st">&quot;hello,world&quot;</span>
 <span class="st">&quot;hello,world&quot;</span>
-    =<span class="kw">&gt;</span> <span class="st">&quot;hello,world&quot;</span>
-<span class="kw">2.0.0-p353</span> :002 <span class="kw">&gt;</span></code></pre></div>
+    =<span class="op">&gt;</span> <span class="st">&quot;hello,world&quot;</span>
+<span class="ex">2.0.0-p353</span> :002 <span class="op">&gt;</span></code></pre></div>
 <p>等等，如果你了解过 HTML 的话，会觉得这一点都不符合语法规则，但是他工作了，没有什么比安装完 Nginx 后看到 It works! 更让人激动了。</p>
 <p>遗憾的是，它可能无法在所有的浏览器上工作，所以我们需要去调试其中的 bug。</p>
 <h4 id="调试-helloworld">调试 hello,world</h4>
@@ -949,8 +949,8 @@ hello,world
 <h3 id="小结-1">小结</h3>
 <h4 id="美妙之处">美妙之处</h4>
 <p>我们简单地上手了一门不算是语言的语言，浏览器简化了这其中的大部分过程，虽然没有 C 和其他语言来得有专业感，但是我们试着去开始写代码了。我们可能在未来的某一篇中可能会看到类似的语言，诸如 Python，我们所要做的就是</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">python</span> file.py
-=<span class="kw">&gt;hello</span>,world</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="ex">python</span> file.py
+=<span class="op">&gt;</span><span class="ex">hello</span>,world</code></pre></div>
 <p>然后在终端上返回结果。只是因为在我看来学会 HTML 是有意义的，简单的上手，然后再慢慢地深入，如果一开始我们就去理解指针，开始去理解类。我们甚至还知道程序是怎么编译运行的时候，在这个过程中又发生了什么。虽然现在我们也没能理解这其中发生了什么，但是至少展示了</p>
 <ol type="1">
 <li>中文编程语言在当前意义不大，不现实，效率不高兼容性差</li>
@@ -1471,28 +1471,28 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 |____utils
 |____controller</code></pre>
 <p>在 mappers 这一层，我们所做的莫过于如下所示的数据库相关查询：</p>
-<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="fu">@Insert</span>(
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="at">@Insert</span>(
         <span class="st">&quot;INSERT INTO users(username, password, enabled) &quot;</span> +
                 <span class="st">&quot;VALUES (#{userName}, #{passwordHash}, #{enabled})&quot;</span>
 )
-<span class="fu">@Options</span>(keyProperty = <span class="st">&quot;id&quot;</span>, keyColumn = <span class="st">&quot;id&quot;</span>, useGeneratedKeys = <span class="kw">true</span>)
+<span class="at">@Options</span>(keyProperty = <span class="st">&quot;id&quot;</span>, keyColumn = <span class="st">&quot;id&quot;</span>, useGeneratedKeys = <span class="kw">true</span>)
 <span class="dt">void</span> <span class="fu">insert</span>(User user);</code></pre></div>
 <p>model 文件夹和 mappers 文件夹都是数据层的一部分，只是两者间的职责不同，如：</p>
-<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> String <span class="fu">getUserName</span>() {
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="bu">String</span> <span class="fu">getUserName</span>() {
     <span class="kw">return</span> userName;
 }
 
-<span class="kw">public</span> <span class="dt">void</span> <span class="fu">setUserName</span>(String userName) {
+<span class="kw">public</span> <span class="dt">void</span> <span class="fu">setUserName</span>(<span class="bu">String</span> userName) {
     <span class="kw">this</span>.<span class="fu">userName</span> = userName;
 }</code></pre></div>
 <p>而他们最后都需要在 Controller，又或者称为 ModelAndView 中处理：</p>
-<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="fu">@RequestMapping</span>(value = {<span class="st">&quot;/disableUser&quot;</span>}, method = RequestMethod.<span class="fu">POST</span>)
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="at">@RequestMapping</span>(value = {<span class="st">&quot;/disableUser&quot;</span>}, method = RequestMethod.<span class="fu">POST</span>)
 <span class="kw">public</span> ModelAndView <span class="fu">processUserDisable</span>(HttpServletRequest request, ModelMap model) {
-    String userName = request.<span class="fu">getParameter</span>(<span class="st">&quot;userName&quot;</span>);
+    <span class="bu">String</span> userName = request.<span class="fu">getParameter</span>(<span class="st">&quot;userName&quot;</span>);
     User user = userService.<span class="fu">getByUsername</span>(userName);
     userService.<span class="fu">disable</span>(user);
-    Map&lt;String,User&gt; map = <span class="kw">new</span> HashMap&lt;String,User&gt;();
-    Map &lt;User,String&gt; usersWithRoles= userService.<span class="fu">getAllUsersWithRole</span>();
+    <span class="bu">Map</span>&lt;<span class="bu">String</span>,User&gt; map = <span class="kw">new</span> <span class="bu">HashMap</span>&lt;<span class="bu">String</span>,User&gt;();
+    <span class="bu">Map</span> &lt;User,<span class="bu">String</span>&gt; usersWithRoles= userService.<span class="fu">getAllUsersWithRole</span>();
     model.<span class="fu">put</span>(<span class="st">&quot;usersWithRoles&quot;</span>,usersWithRoles);
     <span class="kw">return</span> <span class="kw">new</span> <span class="fu">ModelAndView</span>(<span class="st">&quot;redirect:users&quot;</span>,map);
 }</code></pre></div>
@@ -1731,7 +1731,7 @@ num<span class="op">=</span><span class="dv">3</span><span class="op">;</span>
 <li>占用空间更少</li>
 </ul>
 <p>如下所示的是一个简单的对比过程：</p>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript">myJSON <span class="op">=</span> <span class="op">{</span><span class="st">&quot;age&quot;</span> <span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="st">&quot;name&quot;</span> <span class="op">:</span> <span class="st">&quot;Danielle&quot;</span><span class="op">}</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript">myJSON <span class="op">=</span> <span class="st">&#39;{&quot;age&quot; : 12, &quot;name&quot; : &quot;Danielle&quot;}&#39;</span></code></pre></div>
 <p>如果我们要取出上面数值中的age，那么我们只需要这样做：</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript">anObject <span class="op">=</span> <span class="va">JSON</span>.<span class="at">parse</span>(myJSON)<span class="op">;</span>
 <span class="va">anObject</span>.<span class="at">age</span> <span class="op">===</span> <span class="dv">12</span> <span class="co">// True</span></code></pre></div>
@@ -1820,11 +1820,11 @@ thePerson <span class="op">=</span> thePeople[<span class="dv">0</span>]<span cl
 <ol type="1">
 <li>全局安装 gulp：</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">npm</span> install --global gulp</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="ex">npm</span> install --global gulp</code></pre></div>
 <ol start="2" type="1">
 <li>作为项目的开发依赖（devDependencies）安装：</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">npm</span> install --save-dev gulp</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="ex">npm</span> install --save-dev gulp</code></pre></div>
 <ol start="3" type="1">
 <li>在项目根目录下创建一个名为 gulpfile.js 的文件：</li>
 </ol>
@@ -1836,7 +1836,7 @@ thePerson <span class="op">=</span> thePeople[<span class="dv">0</span>]<span cl
 <ol start="4" type="1">
 <li>运行 gulp：</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">gulp</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="ex">gulp</span></code></pre></div>
 <p>默认的名为 default 的任务（task）将会被运行，在这里，这个任务并未做任何事情。接下来，我们就可以打造我们的应用的构建系统了。</p>
 <h4 id="代码质量检测工具">代码质量检测工具</h4>
 <p>当 C 还是一门新型的编程语言时，还存在一些未被原始编译器捕获的常见错误，所以程序员们开发了一个被称作 lint 的配套项目用来扫描源文件，查找问题。</p>
@@ -1849,7 +1849,7 @@ thePerson <span class="op">=</span> thePeople[<span class="dv">0</span>]<span cl
 </ul>
 <p>下面就让我们来安装这个软件吧：</p>
 <p><strong>安装及使用</strong></p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">npm</span> install jshint gulp-jshint --save-dev</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">npm</span> install jshint gulp-jshint --save-dev</code></pre></div>
 <p>示例代码:</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> jshint <span class="op">=</span> <span class="at">require</span>(<span class="st">&#39;gulp-jshint&#39;</span>)<span class="op">;</span>
 <span class="kw">var</span> gulp   <span class="op">=</span> <span class="at">require</span>(<span class="st">&#39;gulp&#39;</span>)<span class="op">;</span>
@@ -2321,11 +2321,11 @@ $ git clone https://username:password@git.coding.net/username/repository.git</co
 <p>命名是一个特别长的，也是特别忧伤的故事。我想作为一个程序员的你，也相当恐惧这件事。一个好的函数名、变量名应该包含着这个函数的信息，如这个函数是干什么的，或者这个函数是怎么来的，这个变量名存储的是什么。</p>
 <p>正因为取名字是一件很重要的事，所以它也是一件很难的事。一个好的函数名、变量名应该能正确地表达出它的涵义。如你可以猜到下面的代码中的i是什么意思吗？</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">fruits <span class="op">=</span> [<span class="st">&#39;banana&#39;</span>, <span class="st">&#39;apple&#39;</span>,  <span class="st">&#39;mango&#39;</span>]
-<span class="cf">for</span> i <span class="op">in</span> fruits:        <span class="co"># Second Example</span>
+<span class="cf">for</span> i <span class="kw">in</span> fruits:        <span class="co"># Second Example</span>
    <span class="bu">print</span> <span class="st">&#39;Current fruit :&#39;</span>, i</code></pre></div>
 <p>那如果换成下面的代码会不会更容易阅读呢？</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">fruits <span class="op">=</span> [<span class="st">&#39;banana&#39;</span>, <span class="st">&#39;apple&#39;</span>,  <span class="st">&#39;mango&#39;</span>]
-<span class="cf">for</span> fruit <span class="op">in</span> fruits:        <span class="co"># Second Example</span>
+<span class="cf">for</span> fruit <span class="kw">in</span> fruits:        <span class="co"># Second Example</span>
    <span class="bu">print</span> <span class="st">&#39;Current fruit :&#39;</span>, fruit</code></pre></div>
 <p>而命令还存在于对函数的命名上，如我们可能会用 getNumber 来表示去获取一个数值，但是要知道这样的命名并不是在所有的语言中都可以这样用。如在 Java 中存在 getter 和 setter 这种模式，如下的代码所示：</p>
 <pre><code>public String getNumber() {
@@ -2406,13 +2406,13 @@ public void setNumber(String number) {
 <p><strong>重构之前</strong></p>
 <p>以重构一书代码为例，重构之前的代码</p>
 <div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> extract {
-    <span class="kw">private</span> String _name;
+    <span class="kw">private</span> <span class="bu">String</span> _name;
 
     <span class="dt">void</span> <span class="fu">printOwing</span>(<span class="dt">double</span> amount){
         <span class="fu">printBanner</span>();
 
-        System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;name:&quot;</span> + _name);
-        System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;amount&quot;</span> + amount);
+        <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;name:&quot;</span> + _name);
+        <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;amount&quot;</span> + amount);
     }
 
     <span class="kw">private</span> <span class="dt">void</span> <span class="fu">printBanner</span>() {
@@ -2420,8 +2420,8 @@ public void setNumber(String number) {
 }</code></pre></div>
 <p><strong>重构</strong></p>
 <p>选中</p>
-<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java">System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;name:&quot;</span> + _name);
-System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;amount&quot;</span> + amount);</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;name:&quot;</span> + _name);
+<span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;amount&quot;</span> + amount);</code></pre></div>
 <p>按下上述的快捷键，会弹出下面的对话框</p>
 <figure>
 <img src="assets/article/chapter3/extract-method.png" alt="Extrct Method" /><figcaption>Extrct Method</figcaption>
@@ -2432,7 +2432,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p><strong>重构之后</strong></p>
 <p>IDE 就可以将方法提出来</p>
 <div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> extract {
-    <span class="kw">private</span> String _name;
+    <span class="kw">private</span> <span class="bu">String</span> _name;
 
     <span class="dt">void</span> <span class="fu">printOwing</span>(<span class="dt">double</span> amount){
         <span class="fu">printBanner</span>();
@@ -2440,8 +2440,8 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
     }
 
     <span class="kw">private</span> <span class="dt">void</span> <span class="fu">printDetails</span>(<span class="dt">double</span> amount) {
-        System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;name:&quot;</span> + _name);
-        System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;amount&quot;</span> + amount);
+        <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;name:&quot;</span> + _name);
+        <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;amount&quot;</span> + amount);
     }
 
     <span class="kw">private</span> <span class="dt">void</span> <span class="fu">printBanner</span>() {
@@ -2522,7 +2522,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <p><strong>重构之前</strong></p>
 <p>过多的临时变量会让我们写出更长的函数，变量不应该太多，以便使功能单一。这也是重构的另外的目的所在，只有函数专注于其功能，才会更容易读懂。</p>
 <p>以书中的代码为例</p>
-<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">import java.lang.System;</span>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">import</span><span class="im"> java.lang.System;</span>
 
 <span class="kw">public</span> <span class="kw">class</span> replaceTemp {
     <span class="kw">public</span> <span class="dt">void</span> <span class="fu">count</span>() {
@@ -2540,7 +2540,7 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <img src="assets/article/chapter3/replace.jpg" alt="Replace Temp With Query" /><figcaption>Replace Temp With Query</figcaption>
 </figure>
 <p>便会返回</p>
-<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">import java.lang.System;</span>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">import</span><span class="im"> java.lang.System;</span>
 
 <span class="kw">public</span> <span class="kw">class</span> replaceTemp {
     <span class="kw">public</span> <span class="dt">void</span> <span class="fu">count</span>() {
@@ -2566,25 +2566,25 @@ System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="
 <div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> replaceTemp {
 
     <span class="kw">public</span> <span class="dt">void</span> <span class="fu">method</span>() {
-        String str = <span class="st">&quot;str&quot;</span>;
-        String aString = <span class="fu">returnString</span>().<span class="fu">concat</span>(str);
-        System.<span class="fu">out</span>.<span class="fu">println</span>(aString);
+        <span class="bu">String</span> str = <span class="st">&quot;str&quot;</span>;
+        <span class="bu">String</span> aString = <span class="fu">returnString</span>().<span class="fu">concat</span>(str);
+        <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(aString);
     }
 
 }</code></pre></div>
 <p>接着我们选中<code>aString</code>，再打开重构菜单，或者</p>
 <p><code>Command</code>+<code>Alt</code>+<code>Shift</code>+<code>T</code> 再选中 Replace Temp with Query</p>
 <p>便会有下面的结果:</p>
-<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">import java.lang.String;</span>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">import</span><span class="im"> java.lang.String;</span>
 
 <span class="kw">public</span> <span class="kw">class</span> replaceTemp {
 
     <span class="kw">public</span> <span class="dt">void</span> <span class="fu">method</span>() {
-        String str = <span class="st">&quot;str&quot;</span>;
-        System.<span class="fu">out</span>.<span class="fu">println</span>(<span class="fu">aString</span>(str));
+        <span class="bu">String</span> str = <span class="st">&quot;str&quot;</span>;
+        <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="fu">aString</span>(str));
     }
 
-    <span class="kw">private</span> String <span class="fu">aString</span>(String str) {
+    <span class="kw">private</span> <span class="bu">String</span> <span class="fu">aString</span>(<span class="bu">String</span> str) {
         <span class="kw">return</span> <span class="fu">returnString</span>().<span class="fu">concat</span>(str);
     }
 
